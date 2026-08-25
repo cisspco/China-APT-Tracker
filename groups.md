@@ -10,6 +10,7 @@
 | 미상 (CVE-2026-59310 vCenter 캠페인) | - | - | - | - | 귀속 미확인 — Chinese-speaking, moderate confidence (검색 스니펫, 미검증) | 2026-08 |
 
 ## 비고
+- 2026-08-25 실행: 신규 캠페인·신규 그룹 없음. 전일 식별한 4건의 미검증 후보(HoneyMyte/CoolClient, Twill Typhoon/FDMTP, UAT-7810/LapDogs, CVE-2026-59310 vCenter 미상 행위자)의 원문 확보를 재시도했으나 관련 1차 출처(Securelist, Darktrace, Cisco Talos, SecurityScorecard, Medium/QUIRSO 등)가 전부 EGRESS_BLOCKED로 여전히 차단되어 상태 변화 없음.
 - 2026-08-24 실행: Mustang Panda(HoneyMyte/Twill Typhoon 별칭)를 신규 추가. CoolClient 커널 루트킷(Securelist, 2026-08-17 공개)과 FDMTP 백도어 APJ 캠페인(Darktrace, 2026-08-04 공개) 모두 원문 페치가 차단되어 전량 미검증. 별칭 목록은 MITRE ATT&CK G0129 그룹 페이지 검색 스니펫을 참고했으며(attack.mitre.org 자체는 미페치), 향후 원문 확인 시 정정될 수 있음.
 - 2026-08-24 실행: UNC6508(REDCap/INFINITERED 캠페인)은 원 보고서 공개일(2026-06-15)이 60일 창을 벗어나 이번 스냅샷의 "최근 캠페인" 절에서는 제외되었으나, 그룹 자체는 표에 계속 유지(누적). 관련 IOC(IP 23.169.65.49)는 `blocklists/ips.txt`에 유지됨.
 - 이번 실행에서 새로 확인했으나 최근 60일 캠페인 창을 벗어나 이번 스냅샷의 "최근 캠페인" 절에는 포함하지 않은 그룹(참고용, 표에는 미등재): UAT-8302(Cisco Talos, 2026-05-05 공개), Salt Typhoon/OPERATOR PANDA/RedMike/UNC5807/GhostEmperor(CISA AA25-239A, 2025-08-27 공개), Earth Estries(Trend Micro GhostSpider/Masol RAT, 2024년 보고서), UNC2814/GRIDTIDE(Google GTIG, 2026년 2월 공개, Google Sheets를 C2로 악용해 42개국 53개 조직 침해), Salt Typhoon 미 하원 위원회 이메일 침해(2026-01 보도), Mustang Panda LOTUSLITE 베네수엘라 테마 스피어피싱(2026-01 공개). 향후 실행에서 이들에 대한 신규(60일 이내) 보고서를 확인하면 표에 추가합니다.
