@@ -10,6 +10,7 @@
 | 미상 (CVE-2026-59310 vCenter 캠페인) | - | - | - | - | 귀속 미확인 — Chinese-speaking, moderate confidence (검색 스니펫, 미검증) | 2026-08 |
 
 ## 비고
+- 2026-08-26 실행: 신규 캠페인·신규 그룹(표 등재) 없음. 검색으로 두 건의 신규 후보를 확인했으나 60일 캠페인 창 밖이라 표에는 등재하지 않고 참고용으로만 기록: (1) CL-STA-1062(TinyRCT 백도어, Palo Alto Unit 42, 공개일 2026-06-26 — UAT-7237(Cisco Talos, 2025-08)과 오버랩, 귀속 미확인/China-speaking 검색 스니펫, 원문 미페치·미검증), (2) GopherWhisper(ESET, 공개일 2026-04-23, 몽골 정부기관 대상, 귀속 미확인/China-aligned 검색 스니펫, 원문 미페치·미검증). 기존 4건의 미검증 후보(CoolClient/HoneyMyte, FDMTP/Twill Typhoon, UAT-7810/LapDogs, CVE-2026-59310 vCenter)의 원문 확보를 재시도했으나 관련 1차 출처가 전부 EGRESS_BLOCKED로 여전히 차단되어 상태 변화 없음. 신규 벤더 도메인 리치버빌리티 프로브(Unit42, Trend Micro, Recorded Future, SC World, Hive Pro) 5건도 전부 차단됨.
 - 2026-08-25 실행: 신규 캠페인·신규 그룹 없음. 전일 식별한 4건의 미검증 후보(HoneyMyte/CoolClient, Twill Typhoon/FDMTP, UAT-7810/LapDogs, CVE-2026-59310 vCenter 미상 행위자)의 원문 확보를 재시도했으나 관련 1차 출처(Securelist, Darktrace, Cisco Talos, SecurityScorecard, Medium/QUIRSO 등)가 전부 EGRESS_BLOCKED로 여전히 차단되어 상태 변화 없음.
 - 2026-08-24 실행: Mustang Panda(HoneyMyte/Twill Typhoon 별칭)를 신규 추가. CoolClient 커널 루트킷(Securelist, 2026-08-17 공개)과 FDMTP 백도어 APJ 캠페인(Darktrace, 2026-08-04 공개) 모두 원문 페치가 차단되어 전량 미검증. 별칭 목록은 MITRE ATT&CK G0129 그룹 페이지 검색 스니펫을 참고했으며(attack.mitre.org 자체는 미페치), 향후 원문 확인 시 정정될 수 있음.
 - 2026-08-24 실행: UNC6508(REDCap/INFINITERED 캠페인)은 원 보고서 공개일(2026-06-15)이 60일 창을 벗어나 이번 스냅샷의 "최근 캠페인" 절에서는 제외되었으나, 그룹 자체는 표에 계속 유지(누적). 관련 IOC(IP 23.169.65.49)는 `blocklists/ips.txt`에 유지됨.
