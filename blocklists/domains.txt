@@ -2,6 +2,7 @@
 admina.freeddns.org
 afsaces.accesscam.org
 clients.brendns.workers.dev
+closed.theworkpc.com
 evilginx2.loseyourip.com
 googles.ddnsfree.com
 jarzoda.net
