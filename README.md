@@ -2,13 +2,13 @@
 
 중국 국가 배후(PLA/MSS 연계로 공개 출처가 명시적으로 밝힌 경우만) 위협 그룹의 최근 캠페인을 방어/차단 목적으로 추적하는 자동화 리포지토리입니다. 모든 데이터는 공개된 벤더·정부 위협 인텔리전스 보고서에서만 수집합니다.
 
-- **마지막 갱신**: 2026-09-24 UTC
-- **검증된 도메인**: 23
-- **검증된 IP**: 15
+- **마지막 갱신**: 2026-09-25 UTC
+- **검증된 도메인**: 28
+- **검증된 IP**: 22
 - **미검증 도메인**: 0
 - **미검증 IP**: 0
-- **파일 해시(SHA-256/MD5)**: 36 (최신 스냅샷 기준, APT24/BADAUDIO 8건 + UNC2814/GRIDTIDE 6건 + Mustang Panda(UNC6384) 5건 + UNC3886(GTIG "Ghost in the Router") SHA-256 6건·MD5 6건 + UNC4191 MD5 5건 — UNC6508 관련 해시 7건은 캠페인이 60일 창을 벗어나 `latest.md`에서는 제외, [`snapshots/2026-08-23.md`](snapshots/2026-08-23.md)에 보존)
-- **악용 CVE**: 23 (검증 8 — Silk Typhoon/HAFNIUM 7건 + UNC3886/CVE-2025-21590, 모두 GTIG/Mandiant/MSTIC 원문 확보 / 미검증 15 — 원문 페치 차단으로 검색 스니펫만 확보, 신규 7건은 Red Heron 캠페인(WordPress wp2shell·Zyxel GS1900·Ubiquiti UniFi·Gitea))
+- **파일 해시(SHA-256/MD5)**: 56 (최신 스냅샷 기준, APT24/BADAUDIO 8건 + UNC2814/GRIDTIDE 6건 + Mustang Panda(UNC6384) 5건 + UNC3886(GTIG "Ghost in the Router") SHA-256 6건·MD5 6건 + UNC4191 MD5 5건 + UNC5221/UNC5266/UNC5330(GTIG "Cutting Edge, Part 4") MD5 20건 — UNC6508 관련 해시 7건은 캠페인이 60일 창을 벗어나 `latest.md`에서는 제외, [`snapshots/2026-08-23.md`](snapshots/2026-08-23.md)에 보존)
+- **악용 CVE**: 26 (검증 11 — Silk Typhoon/HAFNIUM 7건 + UNC3886/CVE-2025-21590 + UNC5221 등/Ivanti CS 3건, 모두 GTIG/Mandiant/MSTIC 원문 확보 / 미검증 15 — 원문 페치 차단으로 검색 스니펫만 확보, Red Heron 캠페인(WordPress wp2shell·Zyxel GS1900·Ubiquiti UniFi·Gitea) 7건 포함)
 
 ## 최신 리포트
 - [`latest.md`](latest.md) — 가장 최근 스냅샷 전문
