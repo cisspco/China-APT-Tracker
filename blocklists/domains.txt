@@ -2,10 +2,14 @@
 admina.freeddns.org
 afsaces.accesscam.org
 akapush.us.to
+applebox.camdvr.org
+bggs.giize.com
+camcampkes.ddnsfree.com
 clients.brendns.workers.dev
 closed.theworkpc.com
 cpanel.netbar.org
 evilginx2.loseyourip.com
+googles.accesscam.org
 googles.ddnsfree.com
 jarzoda.net
 jsdelivrs.com
@@ -17,6 +21,8 @@ roller.johallow.workers.dev
 taiwantradoshows.com
 tradostw.com
 trcloudflare.com
+vmtools.camdvr.org
+vmtools.loseyourip.com
 wispy.geneva.workers.dev
 www.availableextens.com
 www.brighyt.com
