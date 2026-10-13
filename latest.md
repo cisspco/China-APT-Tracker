@@ -1,13 +1,13 @@
-# China State APT Campaign Snapshot — 2026-10-12 UTC
+# China State APT Campaign Snapshot — 2026-10-13 UTC
 
 ## 수집 상태
 - 페치 성공: [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재확인 — 신규 China/PRC-nexus 게시물 없음, 최신 게시물 11건 모두 비China 주제), [Microsoft Security Blog 위협 행위자 목록](https://www.microsoft.com/en-us/security/blog/threat-intelligence/threat-actors/)(재확인 — 최신 게시물 Star Blizzard(09-29)/Storm-2570(09-24)/EvilTokens(09-22), 전부 China 비관련)
-- 페치 차단(EGRESS_BLOCKED, 전부 ENOTFOUND): unit42.paloaltonetworks.com(Phantom Taurus 1차 출처 재시도), justice.gov(QTFY/QScan 1차 출처 재시도), blog.checkpoint.com(Qatar/Gulf China-nexus 캠페인), threatcluster.io, securelist.com(Kaspersky), www.group-ib.com — 신규 캠페인 후보 전부 1차 출처 미확보
+- 페치 차단(EGRESS_BLOCKED, 전부 ENOTFOUND): hendryadrian.com(Integrity Technology Group 세부보도 재보도), fbi.gov(1차 출처), blog.talosintelligence.com(UAT-11587/Antino 1차 출처), cyberpress.org, rewterz.com, cysecurity.news
 - 검증된 IOC: 신규 0개(누적 도메인 35·IP 25) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 0개(누적 26, 검증 11/미검증 15)
 
-6개 정기 WebSearch 쿼리(Chinese state-sponsored APT IOC, Volt/Salt/Silk/Flax Typhoon, APT31/40/41 MSS, Mustang Panda/i-Soon/Chengdu 404, CISA PRC advisory, PLA SSF cyber espionage)와 추가 타겟 검색(China-nexus/China-aligned 캠페인 10월, Salt/Volt Typhoon 10월 신규 권고)을 수행했습니다. 검색 결과는 대부분 기존 등재 캠페인의 재보도이거나 60일 창(2026-08-13~) 이전 활동(Qatar/Gulf China-nexus 캠페인 2026-03, UAT-7290 남아시아 통신사 캠페인, FamousSparrow 아제르바이잔 캠페인 2025-12~2026-02)이었습니다. FamousSparrow/SparroWocky는 이미 기존 등재분과 동일 그룹이며 신규 세부사항은 없습니다. 신규 캠페인 후보는 식별되지 않았습니다.
+6개 정기 WebSearch 쿼리(Chinese state-sponsored APT IOC, Volt/Salt/Silk/Flax Typhoon, APT31/40/41 MSS, Mustang Panda/i-Soon/Chengdu 404, CISA PRC advisory, PLA SSF cyber espionage)와 추가 타겟 검색(China-nexus/China-aligned 캠페인 10월, GTIG/MSTIC 사이트 한정 검색, FBI Integrity Technology Group 후속보도 추적)을 수행했습니다. 대부분 기존 등재 캠페인(Integrity Technology Group, TA419, BPFdoor/Rekoobe/AVERAT)의 재보도였으나, Cisco Talos가 UAT-11587(Antino 백도어) 캠페인에 대해 "약 350개 엔드포인트, 아시아 8개국" 규모로 세부사항을 확대 보도한 2026-10-01~04경 신규 기사(cyberpress.org, rewterz.com 등 재보도)를 확인했습니다. 1차 출처(blog.talosintelligence.com)와 재보도 매체 전량 EGRESS_BLOCKED로 미검증이나, 60일 창 내 재부상 캠페인으로 판단해 재등재했습니다. Integrity Technology Group 캠페인에 대해서도 SoftEther·DCSync·커스텀 메일탈취 봇 사용 및 과거 Raptor Train 보트넷 와해와의 연계, "탈취 이메일에 대한 제3자 접근 포털 운영" 주장 등 추가 세부사항을 검색으로 확인했으나(hendryadrian.com 재보도, 1차 출처 FBI 공동권고 및 thehackernews.com 전량 EGRESS_BLOCKED) 미검증 상태로만 기존 캠페인 설명에 보강했습니다. 신규 CVE·C2·해시는 확인되지 않았습니다.
 
-기존 16건 캠페인은 모두 60일 창(2026-08-13~) 내 유지됩니다(가장 오래된 Jewelbug 공개일 2026-08-13이 창의 경계에 위치하나 포함). 금일 신규 캠페인 없음. 7일 창(2026-10-05~) 기준 BPFdoor/Rekoobe/AVERAT(~10-05 추정)와 Integrity Technology Group(10-08)만 🔥 유지.
+Jewelbug(Earth Alux/REF7707/CL-STA-0049, 공개일 2026-08-13)은 60일 창(2026-08-14~) 경계를 벗어나 금일부로 "최근 캠페인" 절에서 제외합니다(그룹 메타데이터는 `groups.md`에 누적 유지). 나머지 14건 기존 캠페인은 모두 60일 창 내 유지, UAT-11587 재등재로 금일 총 15건입니다. 7일 창(2026-10-06~) 기준 Integrity Technology Group(10-08)만 🔥 유지 — BPFdoor/Rekoobe/AVERAT(~10-05 추정)는 7일 창을 벗어나 🔥 해제.
 
 ## 최근 캠페인 (최근 60일)
 
@@ -15,11 +15,19 @@
 - 귀속: 귀속 미확인 — 검색 결과 종합(1차 출처인 FBI/파트너국 공동권고 원문 미확보, 재보도만 확인): Integrity Technology Group은 과거 미 재무부(OFAC)가 "Flax Typhoon" 활동에 인프라를 제공한 혐의로 제재한 중국 기업이며, 영국도 별도 제재를 부과한 바 있음. 금일 공동권고 자체가 PLA 또는 MSS를 명시했는지는 1차 출처 미확보로 확인 불가. PLA/MSS로 승격하지 않음.
 - 대상: 동남아시아 정부기관, 법집행기관, 의료기관, 종교단체의 Microsoft 365/Exchange 계정
 - 초기 침투: 웹 취약점 스캐닝 및 Microsoft 365/Exchange 계정 비밀번호 추측(패스워드 스프레이 추정)으로 계정 접근 후, 1,300개 이상의 스크립트를 포함한 자체 제작 도구로 메일함을 대량 복제
-- 주요 도구/멀웨어: 명칭 미상의 메일함 대량 복제 툴(1,300개 이상 스크립트 포함)
+- 주요 도구/멀웨어: 명칭 미상의 메일함 대량 복제 툴(1,300개 이상 스크립트 포함). ⚠️(미검증, 금일 추가) 재보도 종합: SoftEther(터널링 도구 악용), DCSync(자격증명 덤핑 기법), 커스텀 메일탈취 봇 사용 및 과거 FBI가 와해한 Raptor Train 보트넷과의 연계 주장, 탈취 이메일에 대한 제3자 접근 포털 운영 주장 — 1차 출처(FBI 공동권고, thehackernews.com) 전량 EGRESS_BLOCKED로 미검증
 - 관측 시점: 공동권고 공개 2026-10-08, 실제 활동 기간은 1차 출처 미확보로 특정 불가
-- 출처: 검색 결과만 확인 — FBI 및 6개국 공동권고(1차 출처 미확보), 재보도(The Hacker News 등, 전량 EGRESS_BLOCKED)
+- 출처: 검색 결과만 확인 — FBI 및 6개국 공동권고(1차 출처 미확보), 재보도(The Hacker News, hendryadrian.com 등, 전량 EGRESS_BLOCKED)
 
-### BPFdoor/Rekoobe/AVERAT — 메일보안장비 위장 통신사 침투 캠페인 ⚠️ (미검증) 🔥
+### UAT-11587 (Antino 백도어) — 아시아 8개국 정부·정책·시민사회 기관 대상 재부상 캠페인 ⚠️ (미검증)
+- 귀속: 귀속 미확인 — 검색 결과 종합: "Talos assesses the actor as China-nexus with high confidence" (Cisco Talos 재보도 종합, 원문 blog.talosintelligence.com EGRESS_BLOCKED로 미검증). PLA/MSS 언급 없음.
+- 대상: 대만·인도·필리핀·캄보디아 등 아시아 8개국 정부·정책·시민사회 기관 — 금일 재보도는 약 350개 엔드포인트 침해로 세부 규모 확대 보도
+- 초기 침투: 대만 학계·시민단체 대상 Gmail 위장 스피어피싱으로 최초 식별
+- 주요 도구/멀웨어: Antino 백도어(Rust 컴파일) — Microsoft Graph API를 통해 Outlook/OneDrive 오브젝트를 C2 데드드롭으로 악용하는 네이티브 Microsoft 365 기반 통신 채널
+- 관측 시점: 2025-09~2026-10(캠페인 지속), 최초 공개 2026-07(미검증)/금일 2026-10-01~04경 세부사항 확대 재보도(미검증)
+- 출처: 검색 결과만 확인 — Cisco Talos(blog.talosintelligence.com, 차단), 재보도(cyberpress.org·rewterz.com, 전량 EGRESS_BLOCKED)
+
+### BPFdoor/Rekoobe/AVERAT — 메일보안장비 위장 통신사 침투 캠페인 ⚠️ (미검증)
 - 귀속: 귀속 미확인 — 검색 결과 종합(원문 rapid7.com EGRESS_BLOCKED로 미검증): "likely tied to Chinese-linked espionage against telecoms". PLA/MSS 언급 없음.
 - 대상: 한국·대만 통신사 — SpamSniper(한국 안티스팸 제품)·ShareTech(대만 메일보안장비) 운영사, Oracle 기반 통신 가입자/프로비저닝 플랫폼
 - 초기 침투: 불명(원문 미확보) — 네트워크 경계(메일보안 게이트웨이) 장비에 기존 공개된 리눅스 백도어 BPFDoor·Rekoobe를 재사용해 배치
@@ -123,14 +131,6 @@
 - 관측 시점: 2025년 말 최초 탐지 ~ 2026 (공개일 2026-08-19)
 - 출처: 검색 스니펫만 확인 — Bitdefender(차단)
 
-### Jewelbug (Earth Alux / REF7707 / CL-STA-0049) — 이중 운영(첩보+암호화폐 사기) ⚠️ (미검증)
-- 귀속: 귀속 미확인 — Symantec/security.com 표현(검색 스니펫): "China-based" threat group. PLA/MSS 언급 없음.
-- 대상: 아시아·중동 정부 부처(약 15개 부처 웹메일 침해 보도) 및 암호화폐/도박 사기 대상 불특정 다수
-- 초기 침투: 불명 — 정부 웹메일 침해와 암호화폐 사기가 동일 관제판(XG-Web)에서 운영
-- 주요 도구/멀웨어: XG-Web, Antino(윈도우 백도어), ClientKing(리눅스 백도어)
-- 관측 시점: 공개일 2026-08-13경
-- 출처: 검색 스니펫만 확인 — security.com(Symantec, 차단)
-
 ### CoolClient 백도어 커널모드 루트킷 강화 — HoneyMyte(Mustang Panda) ⚠️ (미검증)
 - 귀속: 귀속 미확인 — 검색 스니펫상 출처는 "APT group HoneyMyte (aka Mustang Panda)"로만 지칭. PLA/MSS 언급 없음.
 - 대상: 정부기관 및 민간 조직 — 러시아, 미얀마, 몽골, 파키스탄
@@ -140,7 +140,7 @@
 - 출처: 검색 스니펫만 확인 — Securelist(차단)
 
 ## 그룹 별칭 매핑
-전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 신규 행 없음.
+전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 UAT-11587 행의 마지막 관측일만 갱신(신규 행 없음).
 
 ## 악용 CVE (패치 우선순위)
 신규 없음. 전체 누적 목록은 [`exploited-cves.txt`](../exploited-cves.txt) 참조(26건, 검증 11 / 미검증 15).
@@ -158,16 +158,16 @@
 신규 없음. 기존 항목은 [`snapshots/2026-09-07.md`](2026-09-07.md) 참조.
 
 ## 이번 실행 변경사항
-- 신규 캠페인: 없음
+- 신규 캠페인: UAT-11587(Antino 백도어) 재등재 — Cisco Talos 캠페인에 대해 2026-10-01~04경 "약 350개 엔드포인트, 아시아 8개국"으로 규모 확대 재보도(미검증, 1차 출처 blog.talosintelligence.com 차단)를 근거로 60일 창 내 캠페인으로 재등재
 - 신규 IOC: 없음
-- 제거: 없음
+- 제거: Jewelbug(Earth Alux/REF7707/CL-STA-0049) — 공개일 2026-08-13이 금일 기준 60일 창(2026-08-14~) 밖으로 이동하여 "최근 캠페인" 절에서 제외(그룹 메타데이터는 `groups.md`에 누적 유지, IOC 삭제 아님)
 - 승격(미검증→검증): 없음
 - 귀속 변경: 없음
 - 신규 CVE: 없음
-- 신규 그룹(표 등재): 없음
-- 검토 후 제외: Qatar/Gulf China-nexus 캠페인(Check Point, 2026-03, 60일 창 이전), UAT-7290 남아시아 통신사 캠페인(공개일 불명확, 1차 출처 미확보), FamousSparrow 아제르바이잔 캠페인(2025-12~2026-02, 60일 창 이전 — 단 FamousSparrow/SparroWocky 자체는 이미 등재된 캠페인과 동일 그룹)
-- 프로브: unit42.paloaltonetworks.com, justice.gov, blog.checkpoint.com, threatcluster.io, securelist.com, www.group-ib.com — 전부 ENOTFOUND(EGRESS_BLOCKED)
-- 비고: 기존 16건 캠페인 모두 60일 창(2026-08-13~) 내 유지, 신규 캠페인 없음. 7일 창(2026-10-05~) 기준 BPFdoor/Rekoobe/AVERAT(~10-05 추정)와 Integrity Technology Group(10-08)만 🔥 유지.
+- 신규 그룹(표 등재): 없음 — UAT-11587 기존 행의 마지막 관측일만 2026-10로 갱신
+- 검토 후 보강(미검증, IOC 미반영): Integrity Technology Group 캠페인에 SoftEther·DCSync·커스텀 메일탈취 봇·Raptor Train 보트넷 연계·제3자 접근 포털 운영 주장 세부사항 추가(1차 출처 FBI 공동권고 및 thehackernews.com·hendryadrian.com 전량 EGRESS_BLOCKED로 미검증, 구체 C2·해시 미노출)
+- 프로브: hendryadrian.com, fbi.gov, blog.talosintelligence.com, cyberpress.org, rewterz.com, cysecurity.news — 전부 ENOTFOUND(EGRESS_BLOCKED)
+- 비고: Jewelbug 제외·UAT-11587 재등재로 금일 "최근 캠페인" 총 15건(전일 16건). 7일 창(2026-10-06~) 기준 Integrity Technology Group(10-08)만 🔥 유지, BPFdoor/Rekoobe/AVERAT(~10-05 추정)는 7일 창을 벗어나 🔥 해제.
 
 ## 차단 운영 포맷 (복붙용)
 
@@ -240,11 +240,11 @@ www.twisinbeth.com
 ```
 
 ## 출처
-- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-10-12 조회 — fetched(목록 재확인, 신규 China/PRC-nexus 게시물 없음)
-- [Microsoft Security Blog 위협 행위자 목록](https://www.microsoft.com/en-us/security/blog/threat-intelligence/threat-actors/) — Microsoft — 2026-10-12 조회 — fetched(목록 재확인, 최신 게시물 Star Blizzard/Storm-2570/EvilTokens, 전부 China 비관련)
-- unit42.paloaltonetworks.com(Phantom Taurus 1차 출처) — 2026-10-12 조회 — blocked(ENOTFOUND)
-- justice.gov(QTFY/QScan 1차 출처) — 2026-10-12 조회 — blocked(ENOTFOUND)
-- blog.checkpoint.com(Qatar/Gulf China-nexus 캠페인) — 2026-10-12 조회 — blocked(ENOTFOUND)
-- threatcluster.io — 2026-10-12 조회 — blocked(ENOTFOUND)
-- securelist.com — 2026-10-12 조회 — blocked(ENOTFOUND)
-- www.group-ib.com — 2026-10-12 조회 — blocked(ENOTFOUND)
+- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-10-13 조회 — fetched(목록 재확인, 신규 China/PRC-nexus 게시물 없음)
+- [Microsoft Security Blog 위협 행위자 목록](https://www.microsoft.com/en-us/security/blog/threat-intelligence/threat-actors/) — Microsoft — 2026-10-13 조회 — fetched(목록 재확인, 최신 게시물 Star Blizzard/Storm-2570/EvilTokens, 전부 China 비관련)
+- hendryadrian.com(Integrity Technology Group 세부보도 재보도) — 2026-10-13 조회 — blocked(ENOTFOUND)
+- fbi.gov(Integrity Technology Group 1차 출처) — 2026-10-13 조회 — blocked(ENOTFOUND)
+- blog.talosintelligence.com(UAT-11587/Antino 1차 출처) — 2026-10-13 조회 — blocked(ENOTFOUND)
+- cyberpress.org — 2026-10-13 조회 — blocked(ENOTFOUND)
+- rewterz.com — 2026-10-13 조회 — blocked(ENOTFOUND)
+- cysecurity.news — 2026-10-13 조회 — blocked(ENOTFOUND)
