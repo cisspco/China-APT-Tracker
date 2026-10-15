@@ -1,13 +1,13 @@
-# China State APT Campaign Snapshot — 2026-10-14 UTC
+# China State APT Campaign Snapshot — 2026-10-15 UTC
 
 ## 수집 상태
-- 페치 성공: [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재확인 — 신규 게시물 11건 모두 비China/PRC-nexus 주제, 최신은 BREEZE COMET(브라질 금전목적)·UNC6671(비싱)·러시아 대상 캠페인 등), [Microsoft Security Blog 위협 행위자 목록](https://www.microsoft.com/en-us/security/blog/threat-intelligence/threat-actors/)(재확인 — 최신 게시물 Star Blizzard(09-29)/Storm-2570(09-24)/EvilTokens(09-22), 전부 China 비관련), [Updated Cyber Threat Actor Naming System](https://cloud.google.com/blog/topics/threat-intelligence/updated-cyber-threat-actor-naming-system)(Google GTIG — 직접 재확인, 2026-07-24 발표 명명체계 원문 재검증, `groups.md`에 이미 반영된 기존 내용과 일치하여 신규 변경 없음)
-- 페치 차단(EGRESS_BLOCKED, 전부 ENOTFOUND): thehackernews.com(UAT-11587/Antino 및 Integrity Technology Group 1차 보도), socradar.io(APT31/TA412 제로데이 IOC 리포트), blog.talosintelligence.com(UAT-11587/Antino 1차 출처), gurucul.com(Nezha 툴 리포트 — China-nexus 범죄형 활동으로 국가배후 캠페인 해당 안 될 가능성 높음, 검증 불가로 미반영)
+- 페치 성공: [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재확인 — 게시물 11건, 전일과 동일한 목록, 신규 China/PRC-nexus 게시물 없음), [Microsoft Security Blog 위협 행위자 목록](https://www.microsoft.com/en-us/security/blog/threat-intelligence/threat-actors/)(재확인 — 최신 게시물은 2026-10-14 "The hidden network: Inside the phishing infrastructure ecosystem powering global cybercrime"로, 중국어 사용 사이버범죄 생태계를 다루나 국가배후 그룹 귀속이 없어 본 트래커 범위(국가배후 캠페인) 제외. 그 다음은 Star Blizzard(09-29)/Storm-2570(09-24)/EvilTokens(09-22)로 전부 China 비관련)
+- 페치 차단(EGRESS_BLOCKED, 전부 ENOTFOUND): thehackernews.com, www.bleepingcomputer.com, www.sygnia.co(Fire Ant 원문 — BridgeAgent 툴명 검증 시도), threatcluster.io(Fire Ant 재보도 — 동일 목적 시도)
 - 검증된 IOC: 신규 0개(누적 도메인 35·IP 25) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 0개(누적 26, 검증 11/미검증 15)
 
-6개 정기 WebSearch 쿼리와 추가 타겟 검색(GTIG/MSTIC 블로그 사이트 한정 검색, "China-nexus"/"PRC-nexus" 최신 리포트 검색, 10월 13~14일자 뉴스 검색)을 수행했습니다. 신규로 발견된 유일한 항목은 CrowdStrike가 보도한 한국 금융기관 대상 "ARTEX" 캠페인(2026-09말~10월초)이었으나, 원 출처가 "금전적 동기"로 평가하고 특정 국가배후 그룹에 귀속하지 않았으며("moderate confidence 중국어 사용자" 수준) 본 트래커의 범위(국가배후 캠페인)에 해당하지 않아 제외했습니다. 그 외에는 기존 추적 중인 15건 캠페인(Integrity Technology Group, UAT-11587/Antino, BPFdoor/Rekoobe/AVERAT, TA419, NeedyMantis, Phantom Taurus, Red Heron, UTA0565, SparroWocky, CC Switch, BlueMoon, RAVINE/BASIN CASTLE·UNC6508, Fire Ant, QTFY, SilkParasite, CoolClient)의 재보도만 확인되었으며 신규 세부사항, C2, 해시는 발견되지 않았습니다. GTIG 명명체계 발표 원문을 직접 재확인했으나(`updated-cyber-threat-actor-naming-system`) 내용이 `groups.md`에 이미 기록된 2026-07-24 명명체계와 완전히 일치하여 갱신 사항이 없습니다.
+6개 정기 WebSearch 쿼리와 추가 타겟 검색(GTIG/MSTIC 블로그 사이트 한정 검색, "China-nexus"/"PRC-nexus" 최신 리포트 검색, 10월 14~15일자 뉴스 검색)을 수행했습니다. 검색 스니펫에서 Fire Ant 캠페인의 신규 툴명으로 추정되는 "BridgeAgent"가 언급되어 1차 출처(sygnia.co)와 재보도(threatcluster.io) 양쪽 모두 재검증을 시도했으나 둘 다 EGRESS_BLOCKED로 확인 불가하여 그룹 별칭 매핑에 반영하지 않았습니다. 그 외에는 기존 추적 중인 15건 캠페인(Integrity Technology Group, UAT-11587/Antino, BPFdoor/Rekoobe/AVERAT, TA419, NeedyMantis, Phantom Taurus, Red Heron, UTA0565, SparroWocky, CC Switch, BlueMoon, RAVINE/BASIN CASTLE·UNC6508, Fire Ant, QTFY, SilkParasite, CoolClient)의 재보도만 확인되었으며 신규 세부사항, C2, 해시는 발견되지 않았습니다.
 
-전체 15건 캠페인 모두 60일 창(2026-08-15~) 내에 유지됩니다(가장 오래된 CoolClient/HoneyMyte는 공개일 2026-08-17로 2026-10-16까지 유지 예정). 7일 창(2026-10-08~) 기준 Integrity Technology Group(공개 10-08)만 🔥 유지.
+전체 15건 캠페인 모두 60일 창(2026-08-16~) 내에 유지됩니다(가장 오래된 CoolClient/HoneyMyte는 공개일 2026-08-17로 2026-10-16까지 유지 예정). 7일 창(2026-10-08~) 기준 Integrity Technology Group(공개 10-08)만 🔥 유지(경계값, 다음 실행부터 제외 예정).
 
 ## 최근 캠페인 (최근 60일)
 
@@ -108,10 +108,10 @@
 - 출처: [From Prompting to Autonomy: The Evolution of Adversarial AI](https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai) — Google GTIG — 2026-09-08 — fetched(이전 실행)
 
 ### Fire Ant — Cisco IOS XR 라우터 침해·로그 은닉 캠페인 ⚠️ (미검증)
-- 귀속: 귀속 미확인 — 검색 스니펫상 Sygnia 표현: "China-nexus threat actor". UNC3886과 강한 오버랩. PLA/MSS 언급 없음. 1차 출처(sygnia.co) 전량 EGRESS_BLOCKED로 미검증.
+- 귀속: 귀속 미확인 — 검색 스니펫상 Sygnia 표현: "China-nexus threat actor". UNC3886과 강한 오버랩. PLA/MSS 언급 없음. 1차 출처(sygnia.co) 금일 재시도도 EGRESS_BLOCKED로 미검증.
 - 대상: Cisco IOS XR 라우터, TACACS 서버, 리눅스 관리 호스트
 - 초기 침투: 불명 — 비정상 GRE 터널 인터페이스로 최초 발견
-- 주요 도구/멀웨어: 명칭 미상의 신규 공격 도구, TacTap(tac_plus 프로세스에 악성 라이브러리 로드)
+- 주요 도구/멀웨어: TacTap(tac_plus 프로세스에 악성 라이브러리 로드). ⚠️(미검증) 검색 스니펫에 "BridgeAgent"라는 명칭이 추가로 언급되었으나 1차 출처(sygnia.co)와 재보도(threatcluster.io) 모두 금일 EGRESS_BLOCKED로 검증 불가하여 미반영
 - 관측 시점: 2026년, Sygnia 2026-08-30/08-31 공개
 - 출처: 검색 스니펫만 확인 — Sygnia(sygnia.co, 차단)
 
@@ -140,7 +140,7 @@
 - 출처: 검색 스니펫만 확인 — Securelist(차단)
 
 ## 그룹 별칭 매핑
-전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 신규 행·귀속 변경 없음(GTIG 명명체계 원문 재확인 결과 기존 기록과 일치).
+전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 신규 행·귀속 변경 없음(Fire Ant "BridgeAgent" 툴명 검증 시도했으나 EGRESS_BLOCKED로 미반영).
 
 ## 악용 CVE (패치 우선순위)
 신규 없음. 전체 누적 목록은 [`exploited-cves.txt`](../exploited-cves.txt) 참조(26건, 검증 11 / 미검증 15).
@@ -158,15 +158,15 @@
 신규 없음. 기존 항목은 [`snapshots/2026-09-07.md`](2026-09-07.md) 참조.
 
 ## 이번 실행 변경사항
-- 신규 캠페인: 없음 — CrowdStrike "ARTEX" 한국 금융기관 캠페인(2026-09말~10월초)을 검토했으나, 원 출처가 금전적 동기로 평가하고 국가배후 그룹에 귀속하지 않아("moderate confidence 중국어 사용자") 제외
+- 신규 캠페인: 없음
 - 신규 IOC: 없음
-- 제거: 없음 — 15건 캠페인 모두 60일 창(2026-08-15~) 내 유지
+- 제거: 없음 — 15건 캠페인 모두 60일 창(2026-08-16~) 내 유지
 - 승격(미검증→검증): 없음
 - 귀속 변경: 없음
 - 신규 CVE: 없음
-- 신규 그룹(표 등재): 없음 — GTIG "Updated Cyber Threat Actor Naming System" 원문을 직접 재확인했으나 `groups.md`에 이미 반영된 2026-07-24 명명체계와 완전히 일치해 갱신 사항 없음
-- 프로브: thehackernews.com, socradar.io, blog.talosintelligence.com, gurucul.com — 전부 ENOTFOUND(EGRESS_BLOCKED)
-- 비고: 7일 창(2026-10-08~) 기준 Integrity Technology Group만 🔥 유지. 다음 실행(2026-10-16경)부터 CoolClient(HoneyMyte, 공개 2026-08-17)가 60일 창 밖으로 이동할 예정.
+- 신규 그룹(표 등재): 없음 — Fire Ant의 추정 신규 툴명 "BridgeAgent"를 확인하려 했으나 1차 출처(sygnia.co)·재보도(threatcluster.io) 모두 금일 EGRESS_BLOCKED로 검증 불가
+- 프로브: thehackernews.com, www.bleepingcomputer.com, www.sygnia.co, threatcluster.io — 전부 ENOTFOUND(EGRESS_BLOCKED)
+- 비고: 7일 창(2026-10-08~) 기준 Integrity Technology Group만 🔥 유지(경계값, 2026-10-16 실행부터 제외 예정). 60일 창 기준 CoolClient(HoneyMyte, 공개 2026-08-17)는 2026-10-16 실행까지 유지되며 2026-10-17 실행부터 창 밖으로 이동할 예정.
 
 ## 차단 운영 포맷 (복붙용)
 
@@ -239,10 +239,9 @@ www.twisinbeth.com
 ```
 
 ## 출처
-- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-10-14 조회 — fetched(목록 재확인, 신규 China/PRC-nexus 게시물 없음)
-- [Microsoft Security Blog 위협 행위자 목록](https://www.microsoft.com/en-us/security/blog/threat-intelligence/threat-actors/) — Microsoft — 2026-10-14 조회 — fetched(목록 재확인, 최신 게시물 Star Blizzard/Storm-2570/EvilTokens, 전부 China 비관련)
-- [Updated Cyber Threat Actor Naming System](https://cloud.google.com/blog/topics/threat-intelligence/updated-cyber-threat-actor-naming-system) — Google GTIG — 2026-10-14 조회 — fetched(2026-07-24 발표 명명체계 원문 재확인, `groups.md` 기존 기록과 일치, 신규 변경 없음)
-- thehackernews.com(UAT-11587/Antino, Integrity Technology Group 1차 보도) — 2026-10-14 조회 — blocked(ENOTFOUND)
-- socradar.io(APT31/TA412 제로데이 IOC) — 2026-10-14 조회 — blocked(ENOTFOUND)
-- blog.talosintelligence.com(UAT-11587/Antino 1차 출처) — 2026-10-14 조회 — blocked(ENOTFOUND)
-- gurucul.com(Nezha 툴 리포트) — 2026-10-14 조회 — blocked(ENOTFOUND)
+- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-10-15 조회 — fetched(목록 재확인, 전일과 동일, 신규 China/PRC-nexus 게시물 없음)
+- [Microsoft Security Blog 위협 행위자 목록](https://www.microsoft.com/en-us/security/blog/threat-intelligence/threat-actors/) — Microsoft — 2026-10-15 조회 — fetched(목록 재확인, 신규 게시물 "The hidden network"(10-14)는 중국어 사용 사이버범죄 생태계로 국가배후 미귀속, 범위 제외)
+- thehackernews.com(Integrity Technology Group 등 1차 보도) — 2026-10-15 조회 — blocked(ENOTFOUND)
+- www.bleepingcomputer.com(최신 China APT 뉴스 탐색) — 2026-10-15 조회 — blocked(ENOTFOUND)
+- www.sygnia.co(Fire Ant 1차 출처 — BridgeAgent 검증 시도) — 2026-10-15 조회 — blocked(ENOTFOUND)
+- threatcluster.io(Fire Ant 재보도 — BridgeAgent 검증 시도) — 2026-10-15 조회 — blocked(ENOTFOUND)
