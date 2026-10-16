@@ -1,82 +1,90 @@
-# China State APT Campaign Snapshot — 2026-10-15 UTC
+# China State APT Campaign Snapshot — 2026-10-16 UTC
 
 ## 수집 상태
-- 페치 성공: [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재확인 — 게시물 11건, 전일과 동일한 목록, 신규 China/PRC-nexus 게시물 없음), [Microsoft Security Blog 위협 행위자 목록](https://www.microsoft.com/en-us/security/blog/threat-intelligence/threat-actors/)(재확인 — 최신 게시물은 2026-10-14 "The hidden network: Inside the phishing infrastructure ecosystem powering global cybercrime"로, 중국어 사용 사이버범죄 생태계를 다루나 국가배후 그룹 귀속이 없어 본 트래커 범위(국가배후 캠페인) 제외. 그 다음은 Star Blizzard(09-29)/Storm-2570(09-24)/EvilTokens(09-22)로 전부 China 비관련)
-- 페치 차단(EGRESS_BLOCKED, 전부 ENOTFOUND): thehackernews.com, www.bleepingcomputer.com, www.sygnia.co(Fire Ant 원문 — BridgeAgent 툴명 검증 시도), threatcluster.io(Fire Ant 재보도 — 동일 목적 시도)
-- 검증된 IOC: 신규 0개(누적 도메인 35·IP 25) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 0개(누적 26, 검증 11/미검증 15)
+- 페치 성공: [Microsoft Security Blog Typhoon 태그 목록](https://www.microsoft.com/en-us/security/blog/tag/typhoon/), [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence), [Defending Against Active Exploitation of Citrix NetScaler ADC and Gateway Appliances](https://cloud.google.com/blog/topics/threat-intelligence/defending-against-active-exploitation-of-citrix-netscaler-adc-and-gateway-appliances)(국가 귀속 표현 없어 미채택), [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust)(신규 채택)
+- 페치 차단(EGRESS_BLOCKED/ENOTFOUND): www.theregister.com
+- 검증된 IOC: 신규 2개(SHA-256 해시, 누적 도메인 35·IP 25·해시 61) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 1개(누적 27, 검증 12/미검증 15)
 
-6개 정기 WebSearch 쿼리와 추가 타겟 검색(GTIG/MSTIC 블로그 사이트 한정 검색, "China-nexus"/"PRC-nexus" 최신 리포트 검색, 10월 14~15일자 뉴스 검색)을 수행했습니다. 검색 스니펫에서 Fire Ant 캠페인의 신규 툴명으로 추정되는 "BridgeAgent"가 언급되어 1차 출처(sygnia.co)와 재보도(threatcluster.io) 양쪽 모두 재검증을 시도했으나 둘 다 EGRESS_BLOCKED로 확인 불가하여 그룹 별칭 매핑에 반영하지 않았습니다. 그 외에는 기존 추적 중인 15건 캠페인(Integrity Technology Group, UAT-11587/Antino, BPFdoor/Rekoobe/AVERAT, TA419, NeedyMantis, Phantom Taurus, Red Heron, UTA0565, SparroWocky, CC Switch, BlueMoon, RAVINE/BASIN CASTLE·UNC6508, Fire Ant, QTFY, SilkParasite, CoolClient)의 재보도만 확인되었으며 신규 세부사항, C2, 해시는 발견되지 않았습니다.
+6개 정기 WebSearch 쿼리와 `site:cloud.google.com`/`site:microsoft.com` 사이트 한정 검색, "China" "APT"/"Typhoon" 2026-08~10월 날짜 한정 검색을 수행했습니다. Google Cloud/GTIG 블로그 목록에서 2026-10-15 공개된 신규 게시물 "ARMORY CASTLE Exploits BeyondTrust"를 확인·페치한 결과, GTIG가 "ARMORY CASTLE, a suspected PRC-nexus espionage threat actor (formerly tracked as UNC5221)"로 명시한 BeyondTrust Remote Support 제로데이(CVE-2026-102764) 익스플로잇 캠페인을 확인해 신규 반영했습니다. 같은 날 공개된 또 다른 GTIG 원문(Citrix NetScaler CVE-2026-88771/88772, WHIPSHOT/SLAPSHOT)도 재확인했으나 "China"/"PRC"/"state-sponsored" 등 국가 귀속 표현이 전혀 없어("threat actor"로만 서술) 본 트래커 채택 기준(명시적 중국 국가배후 귀속) 미충족으로 제외했습니다. 그 외에는 기존 추적 중인 14건 캠페인(UAT-11587/Antino, BPFdoor/Rekoobe/AVERAT, TA419, NeedyMantis, Phantom Taurus, Red Heron, UTA0565, SparroWocky, CC Switch, BlueMoon, RAVINE·BASIN CASTLE/UNC6508, Fire Ant, QTFY, SilkParasite, CoolClient — Integrity Technology Group 포함 총 15건)의 재보도만 확인되었으며 신규 세부사항, C2, 해시는 발견되지 않았습니다.
 
-전체 15건 캠페인 모두 60일 창(2026-08-16~) 내에 유지됩니다(가장 오래된 CoolClient/HoneyMyte는 공개일 2026-08-17로 2026-10-16까지 유지 예정). 7일 창(2026-10-08~) 기준 Integrity Technology Group(공개 10-08)만 🔥 유지(경계값, 다음 실행부터 제외 예정).
+전체 16건 캠페인 중 15건이 60일 창(2026-08-17~) 내에 유지됩니다(CoolClient/HoneyMyte는 공개일 2026-08-17로 오늘이 창의 마지막 날이며, 2026-10-17 실행부터 창 밖으로 이동 예정). 7일 창(2026-10-10~) 기준 ARMORY CASTLE(공개 10-15)만 🔥, Integrity Technology Group(10-08)은 경계를 벗어나 🔥 해제되었습니다.
 
 ## 최근 캠페인 (최근 60일)
 
-### Integrity Technology Group 연계 — 동남아 정부기관 메일함 대량 복제 (FBI 등 7개국 공동권고) ⚠️ (미검증) 🔥
-- 귀속: 귀속 미확인 — 검색 결과 종합(1차 출처인 FBI/파트너국 공동권고 원문 미확보, 재보도만 확인): Integrity Technology Group은 과거 미 재무부(OFAC)가 "Flax Typhoon" 활동에 인프라를 제공한 혐의로 제재한 중국 기업이며, 영국도 별도 제재를 부과한 바 있음. 금일 공동권고 자체가 PLA 또는 MSS를 명시했는지는 1차 출처 미확보로 확인 불가. PLA/MSS로 승격하지 않음.
+### ARMORY CASTLE(구 UNC5221) — BeyondTrust Remote Support 제로데이 익스플로잇, SAWFLY·BARECLAW 🔥
+- 귀속: 귀속 미확인 — 원문 인용: "ARMORY CASTLE, a suspected PRC-nexus espionage threat actor (formerly tracked as UNC5221)" (GTIG, 검증). PLA/MSS 명시 없음.
+- 대상: 불명 — 원문에 특정 산업·국가 미기재(피해 조직 수·분야 비공개)
+- 초기 침투: BeyondTrust Remote Support(구 Bomgar, 26.2.3 이하 버전) 제로데이 CVE-2026-102764(인증 없는 임의 파일 업로드) 익스플로잇
+- 주요 도구/멀웨어: SAWFLY(PHP 웹셸, `mangoapi.php`), BARECLAW(SOCKS5-over-WebSocket 터널러, `ingredi_ws`), 스테이징 웹셸 `app_84304470%2Ephp`; `bt-secrets` 탈취, `zz-root-persist` 지속성 스크립트, `/usr/bin/dbus-authd` SUID 셸 사본
+- 관측 시점: 제로데이 익스플로잇 2026년 8월 말, BeyondTrust 2026-10-09 SaaS 테넌트 패치, 2026-10-15 취약점 공개 및 GTIG 보고서 발행. ARMORY CASTLE(구 UNC5221)은 최소 2023-10부터 활동
+- 출처: [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched
+
+### Integrity Technology Group 연계 — 동남아 정부기관 메일함 대량 복제 (FBI 등 7개국 공동권고) ⚠️ (미검증)
+- 귀속: 귀속 미확인 — 검색 결과 종합(1차 출처인 FBI/파트너국 공동권고 원문 미확보, 재보도만 확인): Integrity Technology Group은 과거 미 재무부(OFAC)가 "Flax Typhoon" 활동에 인프라를 제공한 혐의로 제재한 중국 기업이며, 영국도 별도 제재를 부과한 바 있음. 공동권고 자체가 PLA 또는 MSS를 명시했는지는 1차 출처 미확보로 확인 불가. PLA/MSS로 승격하지 않음.
 - 대상: 동남아시아 정부기관, 법집행기관, 의료기관, 종교단체의 Microsoft 365/Exchange 계정
 - 초기 침투: 웹 취약점 스캐닝 및 Microsoft 365/Exchange 계정 비밀번호 추측(패스워드 스프레이 추정)으로 계정 접근 후, 1,300개 이상의 스크립트를 포함한 자체 제작 도구로 메일함을 대량 복제
-- 주요 도구/멀웨어: 명칭 미상의 메일함 대량 복제 툴(1,300개 이상 스크립트 포함). ⚠️(미검증) 재보도 종합: SoftEther(터널링 도구 악용), DCSync(자격증명 덤핑 기법), 커스텀 메일탈취 봇 사용 및 과거 FBI가 와해한 Raptor Train 보트넷과의 연계 주장, 탈취 이메일에 대한 제3자 접근 포털 운영 주장 — 1차 출처(FBI 공동권고, thehackernews.com) 전량 EGRESS_BLOCKED로 미검증
+- 주요 도구/멀웨어: 명칭 미상의 메일함 대량 복제 툴(1,300개 이상 스크립트 포함). ⚠️(미검증) 재보도 종합: SoftEther(터널링 도구 악용), DCSync(자격증명 덤핑 기법), 커스텀 메일탈취 봇 사용 및 과거 FBI가 와해한 Raptor Train 보트넷과의 연계 주장
 - 관측 시점: 공동권고 공개 2026-10-08, 실제 활동 기간은 1차 출처 미확보로 특정 불가
-- 출처: 검색 결과만 확인 — FBI 및 6개국 공동권고(1차 출처 미확보), 재보도(The Hacker News — 금일 재시도도 EGRESS_BLOCKED, hendryadrian.com 등)
+- 출처: 검색 결과만 확인 — FBI 및 6개국 공동권고(1차 출처 미확보), 재보도(The Hacker News 등, 전량 EGRESS_BLOCKED)
 
 ### UAT-11587 (Antino 백도어) — 아시아 8개국 정부·정책·시민사회 기관 대상 재부상 캠페인 ⚠️ (미검증)
-- 귀속: 귀속 미확인 — 검색 결과 종합: "Talos assesses the actor as China-nexus with high confidence" (Cisco Talos 재보도 종합, 원문 blog.talosintelligence.com 금일 재시도도 EGRESS_BLOCKED로 미검증). PLA/MSS 언급 없음.
+- 귀속: 귀속 미확인 — 검색 결과 종합: "Talos assesses the actor as China-nexus with high confidence" (Cisco Talos 재보도 종합, 원문 EGRESS_BLOCKED로 미검증). PLA/MSS 언급 없음.
 - 대상: 대만·인도·필리핀·캄보디아 등 아시아 8개국 정부·정책·시민사회 기관 — 약 350개 엔드포인트 침해 보도
 - 초기 침투: 대만 학계·시민단체 대상 Gmail 위장 스피어피싱으로 최초 식별
-- 주요 도구/멀웨어: Antino 백도어(Rust 컴파일) — Microsoft Graph API를 통해 Outlook/OneDrive 오브젝트를 C2 데드드롭으로 악용하는 네이티브 Microsoft 365 기반 통신 채널
+- 주요 도구/멀웨어: Antino 백도어(Rust 컴파일) — Microsoft Graph API를 통해 Outlook/OneDrive 오브젝트를 C2 데드드롭으로 악용
 - 관측 시점: 2025-09~2026-10(캠페인 지속), 최초 공개 2026-07(미검증)/2026-10-01~04경 세부사항 확대 재보도(미검증)
-- 출처: 검색 결과만 확인 — Cisco Talos(blog.talosintelligence.com, 차단), 재보도(The Hacker News·cyberpress.org, 전량 EGRESS_BLOCKED)
+- 출처: 검색 결과만 확인 — Cisco Talos(blog.talosintelligence.com, 차단), 재보도(전량 EGRESS_BLOCKED)
 
 ### BPFdoor/Rekoobe/AVERAT — 메일보안장비 위장 통신사 침투 캠페인 ⚠️ (미검증)
-- 귀속: 귀속 미확인 — 검색 결과 종합(원문 rapid7.com EGRESS_BLOCKED로 미검증): "likely tied to Chinese-linked espionage against telecoms". PLA/MSS 언급 없음.
+- 귀속: 귀속 미확인 — 검색 결과 종합(원문 EGRESS_BLOCKED로 미검증): "likely tied to Chinese-linked espionage against telecoms". PLA/MSS 언급 없음.
 - 대상: 한국·대만 통신사 — SpamSniper(한국 안티스팸 제품)·ShareTech(대만 메일보안장비) 운영사, Oracle 기반 통신 가입자/프로비저닝 플랫폼
 - 초기 침투: 불명(원문 미확보) — 네트워크 경계(메일보안 게이트웨이) 장비에 기존 공개된 리눅스 백도어 BPFDoor·Rekoobe를 재사용해 배치
-- 주요 도구/멀웨어: BPFDoor(변종), BPF 기반 Rekoobe 빌드, AVERAT(신규 명명, 드로퍼+임플란트 6종 빌드) — AVERAT은 TCP 25번 포트로 접속해 EHLO/STARTTLS SMTP 핸드셰이크를 수행한 뒤 자체 암호화 세션을 열어 정상 메일 트래픽처럼 위장. Rekoobe 샘플은 출발지·목적지 포트가 모두 25인 트래픽만 감시하며 한국 안티스팸 제품 SpamSniper의 구성요소 이름으로 프로세스를 위장
+- 주요 도구/멀웨어: BPFDoor(변종), BPF 기반 Rekoobe 빌드, AVERAT(신규 명명, 드로퍼+임플란트 6종 빌드)
 - 관측 시점: 공개 2026-10-05경(추정, 정확한 날짜 원문 미확보)
-- 출처: 검색 결과만 확인 — Rapid7(rapid7.com, 차단), 재보도(infosecurity-magazine.com·mssp alert·scworld.com 등)
+- 출처: 검색 결과만 확인 — Rapid7(차단), 재보도(전량 EGRESS_BLOCKED)
 
 ### TA419 — 미국 AI 정책 전문가 대상 자격증명 피싱 ⚠️ (미검증)
-- 귀속: 귀속 미확인 — 검색 결과 종합(원문 proofpoint.com EGRESS_BLOCKED로 미검증): "China-aligned". PLA/MSS 언급 없음.
+- 귀속: 귀속 미확인 — 검색 결과 종합(원문 EGRESS_BLOCKED로 미검증): "China-aligned". PLA/MSS 언급 없음.
 - 대상: 미국 AI 정책 전문가 — 싱크탱크, 대학, 법률사무소 소속 소수 개인(10명 미만)
-- 초기 침투: 유명 AI 정책가(전 백악관 OSTP 부국장 Lynne Parker, 경제학자 Heidi Crebo-Rediker 등) 및 Anthropic 직원 사칭 이메일로 "AI Policy Advisory Committee" 참여·상원 외교위 AI 수출통제 보고서 기고를 제안, 회신 유도 후 단축 URL로 여러 사이트를 경유시켜 가짜 Microsoft OneDrive 로그인 페이지로 연결
-- 주요 도구/멀웨어: Frameless BitB(오픈소스 브라우저-인-브라우저 피싱 툴의 수정판) — 웹페이지 내에 가짜 브라우저창을 그려 정상 로그인창처럼 위장
-- 관측 시점: 2026-02(Anthropic 직원 사칭 1차 캠페인) · 2026-07-08(AI Policy Advisory Committee 사칭 2차 캠페인) ~ 현재, 공개 2026-10-02경
-- 출처: 검색 결과만 확인 — Proofpoint(proofpoint.com, 차단), 재보도(betanews.com·cyberscoop.com 등, 차단)
+- 초기 침투: 유명 AI 정책가 및 Anthropic 직원 사칭 이메일로 "AI Policy Advisory Committee" 참여를 제안, 회신 유도 후 단축 URL 경유시켜 가짜 Microsoft OneDrive 로그인 페이지로 연결
+- 주요 도구/멀웨어: Frameless BitB(오픈소스 브라우저-인-브라우저 피싱 툴의 수정판)
+- 관측 시점: 2026-02(1차 캠페인) · 2026-07-08(2차 캠페인) ~ 현재, 공개 2026-10-02경
+- 출처: 검색 결과만 확인 — Proofpoint(차단), 재보도(전량 차단)
 
 ### NeedyMantis — Storm-3069 포스트-컴프로마이즈 악성코드 프레임워크
-- 귀속: 귀속 미확인 — 원문 인용: "While Microsoft assesses the activity originates from China, it has not attributed Storm-3069 to a Chinese nation-state actor." PLA/MSS 언급 없음, "China-nexus" 등 일반 연계 표현도 사용하지 않음(Microsoft, 검증)
+- 귀속: 귀속 미확인 — 원문 인용: "While Microsoft assesses the activity originates from China, it has not attributed Storm-3069 to a Chinese nation-state actor." PLA/MSS 언급 없음(Microsoft, 검증)
 - 대상: 통신사, 대학, 의료 비영리단체, 국제기구, 정부 계약업체
-- 초기 침투: 해당 없음 — NeedyMantis는 침입 수단이 아닌 포스트-컴프로마이즈(발판 확보 이후) 단계에서만 배포됨. 2026-05 DAEMON Tools 공급망 침해 관련 IOC를 추적하는 과정에서 발견되었으며, Impacket 툴킷을 이용한 핸즈온키보드 활동 및 DLL 사이드로딩이 관측됨
-- 주요 도구/멀웨어: NeedyMantis(모듈형 포스트-컴프로마이즈 악성코드, 커스텀 실행파일 포맷으로 장기 지속성 확보), Impacket
+- 초기 침투: 해당 없음 — NeedyMantis는 포스트-컴프로마이즈 단계에서만 배포. Impacket 툴킷 기반 핸즈온키보드 활동 및 DLL 사이드로딩 관측
+- 주요 도구/멀웨어: NeedyMantis(모듈형 포스트-컴프로마이즈 악성코드), Impacket
 - 관측 시점: 최소 2025-10부터 현재까지 활동, 2026-09-28 Microsoft 공개
 - 출처: [NeedyMantis: Unpacking a post-compromise malware family used in targeted operations](https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/) — Microsoft — 2026-09-28 — fetched(이전 실행)
 
 ### Phantom Taurus — NET-STAR IIS 멀웨어 스위트 정부·통신사 첩보 캠페인 ⚠️ (미검증)
-- 귀속: 귀속 미확인 — 검색 스니펫 표현: "espionage operations align with the strategic interests of the People's Republic of China (PRC)" (Unit 42 재보도 종합). PLA/MSS 언급 없음. 1차 출처(unit42.paloaltonetworks.com) 재시도도 EGRESS_BLOCKED로 미검증.
-- 대상: 아프리카·중동·아시아 정부기관(외교부, 대사관) 및 통신사 — 지정학적 사건·군사작전 관련 정보 수집 목적
-- 초기 침투: 불명(원문 미확보) — Internet Information Services(IIS) 웹서버를 주요 거점으로 활용, 2023-06 최초 활동 클러스터 CL-STA-0043으로 명명, 2024-05 Operation Diplomatic Specter로 임시 재명명을 거쳐 다년간 추적 끝에 Phantom Taurus로 정식 명명
+- 귀속: 귀속 미확인 — 검색 스니펫 표현: "espionage operations align with the strategic interests of the People's Republic of China (PRC)" (Unit 42 재보도 종합). PLA/MSS 언급 없음.
+- 대상: 아프리카·중동·아시아 정부기관(외교부, 대사관) 및 통신사
+- 초기 침투: 불명(원문 미확보) — IIS 웹서버를 주요 거점으로 활용, CL-STA-0043 → Operation Diplomatic Specter → Phantom Taurus로 명칭 진화
 - 주요 도구/멀웨어: NET-STAR(.NET 기반 신규 멀웨어 스위트, IIS 워커 프로세스 w3wp.exe 메모리 상주 컴포넌트 포함)
-- 관측 시점: 활동 계보 2023-06(CL-STA-0043) ~ 2024-05(Operation Diplomatic Specter) ~ 현재, 공개 2026-09(정확한 날짜 원문 미확보)
-- 출처: 검색 스니펫만 확인 — Unit 42(unit42.paloaltonetworks.com, 차단)
+- 관측 시점: 활동 계보 2023-06 ~ 2024-05 ~ 현재, 공개 2026-09(정확한 날짜 원문 미확보)
+- 출처: 검색 스니펫만 확인 — Unit 42(차단)
 
 ### Red Heron — WordPress·Zyxel·Ubiquiti·Gitea 연쇄 익스플로잇 정부기관 데이터 탈취 ⚠️ (미검증)
-- 귀속: 귀속 미확인 — 검색 스니펫 표현: "Chinese-speaking threat actor linked to the Red Heron group" (Acronis TRU/GreyNoise 재보도 종합). PLA/MSS 언급 없음. 1차 출처(acronis.com, greynoise.io) 전량 EGRESS_BLOCKED로 미검증.
-- 대상: 정부기관·법집행기관 등 49개 조직(29개국) — WordPress 경로, 996개 Zyxel GS1900 스위치(48개국) — 네트워크 장비 경로. 한 서구권 정부기관 침해 사례에서 평문 비밀번호·PII 포함 레코드 18,500여 건 탈취
-- 초기 침투: WordPress Core wp2shell 취약점(CVE-2026-63030, CVE-2026-60137)으로 최소 49개 조직 침해, 2026-08-17부터 Zyxel GS1900 스마트 관리형 스위치 고위험 취약점(CVE-2026-7273)으로 996개 장비에서 설정·네트워크 정보·해시된 루트 자격증명 탈취 시도, Ubiquiti UniFi OS 취약점 체인(CVE-2026-34908, CVE-2026-34909, CVE-2026-34910)으로 루트 권한 RCE 시도, Gitea 취약점(CVE-2026-60004) 신속 무기화로 자체 호스팅 소스코드 관리 플랫폼 침해도 보도됨
+- 귀속: 귀속 미확인 — 검색 스니펫 표현: "Chinese-speaking threat actor linked to the Red Heron group" (Acronis TRU/GreyNoise 재보도 종합). PLA/MSS 언급 없음.
+- 대상: 정부기관·법집행기관 등 49개 조직(29개국) — WordPress 경로, 996개 Zyxel GS1900 스위치(48개국) — 네트워크 장비 경로
+- 초기 침투: WordPress Core wp2shell(CVE-2026-63030, CVE-2026-60137), Zyxel GS1900(CVE-2026-7273), Ubiquiti UniFi OS 체인(CVE-2026-34908/34909/34910), Gitea(CVE-2026-60004)
 - 주요 도구/멀웨어: 신원 미상의 신규 Linux 루트킷, AMSI 우회, 권한 상승 도구
-- 관측 시점: 최소 2026-06 초부터 활동, Zyxel 익스플로잇 2026-08-17 시작, 2026-09-17 기준 996개 장비 침해 확인, 공개 2026-09-22경
-- 출처: 검색 스니펫만 확인 — Acronis TRU(acronis.com, 차단), GreyNoise(greynoise.io, 차단)
+- 관측 시점: 최소 2026-06 초부터 활동, Zyxel 익스플로잇 2026-08-17 시작, 공개 2026-09-22경
+- 출처: 검색 스니펫만 확인 — Acronis TRU(차단), GreyNoise(차단)
 
 ### UTA0565 — "Mind the (Patch) Gap, Part 2" Chrome/Windows 제로데이 체인 재사용, CLEANGULP ⚠️ (미검증)
-- 귀속: 귀속 미확인 — 검색 스니펫 표현: "Chinese threat group"/"China-aligned threat group" (Volexity 재보도 종합). PLA/MSS 언급 없음. 원문(volexity.com) 전량 EGRESS_BLOCKED로 미검증.
+- 귀속: 귀속 미확인 — 검색 스니펫 표현: "Chinese threat group"/"China-aligned threat group" (Volexity 재보도 종합). PLA/MSS 언급 없음.
 - 대상: 아시아 정부기관 등 — 홍콩 활동가 추 항퉁(Chow Hang-tung) 공개 지지를 촉구하는 위장 피싱 메일로 유인
-- 초기 침투: 기존 등재된 BlueMoon 캠페인(UTA0560/JungleBamboo)과 동일한 Chrome/Windows 패치갭 제로데이 체인 — CVE-2026-85046(Chrome V8 타입 컨퓨전) + CVE-2026-87491(Chrome WebAssembly 샌드박스 이스케이프) + CVE-2026-85880(Windows ALPC 권한상승), 가짜 웹사이트로 은밀 트리거
+- 초기 침투: BlueMoon 캠페인(UTA0560/JungleBamboo)과 동일한 Chrome/Windows 패치갭 제로데이 체인 — CVE-2026-85046 + CVE-2026-87491 + CVE-2026-85880
 - 주요 도구/멀웨어: CLEANGULP — Microsoft Visual C Compiler로 빌드된 신규 악성코드
 - 관측 시점: 2026-09-03~09-04 공격 탐지, 2026-09-21 Volexity 공개
-- 출처: 검색 스니펫만 확인 — Volexity(www.volexity.com, 차단)
+- 출처: 검색 스니펫만 확인 — Volexity(차단)
 
 ### SparroWocky 백도어 — FamousSparrow 라틴아메리카 정부 캠페인 ⚠️ (미검증)
-- 귀속: 귀속 미확인 — 검색 스니펫 표현: "China-aligned"(The Hacker News 제목), ESET은 "may be connected to China's interest in monitoring how regional governments respond to growing US political, economic, and strategic engagement in Latin America"로 평가. PLA/MSS 언급 없음. 1차 출처(welivesecurity.com) 전량 EGRESS_BLOCKED로 미검증.
+- 귀속: 귀속 미확인 — 검색 스니펫 표현: "China-aligned"(The Hacker News), ESET은 "may be connected to China's interest in monitoring how regional governments respond to growing US political, economic, and strategic engagement in Latin America"로 평가. PLA/MSS 언급 없음.
 - 대상: 라틴아메리카 8개국 정부기관 — 아르헨티나, 에콰도르, 과테말라, 온두라스, 파나마, 페루, 푸에르토리코, 베네수엘라
 - 초기 침투: 불명
 - 주요 도구/멀웨어: SparroWocky — 모듈형 C++ 백도어, 기존 SparrowDoor 대체
@@ -108,20 +116,20 @@
 - 출처: [From Prompting to Autonomy: The Evolution of Adversarial AI](https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai) — Google GTIG — 2026-09-08 — fetched(이전 실행)
 
 ### Fire Ant — Cisco IOS XR 라우터 침해·로그 은닉 캠페인 ⚠️ (미검증)
-- 귀속: 귀속 미확인 — 검색 스니펫상 Sygnia 표현: "China-nexus threat actor". UNC3886과 강한 오버랩. PLA/MSS 언급 없음. 1차 출처(sygnia.co) 금일 재시도도 EGRESS_BLOCKED로 미검증.
+- 귀속: 귀속 미확인 — 검색 스니펫상 Sygnia 표현: "China-nexus threat actor". UNC3886과 강한 오버랩. PLA/MSS 언급 없음.
 - 대상: Cisco IOS XR 라우터, TACACS 서버, 리눅스 관리 호스트
 - 초기 침투: 불명 — 비정상 GRE 터널 인터페이스로 최초 발견
-- 주요 도구/멀웨어: TacTap(tac_plus 프로세스에 악성 라이브러리 로드). ⚠️(미검증) 검색 스니펫에 "BridgeAgent"라는 명칭이 추가로 언급되었으나 1차 출처(sygnia.co)와 재보도(threatcluster.io) 모두 금일 EGRESS_BLOCKED로 검증 불가하여 미반영
+- 주요 도구/멀웨어: TacTap(tac_plus 프로세스에 악성 라이브러리 로드)
 - 관측 시점: 2026년, Sygnia 2026-08-30/08-31 공개
-- 출처: 검색 스니펫만 확인 — Sygnia(sygnia.co, 차단)
+- 출처: 검색 스니펫만 확인 — Sygnia(차단)
 
 ### QScan/QTRouter 인프라 해체 — QTFY ⚠️ (미검증)
-- 귀속: 귀속 미확인 — 검색 스니펫(원문 미확보) 인용: "A People's Republic of China (PRC) state-sponsored group known as 'QTFY,' employed by China-based Nanjing Xinjiuwei Network Technology Company... paying customers include...Ministry of State Security and...People's Liberation Army." 1차 출처(justice.gov, media.defense.gov) 재시도 포함 전량 EGRESS_BLOCKED로 검증 불가 — PLA/MSS 표로 승격하지 않음.
+- 귀속: 귀속 미확인 — 검색 스니펫(원문 미확보) 인용: "A People's Republic of China (PRC) state-sponsored group known as 'QTFY,' employed by China-based Nanjing Xinjiuwei Network Technology Company... paying customers include...Ministry of State Security and...People's Liberation Army." 1차 출처(justice.gov, media.defense.gov) 전량 EGRESS_BLOCKED로 검증 불가 — PLA/MSS 표로 승격하지 않음.
 - 대상: 미국 연방기관 및 중요 인프라 — NASA, 연방준비제도, 에너지부, 법무부, 보건복지부, 국립보건원, 미 상원, 병원, 통신사, 전력회사, 방위산업체 등 300개 이상 미국 조직
 - 초기 침투: QScan으로 인터넷 전역의 취약 IoT 기기 스캔 후 대량 감염, QTRouter 난독화 네트워크 구성
 - 주요 도구/멀웨어: QScan, QTRouter
 - 관측 시점: 활동 기간 2018~2026 — 2026-08-26 미 법무부·FBI가 도메인 압류로 무력화
-- 출처: 검색 스니펫만 확인 — DOJ(justice.gov, 차단), NSA/FBI/CNMF JCSA(media.defense.gov, 차단)
+- 출처: 검색 스니펫만 확인 — DOJ(차단), NSA/FBI/CNMF JCSA(차단)
 
 ### SilkParasite — 미상 China-nexus 행위자 ⚠️ (미검증)
 - 귀속: 귀속 미확인 — Bitdefender 표현(검색 스니펫): "China-Nexus APT", medium confidence. PLA/MSS 언급 없음.
@@ -136,37 +144,41 @@
 - 대상: 정부기관 및 민간 조직 — 러시아, 미얀마, 몽골, 파키스탄
 - 초기 침투: 서명된 커널모드 드라이버를 Windows 서비스로 추가, IOCTL 요청으로 프로세스·파일·레지스트리·C2 트래픽 은닉
 - 주요 도구/멀웨어: CoolClient 백도어, 서명된 커널모드 루트킷 드라이버
-- 관측 시점: 2025년 말 ~ 2026 (공개일 2026-08-17)
+- 관측 시점: 2025년 말 ~ 2026 (공개일 2026-08-17 — 60일 창의 마지막 날, 2026-10-17 실행부터 창 밖으로 이동 예정)
 - 출처: 검색 스니펫만 확인 — Securelist(차단)
 
 ## 그룹 별칭 매핑
-전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 신규 행·귀속 변경 없음(Fire Ant "BridgeAgent" 툴명 검증 시도했으나 EGRESS_BLOCKED로 미반영).
+전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 갱신: UNC5221 행에 신규 별칭 "ARMORY CASTLE"(2026-10-15 GTIG 원문 확인) 및 BeyondTrust/SAWFLY/BARECLAW 캠페인 정보 추가. 귀속 표현 자체는 기존("suspected China-nexus actor")과 신규("suspected PRC-nexus espionage threat actor")가 사실상 동일 수준이라 귀속 변경으로는 분류하지 않음(승격 아님).
 
 ## 악용 CVE (패치 우선순위)
-신규 없음. 전체 누적 목록은 [`exploited-cves.txt`](../exploited-cves.txt) 참조(26건, 검증 11 / 미검증 15).
+신규 1건 추가: CVE-2026-102764(BeyondTrust Remote Support 구 Bomgar ≤26.2.3, ARMORY CASTLE 구 UNC5221, 검증). 전체 누적 목록은 [`exploited-cves.txt`](../exploited-cves.txt) 참조(27건, 검증 12 / 미검증 15).
 
 ## C2 도메인 (35, 누적)
-신규 없음. 전체 목록은 [`blocklists/domains.txt`](../blocklists/domains.txt) 참조.
+신규 없음(ARMORY CASTLE 원문에 도메인/IP 레드액트, GTI Collection에만 공개). 전체 목록은 [`blocklists/domains.txt`](../blocklists/domains.txt) 참조.
 
 ## C2 IP (25, 누적)
 신규 없음. 전체 목록은 [`blocklists/ips.txt`](../blocklists/ips.txt) 참조.
 
-## 파일 해시 (59, 누적)
-신규 없음. 전체 목록은 이전 스냅샷([`snapshots/2026-08-27.md`](2026-08-27.md), [`snapshots/2026-08-28.md`](2026-08-28.md), [`snapshots/2026-09-03.md`](2026-09-03.md), [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-09-25.md`](2026-09-25.md), [`snapshots/2026-10-01.md`](2026-10-01.md)) 참조.
+## 파일 해시 (61, 누적)
+신규 SHA-256 2건 추가(ARMORY CASTLE, 검증):
+- `dc14e215269a93fdbc4c1a80b984c23faf7af0911c6dbb85309796a6f2ae95fb` — SAWFLY PHP 웹셸(`mangoapi.php`), ARMORY CASTLE(구 UNC5221) — GTIG 2026-10-15
+- `1f19b9a27d79c11bda00a1e8faf74a7fdd683d38ccef1b60df2fd0307e3aa462` — BARECLAW SOCKS5-over-WebSocket 터널러(`ingredi_ws`), ARMORY CASTLE(구 UNC5221) — GTIG 2026-10-15
+
+그 외 기존 59건은 이전 스냅샷([`snapshots/2026-08-27.md`](2026-08-27.md), [`snapshots/2026-08-28.md`](2026-08-28.md), [`snapshots/2026-09-03.md`](2026-09-03.md), [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-09-25.md`](2026-09-25.md), [`snapshots/2026-10-01.md`](2026-10-01.md)) 참조.
 
 ## 호스트 IOC · LOTL 아티팩트
-신규 없음. 기존 항목은 [`snapshots/2026-09-07.md`](2026-09-07.md) 참조.
+신규 추가(ARMORY CASTLE, 검증, 블록리스트 미반영 — 경로/도구명이라 도메인·IP 아님): POST 경로 `/app_84304470%2Ephp`, WebSocket 경로 `/uidchanarge`, TCP 포트 19800, HAProxy ACL `wswsws`, 백엔드 `webskd3`, 지속성 스크립트 `zz-root-persist`, SUID 셸 사본 `/usr/bin/dbus-authd`, 탈취 대상 시크릿 파일 `bt-secrets`. 기존 항목은 [`snapshots/2026-09-07.md`](2026-09-07.md) 참조.
 
 ## 이번 실행 변경사항
-- 신규 캠페인: 없음
-- 신규 IOC: 없음
-- 제거: 없음 — 15건 캠페인 모두 60일 창(2026-08-16~) 내 유지
+- 신규 캠페인: ARMORY CASTLE(구 UNC5221) — BeyondTrust Remote Support 제로데이(CVE-2026-102764) 익스플로잇, SAWFLY·BARECLAW 배포 (GTIG, 검증, 🔥)
+- 신규 IOC: SHA-256 해시 2건(SAWFLY `mangoapi.php`, BARECLAW `ingredi_ws`)
+- 제거: 없음 — 16건 캠페인 중 15건이 60일 창(2026-08-17~) 내 유지(CoolClient는 오늘이 창의 마지막 날)
 - 승격(미검증→검증): 없음
-- 귀속 변경: 없음
-- 신규 CVE: 없음
-- 신규 그룹(표 등재): 없음 — Fire Ant의 추정 신규 툴명 "BridgeAgent"를 확인하려 했으나 1차 출처(sygnia.co)·재보도(threatcluster.io) 모두 금일 EGRESS_BLOCKED로 검증 불가
-- 프로브: thehackernews.com, www.bleepingcomputer.com, www.sygnia.co, threatcluster.io — 전부 ENOTFOUND(EGRESS_BLOCKED)
-- 비고: 7일 창(2026-10-08~) 기준 Integrity Technology Group만 🔥 유지(경계값, 2026-10-16 실행부터 제외 예정). 60일 창 기준 CoolClient(HoneyMyte, 공개 2026-08-17)는 2026-10-16 실행까지 유지되며 2026-10-17 실행부터 창 밖으로 이동할 예정.
+- 귀속 변경: 없음 — UNC5221→ARMORY CASTLE 리브랜드는 귀속 수준이 기존과 동일("suspected China/PRC-nexus")하여 변경으로 미분류
+- 신규 CVE: CVE-2026-102764(검증)
+- 신규 그룹(표 등재): 없음(기존 UNC5221 행에 별칭 추가로 처리) — 검토했으나 미채택: Citrix NetScaler CVE-2026-88771/88772 캠페인(GTIG 2026-09-29/10-15 재확인, "threat actor"로만 서술, China/PRC 귀속 표현 전혀 없음)
+- 프로브: www.theregister.com — ENOTFOUND(EGRESS_BLOCKED)
+- 비고: 7일 창(2026-10-10~) 기준 ARMORY CASTLE(10-15)만 신규 🔥, Integrity Technology Group(10-08)은 경계를 벗어나 🔥 해제. CoolClient/HoneyMyte(공개 2026-08-17)는 2026-10-17 실행부터 60일 창 밖으로 이동 예정(그룹 메타데이터는 누적 유지).
 
 ## 차단 운영 포맷 (복붙용)
 
@@ -239,9 +251,8 @@ www.twisinbeth.com
 ```
 
 ## 출처
-- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-10-15 조회 — fetched(목록 재확인, 전일과 동일, 신규 China/PRC-nexus 게시물 없음)
-- [Microsoft Security Blog 위협 행위자 목록](https://www.microsoft.com/en-us/security/blog/threat-intelligence/threat-actors/) — Microsoft — 2026-10-15 조회 — fetched(목록 재확인, 신규 게시물 "The hidden network"(10-14)는 중국어 사용 사이버범죄 생태계로 국가배후 미귀속, 범위 제외)
-- thehackernews.com(Integrity Technology Group 등 1차 보도) — 2026-10-15 조회 — blocked(ENOTFOUND)
-- www.bleepingcomputer.com(최신 China APT 뉴스 탐색) — 2026-10-15 조회 — blocked(ENOTFOUND)
-- www.sygnia.co(Fire Ant 1차 출처 — BridgeAgent 검증 시도) — 2026-10-15 조회 — blocked(ENOTFOUND)
-- threatcluster.io(Fire Ant 재보도 — BridgeAgent 검증 시도) — 2026-10-15 조회 — blocked(ENOTFOUND)
+- [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched
+- [Defending Against Active Exploitation of Citrix NetScaler ADC and Gateway Appliances](https://cloud.google.com/blog/topics/threat-intelligence/defending-against-active-exploitation-of-citrix-netscaler-adc-and-gateway-appliances) — Google GTIG/Mandiant — 2026-09-29 — fetched(국가 귀속 표현 없어 미채택)
+- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-10-16 조회 — fetched
+- [Microsoft Security Blog Typhoon 태그 목록](https://www.microsoft.com/en-us/security/blog/tag/typhoon/) — Microsoft — 2026-10-16 조회 — fetched
+- www.theregister.com(Flax Typhoon/7개국 공동권고 재보도) — 2026-10-16 조회 — blocked(ENOTFOUND)
