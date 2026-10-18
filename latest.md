@@ -1,13 +1,13 @@
-# China State APT Campaign Snapshot — 2026-10-17 UTC
+# China State APT Campaign Snapshot — 2026-10-18 UTC
 
 ## 수집 상태
-- 페치 성공: [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재확인, China/PRC-nexus 신규 게시물 없음 — BREEZE COMET(브라질, 금전적 동기)·UNC6671·ShinyHunters 등 비중국 게시물만 신규), [Microsoft Security Blog Typhoon 태그 목록](https://www.microsoft.com/en-us/security/blog/tag/typhoon/)(재확인, 캐시된 구버전 목록으로 2025-03-05 Silk Typhoon 게시물이 최신 — 신규 없음)
-- 페치 차단(EGRESS_BLOCKED/ENOTFOUND): www.bleepingcomputer.com, www.sygnia.co
+- 페치 성공: [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재확인, China/PRC-nexus 신규 게시물 없음 — 전체 11건 중 ARMORY CASTLE(10-15)이 최신이며 그 외는 ShinyHunters·BREEZE COMET·UNC6671 등 비중국 또는 중국 귀속 서술 없는 게시물), [Microsoft Security Blog Typhoon 태그 목록](https://www.microsoft.com/en-us/security/blog/tag/typhoon/)(재확인, 캐시된 구버전 목록으로 2025-03-05 Silk Typhoon 게시물이 최신 — 신규 없음)
+- 페치 차단(EGRESS_BLOCKED/ENOTFOUND): unit42.paloaltonetworks.com, www.volexity.com, www.crowdstrike.com, www.recordedfuture.com
 - 검증된 IOC: 신규 0개(누적 도메인 35·IP 25·해시 61) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 0건(누적 27, 검증 12/미검증 15)
 
-6개 정기 WebSearch 쿼리와 `site:cloud.google.com`/`site:microsoft.com` 사이트 한정 검색을 수행했습니다. GTIG 블로그 목록을 재확인했으나 2026-10-15 "ARMORY CASTLE Exploits BeyondTrust"(전일 반영 완료) 이후 China/PRC-nexus 신규 게시물은 없었습니다("Investigating Ephemeral Supply Chain Tampering", "Vulnerability Discovery and Exploitation Trends in the AI Era" 등 신규 게시물 확인했으나 귀속 대상이 중국이 아니거나 국가 귀속 서술이 없어 미채택). Microsoft Security Blog Typhoon 태그 목록은 2025-03-05 Silk Typhoon 게시물까지만 노출되는 캐시된 페이지로 신규 확인 불가. bleepingcomputer.com, sygnia.co(Fire Ant 1차 출처 재시도) 프로브는 모두 ENOTFOUND로 차단되었습니다. 기존 추적 중인 15건 캠페인 전체(ARMORY CASTLE, Integrity Technology Group, UAT-11587/Antino, BPFdoor/Rekoobe/AVERAT, TA419, NeedyMantis, Phantom Taurus, Red Heron, UTA0565, SparroWocky, CC Switch, BlueMoon, RAVINE·BASIN CASTLE/UNC6508, Fire Ant, QTFY, SilkParasite)의 재보도만 확인되었으며 신규 세부사항, C2, 해시는 발견되지 않았습니다.
+6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대)를 수행했으나 2026-10-15(ARMORY CASTLE 공개일) 이후의 신규 중국 국가 배후 캠페인 보도는 확인되지 않았습니다. 검색 결과는 대체로 2025년 이전 자료(Volt/Salt/Flax Typhoon 배경 설명, 2024-2025년 CISA/NSA 공동권고, APT1/APT40 역사적 보고서)와 중국과 무관한 결과(기상 뉴스 등)로 구성되었습니다. `site:cloud.google.com`, `site:microsoft.com` 한정 검색도 2026-10 신규 China-nexus 게시물을 찾지 못했습니다. GTIG 블로그 목록과 Microsoft Typhoon 태그 목록을 직접 재확인한 결과도 동일했습니다. unit42.paloaltonetworks.com(Phantom Taurus 1차 출처), www.volexity.com(BlueMoon/UTA0565 1차 출처), www.crowdstrike.com, www.recordedfuture.com 프로브는 모두 ENOTFOUND로 차단되어 신규 정보를 얻지 못했습니다. 기존 추적 중인 15건 캠페인(ARMORY CASTLE, Integrity Technology Group, UAT-11587/Antino, BPFdoor/Rekoobe/AVERAT, TA419, NeedyMantis, Phantom Taurus, Red Heron, UTA0565, SparroWocky, CC Switch, BlueMoon, RAVINE·BASIN CASTLE/UNC6508, Fire Ant, QTFY, SilkParasite)에 대해 신규 세부사항, C2, 해시는 발견되지 않았습니다.
 
-전체 16건 캠페인 중 CoolClient/HoneyMyte(공개일 2026-08-17)가 60일 창(2026-08-18~) 밖으로 이동하여 금일부터 15건이 창 내에 유지됩니다(그룹 메타데이터는 `groups.md`에 누적 유지, IOC 손실 아님). 7일 창(2026-10-11~) 기준 신규 🔥 없음 — ARMORY CASTLE(공개 10-15)은 아직 7일 창 내 유지.
+전체 15건 캠페인 모두 60일 창(2026-08-19~) 내에 유지됩니다(그룹 메타데이터는 `groups.md`에 누적 유지). SilkParasite(공개 2026-08-19)는 오늘 기준 60일 창 경계에 걸쳐 있으며 다음 실행(2026-10-19)부터는 창 밖으로 이동할 것으로 예상됩니다. 7일 창(2026-10-12~) 기준 신규 🔥 없음 — ARMORY CASTLE(공개 10-15)은 아직 7일 창 내 유지, Integrity Technology Group(공개 10-08)은 7일 창 밖 유지.
 
 ## 최근 캠페인 (최근 60일)
 
@@ -17,7 +17,7 @@
 - 초기 침투: BeyondTrust Remote Support(구 Bomgar, 26.2.3 이하 버전) 제로데이 CVE-2026-102764(인증 없는 임의 파일 업로드) 익스플로잇
 - 주요 도구/멀웨어: SAWFLY(PHP 웹셸, `mangoapi.php`), BARECLAW(SOCKS5-over-WebSocket 터널러, `ingredi_ws`), 스테이징 웹셸 `app_84304470%2Ephp`; `bt-secrets` 탈취, `zz-root-persist` 지속성 스크립트, `/usr/bin/dbus-authd` SUID 셸 사본
 - 관측 시점: 제로데이 익스플로잇 2026년 8월 말, BeyondTrust 2026-10-09 SaaS 테넌트 패치, 2026-10-15 취약점 공개 및 GTIG 보고서 발행. ARMORY CASTLE(구 UNC5221)은 최소 2023-10부터 활동
-- 출처: [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched
+- 출처: [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched(이전 실행)
 
 ### Integrity Technology Group 연계 — 동남아 정부기관 메일함 대량 복제 (FBI 등 7개국 공동권고) ⚠️ (미검증)
 - 귀속: 귀속 미확인 — 검색 결과 종합(1차 출처인 FBI/파트너국 공동권고 원문 미확보, 재보도만 확인): Integrity Technology Group은 과거 미 재무부(OFAC)가 "Flax Typhoon" 활동에 인프라를 제공한 혐의로 제재한 중국 기업이며, 영국도 별도 제재를 부과한 바 있음. 공동권고 자체가 PLA 또는 MSS를 명시했는지는 1차 출처 미확보로 확인 불가. PLA/MSS로 승격하지 않음.
@@ -136,7 +136,7 @@
 - 대상: 중앙아시아 정부기관(우즈베키스탄, 투르크메니스탄, 키르기스스탄, 타지키스탄, 카자흐스탄)
 - 초기 침투: 악성 MS Office 문서(스피어피싱), DLL 사이드로딩, Google Drive를 C2로 악용
 - 주요 도구/멀웨어: DriveSilkRAT, CookiETagRAT, NomadRAT, GoginRAT, NodeEdgeRAT 등 RAT 7종
-- 관측 시점: 2025년 말 최초 탐지 ~ 2026 (공개일 2026-08-19)
+- 관측 시점: 2025년 말 최초 탐지 ~ 2026 (공개일 2026-08-19) — 60일 창 경계(2026-08-19), 다음 실행부터 창 밖 이동 예상
 - 출처: 검색 스니펫만 확인 — Bitdefender(차단)
 
 ## 그룹 별칭 매핑
@@ -160,13 +160,13 @@
 ## 이번 실행 변경사항
 - 신규 캠페인: 없음
 - 신규 IOC: 없음
-- 제거: 없음 — IOC 데이터(블록리스트·해시·CVE) 변경 없음. 단, 캠페인 표시 목록은 CoolClient/HoneyMyte(공개 2026-08-17)가 60일 창(2026-08-18~) 밖으로 이동해 16건→15건으로 줄었음(그룹 메타데이터는 `groups.md`에 누적 유지, IOC 손실 아님)
+- 제거: 없음 — IOC 데이터(블록리스트·해시·CVE) 변경 없음. 캠페인 표시 목록은 전일과 동일하게 15건 유지(SilkParasite가 60일 창 경계(2026-08-19)에 걸쳐 있어 다음 실행부터 제외 예상)
 - 승격(미검증→검증): 없음
 - 귀속 변경: 없음
 - 신규 CVE: 없음
 - 신규 그룹(표 등재): 없음
-- 프로브: www.bleepingcomputer.com — ENOTFOUND(EGRESS_BLOCKED), www.sygnia.co — ENOTFOUND(EGRESS_BLOCKED, Fire Ant 1차 출처 재시도 실패)
-- 비고: 7일 창(2026-10-11~) 기준 신규 🔥 없음. ARMORY CASTLE(공개 10-15)은 7일 창 내 유지, Integrity Technology Group(공개 10-08)은 7일 창 밖 유지.
+- 프로브: unit42.paloaltonetworks.com — ENOTFOUND(EGRESS_BLOCKED, Phantom Taurus 1차 출처 재시도 실패), www.volexity.com — ENOTFOUND(EGRESS_BLOCKED, BlueMoon/UTA0565 1차 출처 재시도 실패), www.crowdstrike.com — ENOTFOUND(EGRESS_BLOCKED), www.recordedfuture.com — ENOTFOUND(EGRESS_BLOCKED)
+- 비고: 7일 창(2026-10-12~) 기준 신규 🔥 없음. ARMORY CASTLE(공개 10-15)은 7일 창 내 유지, Integrity Technology Group(공개 10-08)은 7일 창 밖 유지.
 
 ## 차단 운영 포맷 (복붙용)
 
@@ -240,7 +240,9 @@ www.twisinbeth.com
 
 ## 출처
 - [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched(이전 실행, 신규 변동 없음 재확인)
-- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-10-17 조회 — fetched(China/PRC-nexus 신규 게시물 없음)
-- [Microsoft Security Blog Typhoon 태그 목록](https://www.microsoft.com/en-us/security/blog/tag/typhoon/) — Microsoft — 2026-10-17 조회 — fetched(캐시된 구버전, 신규 없음)
-- www.bleepingcomputer.com(China 태그 목록) — 2026-10-17 조회 — blocked(ENOTFOUND)
-- www.sygnia.co(Fire Ant 1차 출처) — 2026-10-17 조회 — blocked(ENOTFOUND)
+- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-10-18 조회 — fetched(China/PRC-nexus 신규 게시물 없음)
+- [Microsoft Security Blog Typhoon 태그 목록](https://www.microsoft.com/en-us/security/blog/tag/typhoon/) — Microsoft — 2026-10-18 조회 — fetched(캐시된 구버전, 신규 없음)
+- unit42.paloaltonetworks.com — 2026-10-18 조회 — blocked(ENOTFOUND)
+- www.volexity.com — 2026-10-18 조회 — blocked(ENOTFOUND)
+- www.crowdstrike.com — 2026-10-18 조회 — blocked(ENOTFOUND)
+- www.recordedfuture.com — 2026-10-18 조회 — blocked(ENOTFOUND)
