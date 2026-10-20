@@ -1,13 +1,13 @@
-# China State APT Campaign Snapshot — 2026-10-19 UTC
+# China State APT Campaign Snapshot — 2026-10-20 UTC
 
 ## 수집 상태
-- 페치 성공: [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재확인, 2026-10-15 ARMORY CASTLE 이후 China/PRC-nexus 신규 게시물 없음 — 전체 11건 중 ShinyHunters·BREEZE COMET·UNC6671 등 비중국 게시물만 추가), [Microsoft Security Blog Typhoon 태그 목록](https://www.microsoft.com/en-us/security/blog/tag/typhoon/)(재확인, 캐시된 구버전 목록으로 2025-03-05 Silk Typhoon 게시물이 최신 — 신규 없음)
-- 페치 차단(EGRESS_BLOCKED/ENOTFOUND): unit42.paloaltonetworks.com, www.volexity.com
+- 페치 성공: [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재확인, 2026-10-15 ARMORY CASTLE 이후 China/PRC-nexus 신규 게시물 없음 — 신규 게시물 10건 모두 Mandiant 공급 체인/Citrix NetScaler/ShinyHunters/CI-CD 하드닝/BREEZE COMET(브라질, 금전적 동기)/러시아 표적 클러스터/에이전틱 코드리뷰/UNC6671 보이싱갈취 리브랜드 등 비중국 게시물), [Microsoft Security Blog Typhoon 태그 목록](https://www.microsoft.com/en-us/security/blog/tag/typhoon/)(재확인, 캐시된 구버전 목록으로 2025-03-05 Silk Typhoon 게시물이 최신 — 신규 없음)
+- 페치 차단(EGRESS_BLOCKED): 없음(이번 실행에서는 신규 벤더 도메인 프로브를 시도하지 않음 — 일반 검색 결과가 전부 기존 등재 그룹의 재보도 또는 60일 창 밖 배경자료로 확인되어 신규 1차 출처 후보가 없었음)
 - 검증된 IOC: 신규 0개(누적 도메인 35·IP 25·해시 61) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 0건(누적 27, 검증 12/미검증 15)
 
-6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대) 및 추가 확인 검색(China-nexus APT 2026-10-19 등)을 수행했으나 2026-10-15(ARMORY CASTLE 공개일) 이후의 신규 중국 국가 배후 캠페인 보도는 확인되지 않았습니다. 검색 결과는 기존에 이미 추적 중인 캠페인(ARMORY CASTLE, UAT-11587/Antino, Red Heron 등)의 재보도 및 2025년 이전 배경 자료, 중국과 무관한 결과(기상 뉴스 등)로 구성되었습니다. `site:cloud.google.com`, `site:microsoft.com` 한정 검색도 신규 China-nexus 게시물을 찾지 못했습니다. unit42.paloaltonetworks.com(Phantom Taurus 1차 출처), www.volexity.com(BlueMoon/UTA0565 1차 출처) 프로브는 모두 ENOTFOUND로 차단되어 신규 정보를 얻지 못했습니다. 기존 추적 중인 캠페인에 대해 신규 세부사항, C2, 해시는 발견되지 않았습니다.
+6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대)를 수행했으나 2026-10-15(ARMORY CASTLE 공개일) 이후의 신규 중국 국가 배후 캠페인 보도는 확인되지 않았습니다. 검색 결과는 기존에 이미 추적 중인 캠페인(APT31/APT40 2026-02 ASD 권고문 재보도, Salt Typhoon/Volt Typhoon 배경 자료, APT31 Chrome/Windows 제로데이 체인 재인용 등)의 재보도 및 2025년 이전 배경 자료, 중국과 무관한 결과(기상 뉴스, 판다 관광 홍보 등)로 구성되었습니다. GTIG 블로그 목록·Microsoft Typhoon 태그 목록 재페치 결과 모두 신규 China/PRC-nexus 게시물 없음을 재확인했습니다.
 
-전체 14건 캠페인이 60일 창(2026-08-20~) 내에 유지됩니다(그룹 메타데이터는 `groups.md`에 누적 유지). SilkParasite(공개 2026-08-19)는 60일 창을 벗어나 오늘부터 최근 캠페인 목록에서 제외되었습니다(그룹 메타데이터는 `groups.md`에 계속 유지). 7일 창(2026-10-13~) 기준 신규 🔥 없음 — ARMORY CASTLE(공개 10-15)은 아직 7일 창 내 유지, Integrity Technology Group(공개 10-08)은 7일 창 밖 유지.
+전체 14건 캠페인이 60일 창(2026-08-21~) 내에 유지됩니다(그룹 메타데이터는 `groups.md`에 누적 유지). 60일 창 경계를 벗어나는 캠페인 없음(가장 오래된 QTFY는 공개 2026-08-26로 창 내 유지). 7일 창(2026-10-13~) 기준 ARMORY CASTLE(공개 10-15)만 🔥 유지, Integrity Technology Group(공개 10-08)은 7일 창 밖 유지.
 
 ## 최근 캠페인 (최근 60일)
 
@@ -152,13 +152,13 @@
 ## 이번 실행 변경사항
 - 신규 캠페인: 없음
 - 신규 IOC: 없음
-- 제거: SilkParasite(공개 2026-08-19)가 60일 창(2026-08-20~)을 벗어나 최근 캠페인 목록에서 제외됨(IOC 자체는 제거되지 않음 — 해당 캠페인은 애초에 신규 블록리스트/해시 항목을 기여하지 않았음). 그룹 메타데이터는 `groups.md`에 계속 유지. 캠페인 표시 건수 15건 → 14건
+- 제거: 없음(60일 창 경계를 벗어나는 캠페인 없음)
 - 승격(미검증→검증): 없음
 - 귀속 변경: 없음
 - 신규 CVE: 없음
 - 신규 그룹(표 등재): 없음
-- 프로브: unit42.paloaltonetworks.com — ENOTFOUND(EGRESS_BLOCKED, Phantom Taurus 1차 출처 재시도 실패), www.volexity.com — ENOTFOUND(EGRESS_BLOCKED, BlueMoon/UTA0565 1차 출처 재시도 실패)
-- 비고: 7일 창(2026-10-13~) 기준 신규 🔥 없음. ARMORY CASTLE(공개 10-15)은 7일 창 내 유지, Integrity Technology Group(공개 10-08)은 7일 창 밖 유지.
+- 프로브: 없음(신규 1차 출처 후보가 없어 이번 실행에서는 신규 벤더 도메인 리치버빌리티 프로브를 시도하지 않음)
+- 비고: 7일 창(2026-10-13~) 기준 ARMORY CASTLE(공개 10-15)만 🔥 유지, Integrity Technology Group(공개 10-08)은 7일 창 밖 유지.
 
 ## 차단 운영 포맷 (복붙용)
 
@@ -232,7 +232,5 @@ www.twisinbeth.com
 
 ## 출처
 - [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched(이전 실행, 신규 변동 없음 재확인)
-- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-10-19 조회 — fetched(China/PRC-nexus 신규 게시물 없음)
-- [Microsoft Security Blog Typhoon 태그 목록](https://www.microsoft.com/en-us/security/blog/tag/typhoon/) — Microsoft — 2026-10-19 조회 — fetched(캐시된 구버전, 신규 없음)
-- unit42.paloaltonetworks.com — 2026-10-19 조회 — blocked(ENOTFOUND)
-- www.volexity.com — 2026-10-19 조회 — blocked(ENOTFOUND)
+- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-10-20 조회 — fetched(China/PRC-nexus 신규 게시물 없음)
+- [Microsoft Security Blog Typhoon 태그 목록](https://www.microsoft.com/en-us/security/blog/tag/typhoon/) — Microsoft — 2026-10-20 조회 — fetched(캐시된 구버전, 신규 없음)
