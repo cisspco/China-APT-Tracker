@@ -1,17 +1,17 @@
-# China State APT Campaign Snapshot — 2026-10-21 UTC
+# China State APT Campaign Snapshot — 2026-10-22 UTC
 
 ## 수집 상태
-- 페치 성공: [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재확인, 2026-10-15 ARMORY CASTLE 이후 China/PRC-nexus 신규 게시물 없음 — 신규 게시물 11건 모두 비중국 게시물: GTIG AI Threat Tracker 재게재/Mandiant 공급망 변조 조사/AI 시대 취약점 트렌드/Citrix NetScaler/ShinyHunters PeopleSoft/CI-CD 하드닝/BREEZE COMET(브라질, 금전적 동기)/러시아 표적 클러스터/에이전틱 코드리뷰/UNC6671 보이싱갈취 리브랜드), [Microsoft Security Blog Typhoon 태그 목록](https://www.microsoft.com/en-us/security/blog/tag/typhoon/)(재확인, 캐시된 구버전 목록으로 2025-03-05 Silk Typhoon 게시물이 여전히 최신 표시 — 신규 없음)
-- 페치 차단(EGRESS_BLOCKED): unit42.paloaltonetworks.com(신규 프로브, 여전히 차단 — DNS 실패), blog.talosintelligence.com(신규 프로브, 여전히 차단 — DNS 실패)
+- 페치 성공: [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재확인, 2026-10-15 ARMORY CASTLE 이후 China/PRC-nexus 신규 게시물 없음 — 목록 11건 동일: GTIG AI Threat Tracker/ARMORY CASTLE/Mandiant 공급망 변조/AI 시대 취약점 트렌드/Citrix NetScaler/ShinyHunters PeopleSoft/CI-CD 하드닝/BREEZE COMET(브라질)/러시아 표적 클러스터/에이전틱 코드리뷰/UNC6671 보이싱갈취), [Microsoft Security Blog Typhoon 태그 목록](https://www.microsoft.com/en-us/security/blog/tag/typhoon/)(재확인, 캐시된 구버전 목록으로 2025-03-05 Silk Typhoon 게시물이 여전히 최신 표시 — 신규 없음)
+- 페치 차단(EGRESS_BLOCKED): buttondown.com(신규 프로브, DNS 실패), helpnetsecurity.com(신규 프로브, DNS 실패), bleepingcomputer.com(신규 프로브, DNS 실패), dig.watch(신규 프로브, DNS 실패), cyfirma.com(신규 프로브, DNS 실패)
 - 검증된 IOC: 신규 0개(누적 도메인 35·IP 25·해시 61) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 0건(누적 27, 검증 12/미검증 15)
 
-6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대)를 수행했으나 2026-10-15(ARMORY CASTLE 공개일) 이후의 신규 중국 국가 배후 캠페인 보도는 확인되지 않았습니다. 검색 결과는 기존에 이미 추적 중인 캠페인(APT40 2026-02 ASD 권고문 재보도, APT31 러시아 IT 기업 침투 재보도, Salt/Volt Typhoon 배경 자료, APT31 Chrome/Windows 제로데이 체인 재인용 등)의 재보도 및 2025년 이전 배경 자료, 중국과 무관한 결과(기상 뉴스, 판다 관광 홍보 등)로 구성되었습니다. GTIG 블로그 목록·Microsoft Typhoon 태그 목록 재페치 결과 모두 신규 China/PRC-nexus 게시물 없음을 재확인했습니다. 추가로 이전 실행에서 차단으로 기록된 Unit 42·Cisco Talos 도메인을 재프로브했으나 여전히 DNS 수준에서 차단되어 Phantom Taurus·UAT-11587 항목을 검증으로 승격하지 못했습니다.
+6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대)를 수행했으나 2026-10-15(ARMORY CASTLE 공개일) 이후의 신규 중국 국가 배후 캠페인 보도는 확인되지 않았습니다. 다만 추가 검색에서 이미 추적 중인 "Integrity Technology Group 연계" 캠페인(2026-10-08 FBI 등 7개국 공동권고)에 대한 보강 보도를 확인했습니다: 2026-10-09 보도(전량 EGRESS_BLOCKED로 미검증)에 따르면 FBI/DOJ가 해당 캠페인에 사용된 도메인 7개를 압류했으며, 사용 툴 명칭이 MicroScan(IoT 봇넷 기반 취약점 스캐너)·FishHub(스피어피싱/멀웨어 배포)로 특정되었고, 피해 대상에 미국 사우스캐롤라이나주 전력회사, 일본·폴란드 공항, 대만 가스·전력 부문 조직이 포함되었다는 추가 서술이 있었습니다. 원문(FBI/DOJ 보도자료)은 1차 출처 미확보로 검증 목록에는 반영하지 않고 기존 캠페인 항목(아래) 서술을 보강했습니다. 그 외 검색 결과는 기존 추적 캠페인의 재보도, 2026년 이전 배경 자료, 중국과 무관한 결과로 구성되었습니다.
 
-전체 14건 캠페인이 60일 창(2026-08-23~) 내에 유지됩니다(그룹 메타데이터는 `groups.md`에 누적 유지). 60일 창 경계를 벗어나는 캠페인 없음(가장 오래된 QTFY는 공개 2026-08-26로 창 내 유지). 7일 창(2026-10-14~) 기준 ARMORY CASTLE(공개 10-15)만 🔥 유지(경계 임박 — 익일부터 창 밖), Integrity Technology Group(공개 10-08)은 7일 창 밖 유지.
+전체 14건 캠페인이 60일 창(2026-08-23~) 내에 유지됩니다(그룹 메타데이터는 `groups.md`에 누적 유지). 60일 창 경계를 벗어나는 캠페인 없음(가장 오래된 QTFY는 공개 2026-08-26로 창 내 유지, 다음 실행 전후 경계 이탈 예상). 7일 창(2026-10-15~) 기준 ARMORY CASTLE(공개 10-15, 정확히 7일 경계)은 금일부로 🔥 표시에서 제외합니다(전일 기록대로 경계 통과). 신규 7일 창 내 캠페인 없음.
 
 ## 최근 캠페인 (최근 60일)
 
-### ARMORY CASTLE(구 UNC5221) — BeyondTrust Remote Support 제로데이 익스플로잇, SAWFLY·BARECLAW 🔥
+### ARMORY CASTLE(구 UNC5221) — BeyondTrust Remote Support 제로데이 익스플로잇, SAWFLY·BARECLAW
 - 귀속: 귀속 미확인 — 원문 인용: "ARMORY CASTLE, a suspected PRC-nexus espionage threat actor (formerly tracked as UNC5221)" (GTIG, 검증). PLA/MSS 명시 없음.
 - 대상: 불명 — 원문에 특정 산업·국가 미기재(피해 조직 수·분야 비공개)
 - 초기 침투: BeyondTrust Remote Support(구 Bomgar, 26.2.3 이하 버전) 제로데이 CVE-2026-102764(인증 없는 임의 파일 업로드) 익스플로잇
@@ -19,13 +19,13 @@
 - 관측 시점: 제로데이 익스플로잇 2026년 8월 말, BeyondTrust 2026-10-09 SaaS 테넌트 패치, 2026-10-15 취약점 공개 및 GTIG 보고서 발행. ARMORY CASTLE(구 UNC5221)은 최소 2023-10부터 활동
 - 출처: [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched(이전 실행)
 
-### Integrity Technology Group 연계 — 동남아 정부기관 메일함 대량 복제 (FBI 등 7개국 공동권고) ⚠️ (미검증)
-- 귀속: 귀속 미확인 — 검색 결과 종합(1차 출처인 FBI/파트너국 공동권고 원문 미확보, 재보도만 확인): Integrity Technology Group은 과거 미 재무부(OFAC)가 "Flax Typhoon" 활동에 인프라를 제공한 혐의로 제재한 중국 기업이며, 영국도 별도 제재를 부과한 바 있음. 공동권고 자체가 PLA 또는 MSS를 명시했는지는 1차 출처 미확보로 확인 불가. PLA/MSS로 승격하지 않음.
-- 대상: 동남아시아 정부기관, 법집행기관, 의료기관, 종교단체의 Microsoft 365/Exchange 계정
-- 초기 침투: 웹 취약점 스캐닝 및 Microsoft 365/Exchange 계정 비밀번호 추측(패스워드 스프레이 추정)으로 계정 접근 후, 1,300개 이상의 스크립트를 포함한 자체 제작 도구로 메일함을 대량 복제
-- 주요 도구/멀웨어: 명칭 미상의 메일함 대량 복제 툴(1,300개 이상 스크립트 포함). ⚠️(미검증) 재보도 종합: SoftEther(터널링 도구 악용), DCSync(자격증명 덤핑 기법), 커스텀 메일탈취 봇 사용 및 과거 FBI가 와해한 Raptor Train 보트넷과의 연계 주장
-- 관측 시점: 공동권고 공개 2026-10-08, 실제 활동 기간은 1차 출처 미확보로 특정 불가
-- 출처: 검색 결과만 확인 — FBI 및 6개국 공동권고(1차 출처 미확보), 재보도(The Hacker News 등, 전량 EGRESS_BLOCKED)
+### Integrity Technology Group 연계 — 동남아 정부기관 메일함 대량 복제 및 MicroScan/FishHub 글로벌 봇넷·피싱 인프라 (FBI 등 7개국 공동권고 + DOJ 도메인 압류) ⚠️ (미검증)
+- 귀속: 귀속 미확인 — 검색 결과 종합(1차 출처인 FBI/파트너국 공동권고 및 DOJ 보도자료 원문 미확보, 재보도만 확인): Integrity Technology Group은 과거 미 재무부(OFAC)가 "Flax Typhoon" 활동에 인프라를 제공한 혐의로 제재한 중국 기업이며, 영국도 별도 제재를 부과한 바 있음. 공동권고·압류 발표 자체가 PLA 또는 MSS를 명시했는지는 1차 출처 미확보로 확인 불가. PLA/MSS로 승격하지 않음.
+- 대상: 동남아시아 정부기관·법집행기관·의료기관·종교단체의 Microsoft 365/Exchange 계정(메일함 복제); ⚠️(미검증, 2026-10-09 추가 보도) 미국 사우스캐롤라이나주 전력회사, 일본·폴란드 공항, 대만 가스·전력 부문 조직(MicroScan/FishHub 인프라 피해자로 거론)
+- 초기 침투: 웹 취약점 스캐닝 및 Microsoft 365/Exchange 계정 비밀번호 추측(패스워드 스프레이 추정)으로 계정 접근 후, 1,300개 이상의 스크립트를 포함한 자체 제작 도구로 메일함을 대량 복제. ⚠️(미검증) MicroScan은 감염된 IoT 기기 봇넷을 이용한 인터넷 전역 취약점 스캐닝 도구로 서술됨
+- 주요 도구/멀웨어: 명칭 미상의 메일함 대량 복제 툴(1,300개 이상 스크립트 포함). ⚠️(미검증) 2026-10-09 추가 보도로 툴 명칭 특정: MicroScan(취약점 스캐너, IoT 봇넷 기반), FishHub(스피어피싱·멀웨어 배포 인프라) — FBI/DOJ가 관련 도메인 7개 압류(1개는 MicroScan 접근용, 5개는 FishHub 멀웨어 배포용, 1개는 피해 장비상의 SoftEther VPN 소프트웨어 관련). 재보도 종합: SoftEther(터널링 도구 악용), DCSync(자격증명 덤핑 기법), 과거 FBI가 와해한 Raptor Train 보트넷과의 연계 주장
+- 관측 시점: 공동권고 공개 2026-10-08, DOJ 도메인 압류 2026-10-08경(2026-10-09 보도 확인), 실제 활동 기간은 1차 출처 미확보로 특정 불가
+- 출처: 검색 결과만 확인 — FBI 및 6개국 공동권고(1차 출처 미확보), 재보도(The Hacker News 등, 전량 EGRESS_BLOCKED); 2026-10-09 FBI/DOJ 도메인 압류 보도(Help Net Security, BleepingComputer, dig.watch, CYFIRMA 등, 전량 EGRESS_BLOCKED)
 
 ### UAT-11587 (Antino 백도어) — 아시아 8개국 정부·정책·시민사회 기관 대상 재부상 캠페인 ⚠️ (미검증)
 - 귀속: 귀속 미확인 — 검색 결과 종합: "Talos assesses the actor as China-nexus with high confidence" (Cisco Talos 재보도 종합, 원문 EGRESS_BLOCKED로 미검증). PLA/MSS 언급 없음.
@@ -33,7 +33,7 @@
 - 초기 침투: 대만 학계·시민단체 대상 Gmail 위장 스피어피싱으로 최초 식별
 - 주요 도구/멀웨어: Antino 백도어(Rust 컴파일) — Microsoft Graph API를 통해 Outlook/OneDrive 오브젝트를 C2 데드드롭으로 악용
 - 관측 시점: 2025-09~2026-10(캠페인 지속), 최초 공개 2026-07(미검증)/2026-10-01~04경 세부사항 확대 재보도(미검증)
-- 출처: 검색 결과만 확인 — Cisco Talos(blog.talosintelligence.com, 재프로브 결과 여전히 차단), 재보도(전량 EGRESS_BLOCKED)
+- 출처: 검색 결과만 확인 — Cisco Talos(blog.talosintelligence.com, 이전 프로브 결과 차단), 재보도(전량 EGRESS_BLOCKED)
 
 ### BPFdoor/Rekoobe/AVERAT — 메일보안장비 위장 통신사 침투 캠페인 ⚠️ (미검증)
 - 귀속: 귀속 미확인 — 검색 결과 종합(원문 EGRESS_BLOCKED로 미검증): "likely tied to Chinese-linked espionage against telecoms". PLA/MSS 언급 없음.
@@ -65,7 +65,7 @@
 - 초기 침투: 불명(원문 미확보) — IIS 웹서버를 주요 거점으로 활용, CL-STA-0043 → Operation Diplomatic Specter → Phantom Taurus로 명칭 진화
 - 주요 도구/멀웨어: NET-STAR(.NET 기반 신규 멀웨어 스위트, IIS 워커 프로세스 w3wp.exe 메모리 상주 컴포넌트 포함)
 - 관측 시점: 활동 계보 2023-06 ~ 2024-05 ~ 현재, 공개 2026-09(정확한 날짜 원문 미확보)
-- 출처: 검색 스니펫만 확인 — Unit 42(unit42.paloaltonetworks.com, 재프로브 결과 여전히 차단)
+- 출처: 검색 스니펫만 확인 — Unit 42(unit42.paloaltonetworks.com, 이전 프로브 결과 차단)
 
 ### Red Heron — WordPress·Zyxel·Ubiquiti·Gitea 연쇄 익스플로잇 정부기관 데이터 탈취 ⚠️ (미검증)
 - 귀속: 귀속 미확인 — 검색 스니펫 표현: "Chinese-speaking threat actor linked to the Red Heron group" (Acronis TRU/GreyNoise 재보도 종합). PLA/MSS 언급 없음.
@@ -132,7 +132,7 @@
 - 출처: 검색 스니펫만 확인 — DOJ(차단), NSA/FBI/CNMF JCSA(차단)
 
 ## 그룹 별칭 매핑
-전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 갱신: 없음(신규 그룹·별칭·귀속 변경 없음).
+전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 갱신: Integrity Technology Group 항목에 MicroScan·FishHub 툴 명칭 및 추가 피해 대상(미국 전력회사, 일본·폴란드 공항, 대만 가스·전력) 보강(미검증), 마지막 관측 2026-10-09로 갱신. 신규 그룹·귀속 변경 없음.
 
 ## 악용 CVE (패치 우선순위)
 신규 없음. 전체 누적 목록은 [`exploited-cves.txt`](../exploited-cves.txt) 참조(27건, 검증 12 / 미검증 15).
@@ -151,14 +151,15 @@
 
 ## 이번 실행 변경사항
 - 신규 캠페인: 없음
-- 신규 IOC: 없음
+- 신규 IOC: 없음(구체적 도메인/IP/해시 값이 포함된 신규 보도 없음)
 - 제거: 없음(60일 창 경계를 벗어나는 캠페인 없음)
 - 승격(미검증→검증): 없음
 - 귀속 변경: 없음
 - 신규 CVE: 없음
 - 신규 그룹(표 등재): 없음
-- 프로브: Unit 42(unit42.paloaltonetworks.com), Cisco Talos(blog.talosintelligence.com) 재시도 — 둘 다 여전히 DNS 수준 차단(EGRESS_BLOCKED)
-- 비고: 7일 창(2026-10-14~) 기준 ARMORY CASTLE(공개 10-15)만 🔥 유지(경계 임박), Integrity Technology Group(공개 10-08)은 7일 창 밖 유지.
+- 캠페인 상세 보강: Integrity Technology Group 연계 캠페인에 2026-10-09 FBI/DOJ 도메인 압류 보도 반영 — 툴 명칭 MicroScan·FishHub 특정, 피해 대상에 미국 사우스캐롤라이나 전력회사·일본/폴란드 공항·대만 가스전력 부문 추가(전량 미검증, 1차 출처 미확보)
+- 프로브: buttondown.com, helpnetsecurity.com, bleepingcomputer.com, dig.watch, cyfirma.com — 전부 DNS 단계에서 EGRESS_BLOCKED
+- 비고: 7일 창(2026-10-15~) 기준 ARMORY CASTLE(공개 10-15)이 경계를 지나 금일부로 🔥 제외. 신규 7일 창 내 캠페인 없음.
 
 ## 차단 운영 포맷 (복붙용)
 
@@ -232,5 +233,6 @@ www.twisinbeth.com
 
 ## 출처
 - [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched(이전 실행, 신규 변동 없음 재확인)
-- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-10-21 조회 — fetched(China/PRC-nexus 신규 게시물 없음)
-- [Microsoft Security Blog Typhoon 태그 목록](https://www.microsoft.com/en-us/security/blog/tag/typhoon/) — Microsoft — 2026-10-21 조회 — fetched(캐시된 구버전, 신규 없음)
+- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-10-22 조회 — fetched(China/PRC-nexus 신규 게시물 없음)
+- [Microsoft Security Blog Typhoon 태그 목록](https://www.microsoft.com/en-us/security/blog/tag/typhoon/) — Microsoft — 2026-10-22 조회 — fetched(캐시된 구버전, 신규 없음)
+- FBI/DOJ Flax Typhoon 관련 도메인 압류(MicroScan/FishHub) 보도 — Help Net Security, BleepingComputer, dig.watch, CYFIRMA 등 — 2026-10-09 보도 — blocked(검색 스니펫만 확인, 1차 출처 미확보)
