@@ -1,13 +1,13 @@
-# China State APT Campaign Snapshot — 2026-10-22 UTC
+# China State APT Campaign Snapshot — 2026-10-23 UTC
 
 ## 수집 상태
 - 페치 성공: [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재확인, 2026-10-15 ARMORY CASTLE 이후 China/PRC-nexus 신규 게시물 없음 — 목록 11건 동일: GTIG AI Threat Tracker/ARMORY CASTLE/Mandiant 공급망 변조/AI 시대 취약점 트렌드/Citrix NetScaler/ShinyHunters PeopleSoft/CI-CD 하드닝/BREEZE COMET(브라질)/러시아 표적 클러스터/에이전틱 코드리뷰/UNC6671 보이싱갈취), [Microsoft Security Blog Typhoon 태그 목록](https://www.microsoft.com/en-us/security/blog/tag/typhoon/)(재확인, 캐시된 구버전 목록으로 2025-03-05 Silk Typhoon 게시물이 여전히 최신 표시 — 신규 없음)
-- 페치 차단(EGRESS_BLOCKED): buttondown.com(신규 프로브, DNS 실패), helpnetsecurity.com(신규 프로브, DNS 실패), bleepingcomputer.com(신규 프로브, DNS 실패), dig.watch(신규 프로브, DNS 실패), cyfirma.com(신규 프로브, DNS 실패)
+- 페치 차단(EGRESS_BLOCKED): blog.talosintelligence.com(신규 프로브, DNS 실패 — UAT-11587/Antino 1차 출처 검증 재시도 실패), www.bankinfosecurity.com(신규 프로브, DNS 실패), unit42.paloaltonetworks.com(신규 프로브, DNS 실패), www.recordedfuture.com(신규 프로브, DNS 실패), www.darkreading.com(신규 프로브, DNS 실패)
 - 검증된 IOC: 신규 0개(누적 도메인 35·IP 25·해시 61) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 0건(누적 27, 검증 12/미검증 15)
 
-6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대)를 수행했으나 2026-10-15(ARMORY CASTLE 공개일) 이후의 신규 중국 국가 배후 캠페인 보도는 확인되지 않았습니다. 다만 추가 검색에서 이미 추적 중인 "Integrity Technology Group 연계" 캠페인(2026-10-08 FBI 등 7개국 공동권고)에 대한 보강 보도를 확인했습니다: 2026-10-09 보도(전량 EGRESS_BLOCKED로 미검증)에 따르면 FBI/DOJ가 해당 캠페인에 사용된 도메인 7개를 압류했으며, 사용 툴 명칭이 MicroScan(IoT 봇넷 기반 취약점 스캐너)·FishHub(스피어피싱/멀웨어 배포)로 특정되었고, 피해 대상에 미국 사우스캐롤라이나주 전력회사, 일본·폴란드 공항, 대만 가스·전력 부문 조직이 포함되었다는 추가 서술이 있었습니다. 원문(FBI/DOJ 보도자료)은 1차 출처 미확보로 검증 목록에는 반영하지 않고 기존 캠페인 항목(아래) 서술을 보강했습니다. 그 외 검색 결과는 기존 추적 캠페인의 재보도, 2026년 이전 배경 자료, 중국과 무관한 결과로 구성되었습니다.
+6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대) 및 보강 쿼리 3건(GTIG/MS 블로그 site: 검색, "China-nexus espionage campaign new backdoor report 2026-10")을 수행했으나 2026-10-15(ARMORY CASTLE 공개일) 이후의 신규 중국 국가 배후 캠페인 보도는 확인되지 않았습니다. 검색 스니펫에서 기존 추적 캠페인(UAT-11587/Antino, Integrity Technology Group/MicroScan·FishHub 등)에 대한 재보도 외에 새로운 정보는 발견되지 않았습니다. 1차 출처 검증을 위해 blog.talosintelligence.com, unit42.paloaltonetworks.com 등 5개 벤더 도메인을 신규로 프로브했으나 전부 EGRESS_BLOCKED로 실패했습니다. 그 외 검색 결과는 기존 추적 캠페인의 재보도, 2026년 이전 배경 자료, 중국과 무관한 결과로 구성되었습니다.
 
-전체 14건 캠페인이 60일 창(2026-08-23~) 내에 유지됩니다(그룹 메타데이터는 `groups.md`에 누적 유지). 60일 창 경계를 벗어나는 캠페인 없음(가장 오래된 QTFY는 공개 2026-08-26로 창 내 유지, 다음 실행 전후 경계 이탈 예상). 7일 창(2026-10-15~) 기준 ARMORY CASTLE(공개 10-15, 정확히 7일 경계)은 금일부로 🔥 표시에서 제외합니다(전일 기록대로 경계 통과). 신규 7일 창 내 캠페인 없음.
+전체 14건 캠페인이 60일 창(2026-08-24~) 내에 유지됩니다(그룹 메타데이터는 `groups.md`에 누적 유지). 가장 오래된 QTFY(공개 2026-08-26)는 60일 창 경계(2026-08-24)를 아직 통과하지 않아 창 내 유지되나, 2026-10-26 실행부터는 경계를 벗어날 것으로 예상됩니다. 7일 창(2026-10-17~) 기준 신규 캠페인 없음 — ARMORY CASTLE(공개 10-15)은 전일부로 이미 🔥 표시에서 제외된 상태 유지.
 
 ## 최근 캠페인 (최근 60일)
 
@@ -33,7 +33,7 @@
 - 초기 침투: 대만 학계·시민단체 대상 Gmail 위장 스피어피싱으로 최초 식별
 - 주요 도구/멀웨어: Antino 백도어(Rust 컴파일) — Microsoft Graph API를 통해 Outlook/OneDrive 오브젝트를 C2 데드드롭으로 악용
 - 관측 시점: 2025-09~2026-10(캠페인 지속), 최초 공개 2026-07(미검증)/2026-10-01~04경 세부사항 확대 재보도(미검증)
-- 출처: 검색 결과만 확인 — Cisco Talos(blog.talosintelligence.com, 이전 프로브 결과 차단), 재보도(전량 EGRESS_BLOCKED)
+- 출처: 검색 결과만 확인 — Cisco Talos(blog.talosintelligence.com, 금일 포함 재차 프로브 결과 차단), 재보도(전량 EGRESS_BLOCKED)
 
 ### BPFdoor/Rekoobe/AVERAT — 메일보안장비 위장 통신사 침투 캠페인 ⚠️ (미검증)
 - 귀속: 귀속 미확인 — 검색 결과 종합(원문 EGRESS_BLOCKED로 미검증): "likely tied to Chinese-linked espionage against telecoms". PLA/MSS 언급 없음.
@@ -65,7 +65,7 @@
 - 초기 침투: 불명(원문 미확보) — IIS 웹서버를 주요 거점으로 활용, CL-STA-0043 → Operation Diplomatic Specter → Phantom Taurus로 명칭 진화
 - 주요 도구/멀웨어: NET-STAR(.NET 기반 신규 멀웨어 스위트, IIS 워커 프로세스 w3wp.exe 메모리 상주 컴포넌트 포함)
 - 관측 시점: 활동 계보 2023-06 ~ 2024-05 ~ 현재, 공개 2026-09(정확한 날짜 원문 미확보)
-- 출처: 검색 스니펫만 확인 — Unit 42(unit42.paloaltonetworks.com, 이전 프로브 결과 차단)
+- 출처: 검색 스니펫만 확인 — Unit 42(unit42.paloaltonetworks.com, 금일 포함 재차 프로브 결과 차단)
 
 ### Red Heron — WordPress·Zyxel·Ubiquiti·Gitea 연쇄 익스플로잇 정부기관 데이터 탈취 ⚠️ (미검증)
 - 귀속: 귀속 미확인 — 검색 스니펫 표현: "Chinese-speaking threat actor linked to the Red Heron group" (Acronis TRU/GreyNoise 재보도 종합). PLA/MSS 언급 없음.
@@ -130,9 +130,10 @@
 - 주요 도구/멀웨어: QScan, QTRouter
 - 관측 시점: 활동 기간 2018~2026 — 2026-08-26 미 법무부·FBI가 도메인 압류로 무력화
 - 출처: 검색 스니펫만 확인 — DOJ(차단), NSA/FBI/CNMF JCSA(차단)
+- 비고: 2026-08-26 공개로 60일 창(2026-08-24~) 경계에 근접 — 2026-10-26 실행부터 창 밖으로 제외 예정
 
 ## 그룹 별칭 매핑
-전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 갱신: Integrity Technology Group 항목에 MicroScan·FishHub 툴 명칭 및 추가 피해 대상(미국 전력회사, 일본·폴란드 공항, 대만 가스·전력) 보강(미검증), 마지막 관측 2026-10-09로 갱신. 신규 그룹·귀속 변경 없음.
+전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 갱신 없음. 신규 그룹·귀속 변경 없음.
 
 ## 악용 CVE (패치 우선순위)
 신규 없음. 전체 누적 목록은 [`exploited-cves.txt`](../exploited-cves.txt) 참조(27건, 검증 12 / 미검증 15).
@@ -152,14 +153,14 @@
 ## 이번 실행 변경사항
 - 신규 캠페인: 없음
 - 신규 IOC: 없음(구체적 도메인/IP/해시 값이 포함된 신규 보도 없음)
-- 제거: 없음(60일 창 경계를 벗어나는 캠페인 없음)
+- 제거: 없음(60일 창 경계를 벗어나는 캠페인 없음 — QTFY는 2026-10-26 실행부터 경계 이탈 예상)
 - 승격(미검증→검증): 없음
 - 귀속 변경: 없음
 - 신규 CVE: 없음
 - 신규 그룹(표 등재): 없음
-- 캠페인 상세 보강: Integrity Technology Group 연계 캠페인에 2026-10-09 FBI/DOJ 도메인 압류 보도 반영 — 툴 명칭 MicroScan·FishHub 특정, 피해 대상에 미국 사우스캐롤라이나 전력회사·일본/폴란드 공항·대만 가스전력 부문 추가(전량 미검증, 1차 출처 미확보)
-- 프로브: buttondown.com, helpnetsecurity.com, bleepingcomputer.com, dig.watch, cyfirma.com — 전부 DNS 단계에서 EGRESS_BLOCKED
-- 비고: 7일 창(2026-10-15~) 기준 ARMORY CASTLE(공개 10-15)이 경계를 지나 금일부로 🔥 제외. 신규 7일 창 내 캠페인 없음.
+- 캠페인 상세 보강: 없음
+- 프로브: blog.talosintelligence.com, www.bankinfosecurity.com, unit42.paloaltonetworks.com, www.recordedfuture.com, www.darkreading.com — 전부 DNS 단계에서 EGRESS_BLOCKED
+- 비고: 7일 창(2026-10-17~) 내 신규 캠페인 없음. GTIG·Microsoft 블로그 목록 재확인 결과 2026-10-22 실행 이후 변동 없음.
 
 ## 차단 운영 포맷 (복붙용)
 
@@ -233,6 +234,7 @@ www.twisinbeth.com
 
 ## 출처
 - [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched(이전 실행, 신규 변동 없음 재확인)
-- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-10-22 조회 — fetched(China/PRC-nexus 신규 게시물 없음)
-- [Microsoft Security Blog Typhoon 태그 목록](https://www.microsoft.com/en-us/security/blog/tag/typhoon/) — Microsoft — 2026-10-22 조회 — fetched(캐시된 구버전, 신규 없음)
-- FBI/DOJ Flax Typhoon 관련 도메인 압류(MicroScan/FishHub) 보도 — Help Net Security, BleepingComputer, dig.watch, CYFIRMA 등 — 2026-10-09 보도 — blocked(검색 스니펫만 확인, 1차 출처 미확보)
+- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-10-23 조회 — fetched(China/PRC-nexus 신규 게시물 없음)
+- [Microsoft Security Blog Typhoon 태그 목록](https://www.microsoft.com/en-us/security/blog/tag/typhoon/) — Microsoft — 2026-10-23 조회 — fetched(캐시된 구버전, 신규 없음)
+- UAT-11587/Antino (Cisco Talos) — blog.talosintelligence.com — 2026-10-23 재프로브 — blocked(1차 출처 미확보, 미검증 유지)
+- CL-STA-1087 동남아 군사기관 표적 클러스터 (Unit 42) — unit42.paloaltonetworks.com — 2026-10-23 프로브 — blocked(검색 스니펫만 확인, 본 리포트에 미등재 — 1차 출처 미확보 및 캠페인명·세부사항 불충분)
