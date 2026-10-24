@@ -1,15 +1,23 @@
-# China State APT Campaign Snapshot — 2026-10-23 UTC
+# China State APT Campaign Snapshot — 2026-10-24 UTC
 
 ## 수집 상태
-- 페치 성공: [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재확인, 2026-10-15 ARMORY CASTLE 이후 China/PRC-nexus 신규 게시물 없음 — 목록 11건 동일: GTIG AI Threat Tracker/ARMORY CASTLE/Mandiant 공급망 변조/AI 시대 취약점 트렌드/Citrix NetScaler/ShinyHunters PeopleSoft/CI-CD 하드닝/BREEZE COMET(브라질)/러시아 표적 클러스터/에이전틱 코드리뷰/UNC6671 보이싱갈취), [Microsoft Security Blog Typhoon 태그 목록](https://www.microsoft.com/en-us/security/blog/tag/typhoon/)(재확인, 캐시된 구버전 목록으로 2025-03-05 Silk Typhoon 게시물이 여전히 최신 표시 — 신규 없음)
-- 페치 차단(EGRESS_BLOCKED): blog.talosintelligence.com(신규 프로브, DNS 실패 — UAT-11587/Antino 1차 출처 검증 재시도 실패), www.bankinfosecurity.com(신규 프로브, DNS 실패), unit42.paloaltonetworks.com(신규 프로브, DNS 실패), www.recordedfuture.com(신규 프로브, DNS 실패), www.darkreading.com(신규 프로브, DNS 실패)
-- 검증된 IOC: 신규 0개(누적 도메인 35·IP 25·해시 61) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 0건(누적 27, 검증 12/미검증 15)
+- 페치 성공: [AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise](https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/)(Microsoft, 2026-10-21, 신규 1차 출처), [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust)(GTIG, 재확인), [PRC Targets US Medical Research](https://cloud.google.com/blog/topics/threat-intelligence/prc-targets-us-medical-research)(GTIG, 재확인), [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재페치, 2026-10-15 ARMORY CASTLE 이후 China/PRC-nexus 신규 게시물 없음 재확인), [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/)(재페치, 10-21 ARTEX 게시물 신규 식별 외 10-14 피싱 생태계·09-30 Zimbra CVE·09-29 RMM 피싱 남용/Star Blizzard는 모두 China 비관련)
+- 페치 차단(EGRESS_BLOCKED): unit42.paloaltonetworks.com(Phantom Taurus/CL-STA-1087 원문 검증 재시도, DNS 실패), blog.talosintelligence.com(UAT-11587/Antino 원문 검증 재시도, DNS 실패)
+- 검증된 IOC: 신규 IP 6개(누적 도메인 35·IP 31) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 0건(누적 27, 검증 12/미검증 15)
 
-6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대) 및 보강 쿼리 3건(GTIG/MS 블로그 site: 검색, "China-nexus espionage campaign new backdoor report 2026-10")을 수행했으나 2026-10-15(ARMORY CASTLE 공개일) 이후의 신규 중국 국가 배후 캠페인 보도는 확인되지 않았습니다. 검색 스니펫에서 기존 추적 캠페인(UAT-11587/Antino, Integrity Technology Group/MicroScan·FishHub 등)에 대한 재보도 외에 새로운 정보는 발견되지 않았습니다. 1차 출처 검증을 위해 blog.talosintelligence.com, unit42.paloaltonetworks.com 등 5개 벤더 도메인을 신규로 프로브했으나 전부 EGRESS_BLOCKED로 실패했습니다. 그 외 검색 결과는 기존 추적 캠페인의 재보도, 2026년 이전 배경 자료, 중국과 무관한 결과로 구성되었습니다.
+6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대) 및 보강 쿼리 다수(GTIG/MS 블로그 site: 검색, "China-nexus espionage new backdoor report October 23 24 2026", Unit 42 CL-STA-1087, NVISO BRICKSTORM Windows 변종, Storm-0940/ARTEX)를 수행했습니다. Microsoft가 2026-10-21 공개한 Storm-0940/ARTEX ConnectWise 공급망 침해 캠페인을 신규 1차 출처로 확보해 반영했습니다. 그 외 검토한 후보(Unit 42 CL-STA-1087, NVISO BRICKSTORM Windows 변종)는 모두 60일 창 밖이거나 이미 등재된 그룹과 동일해 미채택했습니다.
 
-전체 14건 캠페인이 60일 창(2026-08-24~) 내에 유지됩니다(그룹 메타데이터는 `groups.md`에 누적 유지). 가장 오래된 QTFY(공개 2026-08-26)는 60일 창 경계(2026-08-24)를 아직 통과하지 않아 창 내 유지되나, 2026-10-26 실행부터는 경계를 벗어날 것으로 예상됩니다. 7일 창(2026-10-17~) 기준 신규 캠페인 없음 — ARMORY CASTLE(공개 10-15)은 전일부로 이미 🔥 표시에서 제외된 상태 유지.
+전체 16건 캠페인이 60일 창(2026-08-25~) 내에 유지됩니다(그룹 메타데이터는 `groups.md`에 누적 유지). 가장 오래된 QTFY(공개 2026-08-26)는 60일 창 내에 유지되나 2026-10-26 실행부터는 경계를 벗어날 것으로 예상됩니다. 7일 창(2026-10-18~) 기준 Storm-0940(공개 10-21)만 신규 🔥 — ARMORY CASTLE(공개 10-15)은 7일 창을 벗어나 🔥 해제 유지.
 
 ## 최근 캠페인 (최근 60일)
+
+### Storm-0940 — ARTEX AI 에이전트 기반 ConnectWise 공급망 침해, M365 테넌트 대량 표적화 🔥
+- 귀속: 귀속 미확인 — 원문 인용: "China-state aligned actor" (Microsoft, 검증). PLA/MSS/PRC-nexus 표현 없음. 별칭 없음(원문: "no known industry aliases").
+- 대상: 항공우주·국방, 자동차, 화학, 에너지, 금융서비스, 정부, 법률, 제조, 미디어, 군, 반도체, 소프트웨어, 기술, 싱크탱크·비영리단체 등 전 세계 수백 개 조직. ConnectWise Cloud Backup 멀티테넌트 앱을 통해 2,250개 이상의 M365 테넌트 대상화
+- 초기 침투: ConnectWise Cloud Backup 멀티테넌트 앱 공급망 침해 → 신뢰된 OAuth 앱 경유 다운스트림 테넌트 접근. 2026-10-10~14(피크 10-11) 8개 조직 327개 계정 대상 패스워드 스프레이(성공 인증 미확인). 과거에는 패스워드 스프레이 및 인터넷 공개 애플리케이션 익스플로잇 사용. CVE 명시 없음
+- 주요 도구/멀웨어: ARTEX(오픈소스 멀티에이전트 LLM 펜테스트 프레임워크, Go+Next.js, 임의 AI 모델 구동 가능); 사후공격: 기존 OAuth/서비스 주체 앱에 자격증명 추가, 일부 ConnectWise 관리 앱의 Global Administrator 역할 자가 할당, Microsoft Graph로 ID·그룹·권한있는 역할 변경, 다수 Azure Key Vault 비밀 대량 조회
+- 관측 시점: 최소 2026-09부터 활동, 2026-10-15 ConnectWise 침해 최초 보도, 2026-10-16 ConnectWise 1차 권고, 2026-10-21 Microsoft 블로그 공개
+- 출처: [AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise](https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/) — Microsoft — 2026-10-21 — fetched
 
 ### ARMORY CASTLE(구 UNC5221) — BeyondTrust Remote Support 제로데이 익스플로잇, SAWFLY·BARECLAW
 - 귀속: 귀속 미확인 — 원문 인용: "ARMORY CASTLE, a suspected PRC-nexus espionage threat actor (formerly tracked as UNC5221)" (GTIG, 검증). PLA/MSS 명시 없음.
@@ -17,7 +25,7 @@
 - 초기 침투: BeyondTrust Remote Support(구 Bomgar, 26.2.3 이하 버전) 제로데이 CVE-2026-102764(인증 없는 임의 파일 업로드) 익스플로잇
 - 주요 도구/멀웨어: SAWFLY(PHP 웹셸, `mangoapi.php`), BARECLAW(SOCKS5-over-WebSocket 터널러, `ingredi_ws`), 스테이징 웹셸 `app_84304470%2Ephp`; `bt-secrets` 탈취, `zz-root-persist` 지속성 스크립트, `/usr/bin/dbus-authd` SUID 셸 사본
 - 관측 시점: 제로데이 익스플로잇 2026년 8월 말, BeyondTrust 2026-10-09 SaaS 테넌트 패치, 2026-10-15 취약점 공개 및 GTIG 보고서 발행. ARMORY CASTLE(구 UNC5221)은 최소 2023-10부터 활동
-- 출처: [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched(이전 실행)
+- 출처: [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched(재확인)
 
 ### Integrity Technology Group 연계 — 동남아 정부기관 메일함 대량 복제 및 MicroScan/FishHub 글로벌 봇넷·피싱 인프라 (FBI 등 7개국 공동권고 + DOJ 도메인 압류) ⚠️ (미검증)
 - 귀속: 귀속 미확인 — 검색 결과 종합(1차 출처인 FBI/파트너국 공동권고 및 DOJ 보도자료 원문 미확보, 재보도만 확인): Integrity Technology Group은 과거 미 재무부(OFAC)가 "Flax Typhoon" 활동에 인프라를 제공한 혐의로 제재한 중국 기업이며, 영국도 별도 제재를 부과한 바 있음. 공동권고·압류 발표 자체가 PLA 또는 MSS를 명시했는지는 1차 출처 미확보로 확인 불가. PLA/MSS로 승격하지 않음.
@@ -113,7 +121,7 @@
 - 초기 침투: RAVINE CASTLE — VMware vCenter SAML 취약점, Rubeus 기반 Kerberos 공격; BASIN CASTLE — 맞춤형 소셜엔지니어링, PowerShell 사후공격
 - 주요 도구/멀웨어: Gemini 오남용 자동화 침투테스트 프레임워크(RAVINE CASTLE), 생성형 AI 통합 공격수명주기 도구(BASIN CASTLE)
 - 관측 시점: 2026-09-08 공개
-- 출처: [From Prompting to Autonomy: The Evolution of Adversarial AI](https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai) — Google GTIG — 2026-09-08 — fetched(이전 실행)
+- 출처: [From Prompting to Autonomy: The Evolution of Adversarial AI](https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai) — Google GTIG — 2026-09-08 — fetched(재확인)
 
 ### Fire Ant — Cisco IOS XR 라우터 침해·로그 은닉 캠페인 ⚠️ (미검증)
 - 귀속: 귀속 미확인 — 검색 스니펫상 Sygnia 표현: "China-nexus threat actor". UNC3886과 강한 오버랩. PLA/MSS 언급 없음.
@@ -130,37 +138,45 @@
 - 주요 도구/멀웨어: QScan, QTRouter
 - 관측 시점: 활동 기간 2018~2026 — 2026-08-26 미 법무부·FBI가 도메인 압류로 무력화
 - 출처: 검색 스니펫만 확인 — DOJ(차단), NSA/FBI/CNMF JCSA(차단)
-- 비고: 2026-08-26 공개로 60일 창(2026-08-24~) 경계에 근접 — 2026-10-26 실행부터 창 밖으로 제외 예정
+- 비고: 2026-08-26 공개로 60일 창(2026-08-25~) 경계에 근접 — 2026-10-26 실행부터 창 밖으로 제외 예정
 
 ## 그룹 별칭 매핑
-전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 갱신 없음. 신규 그룹·귀속 변경 없음.
+전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 신규 1건 추가(Storm-0940, Microsoft 검증). 귀속 변경 없음.
 
 ## 악용 CVE (패치 우선순위)
-신규 없음. 전체 누적 목록은 [`exploited-cves.txt`](../exploited-cves.txt) 참조(27건, 검증 12 / 미검증 15).
+신규 없음. 전체 누적 목록은 [`exploited-cves.txt`](../exploited-cves.txt) 참조(27건, 검증 12 / 미검증 15). Storm-0940/ARTEX 캠페인은 특정 CVE 명시 없음(공급망 침해·패스워드 스프레이).
 
 ## C2 도메인 (35, 누적)
 신규 없음. 전체 목록은 [`blocklists/domains.txt`](../blocklists/domains.txt) 참조.
 
-## C2 IP (25, 누적)
-신규 없음. 전체 목록은 [`blocklists/ips.txt`](../blocklists/ips.txt) 참조.
+## C2 IP (31, 누적)
+신규 검증 IP 6건 추가(Storm-0940/ARTEX, Microsoft 원문 검증):
+- 144.172.64.128 — Storm-0940, ConnectWise/Graph API 활동, Microsoft
+- 144.172.64.60 — Storm-0940, ConnectWise/Graph API 활동, Microsoft
+- 144.172.64.99 — Storm-0940, ConnectWise/Graph API 활동 및 패스워드 스프레이 인프라, Microsoft
+- 187.15.88.186 — Storm-0940, VPN 연계 임시 IP(2026-10-15~16 관측), Microsoft
+- 187.15.89.186 — Storm-0940, VPN 연계 임시 IP(2026-10-15~16 관측), Microsoft
+- 187.15.90.217 — Storm-0940, VPN 연계 임시 IP(2026-10-15~16 관측), Microsoft
+
+전체 목록은 [`blocklists/ips.txt`](../blocklists/ips.txt) 참조.
 
 ## 파일 해시 (61, 누적)
-신규 없음. 기존 61건은 이전 스냅샷([`snapshots/2026-08-27.md`](2026-08-27.md), [`snapshots/2026-08-28.md`](2026-08-28.md), [`snapshots/2026-09-03.md`](2026-09-03.md), [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-09-25.md`](2026-09-25.md), [`snapshots/2026-10-01.md`](2026-10-01.md), [`snapshots/2026-10-16.md`](2026-10-16.md)) 참조.
+신규 없음. 기존 61건은 이전 스냅샷([`snapshots/2026-08-27.md`](2026-08-27.md), [`snapshots/2026-08-28.md`](2026-08-28.md), [`snapshots/2026-09-03.md`](2026-09-03.md), [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-09-25.md`](2026-09-25.md), [`snapshots/2026-10-01.md`](2026-10-01.md), [`snapshots/2026-10-16.md`](2026-10-16.md)) 참조. Storm-0940/ARTEX 원문에는 파일 해시 미수록(User-Agent 문자열만 제공: Python-urllib/3.12, python-requests/2.31.0, python-requests/2.34.2, curl/7.88.1, azure-toolkit/1.0 — IOC 성격이 아니라 차단리스트 미반영).
 
 ## 호스트 IOC · LOTL 아티팩트
-신규 없음. 기존 항목은 [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-10-16.md`](2026-10-16.md) 참조.
+신규 없음. 기존 항목은 [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-10-16.md`](2026-10-16.md) 참조. Storm-0940 사후공격 패턴(OAuth/서비스 주체 자격증명 추가, Global Administrator 자가 할당, Azure Key Vault 비밀 대량 조회)은 Microsoft Graph API 표준 호출 기반으로 특정 파일경로·커맨드 아티팩트 없음.
 
 ## 이번 실행 변경사항
-- 신규 캠페인: 없음
-- 신규 IOC: 없음(구체적 도메인/IP/해시 값이 포함된 신규 보도 없음)
+- 신규 캠페인: Storm-0940(ARTEX/ConnectWise 공급망 침해, Microsoft, 2026-10-21 공개) 1건 추가
+- 신규 IOC: 검증 IP 6건(Storm-0940 관련, 위 "C2 IP" 절 참조)
 - 제거: 없음(60일 창 경계를 벗어나는 캠페인 없음 — QTFY는 2026-10-26 실행부터 경계 이탈 예상)
 - 승격(미검증→검증): 없음
 - 귀속 변경: 없음
 - 신규 CVE: 없음
-- 신규 그룹(표 등재): 없음
+- 신규 그룹(표 등재): Storm-0940
 - 캠페인 상세 보강: 없음
-- 프로브: blog.talosintelligence.com, www.bankinfosecurity.com, unit42.paloaltonetworks.com, www.recordedfuture.com, www.darkreading.com — 전부 DNS 단계에서 EGRESS_BLOCKED
-- 비고: 7일 창(2026-10-17~) 내 신규 캠페인 없음. GTIG·Microsoft 블로그 목록 재확인 결과 2026-10-22 실행 이후 변동 없음.
+- 프로브: unit42.paloaltonetworks.com(Phantom Taurus/CL-STA-1087 검증 시도), blog.talosintelligence.com(UAT-11587 검증 시도) — 모두 DNS 단계에서 EGRESS_BLOCKED
+- 비고: 7일 창(2026-10-18~) 내 Storm-0940(10-21)만 신규 🔥. 검토 후 미채택: Unit 42 CL-STA-1087(동남아 군 기관, 공개 2026-03, 60일 창 밖), NVISO BRICKSTORM Windows 변종(ARMORY CASTLE/UNC5221과 동일 그룹, 공개 2025-04, 60일 창 밖), CrowdStrike 한국 금융기관 ARTEX 캠페인("likely a Chinese speaker and financially motivated"로 국가 배후 미귀속·금전적 동기 서술, 국가 배후 첩보 활동 기준 미충족).
 
 ## 차단 운영 포맷 (복붙용)
 
@@ -214,8 +230,14 @@ www.twisinbeth.com
 118.189.188.122
 129.126.109.50
 130.94.6.228
+144.172.64.128
+144.172.64.60
+144.172.64.99
 158.140.135.244
 166.88.2.90
+187.15.88.186
+187.15.89.186
+187.15.90.217
 193.149.129.191
 195.123.211.70
 202.59.10.122
@@ -233,8 +255,10 @@ www.twisinbeth.com
 ```
 
 ## 출처
-- [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched(이전 실행, 신규 변동 없음 재확인)
-- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-10-23 조회 — fetched(China/PRC-nexus 신규 게시물 없음)
-- [Microsoft Security Blog Typhoon 태그 목록](https://www.microsoft.com/en-us/security/blog/tag/typhoon/) — Microsoft — 2026-10-23 조회 — fetched(캐시된 구버전, 신규 없음)
-- UAT-11587/Antino (Cisco Talos) — blog.talosintelligence.com — 2026-10-23 재프로브 — blocked(1차 출처 미확보, 미검증 유지)
-- CL-STA-1087 동남아 군사기관 표적 클러스터 (Unit 42) — unit42.paloaltonetworks.com — 2026-10-23 프로브 — blocked(검색 스니펫만 확인, 본 리포트에 미등재 — 1차 출처 미확보 및 캠페인명·세부사항 불충분)
+- [AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise](https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/) — Microsoft — 2026-10-21 — fetched
+- [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched(재확인)
+- [PRC Targets US Medical Research](https://cloud.google.com/blog/topics/threat-intelligence/prc-targets-us-medical-research) — Google GTIG — 2026-06-15 — fetched(재확인)
+- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-10-24 조회 — fetched(China/PRC-nexus 신규 게시물 없음)
+- [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/) — Microsoft — 2026-10-24 조회 — fetched(10-21 ARTEX 신규 식별, 그 외 China 비관련)
+- Phantom Taurus/CL-STA-1087 (Unit 42) — unit42.paloaltonetworks.com — 2026-10-24 재프로브 — blocked(1차 출처 미확보, 미검증 유지)
+- UAT-11587/Antino (Cisco Talos) — blog.talosintelligence.com — 2026-10-24 재프로브 — blocked(1차 출처 미확보, 미검증 유지)
