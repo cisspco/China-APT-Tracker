@@ -1,17 +1,17 @@
-# China State APT Campaign Snapshot — 2026-10-25 UTC
+# China State APT Campaign Snapshot — 2026-11-02 UTC
 
 ## 수집 상태
-- 페치 성공: [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재페치, 10-24 확인 이후 신규 China/PRC-nexus 게시물 없음 — 최신 게시물은 여전히 10-15 ARMORY CASTLE), [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/)(재페치, 10-21 Storm-0940/ARTEX 이후 신규 China 관련 게시물 없음 — 10-14 피싱 생태계(Storm-2990/Storm-3119, 중국어권 사이버범죄 생태계로 서술되나 국가 배후 미귀속)·09-30 Zimbra CVE·09-29 Storm-3168/RMM 피싱·09-29 Star Blizzard는 모두 비관련 또는 러시아 귀속)
-- 페치 차단(EGRESS_BLOCKED): unit42.paloaltonetworks.com(Phantom Taurus 원문 검증 재시도, DNS 실패), welivesecurity.com(FamousSparrow/SparroWocky 원문 검증 신규 시도, DNS 실패)
+- 페치 성공: [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재페치 — 11건 전체 제목 확인, 10-15 ARMORY CASTLE 이후 신규 China/PRC-nexus 게시물 없음, 10-30 BREEZE COMET은 브라질 대상 금전적 동기 그룹으로 비관련), [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/)(재페치 — 09-22~10-30 12건 전체 제목·날짜 확인, 10-21 Storm-0940/ARTEX 이후 신규 China 관련 게시물 없음 — 10-30 Claude Code 확장 SSH 백도어·AD CS ESC1/ESC8은 모두 비관련, 10-29는 북한 귀속, 10-14 Storm-2990/Storm-3119는 "Chinese-language cybercriminal ecosystem"으로 서술되나 국가 배후 귀속 없음), [PRC Targets US Medical Research](https://cloud.google.com/blog/topics/threat-intelligence/prc-targets-us-medical-research)(UNC6508/INFINITERED, 공개 2026-06-15, 재확인 — 기존 반영 내용과 완전 동일), [Ghost in the Router](https://cloud.google.com/blog/topics/threat-intelligence/china-nexus-espionage-targets-juniper-routers)(UNC3886, 공개 2025-03-12, 재확인 — 기존 반영 내용과 완전 동일), [Silk Typhoon Targeting IT Supply Chain](https://www.microsoft.com/en-us/security/blog/2025/03/05/silk-typhoon-targeting-it-supply-chain/)(공개 2025-03-05, 재확인 — 기존 반영 내용과 완전 동일)
+- 페치 차단: sygnia.co(Fire Ant 원문 승격 재시도, DNS 실패), cybersecuritynews.com(Fire Ant 후속 보도 2026-10-07 검증 시도, DNS 실패), bleepingcomputer.com(Fire Ant 재보도 검증 시도, DNS 실패), unit42.paloaltonetworks.com(Phantom Taurus 원문 검증 재시도, DNS 실패)
 - 검증된 IOC: 신규 0개(누적 도메인 35·IP 31) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 0건(누적 27, 검증 12/미검증 15)
 
-6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대) 및 보강 쿼리(GTIG/MS 블로그 site: 검색)를 수행했으나 모두 기존에 이미 반영된 캠페인(Storm-0940/ARTEX, Chrome/Windows 제로데이 체인 등)이나 60일 창 밖의 과거 자료만 재확인되었고, 신규 1차 출처는 발견하지 못했습니다. Microsoft 10-14 게시물(Storm-2990/Storm-3119, 중국어권 피싱 키트·마켓플레이스 생태계)은 "Chinese-language cybercriminal ecosystem"으로만 서술되어 국가 배후 귀속이 없고 금전적 동기의 사이버범죄로 판단되어 미채택(방법론: "일반적인 China-nexus 범죄 활동으로 리포트를 채우지 않음" 원칙 적용). 이번 실행은 신규 캠페인·신규 IOC·신규 CVE 없는 "변경 없음" 일자입니다.
+6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대) 및 보강 쿼리(GTIG/MS 블로그 site: 검색, Fire Ant/UNC6508/Storm-2603/Phantom Taurus 등 특정 캠페인 후속 검색)를 수행했으나, 모두 기존에 이미 반영된 캠페인(UNC6508, UNC3886/Juniper, Silk Typhoon, Fire Ant, Storm-0940 등)의 재보도이거나 60일 창 밖의 과거 자료만 재확인되었고, 신규 1차 출처는 발견하지 못했습니다. GTIG·Microsoft 블로그 목록을 직접 재페치해 전체 게시물 제목·날짜를 확인한 결과 전회(2026-10-25) 실행 이후 신규 China/PRC-nexus 게시물이 없음을 확인했습니다.
 
-전체 16건 캠페인이 60일 창(2026-08-26~) 내에 유지됩니다(그룹 메타데이터는 `groups.md`에 누적 유지). 가장 오래된 QTFY(공개 2026-08-26)는 60일 창 경계에 정확히 위치해 오늘 실행에서는 유지되나, 2026-10-26 실행부터는 창 밖으로 제외될 예정입니다. 7일 창(2026-10-19~) 기준 Storm-0940(공개 10-21)만 신규 🔥 유지 — ARMORY CASTLE(공개 10-15)은 7일 창을 벗어나 🔥 해제 유지.
+60일 창이 2026-09-03로 이동하면서 Fire Ant(공개 2026-08-30/08-31)와 QTFY(공개 2026-08-26)가 창 밖으로 이탈해 "최근 캠페인" 절에서 제외되었습니다(그룹 메타데이터·관련 IOC는 `groups.md`·누적 차단목록에 계속 유지 — 제거 아님, 60일 서사 창 이탈만). 전회 🔥였던 Storm-0940(공개 10-21)은 7일 창(2026-10-26~)을 벗어나 🔥 해제. 나머지 14건 캠페인은 모두 60일 창(2026-09-03~) 내 유지됩니다.
 
 ## 최근 캠페인 (최근 60일)
 
-### Storm-0940 — ARTEX AI 에이전트 기반 ConnectWise 공급망 침해, M365 테넌트 대량 표적화 🔥
+### Storm-0940 — ARTEX AI 에이전트 기반 ConnectWise 공급망 침해, M365 테넌트 대량 표적화
 - 귀속: 귀속 미확인 — 원문 인용: "China-state aligned actor" (Microsoft, 검증). PLA/MSS/PRC-nexus 표현 없음. 별칭 없음(원문: "no known industry aliases").
 - 대상: 항공우주·국방, 자동차, 화학, 에너지, 금융서비스, 정부, 법률, 제조, 미디어, 군, 반도체, 소프트웨어, 기술, 싱크탱크·비영리단체 등 전 세계 수백 개 조직. ConnectWise Cloud Backup 멀티테넌트 앱을 통해 2,250개 이상의 M365 테넌트 대상화
 - 초기 침투: ConnectWise Cloud Backup 멀티테넌트 앱 공급망 침해 → 신뢰된 OAuth 앱 경유 다운스트림 테넌트 접근. 2026-10-10~14(피크 10-11) 8개 조직 327개 계정 대상 패스워드 스프레이(성공 인증 미확인). 과거에는 패스워드 스프레이 및 인터넷 공개 애플리케이션 익스플로잇 사용. CVE 명시 없음
@@ -33,7 +33,7 @@
 - 초기 침투: 웹 취약점 스캐닝 및 Microsoft 365/Exchange 계정 비밀번호 추측(패스워드 스프레이 추정)으로 계정 접근 후, 1,300개 이상의 스크립트를 포함한 자체 제작 도구로 메일함을 대량 복제. ⚠️(미검증) MicroScan은 감염된 IoT 기기 봇넷을 이용한 인터넷 전역 취약점 스캐닝 도구로 서술됨
 - 주요 도구/멀웨어: 명칭 미상의 메일함 대량 복제 툴(1,300개 이상 스크립트 포함). ⚠️(미검증) 2026-10-09 추가 보도로 툴 명칭 특정: MicroScan(취약점 스캐너, IoT 봇넷 기반), FishHub(스피어피싱·멀웨어 배포 인프라) — FBI/DOJ가 관련 도메인 7개 압류
 - 관측 시점: 공동권고 공개 2026-10-08, DOJ 도메인 압류 2026-10-08경(2026-10-09 보도 확인), 실제 활동 기간은 1차 출처 미확보로 특정 불가
-- 출처: 검색 결과만 확인 — FBI 및 6개국 공동권고(1차 출처 미확보), 재보도(The Hacker News 등, 전량 EGRESS_BLOCKED); 2026-10-09 FBI/DOJ 도메인 압류 보도(전량 EGRESS_BLOCKED)
+- 출처: 검색 결과만 확인 — FBI 및 6개국 공동권고(1차 출처 미확보), 재보도(전량 EGRESS_BLOCKED); 2026-10-09 FBI/DOJ 도메인 압류 보도(전량 EGRESS_BLOCKED)
 
 ### UAT-11587 (Antino 백도어) — 아시아 8개국 정부·정책·시민사회 기관 대상 재부상 캠페인 ⚠️ (미검증)
 - 귀속: 귀속 미확인 — 검색 결과 종합: "Talos assesses the actor as China-nexus with high confidence" (Cisco Talos 재보도 종합, 원문 EGRESS_BLOCKED로 미검증). PLA/MSS 언급 없음.
@@ -97,7 +97,7 @@
 - 초기 침투: 불명
 - 주요 도구/멀웨어: SparroWocky — 모듈형 C++ 백도어, 기존 SparrowDoor 대체
 - 관측 시점: 최소 2025-08부터 활동, 2026-09-17 공개
-- 출처: 검색 스니펫만 확인 — The Hacker News(차단), ESET welivesecurity.com(금일 신규 프로브 결과 DNS 차단)
+- 출처: 검색 스니펫만 확인 — The Hacker News(차단), ESET welivesecurity.com(차단)
 
 ### AI 모델 전환 공격 툴 "CC Switch" — 미상 PRC-nexus 첩보 그룹
 - 귀속: 귀속 미확인 — 원문 인용: "a PRC-nexus espionage group" (Google Cloud/GTIG, Cloud CISO Perspectives, 검증). 그룹 고유 명칭 미부여. PLA/MSS 언급 없음.
@@ -123,23 +123,6 @@
 - 관측 시점: 2026-09-08 공개
 - 출처: [From Prompting to Autonomy: The Evolution of Adversarial AI](https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai) — Google GTIG — 2026-09-08 — fetched(이전 실행)
 
-### Fire Ant — Cisco IOS XR 라우터 침해·로그 은닉 캠페인 ⚠️ (미검증)
-- 귀속: 귀속 미확인 — 검색 스니펫상 Sygnia 표현: "China-nexus threat actor". UNC3886과 강한 오버랩. PLA/MSS 언급 없음.
-- 대상: Cisco IOS XR 라우터, TACACS 서버, 리눅스 관리 호스트
-- 초기 침투: 불명 — 비정상 GRE 터널 인터페이스로 최초 발견
-- 주요 도구/멀웨어: TacTap(tac_plus 프로세스에 악성 라이브러리 로드)
-- 관측 시점: 2026년, Sygnia 2026-08-30/08-31 공개
-- 출처: 검색 스니펫만 확인 — Sygnia(차단)
-
-### QScan/QTRouter 인프라 해체 — QTFY ⚠️ (미검증)
-- 귀속: 귀속 미확인 — 검색 스니펫(원문 미확보) 인용: "A People's Republic of China (PRC) state-sponsored group known as 'QTFY,' employed by China-based Nanjing Xinjiuwei Network Technology Company... paying customers include...Ministry of State Security and...People's Liberation Army." 1차 출처(justice.gov, media.defense.gov) 전량 EGRESS_BLOCKED로 검증 불가 — PLA/MSS 표로 승격하지 않음.
-- 대상: 미국 연방기관 및 중요 인프라 — NASA, 연방준비제도, 에너지부, 법무부, 보건복지부, 국립보건원, 미 상원, 병원, 통신사, 전력회사, 방위산업체 등 300개 이상 미국 조직
-- 초기 침투: QScan으로 인터넷 전역의 취약 IoT 기기 스캔 후 대량 감염, QTRouter 난독화 네트워크 구성
-- 주요 도구/멀웨어: QScan, QTRouter
-- 관측 시점: 활동 기간 2018~2026 — 2026-08-26 미 법무부·FBI가 도메인 압류로 무력화
-- 출처: 검색 스니펫만 확인 — DOJ(차단), NSA/FBI/CNMF JCSA(차단)
-- 비고: 2026-08-26 공개로 60일 창(2026-08-26~) 경계에 정확히 위치 — 오늘(2026-10-25) 실행까지는 유지되나 2026-10-26 실행부터는 창 밖으로 제외 예정
-
 ## 그룹 별칭 매핑
 전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 신규 그룹 추가 없음, 귀속 변경 없음.
 
@@ -161,14 +144,15 @@
 ## 이번 실행 변경사항
 - 신규 캠페인: 없음
 - 신규 IOC: 없음
-- 제거: 없음(60일 창 경계를 벗어나는 캠페인 없음 — QTFY는 2026-10-26 실행부터 경계 이탈 예상)
+- 제거: 없음(누적 차단목록·CVE·그룹 목록에서 삭제된 항목 없음). 다만 Fire Ant(공개 2026-08-30/08-31)와 QTFY(공개 2026-08-26)는 60일 창(2026-09-03~)을 벗어나 이번 스냅샷의 "최근 캠페인" 서사에서만 제외됨 — 그룹 메타데이터는 `groups.md`에 계속 유지
 - 승격(미검증→검증): 없음
 - 귀속 변경: 없음
 - 신규 CVE: 없음
 - 신규 그룹(표 등재): 없음
 - 캠페인 상세 보강: 없음
-- 프로브: unit42.paloaltonetworks.com(Phantom Taurus 검증 재시도), welivesecurity.com(FamousSparrow/SparroWocky 검증 신규 시도) — 모두 DNS 단계에서 EGRESS_BLOCKED
-- 비고: 검토 후 미채택 — Microsoft Storm-1175/StormEncryptor(랜섬웨어, China-linked로 재보도되었으나 금전적 동기의 사이버범죄로 서술되어 국가 배후 첩보 활동 기준 미충족), Microsoft Storm-2990/Storm-3119(2026-10-14, "Chinese-language cybercriminal ecosystem"으로 서술되나 국가 배후 귀속 없음, 금전적 동기)
+- 🔥 해제: Storm-0940(공개 10-21)이 7일 창(2026-10-26~)을 벗어나 🔥 해제. 금일 🔥 캠페인 없음
+- 프로브: sygnia.co(Fire Ant 원문 승격 재시도), cybersecuritynews.com(Fire Ant 후속 보도 검증), bleepingcomputer.com(Fire Ant 재보도 검증), unit42.paloaltonetworks.com(Phantom Taurus 원문 검증 재시도) — 모두 DNS 단계에서 실패(ENOTFOUND)
+- 비고: GTIG·Microsoft 블로그 목록 전체 재확인(각 11건·12건) 결과 전회(2026-10-25) 이후 신규 China/PRC-nexus 게시물 없음을 확인. WebFetch 예산 8건 소진(성공 5 — GTIG 목록, MSTIC 목록, UNC6508 재확인, UNC3886/Juniper 재확인, Silk Typhoon 재확인 / 실패 3 — sygnia.co, cybersecuritynews.com, bleepingcomputer.com, unit42.paloaltonetworks.com 중 DNS 실패 다수)
 
 ## 차단 운영 포맷 (복붙용)
 
@@ -249,7 +233,12 @@ www.twisinbeth.com
 ## 출처
 - [AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise](https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/) — Microsoft — 2026-10-21 — fetched(이전 실행)
 - [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched(이전 실행)
-- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-10-25 조회 — fetched(China/PRC-nexus 신규 게시물 없음)
-- [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/) — Microsoft — 2026-10-25 조회 — fetched(10-21 ARTEX 이후 신규 China 관련 게시물 없음)
-- Phantom Taurus (Unit 42) — unit42.paloaltonetworks.com — 2026-10-25 재프로브 — blocked(1차 출처 미확보, 미검증 유지)
-- FamousSparrow/SparroWocky (ESET) — welivesecurity.com — 2026-10-25 신규 프로브 — blocked(1차 출처 미확보, 미검증 유지)
+- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-11-02 조회 — fetched(China/PRC-nexus 신규 게시물 없음)
+- [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/) — Microsoft — 2026-11-02 조회 — fetched(10-21 ARTEX 이후 신규 China 관련 게시물 없음)
+- [PRC Targets US Medical Research](https://cloud.google.com/blog/topics/threat-intelligence/prc-targets-us-medical-research) — Google GTIG — 공개 2026-06-15 — 2026-11-02 재확인 — fetched(신규 정보 없음)
+- [Ghost in the Router (China-nexus espionage targets Juniper routers)](https://cloud.google.com/blog/topics/threat-intelligence/china-nexus-espionage-targets-juniper-routers) — Google GTIG/Mandiant — 공개 2025-03-12 — 2026-11-02 재확인 — fetched(신규 정보 없음, UNC3886)
+- [Silk Typhoon Targeting IT Supply Chain](https://www.microsoft.com/en-us/security/blog/2025/03/05/silk-typhoon-targeting-it-supply-chain/) — Microsoft — 공개 2025-03-05 — 2026-11-02 재확인 — fetched(신규 정보 없음)
+- Fire Ant 후속 보도(cybersecuritynews.com, 2026-10-07) — 2026-11-02 프로브 — blocked(DNS 실패, 미검증 유지)
+- Fire Ant 원문(sygnia.co) — 2026-11-02 프로브 — blocked(DNS 실패, 미검증 유지)
+- Fire Ant 재보도(bleepingcomputer.com) — 2026-11-02 프로브 — blocked(DNS 실패, 미검증 유지)
+- Phantom Taurus (Unit 42) — unit42.paloaltonetworks.com — 2026-11-02 재프로브 — blocked(DNS 실패, 1차 출처 미확보, 미검증 유지)
