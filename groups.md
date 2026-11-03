@@ -4,7 +4,7 @@
 
 | 대표명 | Microsoft | APT 번호 | Mandiant | 기타 | 귀속 | 마지막 관측 |
 |---|---|---|---|---|---|---|
-| Storm-0940 | Storm-0940 | - | - | 별칭 없음(원문 명시: "no known industry aliases"), ARTEX(오픈소스 멀티에이전트 LLM 펜테스트 프레임워크, Go+Next.js) 사용, ConnectWise Cloud Backup 멀티테넌트 앱 공급망 침해로 M365 다운스트림 테넌트 2,250개 이상 대상 OAuth 앱 신뢰 악용 | 귀속 미확인 — 원문 인용: "China-state aligned actor" (Microsoft, 검증). PLA/MSS/PRC-nexus 표현 없음 | 2026-10-21 |
+| Storm-0940 | Storm-0940 | - | UNC7228(GTIG, 2026-10-30 명명 — Wiz가 추적하는 동일 활동과 중첩) | 별칭 없음(Microsoft 원문: "no known industry aliases"), ARTEX(오픈소스 멀티에이전트 LLM 펜테스트 프레임워크, Go+Next.js) 사용, ConnectWise Cloud Backup 멀티테넌트 앱 공급망 침해로 M365 다운스트림 테넌트 2,250개 이상 대상 OAuth 앱 신뢰 악용; GTIG 보강(2026-10-30, 검증): Azure Kudu/SCM API·AWS IAM 자격증명·Weaver OA 웹서버 경유 침투, MySQL general_log_file 악용 .jsp 웹셸(cl1217.jsp 등), artex-probe-* 명명 패턴, webhook.site 악용 유출. GTIG는 ARTEX를 사용하는 별도의 미명명 "suspected PRC-nexus clusters"도 존재한다고 서술 | 귀속 미확인 — 원문 인용: "China-state aligned actor"(Microsoft, 검증) / "PRC-nexus actor STORM-0940"(GTIG 인용, 검증). PLA/MSS 명시 없음 | 2026-10-30 |
 | Mustang Panda | Twill Typhoon | TA416 | UNC6384 | HoneyMyte(Kaspersky), Earth Preta(Trend Micro), RedDelta/BRONZE PRESIDENT/STATELY TAURUS 등(MITRE G0129), TEMP.Hex/BASIN(→ BASIN CASTLE, Mandiant 신규 명명체계 2026-07-24; 2026-09-08 GTIG 원문 재확인: "BASIN CASTLE, a PRC-nexus cyber espionage group previously tracked as BASIN and TEMP.Hex") | 귀속 미확인 — 원문: "PRC-nexus threat actor", "aligned with the strategic interests of the People's Republic of China (PRC)" (GTIG, 검증) | 2026-08 |
 | UNC6508 | - | - | UNC6508 | - | 귀속 미확인 — 출처 원문: "People's Republic of China (PRC)-nexus threat actor" (GTIG, 검증) | 2026-09-20(재확인)/2026-06(캠페인) |
 | UAT-7810 | - | - | - | LapDogs ORB 운영자 (Cisco Talos) | 귀속 미확인 — China-nexus (검색 스니펫, 미검증) | 2026-07 |
