@@ -1,23 +1,23 @@
-# China State APT Campaign Snapshot — 2026-11-03 UTC
+# China State APT Campaign Snapshot — 2026-11-04 UTC
 
 ## 수집 상태
-- 페치 성공: [ARTEX and Friends: Enter Agentic Offensive Frameworks](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks)(Google GTIG/Mandiant, 공개 2026-10-30, 신규 — Storm-0940/ARTEX 캠페인에 GTIG가 UNC7228 명명 부여하고 Wiz·CrowdStrike 등 업계 전반의 ARTEX 악용 사례를 종합), [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재페치 — 11건 전체 제목 확인, 신규 China/PRC-nexus 게시물 1건(ARTEX and Friends) 발견 — 상기 반영), [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/)(재페치 — 12건 전체 제목·날짜 확인, 10-21 Storm-0940/ARTEX 이후 신규 China 관련 게시물 없음 — 11-02 "What exploited vulnerabilities have in common" 등은 비관련, 10-29는 북한 귀속)
-- 페치 차단: zscaler.com(ARTEX 한국 금융권 공격 캠페인 검증 시도, DNS 실패/ENOTFOUND), labs.cloudsecurityalliance.org(CSA "CyberStrikeAI and ARTEX" 연구노트 검증 시도, DNS 실패/ENOTFOUND)
-- 검증된 IOC: 신규 0개(누적 도메인 35·IP 31·해시 61) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 0건(누적 27, 검증 12/미검증 15) / 신규 호스트 IOC·LOTL 아티팩트: 다수(상세는 Storm-0940 항목 참조)
+- 페치 성공: [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재페치 — 11건 전체 제목 확인, 전일(11-03) 이후 신규 China/PRC-nexus 게시물 없음), [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/)(재페치 — 11-02/11-03 게시물 확인, 모두 China 관련 없음), [ARTEX and Friends: Enter Agentic Offensive Frameworks](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks)(Google GTIG/Mandiant, 2026-10-30 — 전일 이미 반영된 보고서, 재확인만 수행, 신규 내용 없음), [Shutting the Door on the XCPE Botnet](https://cloud.google.com/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet)(Google GTIG, 2026-11-02 — 검토 후 제외: 중국 역외 기업의 금전적 동기 봇넷으로 서술되며 "financial gain"으로만 귀속, PLA/MSS/PRC-nexus 등 국가 배후 표현 전혀 없어 수집 대상에서 제외), [Investigating Ephemeral Supply Chain Tampering](https://cloud.google.com/blog/topics/threat-intelligence/investigating-ephemeral-supply-chain-tampering)(Google Mandiant, 2026-10-15 — 검토 후 제외: 위협 클러스터 UNC7017에 국가 귀속 전혀 없음. 멀웨어의 지리위치 "CN" 코드 실행 중단 로직은 가드레일로만 서술되고 귀속 증거로 사용되지 않음)
+- 페치 차단: 없음
+- 검증된 IOC: 신규 0개(누적 도메인 35·IP 31·해시 61) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 0건(누적 27, 검증 12/미검증 15)
 
-6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대) 및 보강 쿼리(GTIG/MS 블로그 site: 검색, "ARTEX and Friends" 제목 검색, UNC7228/Storm-0940 검색)를 수행했습니다. 대부분은 기존에 이미 반영된 캠페인의 재보도이거나 60일 창 밖의 과거 자료였으나, GTIG 블로그 목록 재페치 과정에서 전회(2026-11-02) 이후 신규 게시물인 "ARTEX and Friends: Enter Agentic Offensive Frameworks"(2026-10-30 공개)를 발견해 직접 페치·검증했습니다. 이 보고서는 기존에 추적 중인 Storm-0940/ARTEX 캠페인(ConnectWise 공급망 침해)과 동일한 활동 클러스터를 GTIG가 신규 명칭 UNC7228로 명명하고, Wiz·CrowdStrike 등 타 벤더의 ARTEX 악용 사례(한국 금융권 등)를 종합한 내용입니다. 신규 독립 캠페인이 아니라 기존 Storm-0940 항목에 통합·보강했습니다. CVE·C2 도메인/IP/해시는 이 보고서에 포함되지 않았고, 호스트 IOC(웹셸 파일명, 프로브 명명 패턴)만 신규 확보했습니다. zscaler.com(ARTEX의 한국 금융권 캠페인 1차 출처로 CSA 노트가 인용)과 labs.cloudsecurityalliance.org(CSA 연구노트 원문)는 모두 DNS 단계에서 차단되어 검증하지 못했습니다.
+6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대) 및 보강 쿼리(GTIG/MS 블로그 목록 재확인, "ARTEX and Friends" 신규 세부사항 탐색)를 수행했습니다. 모든 검색 결과가 기존에 이미 반영된 캠페인의 재보도이거나 60일 창 밖의 과거 자료, 또는 검증 기준 미충족 자료였습니다. GTIG/Microsoft 블로그 목록을 직접 재페치해 전일(2026-11-03) 이후 신규 게시물을 확인했으나, 신규 중국 국가 배후 캠페인은 발견하지 못했습니다. GTIG의 신규 게시물 2건(XCPE 봇넷, UNC7017 공급망 변조)을 직접 검토했으나 각각 "금전적 동기"와 "귀속 미기재"로 수집 규칙(중국 국가 배후로 출처가 명시적으로 귀속한 활동만 수집)에 부합하지 않아 제외했습니다.
 
-60일 창(2026-09-04~)은 전일 대비 1일만 이동했으며, 기존 14건 캠페인 모두 창 내에 유지됩니다(최저 관측/공개일 캠페인인 RAVINE CASTLE·BASIN CASTLE·UNC6508 2026-09-08은 여전히 창 내). 신규 GTIG 보고서(2026-10-30)는 7일 창(2026-10-27~2026-11-03) 내에 위치하므로, Storm-0940 캠페인에 🔥가 복귀합니다(전회 10-21 보고서는 7일 창을 벗어나 🔥 해제되었으나, 10-30 보강 보고서로 재적용).
+60일 창(2026-09-05~)은 전일 대비 1일 이동했으며, 기존 14건 캠페인 모두 창 내에 유지됩니다(최저 관측/공개일 캠페인인 RAVINE CASTLE·BASIN CASTLE·UNC6508 2026-09-08은 여전히 창 내). 7일 창(2026-10-28~2026-11-04) 기준 Storm-0940(UNC7228)만 🔥 유지(GTIG 2026-10-30 보고서).
 
 ## 최근 캠페인 (최근 60일)
 
 ### Storm-0940(UNC7228) — ARTEX AI 에이전트 기반 ConnectWise 공급망 침해, M365 테넌트 대량 표적화 🔥
 - 귀속: 귀속 미확인 — 원문 인용: "China-state aligned actor"(Microsoft, 검증) / GTIG 인용: "overlaps with activity tracked by Microsoft as the PRC-nexus actor STORM-0940"(Google GTIG, 검증, 2026-10-30). PLA/MSS 명시 없음. GTIG는 ARTEX를 사용하는 "additional suspected PRC-nexus clusters"(미명명)도 별도로 존재한다고 서술(검증) — 특정 그룹 특정 불가로 별도 항목화하지 않음.
-- 대상: (기존) 항공우주·국방, 자동차, 화학, 에너지, 금융서비스, 정부, 법률, 제조, 미디어, 군, 반도체, 소프트웨어, 기술, 싱크탱크·비영리단체 등 전 세계 수백 개 조직. ConnectWise Cloud Backup 멀티테넌트 앱 통해 2,250개 이상 M365 테넌트 대상화. (신규, GTIG가 Wiz 인용) 미국·유럽의 엔터프라이즈 소프트웨어, 산업자동화, 반도체 설계·제조, 통신사. (신규, GTIG/Mandiant IR 직접 사례) 미국 정부기관, 기술, 화학·소재, 제조업. ⚠️(미검증, GTIG가 CrowdStrike 공개 보도 인용) 한국 등 아시아 금융권(별도 미상 공격자로 서술, STORM-0940과 동일 귀속 미확정)
-- 초기 침투: (기존) ConnectWise Cloud Backup 멀티테넌트 앱 공급망 침해 → 신뢰된 OAuth 앱 경유 다운스트림 테넌트 접근. 2026-10-10~14(피크 10-11) 8개 조직 327개 계정 대상 패스워드 스프레이. (신규, GTIG 검증) Azure Kudu/SCM 관리 API를 퍼블리싱 자격증명·스토리지/SAS/서비스 주체 자격증명으로 악용; AWS는 탈취한 IAM 사용자 자격증명 사용; Weaver OA 웹서버(Linux)는 노출된 애플리케이션 API에 유효 자격증명으로 SQL 실행. ARTEX가 탈취 자격증명을 받아 이후 단계를 자동 수행 — 계정 탈취부터 심층 시스템 접근까지 평균 약 4시간, 최단 사례 15분. CVE 명시 없음
-- 주요 도구/멀웨어: ARTEX(오픈소스 멀티에이전트 LLM 펜테스트 프레임워크, Go+Next.js, 임의 AI 모델 구동 가능; 2026-10 원저자 GitHub 저장소 비공개 전환, ScopeWeaver 포크 및 상업판 "ARTEX PRO" 존재). 사후공격(기존): 기존 OAuth/서비스 주체 앱에 자격증명 추가, 일부 ConnectWise 관리 앱의 Global Administrator 역할 자가 할당, Microsoft Graph로 ID·그룹·권한있는 역할 변경, Azure Key Vault 비밀 대량 조회. (신규, GTIG 검증) 웹셸 배포 — MySQL `general_log_file` 설정을 악용해 공개 경로에 `.jsp` 웹셸 작성(파일명: `cl1217.jsp`, `f1219a.jsp`, `z1219.jsp`); 프로브 파일명 `artex-probe-*`(5자리 증분 접미사, 계정명·비밀번호·이메일 제목에도 동일 패턴 재사용), `is_admin=true` 권한으로 계정 생성(명명 패턴 `ArtexProbe`); 탈취 데이터를 curl로 webhook.site의 순환 URL 491개에 전송(범용 웹훅 테스트 서비스 악용 — 특정 공격자 전용 인프라가 아니므로 차단목록에는 미등재, 탐지 규칙으로만 권고); 클라우드에서 t3.micro 인스턴스 및 100GB 볼륨 생성, 루트 디스크 60GB로 확장; 알림 기능 악용해 조직 내부 사용자 1,300명 이상에게 테스트 이메일 대량 발송
-- 관측 시점: 최소 2026-08말부터 ARTEX 관련 활동 관측(GTIG/Wiz), 최소 2026-09부터 활동(기존 서술), 2026-10-10~14 패스워드 스프레이 피크, 2026-10-15 ConnectWise 침해 최초 보도, 2026-10-16 ConnectWise 1차 권고, 2026-10-21 Microsoft 블로그 공개, 2026-10-30 GTIG/Mandiant "ARTEX and Friends" 공개(UNC7228 명명 부여)
-- 출처: [AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise](https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/) — Microsoft — 2026-10-21 — fetched(이전 실행); [ARTEX and Friends: Enter Agentic Offensive Frameworks](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks) — Google GTIG/Mandiant — 2026-10-30 — fetched(신규)
+- 대상: (기존) 항공우주·국방, 자동차, 화학, 에너지, 금융서비스, 정부, 법률, 제조, 미디어, 군, 반도체, 소프트웨어, 기술, 싱크탱크·비영리단체 등 전 세계 수백 개 조직. ConnectWise Cloud Backup 멀티테넌트 앱 통해 2,250개 이상 M365 테넌트 대상화. 미국·유럽의 엔터프라이즈 소프트웨어, 산업자동화, 반도체 설계·제조, 통신사(GTIG가 Wiz 인용). 미국 정부기관, 기술, 화학·소재, 제조업(GTIG/Mandiant IR 직접 사례). ⚠️(미검증, GTIG가 CrowdStrike 공개 보도 인용) 한국 등 아시아 금융권(별도 미상 공격자로 서술, STORM-0940과 동일 귀속 미확정)
+- 초기 침투: ConnectWise Cloud Backup 멀티테넌트 앱 공급망 침해 → 신뢰된 OAuth 앱 경유 다운스트림 테넌트 접근. 2026-10-10~14(피크 10-11) 8개 조직 327개 계정 대상 패스워드 스프레이. Azure Kudu/SCM 관리 API를 퍼블리싱 자격증명·스토리지/SAS/서비스 주체 자격증명으로 악용; AWS는 탈취한 IAM 사용자 자격증명 사용; Weaver OA 웹서버(Linux)는 노출된 애플리케이션 API에 유효 자격증명으로 SQL 실행. ARTEX가 탈취 자격증명을 받아 이후 단계를 자동 수행 — 계정 탈취부터 심층 시스템 접근까지 평균 약 4시간, 최단 사례 15분. CVE 명시 없음
+- 주요 도구/멀웨어: ARTEX(오픈소스 멀티에이전트 LLM 펜테스트 프레임워크, Go+Next.js, 임의 AI 모델 구동 가능; 2026-10 원저자 GitHub 저장소 비공개 전환, ScopeWeaver 포크 및 상업판 "ARTEX PRO" 존재). 사후공격: 기존 OAuth/서비스 주체 앱에 자격증명 추가, 일부 ConnectWise 관리 앱의 Global Administrator 역할 자가 할당, Microsoft Graph로 ID·그룹·권한있는 역할 변경, Azure Key Vault 비밀 대량 조회, 웹셸 배포(MySQL `general_log_file` 설정 악용해 공개 경로에 `.jsp` 웹셸 작성: `cl1217.jsp`, `f1219a.jsp`, `z1219.jsp`), 프로브 파일명 `artex-probe-*`(5자리 증분 접미사), `is_admin=true` 권한 계정 생성(명명 패턴 `ArtexProbe`), curl로 webhook.site 순환 URL 491개 유출, 클라우드에서 t3.micro 인스턴스·100GB 볼륨 생성, 알림 기능 악용해 조직 내부 사용자 1,300명 이상에게 테스트 이메일 대량 발송
+- 관측 시점: 최소 2026-08말부터 ARTEX 관련 활동 관측(GTIG/Wiz), 2026-10-10~14 패스워드 스프레이 피크, 2026-10-15 ConnectWise 침해 최초 보도, 2026-10-16 ConnectWise 1차 권고, 2026-10-21 Microsoft 블로그 공개, 2026-10-30 GTIG/Mandiant "ARTEX and Friends" 공개(UNC7228 명명 부여)
+- 출처: [AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise](https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/) — Microsoft — 2026-10-21 — fetched(이전 실행); [ARTEX and Friends: Enter Agentic Offensive Frameworks](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks) — Google GTIG/Mandiant — 2026-10-30 — fetched(이전 실행, 금일 재확인)
 
 ### ARMORY CASTLE(구 UNC5221) — BeyondTrust Remote Support 제로데이 익스플로잇, SAWFLY·BARECLAW
 - 귀속: 귀속 미확인 — 원문 인용: "ARMORY CASTLE, a suspected PRC-nexus espionage threat actor (formerly tracked as UNC5221)" (GTIG, 검증). PLA/MSS 명시 없음.
@@ -31,9 +31,9 @@
 - 귀속: 귀속 미확인 — 검색 결과 종합(1차 출처인 FBI/파트너국 공동권고 및 DOJ 보도자료 원문 미확보, 재보도만 확인): Integrity Technology Group은 과거 미 재무부(OFAC)가 "Flax Typhoon" 활동에 인프라를 제공한 혐의로 제재한 중국 기업이며, 영국도 별도 제재를 부과한 바 있음. 공동권고·압류 발표 자체가 PLA 또는 MSS를 명시했는지는 1차 출처 미확보로 확인 불가. PLA/MSS로 승격하지 않음.
 - 대상: 동남아시아 정부기관·법집행기관·의료기관·종교단체의 Microsoft 365/Exchange 계정(메일함 복제); ⚠️(미검증) 미국 사우스캐롤라이나주 전력회사, 일본·폴란드 공항, 대만 가스·전력 부문 조직(MicroScan/FishHub 인프라 피해자로 거론)
 - 초기 침투: 웹 취약점 스캐닝 및 Microsoft 365/Exchange 계정 비밀번호 추측(패스워드 스프레이 추정)으로 계정 접근 후, 1,300개 이상의 스크립트를 포함한 자체 제작 도구로 메일함을 대량 복제. ⚠️(미검증) MicroScan은 감염된 IoT 기기 봇넷을 이용한 인터넷 전역 취약점 스캐닝 도구로 서술됨
-- 주요 도구/멀웨어: 명칭 미상의 메일함 대량 복제 툴(1,300개 이상 스크립트 포함). ⚠️(미검증) 2026-10-09 추가 보도로 툴 명칭 특정: MicroScan(취약점 스캐너, IoT 봇넷 기반), FishHub(스피어피싱·멀웨어 배포 인프라) — FBI/DOJ가 관련 도메인 7개 압류
+- 주요 도구/멀웨어: 명칭 미상의 메일함 대량 복제 툴(1,300개 이상 스크립트 포함). ⚠️(미검증) 추가 보도로 툴 명칭 특정: MicroScan(취약점 스캐너, IoT 봇넷 기반), FishHub(스피어피싱·멀웨어 배포 인프라) — FBI/DOJ가 관련 도메인 7개 압류
 - 관측 시점: 공동권고 공개 2026-10-08, DOJ 도메인 압류 2026-10-08경(2026-10-09 보도 확인), 실제 활동 기간은 1차 출처 미확보로 특정 불가
-- 출처: 검색 결과만 확인 — FBI 및 6개국 공동권고(1차 출처 미확보), 재보도(전량 EGRESS_BLOCKED); 2026-10-09 FBI/DOJ 도메인 압류 보도(전량 EGRESS_BLOCKED)
+- 출처: 검색 결과만 확인 — FBI 및 6개국 공동권고(1차 출처 미확보), 재보도(전량 EGRESS_BLOCKED); FBI/DOJ 도메인 압류 보도(전량 EGRESS_BLOCKED)
 
 ### UAT-11587 (Antino 백도어) — 아시아 8개국 정부·정책·시민사회 기관 대상 재부상 캠페인 ⚠️ (미검증)
 - 귀속: 귀속 미확인 — 검색 결과 종합: "Talos assesses the actor as China-nexus with high confidence" (Cisco Talos 재보도 종합, 원문 EGRESS_BLOCKED로 미검증). PLA/MSS 언급 없음.
@@ -124,7 +124,7 @@
 - 출처: [From Prompting to Autonomy: The Evolution of Adversarial AI](https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai) — Google GTIG — 2026-09-08 — fetched(이전 실행)
 
 ## 그룹 별칭 매핑
-전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 신규: Storm-0940 행에 Mandiant 별칭 UNC7228 추가(GTIG, 2026-10-30). 귀속 변경 없음(귀속 미확인 유지, 출처 인용문 보강).
+전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 신규 없음.
 
 ## 악용 CVE (패치 우선순위)
 신규 없음. 전체 누적 목록은 [`exploited-cves.txt`](../exploited-cves.txt) 참조(27건, 검증 12 / 미검증 15).
@@ -139,24 +139,18 @@
 신규 없음. 기존 61건은 이전 스냅샷([`snapshots/2026-08-27.md`](2026-08-27.md), [`snapshots/2026-08-28.md`](2026-08-28.md), [`snapshots/2026-09-03.md`](2026-09-03.md), [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-09-25.md`](2026-09-25.md), [`snapshots/2026-10-01.md`](2026-10-01.md), [`snapshots/2026-10-16.md`](2026-10-16.md)) 참조.
 
 ## 호스트 IOC · LOTL 아티팩트
-신규(Storm-0940/UNC7228, GTIG 2026-10-30, 검증):
-- 웹셸 배포 기법: MySQL `general_log_file` 설정 악용해 공개 경로에 `.jsp` 웹셸 작성
-- 웹셸 파일명: `cl1217.jsp`, `f1219a.jsp`, `z1219.jsp`
-- 프로브 파일/계정/문자열 명명 패턴: `artex-probe-*`(5자리 증분 접미사), 계정명 `ArtexProbe`(`is_admin=true`로 생성)
-- 유출 기법: curl → webhook.site 순환 URL 491개(범용 서비스 악용 — 도메인 차단목록에는 미등재, "Suspicious Webhook.Site Interaction" 등 행위 기반 탐지 권고)
-
-기존 항목은 [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-10-16.md`](2026-10-16.md) 참조.
+신규 없음. 기존 항목은 [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-10-16.md`](2026-10-16.md), [`snapshots/2026-11-03.md`](2026-11-03.md) 참조.
 
 ## 이번 실행 변경사항
-- 신규 캠페인: 없음(Storm-0940 기존 캠페인에 GTIG 2026-10-30 보고서 통합 — UNC7228 명명 추가)
-- 신규 IOC: 호스트 IOC·LOTL 아티팩트 신규 추가(상세는 위 절 참조). 도메인/IP/해시 신규 없음
+- 신규 캠페인: 없음
+- 신규 IOC: 없음
 - 제거: 없음
 - 승격(미검증→검증): 없음
-- 귀속 변경: 없음(귀속 미확인 유지) — 다만 GTIG가 "PRC-nexus actor STORM-0940"으로 Microsoft 귀속을 재인용한 신규 출처 문구 확보
+- 귀속 변경: 없음
 - 신규 CVE: 없음
-- 신규 그룹(표 등재): 없음(기존 Storm-0940 행에 별칭 UNC7228만 추가)
-- 🔥 추가: Storm-0940 — GTIG 2026-10-30 보강 보고서가 7일 창(2026-10-27~) 내에 위치해 🔥 복귀
-- 비고: GTIG 블로그 목록 재확인 결과 "ARTEX and Friends: Enter Agentic Offensive Frameworks"(2026-10-30) 신규 발견·직접 페치. Microsoft 블로그 목록 재확인 결과 10-21 이후 신규 China 관련 게시물 없음. zscaler.com(ARTEX 한국 금융권 캠페인 1차 출처)·labs.cloudsecurityalliance.org(CSA 연구노트)는 모두 DNS 단계 차단(ENOTFOUND)으로 검증 실패. WebFetch 예산 7건 사용(성공 3 — GTIG ARTEX and Friends 신규 페치, GTIG 목록 재확인, MSTIC 목록 재확인 / 실패 2 — zscaler.com, labs.cloudsecurityalliance.org)
+- 신규 그룹(표 등재): 없음
+- 검토 후 제외한 항목: XCPE 봇넷(GTIG, 2026-11-02 — "financial gain"으로만 귀속, 국가 배후 서술 없음), UNC7017 공급망 변조(Mandiant, 2026-10-15 — 국가 귀속 전혀 없음, 지리위치 "CN" 코드는 가드레일 서술일 뿐 귀속 근거 아님)
+- 비고: GTIG·Microsoft 블로그 목록을 직접 재페치해 전일 이후 신규 게시물을 모두 확인했으나, 수집 규칙에 부합하는 신규 중국 국가 배후 캠페인은 없었음. WebFetch 예산 5건 사용(전부 성공).
 
 ## 차단 운영 포맷 (복붙용)
 
@@ -236,9 +230,9 @@ www.twisinbeth.com
 
 ## 출처
 - [AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise](https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/) — Microsoft — 2026-10-21 — fetched(이전 실행)
-- [ARTEX and Friends: Enter Agentic Offensive Frameworks](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks) — Google GTIG/Mandiant — 2026-10-30 — fetched(신규)
+- [ARTEX and Friends: Enter Agentic Offensive Frameworks](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks) — Google GTIG/Mandiant — 2026-10-30 — fetched(금일 재확인, 신규 내용 없음)
 - [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched(이전 실행)
-- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-11-03 조회 — fetched(신규 게시물 1건 발견·반영)
-- [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/) — Microsoft — 2026-11-03 조회 — fetched(10-21 ARTEX 이후 신규 China 관련 게시물 없음)
-- ARTEX 한국 금융권 캠페인(zscaler.com) — 2026-11-03 프로브 — blocked(DNS 실패/ENOTFOUND, 미검증 유지)
-- CyberStrikeAI/ARTEX 멀티에이전트 공세 연구노트(labs.cloudsecurityalliance.org) — 2026-11-03 프로브 — blocked(DNS 실패/ENOTFOUND, 미검증 유지)
+- [Shutting the Door on the XCPE Botnet](https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet) — Google GTIG — 2026-11-02 — fetched(금일, 국가 귀속 없음으로 수집 제외)
+- [Investigating Ephemeral Supply Chain Tampering](https://cloud.google.com/blog/topics/threat-intelligence/investigating-ephemeral-supply-chain-tampering) — Google Mandiant — 2026-10-15 — fetched(금일, 국가 귀속 없음으로 수집 제외)
+- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-11-04 조회 — fetched(신규 게시물 없음)
+- [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/) — Microsoft — 2026-11-04 조회 — fetched(신규 China 관련 게시물 없음)
