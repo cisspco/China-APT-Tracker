@@ -1,13 +1,13 @@
-# China State APT Campaign Snapshot — 2026-11-04 UTC
+# China State APT Campaign Snapshot — 2026-11-05 UTC
 
 ## 수집 상태
-- 페치 성공: [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재페치 — 11건 전체 제목 확인, 전일(11-03) 이후 신규 China/PRC-nexus 게시물 없음), [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/)(재페치 — 11-02/11-03 게시물 확인, 모두 China 관련 없음), [ARTEX and Friends: Enter Agentic Offensive Frameworks](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks)(Google GTIG/Mandiant, 2026-10-30 — 전일 이미 반영된 보고서, 재확인만 수행, 신규 내용 없음), [Shutting the Door on the XCPE Botnet](https://cloud.google.com/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet)(Google GTIG, 2026-11-02 — 검토 후 제외: 중국 역외 기업의 금전적 동기 봇넷으로 서술되며 "financial gain"으로만 귀속, PLA/MSS/PRC-nexus 등 국가 배후 표현 전혀 없어 수집 대상에서 제외), [Investigating Ephemeral Supply Chain Tampering](https://cloud.google.com/blog/topics/threat-intelligence/investigating-ephemeral-supply-chain-tampering)(Google Mandiant, 2026-10-15 — 검토 후 제외: 위협 클러스터 UNC7017에 국가 귀속 전혀 없음. 멀웨어의 지리위치 "CN" 코드 실행 중단 로직은 가드레일로만 서술되고 귀속 증거로 사용되지 않음)
-- 페치 차단: 없음
+- 페치 성공: [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재페치 — 11건 전체 제목 확인, 전일(11-04) 이후 신규 게시물 없음, 신규 China/PRC-nexus 게시물 없음), [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/)(재페치 — 11-03 게시물까지 확인, 그 이후 신규 게시물 없음. 11-03 "Fake-download campaign" 게시물은 금전적 동기 멀웨어로 국가 귀속 없어 검토 후 제외)
+- 페치 차단: socradar.io(DNS 미응답 — 세션 네트워크 허용목록 밖으로 판단), hackread.com(DNS 미응답, 동일), vpncentral.com(DNS 미응답, 동일) — 모두 검색 스니펫에서만 확인된 2차 보도였으며 원문 미확보로 수집 제외
 - 검증된 IOC: 신규 0개(누적 도메인 35·IP 31·해시 61) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 0건(누적 27, 검증 12/미검증 15)
 
-6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대) 및 보강 쿼리(GTIG/MS 블로그 목록 재확인, "ARTEX and Friends" 신규 세부사항 탐색)를 수행했습니다. 모든 검색 결과가 기존에 이미 반영된 캠페인의 재보도이거나 60일 창 밖의 과거 자료, 또는 검증 기준 미충족 자료였습니다. GTIG/Microsoft 블로그 목록을 직접 재페치해 전일(2026-11-03) 이후 신규 게시물을 확인했으나, 신규 중국 국가 배후 캠페인은 발견하지 못했습니다. GTIG의 신규 게시물 2건(XCPE 봇넷, UNC7017 공급망 변조)을 직접 검토했으나 각각 "금전적 동기"와 "귀속 미기재"로 수집 규칙(중국 국가 배후로 출처가 명시적으로 귀속한 활동만 수집)에 부합하지 않아 제외했습니다.
+6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대)를 수행했습니다. 검색 결과는 전량 기존에 이미 반영된 캠페인의 재보도, 60일 창 밖의 과거 자료(예: 2026년 1월 Volt Typhoon 공동권고, 2026년 3~5월 SOHO 라우터 공동권고, 2026년 5월 Salt Typhoon/Twill Typhoon 확장 보도, 2026년 2월 ASD APT40 베트남어판 권고, 2026년 2월 Lotus Blossom/Notepad++ 보도, 2025년 12월~2026년 1월 Mustang Panda 외교 브리핑 위장 캠페인), 또는 검증 기준 미충족 자료(1차 출처 미확보)였습니다. GTIG/Microsoft 블로그 목록을 직접 재페치해 전일 이후 신규 게시물을 확인했으나, 수집 규칙에 부합하는 신규 중국 국가 배후 캠페인은 발견하지 못했습니다. 검색 스니펫에서 발견한 2차 보도 3건(SOCRadar Chrome/Windows 제로데이 체인, 2026-09-12 — 60일 창 내이나 1차 출처 미확보; hackread.com Mustang Panda 외교 브리핑; vpncentral.com 동남아 정부 3개 클러스터 공동공격)을 원문 확인 위해 페치 시도했으나 모두 DNS 미응답으로 차단되어 미검증 상태를 벗어나지 못했고, 수집 규칙상 미검증 자료는 1차 출처 확보 전까지 블록리스트에 반영하지 않으므로 그대로 제외했습니다.
 
-60일 창(2026-09-05~)은 전일 대비 1일 이동했으며, 기존 14건 캠페인 모두 창 내에 유지됩니다(최저 관측/공개일 캠페인인 RAVINE CASTLE·BASIN CASTLE·UNC6508 2026-09-08은 여전히 창 내). 7일 창(2026-10-28~2026-11-04) 기준 Storm-0940(UNC7228)만 🔥 유지(GTIG 2026-10-30 보고서).
+60일 창이 2026-09-06~으로 1일 이동했으며, 기존 14건 캠페인 모두 창 내에 유지됩니다(최저 관측/공개일 캠페인인 RAVINE CASTLE·BASIN CASTLE·UNC6508 2026-09-08은 여전히 창 내). 7일 창(2026-10-29~2026-11-05) 기준 Storm-0940(UNC7228)만 🔥 유지(GTIG 2026-10-30 보고서, 6일 전).
 
 ## 최근 캠페인 (최근 60일)
 
@@ -17,7 +17,7 @@
 - 초기 침투: ConnectWise Cloud Backup 멀티테넌트 앱 공급망 침해 → 신뢰된 OAuth 앱 경유 다운스트림 테넌트 접근. 2026-10-10~14(피크 10-11) 8개 조직 327개 계정 대상 패스워드 스프레이. Azure Kudu/SCM 관리 API를 퍼블리싱 자격증명·스토리지/SAS/서비스 주체 자격증명으로 악용; AWS는 탈취한 IAM 사용자 자격증명 사용; Weaver OA 웹서버(Linux)는 노출된 애플리케이션 API에 유효 자격증명으로 SQL 실행. ARTEX가 탈취 자격증명을 받아 이후 단계를 자동 수행 — 계정 탈취부터 심층 시스템 접근까지 평균 약 4시간, 최단 사례 15분. CVE 명시 없음
 - 주요 도구/멀웨어: ARTEX(오픈소스 멀티에이전트 LLM 펜테스트 프레임워크, Go+Next.js, 임의 AI 모델 구동 가능; 2026-10 원저자 GitHub 저장소 비공개 전환, ScopeWeaver 포크 및 상업판 "ARTEX PRO" 존재). 사후공격: 기존 OAuth/서비스 주체 앱에 자격증명 추가, 일부 ConnectWise 관리 앱의 Global Administrator 역할 자가 할당, Microsoft Graph로 ID·그룹·권한있는 역할 변경, Azure Key Vault 비밀 대량 조회, 웹셸 배포(MySQL `general_log_file` 설정 악용해 공개 경로에 `.jsp` 웹셸 작성: `cl1217.jsp`, `f1219a.jsp`, `z1219.jsp`), 프로브 파일명 `artex-probe-*`(5자리 증분 접미사), `is_admin=true` 권한 계정 생성(명명 패턴 `ArtexProbe`), curl로 webhook.site 순환 URL 491개 유출, 클라우드에서 t3.micro 인스턴스·100GB 볼륨 생성, 알림 기능 악용해 조직 내부 사용자 1,300명 이상에게 테스트 이메일 대량 발송
 - 관측 시점: 최소 2026-08말부터 ARTEX 관련 활동 관측(GTIG/Wiz), 2026-10-10~14 패스워드 스프레이 피크, 2026-10-15 ConnectWise 침해 최초 보도, 2026-10-16 ConnectWise 1차 권고, 2026-10-21 Microsoft 블로그 공개, 2026-10-30 GTIG/Mandiant "ARTEX and Friends" 공개(UNC7228 명명 부여)
-- 출처: [AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise](https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/) — Microsoft — 2026-10-21 — fetched(이전 실행); [ARTEX and Friends: Enter Agentic Offensive Frameworks](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks) — Google GTIG/Mandiant — 2026-10-30 — fetched(이전 실행, 금일 재확인)
+- 출처: [AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise](https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/) — Microsoft — 2026-10-21 — fetched(이전 실행); [ARTEX and Friends: Enter Agentic Offensive Frameworks](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks) — Google GTIG/Mandiant — 2026-10-30 — fetched(이전 실행, 금일 목록상 재확인)
 
 ### ARMORY CASTLE(구 UNC5221) — BeyondTrust Remote Support 제로데이 익스플로잇, SAWFLY·BARECLAW
 - 귀속: 귀속 미확인 — 원문 인용: "ARMORY CASTLE, a suspected PRC-nexus espionage threat actor (formerly tracked as UNC5221)" (GTIG, 검증). PLA/MSS 명시 없음.
@@ -149,8 +149,8 @@
 - 귀속 변경: 없음
 - 신규 CVE: 없음
 - 신규 그룹(표 등재): 없음
-- 검토 후 제외한 항목: XCPE 봇넷(GTIG, 2026-11-02 — "financial gain"으로만 귀속, 국가 배후 서술 없음), UNC7017 공급망 변조(Mandiant, 2026-10-15 — 국가 귀속 전혀 없음, 지리위치 "CN" 코드는 가드레일 서술일 뿐 귀속 근거 아님)
-- 비고: GTIG·Microsoft 블로그 목록을 직접 재페치해 전일 이후 신규 게시물을 모두 확인했으나, 수집 규칙에 부합하는 신규 중국 국가 배후 캠페인은 없었음. WebFetch 예산 5건 사용(전부 성공).
+- 검토 후 제외한 항목: Fake-download campaign(Microsoft, 2026-11-03 — 금전적 동기 트로이목마 설치파일, 국가 배후 서술 없음)
+- 비고: GTIG·Microsoft 블로그 목록을 직접 재페치해 전일 이후 신규 게시물을 모두 확인했으나, 수집 규칙에 부합하는 신규 중국 국가 배후 캠페인은 없었음. 검색 스니펫에서만 발견된 2차 보도 3건(socradar.io, hackread.com, vpncentral.com)의 원문 확보를 시도했으나 세 도메인 모두 DNS 미응답(세션 네트워크 허용목록 밖)으로 차단되어 미검증 상태 유지. WebFetch 예산 5건 사용(성공 2건 — GTIG/MS 블로그 목록, 차단 3건 — socradar.io/hackread.com/vpncentral.com).
 
 ## 차단 운영 포맷 (복붙용)
 
@@ -230,9 +230,11 @@ www.twisinbeth.com
 
 ## 출처
 - [AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise](https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/) — Microsoft — 2026-10-21 — fetched(이전 실행)
-- [ARTEX and Friends: Enter Agentic Offensive Frameworks](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks) — Google GTIG/Mandiant — 2026-10-30 — fetched(금일 재확인, 신규 내용 없음)
+- [ARTEX and Friends: Enter Agentic Offensive Frameworks](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks) — Google GTIG/Mandiant — 2026-10-30 — fetched(이전 실행, 금일 목록상 재확인)
 - [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched(이전 실행)
-- [Shutting the Door on the XCPE Botnet](https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet) — Google GTIG — 2026-11-02 — fetched(금일, 국가 귀속 없음으로 수집 제외)
-- [Investigating Ephemeral Supply Chain Tampering](https://cloud.google.com/blog/topics/threat-intelligence/investigating-ephemeral-supply-chain-tampering) — Google Mandiant — 2026-10-15 — fetched(금일, 국가 귀속 없음으로 수집 제외)
-- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-11-04 조회 — fetched(신규 게시물 없음)
-- [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/) — Microsoft — 2026-11-04 조회 — fetched(신규 China 관련 게시물 없음)
+- [NeedyMantis: Unpacking a post-compromise malware family used in targeted operations](https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/) — Microsoft — 2026-09-28 — fetched(이전 실행)
+- [From Prompting to Autonomy: The Evolution of Adversarial AI](https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai) — Google GTIG — 2026-09-08 — fetched(이전 실행)
+- [Cloud CISO Perspectives: How Google monitors AI threats and advances AI defenses](https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-how-google-monitors-ai-threats-advances-ai-defenses) — Google Cloud/GTIG — 2026-09-16 — fetched(이전 실행)
+- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-11-05 조회 — fetched(신규 게시물 없음)
+- [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/) — Microsoft — 2026-11-05 조회 — fetched(신규 China 국가배후 게시물 없음)
+- socradar.io, hackread.com, vpncentral.com — blocked(DNS 미응답, 세션 네트워크 허용목록 밖)
