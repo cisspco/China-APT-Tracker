@@ -1,18 +1,18 @@
-# China State APT Campaign Snapshot — 2026-11-07 UTC
+# China State APT Campaign Snapshot — 2026-11-08 UTC
 
 ## 수집 상태
-- 페치 성공: [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재페치 — 11건 전체 제목 확인, 전일(11-06) 이후 신규 게시물 2건 확인 후 개별 원문 페치), [Shutting the Door on the XCPE Botnet](https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet) — Google GTIG — 2026-11-02 — fetched(검토 후 제외), [The Rise of LLMJacking: How Threat Actors Monetize Compromised Cloud and Model Resources](https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models) — Google GTIG — 2026-11-02 — fetched(검토 후 제외), [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/)(재페치 — 2026-09-29~2026-11-05 게시물 12건 확인, 금일 기준 신규 게시물 없음)
-- 페치 차단(EGRESS_BLOCKED/DNS 미해결): unit42.paloaltonetworks.com(DNS 미해결 — Phantom Taurus 1차 출처, 재프로브 결과 동일), www.volexity.com(DNS 미해결 — UTA0560/UTA0565/JungleBamboo/BlueMoon 1차 출처, 신규 프로브)
+- 페치 성공: [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재페치 — 11건 전체 제목 재확인, 전일(11-07) 대비 신규 게시물 없음), [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/)(재페치 — 12건 중 신규 게시물 1건 확인 후 원문 직접 페치), [ARTEX abuse expands as cybercriminals target financial sector](https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/) — Microsoft — 2026-11-06 — fetched(검토 후 제외)
+- 페치 차단(EGRESS_BLOCKED/DNS 미해결): unit42.paloaltonetworks.com(DNS 미해결 — Phantom Taurus 1차 출처, 재프로브 결과 동일), www.volexity.com(DNS 미해결 — UTA0560/UTA0565/JungleBamboo/BlueMoon 1차 출처, 재프로브 결과 동일), www.crowdstrike.com(DNS 미해결 — 금일 신규 프로브), www.recordedfuture.com(DNS 미해결 — 금일 신규 프로브)
 - 검증된 IOC: 신규 0개(누적 도메인 35·IP 31·해시 61) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 0건(누적 27, 검증 12/미검증 15)
 
-6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대)를 수행했습니다. 검색 결과는 전량 기존에 이미 반영된 캠페인의 재보도, 60일 창 밖의 과거 자료, 또는 검증 기준 미충족 자료(1차 출처 미확보)였습니다. GTIG 블로그 목록 재페치 결과 전일(11-06) 이후 신규 게시물 2건을 발견해 각각 원문을 직접 페치했습니다: (1) "Shutting the Door on the XCPE Botnet"(2026-11-02)은 Android 셋톱박스 OEM Videostrong Technology Co.가 금전적 목적(광고 사기·대역폭 재판매)으로 운영한 봇넷으로, 원문에 중국/PRC-nexus 또는 국가 배후 귀속 표현이 전혀 없어 수집 규칙(중국 국가 배후 명시적 귀속 필요, 일반 중국계 범죄 활동 배제)에 따라 제외; (2) "The Rise of LLMJacking"(2026-11-02)은 금전적 목적의 UNC6993/"D1337-KAIROS" 클러스터를 다루며 중국/PRC 언급이 전혀 없어 동일 사유로 제외. Microsoft 블로그 목록을 재페치해 2026-09-29~2026-11-05 사이 게시물 12건을 재확인했으나 금일 기준 신규 게시물은 없었습니다(전일 반영된 2026-11-05 게시물 2건 외 추가 없음). 1차 출처가 EGRESS_BLOCKED 상태인 Phantom Taurus(Unit 42)·UTA0560/UTA0565/JungleBamboo/BlueMoon(Volexity) 계열 캠페인에 대해 각각 unit42.paloaltonetworks.com·www.volexity.com 재프로브를 시도했으나 둘 다 DNS 미해결로 차단 상태가 유지됨을 확인했습니다(이 외 추가 프로브는 수행하지 않음). 이 외 금일은 수집 규칙에 부합하는 신규 중국 국가 배후 캠페인을 발견하지 못했습니다.
+6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대)를 수행했습니다. 검색 결과는 전량 60일 창(2026-09-09~) 밖의 과거 자료(예: UNC2814/GRIDTIDE — Google, 2026-02-25 공개; UAT-9244/TernDoor — Cisco Talos, 2026-03-05 공개; Salt Typhoon/Twill Typhoon — Darktrace/Bitdefender 재보도, 2025-10~2026-05) 또는 기존에 이미 반영된 캠페인의 재보도였습니다. GTIG 블로그 목록을 재페치해 전일 확인된 11건 제목을 재확인했으며 신규 게시물은 없었습니다. Microsoft 블로그 목록 재페치 결과 전일(11-07) 기준 최신 게시물(2026-11-05) 이후 신규 게시물 1건을 확인해 원문을 직접 페치했습니다: "ARTEX abuse expands as cybercriminals target financial sector"(2026-11-06, Microsoft)는 Storm-3358이라는 "Cambodia-based intrusion cluster"가 ARTEX 프레임워크를 악용해 동남아 및 일부 글로벌 금융기관을 금전적 목적으로 공격한 내용으로, 원문이 중국/PRC 국가 배후 귀속을 전혀 명시하지 않아(금전적 목적의 캄보디아 기반 클러스터로만 서술) 수집 규칙(중국 국가 배후 명시적 귀속 필요, 일반 범죄 활동 배제)에 따라 제외했습니다. 1차 출처가 EGRESS_BLOCKED 상태인 Phantom Taurus(Unit 42)·UTA0560/UTA0565/JungleBamboo/BlueMoon(Volexity) 계열 캠페인에 대해 각각 unit42.paloaltonetworks.com·www.volexity.com 재프로브를 시도했으나 둘 다 DNS 미해결로 차단 상태가 유지됨을 확인했습니다. 추가로 금일 신규 벤더 소스 확보 가능성을 확인하기 위해 www.crowdstrike.com·www.recordedfuture.com에 프로브를 시도했으나 둘 다 DNS 미해결로 차단됨을 확인했습니다. 이 외 금일은 수집 규칙에 부합하는 신규 중국 국가 배후 캠페인을 발견하지 못했습니다.
 
-60일 창이 2026-09-08~으로 1일 이동했으며, 기존 14건 캠페인 모두 창 내에 유지됩니다(최저 관측/공개일 캠페인인 RAVINE CASTLE·BASIN CASTLE·UNC6508 2026-09-08은 경계값으로 금일 포함 — 익일부터 창 밖). 7일 창(2026-10-31~2026-11-07) 기준 🔥 유지 캠페인 없음(Storm-0940/UNC7228의 최신 검증 출처는 2026-10-30 GTIG 보고서로, 7일 창 밖으로 이동해 🔥 해제).
+60일 창이 2026-09-09~으로 1일 이동하면서, 최저 관측/공개일 캠페인이었던 "RAVINE CASTLE·BASIN CASTLE·UNC6508 — AI 통합 첩보작전 고도화"(공개 2026-09-08)가 창 밖으로 벗어나 금일부터 "최근 캠페인" 목록에서 제외됩니다(그룹·출처 메타데이터는 [`groups.md`](../groups.md) 및 [`snapshots/2026-09-08.md`](2026-09-08.md) 등 과거 스냅샷에 보존, 해당 캠페인에 결부된 검증 도메인/IP/해시는 없어 블록리스트 변동 없음). 나머지 13건 캠페인은 모두 창 내에 유지됩니다(최저 관측일: BlueMoon, 공개 2026-09-09, 경계값 — 익일부터 창 밖). 7일 창(2026-11-02~2026-11-08) 기준 🔥 해당 캠페인 없음(최신 검증 출처는 GTIG 2026-10-30·Microsoft 2026-10-21로 모두 7일 창 밖).
 
 ## 최근 캠페인 (최근 60일)
 
 ### Storm-0940(UNC7228) — ARTEX AI 에이전트 기반 ConnectWise 공급망 침해, M365 테넌트 대량 표적화
-- 귀속: 귀속 미확인 — 원문 인용: "China-state aligned actor"(Microsoft, 검증) / GTIG 인용: "overlaps with activity tracked by Microsoft as the PRC-nexus actor STORM-0940"(Google GTIG, 검증, 2026-10-30). PLA/MSS 명시 없음. GTIG는 ARTEX를 사용하는 "additional suspected PRC-nexus clusters"(미명명)도 별도로 존재한다고 서술(검증) — 특정 그룹 특정 불가로 별도 항목화하지 않음. ⚠️(미검증) Microsoft가 2026-11-05 추가 공개한 ARTEX 관련 네트워크 지표는 원문이 "Unattributed"로 명시해 Storm-0940/특정 PRC 그룹에 귀속되지 않으므로 별도 미귀속 활동으로 취급, 본 캠페인에 병합하지 않음.
+- 귀속: 귀속 미확인 — 원문 인용: "China-state aligned actor"(Microsoft, 검증) / GTIG 인용: "overlaps with activity tracked by Microsoft as the PRC-nexus actor STORM-0940"(Google GTIG, 검증, 2026-10-30). PLA/MSS 명시 없음. GTIG는 ARTEX를 사용하는 "additional suspected PRC-nexus clusters"(미명명)도 별도로 존재한다고 서술(검증) — 특정 그룹 특정 불가로 별도 항목화하지 않음. ⚠️(미검증) Microsoft가 2026-11-05 추가 공개한 ARTEX 관련 네트워크 지표는 원문이 "Unattributed"로 명시해 Storm-0940/특정 PRC 그룹에 귀속되지 않으므로 별도 미귀속 활동으로 취급, 본 캠페인에 병합하지 않음. 참고: 2026-11-06 Microsoft가 공개한 별도 클러스터 Storm-3358("Cambodia-based intrusion cluster")도 동일 ARTEX 프레임워크를 악용하나 중국 귀속 없음(금전적 목적) — 본 캠페인과 무관, 본 리포트에 미포함.
 - 대상: (기존) 항공우주·국방, 자동차, 화학, 에너지, 금융서비스, 정부, 법률, 제조, 미디어, 군, 반도체, 소프트웨어, 기술, 싱크탱크·비영리단체 등 전 세계 수백 개 조직. ConnectWise Cloud Backup 멀티테넌트 앱 통해 2,250개 이상 M365 테넌트 대상화. 미국·유럽의 엔터프라이즈 소프트웨어, 산업자동화, 반도체 설계·제조, 통신사(GTIG가 Wiz 인용). 미국 정부기관, 기술, 화학·소재, 제조업(GTIG/Mandiant IR 직접 사례). ⚠️(미검증, GTIG가 CrowdStrike 공개 보도 인용) 한국 등 아시아 금융권(별도 미상 공격자로 서술, STORM-0940과 동일 귀속 미확정)
 - 초기 침투: ConnectWise Cloud Backup 멀티테넌트 앱 공급망 침해 → 신뢰된 OAuth 앱 경유 다운스트림 테넌트 접근. 2026-10-10~14(피크 10-11) 8개 조직 327개 계정 대상 패스워드 스프레이. Azure Kudu/SCM 관리 API를 퍼블리싱 자격증명·스토리지/SAS/서비스 주체 자격증명으로 악용; AWS는 탈취한 IAM 사용자 자격증명 사용; Weaver OA 웹서버(Linux)는 노출된 애플리케이션 API에 유효 자격증명으로 SQL 실행. ARTEX가 탈취 자격증명을 받아 이후 단계를 자동 수행 — 계정 탈취부터 심층 시스템 접근까지 평균 약 4시간, 최단 사례 15분. CVE 명시 없음
 - 주요 도구/멀웨어: ARTEX(오픈소스 멀티에이전트 LLM 펜테스트 프레임워크, Go+Next.js, 임의 AI 모델 구동 가능; 2026-10 원저자 GitHub 저장소 비공개 전환, ScopeWeaver 포크 및 상업판 "ARTEX PRO" 존재). 사후공격: 기존 OAuth/서비스 주체 앱에 자격증명 추가, 일부 ConnectWise 관리 앱의 Global Administrator 역할 자가 할당, Microsoft Graph로 ID·그룹·권한있는 역할 변경, Azure Key Vault 비밀 대량 조회, 웹셸 배포(MySQL `general_log_file` 설정 악용해 공개 경로에 `.jsp` 웹셸 작성: `cl1217.jsp`, `f1219a.jsp`, `z1219.jsp`), 프로브 파일명 `artex-probe-*`(5자리 증분 접미사), `is_admin=true` 권한 계정 생성(명명 패턴 `ArtexProbe`), curl로 webhook.site 순환 URL 491개 유출, 클라우드에서 t3.micro 인스턴스·100GB 볼륨 생성, 알림 기능 악용해 조직 내부 사용자 1,300명 이상에게 테스트 이메일 대량 발송
@@ -112,16 +112,8 @@
 - 대상: 미국 NGO, 광업 기업, 실물상품거래 기업(TA412), 반사형 XSS 취약점이 있던 미국 대학 웹사이트 방문자 등
 - 초기 침투: CVE-2026-85046 + CVE-2026-87491 + CVE-2026-85880. TA412은 대학생 인턴십 문의·Association for Asian Studies 컨퍼런스 위장 스피어피싱으로 유포
 - 주요 도구/멀웨어: GRIMWEDGE(UTA0560), SUPERSTOMP(JungleBamboo) → LONGTALE, GemStone(TA412, ⚠️ 미검증)
-- 관측 시점: 2026-08-28 TA412 최초 사용, 2026-09-01 일반 활동, 2026-09-09 Volexity 공개
+- 관측 시점: 2026-08-28 TA412 최초 사용, 2026-09-01 일반 활동, 2026-09-09 Volexity 공개 — **경계값: 60일 창 하한, 내일(11-09)부터 창 밖**
 - 출처: 검색 스니펫만 확인 — Volexity(www.volexity.com, 금일 재프로브 결과 DNS 미해결로 차단 유지), Proofpoint(차단)
-
-### AI 통합 첩보작전 고도화 — RAVINE CASTLE·BASIN CASTLE·UNC6508 (GTIG AI Threat Tracker)
-- 귀속: 귀속 미확인 — 원문 인용: "RAVINE CASTLE, a PRC-nexus cyber espionage group previously known as COULEE, APT24"; "BASIN CASTLE, a PRC-nexus cyber espionage group previously tracked as BASIN and TEMP.Hex"; "UNC6508, a People's Republic of China (PRC)-nexus threat actor". PLA/MSS 언급 없음 (GTIG, 검증)
-- 대상: RAVINE CASTLE — 외국 정부(외교부 등); BASIN CASTLE — 공격수명주기 전반; UNC6508 — 북미 학술·의료·군사 연구기관
-- 초기 침투: RAVINE CASTLE — VMware vCenter SAML 취약점, Rubeus 기반 Kerberos 공격; BASIN CASTLE — 맞춤형 소셜엔지니어링, PowerShell 사후공격
-- 주요 도구/멀웨어: Gemini 오남용 자동화 침투테스트 프레임워크(RAVINE CASTLE), 생성형 AI 통합 공격수명주기 도구(BASIN CASTLE)
-- 관측 시점: 2026-09-08 공개
-- 출처: [From Prompting to Autonomy: The Evolution of Adversarial AI](https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai) — Google GTIG — 2026-09-08 — fetched(이전 실행)
 
 ## 그룹 별칭 매핑
 전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 신규 없음.
@@ -133,7 +125,7 @@
 신규 없음. 전체 목록은 [`blocklists/domains.txt`](../blocklists/domains.txt) 참조.
 
 ## C2 IP (31, 누적)
-신규 없음. 전체 목록은 [`blocklists/ips.txt`](../blocklists/ips.txt) 참조. ⚠️ 참고: Microsoft가 2026-11-05 공개한 ARTEX 관련 미귀속 IP 4건(199.19.77[.]84, 199.19.77[.]18, 65.87.223[.]26, 157.22.126[.]128)은 원문이 "Unattributed"로 명시해 중국 국가 배후 귀속 기준 미충족 — 블록리스트에 추가하지 않음.
+신규 없음. 전체 목록은 [`blocklists/ips.txt`](../blocklists/ips.txt) 참조. ⚠️ 참고: Microsoft가 2026-11-05 공개한 ARTEX 관련 미귀속 IP 4건(199.19.77[.]84, 199.19.77[.]18, 65.87.223[.]26, 157.22.126[.]128) 및 2026-11-06 공개한 Storm-3358(중국 귀속 없음) 관련 IP 8건(199.19.95[.]66~68, 91.92.240[.]238, 85.11.168[.]45, 85.11.167[.]52, 178.16.54[.]129, 31.77.229[.]35)은 원문이 각각 "Unattributed" 또는 금전적 목적의 캄보디아 기반 클러스터로 명시해 중국 국가 배후 귀속 기준 미충족 — 블록리스트에 추가하지 않음.
 
 ## 파일 해시 (61, 누적)
 신규 없음. 기존 61건은 이전 스냅샷([`snapshots/2026-08-27.md`](2026-08-27.md), [`snapshots/2026-08-28.md`](2026-08-28.md), [`snapshots/2026-09-03.md`](2026-09-03.md), [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-09-25.md`](2026-09-25.md), [`snapshots/2026-10-01.md`](2026-10-01.md), [`snapshots/2026-10-16.md`](2026-10-16.md)) 참조.
@@ -144,14 +136,13 @@
 ## 이번 실행 변경사항
 - 신규 캠페인: 없음
 - 신규 IOC: 없음
-- 제거: 없음
+- 제거: "RAVINE CASTLE·BASIN CASTLE·UNC6508 — AI 통합 첩보작전 고도화"(GTIG, 공개 2026-09-08) — 60일 창(2026-09-09~)을 벗어나 금일부터 "최근 캠페인" 목록에서 제외(그룹·출처 메타데이터는 `groups.md` 및 과거 스냅샷에 보존, 결부된 검증 IOC 없어 블록리스트 변동 없음)
 - 승격(미검증→검증): 없음
 - 귀속 변경: 없음
 - 신규 CVE: 없음
 - 신규 그룹(표 등재): 없음
-- 검토 후 제외한 항목: "Shutting the Door on the XCPE Botnet"(Google GTIG, 2026-11-02 — Android 셋톱박스 OEM Videostrong Technology Co.의 금전적 목적 봇넷/광고사기, 원문에 중국 국가 배후 귀속 표현 없음); "The Rise of LLMJacking"(Google GTIG, 2026-11-02 — 금전적 목적 UNC6993/"D1337-KAIROS" 클러스터, 중국/PRC 언급 없음)
-- 🔥 변경: Storm-0940(UNC7228)의 7일 창 🔥 표시 해제 — 최신 검증 출처(GTIG, 2026-10-30)가 7일 창(2026-10-31~2026-11-07) 밖으로 이동
-- 비고: GTIG 블로그 목록 재페치로 신규 게시물 2건 확인·개별 원문 페치 후 모두 제외. Microsoft 블로그 목록 재페치 결과 신규 게시물 없음. 1차 출처 EGRESS_BLOCKED 상태인 unit42.paloaltonetworks.com·www.volexity.com에 재프로브를 시도했으나 둘 다 DNS 미해결로 차단 유지 확인. WebFetch 예산 4건 사용(모두 성공 — GTIG 블로그 목록, XCPE 봇넷 게시물, LLMJacking 게시물, Microsoft 블로그 목록), 추가 2건은 DNS 미해결로 실패(unit42, volexity).
+- 검토 후 제외한 항목: "ARTEX abuse expands as cybercriminals target financial sector"(Microsoft, 2026-11-06 — Storm-3358이라는 "Cambodia-based intrusion cluster"의 금전적 목적 ARTEX 악용 공격, 원문에 중국 국가 배후 귀속 표현 없음)
+- 비고: GTIG 블로그 목록 재페치 결과 신규 게시물 없음(11건 동일). Microsoft 블로그 목록 재페치 결과 신규 게시물 1건 확인·원문 페치 후 제외. 1차 출처 EGRESS_BLOCKED 상태인 unit42.paloaltonetworks.com·www.volexity.com에 재프로브를 시도했으나 둘 다 DNS 미해결로 차단 유지 확인. 추가로 www.crowdstrike.com·www.recordedfuture.com에 신규 프로브를 시도했으나 둘 다 DNS 미해결로 차단됨을 확인(향후 프로브 후보에서 보류). WebFetch 예산 7건 사용(GTIG 블로그 목록, Microsoft 블로그 목록, ARTEX abuse 게시물 성공 3건; unit42, volexity, crowdstrike, recordedfuture DNS 미해결 4건).
 
 ## 차단 운영 포맷 (복붙용)
 
@@ -234,9 +225,7 @@ www.twisinbeth.com
 - [ARTEX and Friends: Enter Agentic Offensive Frameworks](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks) — Google GTIG/Mandiant — 2026-10-30 — fetched(이전 실행)
 - [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched(이전 실행)
 - [NeedyMantis: Unpacking a post-compromise malware family used in targeted operations](https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/) — Microsoft — 2026-09-28 — fetched(이전 실행)
-- [From Prompting to Autonomy: The Evolution of Adversarial AI](https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai) — Google GTIG — 2026-09-08 — fetched(이전 실행)
 - [Cloud CISO Perspectives: How Google monitors AI threats and advances AI defenses](https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-how-google-monitors-ai-threats-advances-ai-defenses) — Google Cloud/GTIG — 2026-09-16 — fetched(이전 실행)
-- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-11-07 조회 — fetched(신규 게시물 2건 확인, 개별 검토 후 제외)
-- [Shutting the Door on the XCPE Botnet](https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet) — Google GTIG — 2026-11-02 — fetched(금일, 중국 귀속 없음으로 제외)
-- [The Rise of LLMJacking: How Threat Actors Monetize Compromised Cloud and Model Resources](https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models) — Google GTIG — 2026-11-02 — fetched(금일, 중국 귀속 없음으로 제외)
-- [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/) — Microsoft — 2026-11-07 조회 — fetched(신규 게시물 없음)
+- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-11-08 조회 — fetched(신규 게시물 없음)
+- [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/) — Microsoft — 2026-11-08 조회 — fetched(신규 게시물 1건 확인)
+- [ARTEX abuse expands as cybercriminals target financial sector](https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/) — Microsoft — 2026-11-06 — fetched(금일, 중국 귀속 없음으로 제외)
