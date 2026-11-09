@@ -1,13 +1,13 @@
-# China State APT Campaign Snapshot — 2026-11-08 UTC
+# China State APT Campaign Snapshot — 2026-11-09 UTC
 
 ## 수집 상태
-- 페치 성공: [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재페치 — 11건 전체 제목 재확인, 전일(11-07) 대비 신규 게시물 없음), [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/)(재페치 — 12건 중 신규 게시물 1건 확인 후 원문 직접 페치), [ARTEX abuse expands as cybercriminals target financial sector](https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/) — Microsoft — 2026-11-06 — fetched(검토 후 제외)
-- 페치 차단(EGRESS_BLOCKED/DNS 미해결): unit42.paloaltonetworks.com(DNS 미해결 — Phantom Taurus 1차 출처, 재프로브 결과 동일), www.volexity.com(DNS 미해결 — UTA0560/UTA0565/JungleBamboo/BlueMoon 1차 출처, 재프로브 결과 동일), www.crowdstrike.com(DNS 미해결 — 금일 신규 프로브), www.recordedfuture.com(DNS 미해결 — 금일 신규 프로브)
+- 페치 성공: [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재페치 — 11건 전체 제목 재확인, 전일(11-08) 대비 신규 게시물 없음), [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/)(재페치 — 12건 전체 제목 재확인, 최신 게시물 여전히 2026-11-06 "ARTEX abuse expands..."로 전일 대비 신규 게시물 없음)
+- 페치 차단: www.trendmicro.com(DNS 미해결 — 금일 신규 프로브), www.sentinelone.com(DNS 미해결 — 금일 신규 프로브)
 - 검증된 IOC: 신규 0개(누적 도메인 35·IP 31·해시 61) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 0건(누적 27, 검증 12/미검증 15)
 
-6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대)를 수행했습니다. 검색 결과는 전량 60일 창(2026-09-09~) 밖의 과거 자료(예: UNC2814/GRIDTIDE — Google, 2026-02-25 공개; UAT-9244/TernDoor — Cisco Talos, 2026-03-05 공개; Salt Typhoon/Twill Typhoon — Darktrace/Bitdefender 재보도, 2025-10~2026-05) 또는 기존에 이미 반영된 캠페인의 재보도였습니다. GTIG 블로그 목록을 재페치해 전일 확인된 11건 제목을 재확인했으며 신규 게시물은 없었습니다. Microsoft 블로그 목록 재페치 결과 전일(11-07) 기준 최신 게시물(2026-11-05) 이후 신규 게시물 1건을 확인해 원문을 직접 페치했습니다: "ARTEX abuse expands as cybercriminals target financial sector"(2026-11-06, Microsoft)는 Storm-3358이라는 "Cambodia-based intrusion cluster"가 ARTEX 프레임워크를 악용해 동남아 및 일부 글로벌 금융기관을 금전적 목적으로 공격한 내용으로, 원문이 중국/PRC 국가 배후 귀속을 전혀 명시하지 않아(금전적 목적의 캄보디아 기반 클러스터로만 서술) 수집 규칙(중국 국가 배후 명시적 귀속 필요, 일반 범죄 활동 배제)에 따라 제외했습니다. 1차 출처가 EGRESS_BLOCKED 상태인 Phantom Taurus(Unit 42)·UTA0560/UTA0565/JungleBamboo/BlueMoon(Volexity) 계열 캠페인에 대해 각각 unit42.paloaltonetworks.com·www.volexity.com 재프로브를 시도했으나 둘 다 DNS 미해결로 차단 상태가 유지됨을 확인했습니다. 추가로 금일 신규 벤더 소스 확보 가능성을 확인하기 위해 www.crowdstrike.com·www.recordedfuture.com에 프로브를 시도했으나 둘 다 DNS 미해결로 차단됨을 확인했습니다. 이 외 금일은 수집 규칙에 부합하는 신규 중국 국가 배후 캠페인을 발견하지 못했습니다.
+6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대)를 수행했습니다. 검색 결과는 전량 60일 창(2026-09-10~) 밖의 과거 자료(예: UNC6508/REDCap — Gurucul 재보도, 2026-06-16; UNC2814/GRIDTIDE — Google, 2026-02-25; Mustang Panda 인도 은행권 LOTUSLITE — 2026-03; "Silver Dragon" 제로데이 클러스터 — CtrlAltNod, 중국 귀속 불명확·원문 미확보) 또는 기존에 이미 반영된 캠페인의 재보도였으며, "Chengdu 404"에 대한 신규 자료는 없었습니다. GTIG 블로그 목록을 재페치해 11건 제목을 재확인했으며(신규 항목 "Financially Motivated Threat Actor BREEZE COMET Targets Brazil"은 원문 제목상 금전적 목적 명시로 수집 규칙상 중국 국가 배후 캠페인에 해당하지 않아 상세 검토 없이 제외), 전일 대비 실질적 신규 게시물은 없었습니다. Microsoft 블로그 목록도 재페치해 12건 제목을 재확인했으며 최신 게시물은 여전히 2026-11-06자 "ARTEX abuse expands..."(전일 이미 검토·제외)로 변동이 없었습니다. 신규 벤더 소스 확보 가능성을 확인하기 위해 www.trendmicro.com·www.sentinelone.com에 프로브를 시도했으나 둘 다 DNS 미해결(세션 네트워크 허용 목록 밖)로 차단됨을 확인했습니다(2회 연속 실패로 추가 신규 도메인 프로브는 금일 중단). 이 외 금일은 수집 규칙에 부합하는 신규 중국 국가 배후 캠페인을 발견하지 못했습니다.
 
-60일 창이 2026-09-09~으로 1일 이동하면서, 최저 관측/공개일 캠페인이었던 "RAVINE CASTLE·BASIN CASTLE·UNC6508 — AI 통합 첩보작전 고도화"(공개 2026-09-08)가 창 밖으로 벗어나 금일부터 "최근 캠페인" 목록에서 제외됩니다(그룹·출처 메타데이터는 [`groups.md`](../groups.md) 및 [`snapshots/2026-09-08.md`](2026-09-08.md) 등 과거 스냅샷에 보존, 해당 캠페인에 결부된 검증 도메인/IP/해시는 없어 블록리스트 변동 없음). 나머지 13건 캠페인은 모두 창 내에 유지됩니다(최저 관측일: BlueMoon, 공개 2026-09-09, 경계값 — 익일부터 창 밖). 7일 창(2026-11-02~2026-11-08) 기준 🔥 해당 캠페인 없음(최신 검증 출처는 GTIG 2026-10-30·Microsoft 2026-10-21로 모두 7일 창 밖).
+60일 창이 2026-09-10~으로 1일 이동하면서, 최저 관측/공개일 캠페인이었던 "BlueMoon — Chrome/Windows 패치갭 제로데이 체인(TA412/JungleBamboo·UTA0560)"(공개 2026-09-09)이 창 밖으로 벗어나 금일부터 "최근 캠페인" 목록에서 제외됩니다(그룹·출처 메타데이터는 [`groups.md`](../groups.md) 및 [`snapshots/2026-11-08.md`](2026-11-08.md) 등 과거 스냅샷에 보존, 해당 캠페인에 결부된 검증 도메인/IP/해시는 없어 블록리스트 변동 없음). 나머지 12건 캠페인은 모두 창 내에 유지됩니다(최저 공개일: CC Switch/AI 모델 전환 툴, 2026-09-16). 7일 창(2026-11-02~2026-11-09) 기준 🔥 해당 캠페인 없음(최신 검증 출처는 GTIG 2026-10-30·Microsoft 2026-10-21로 모두 7일 창 밖).
 
 ## 최근 캠페인 (최근 60일)
 
@@ -73,7 +73,7 @@
 - 초기 침투: 불명(원문 미확보) — IIS 웹서버를 주요 거점으로 활용, CL-STA-0043 → Operation Diplomatic Specter → Phantom Taurus로 명칭 진화
 - 주요 도구/멀웨어: NET-STAR(.NET 기반 신규 멀웨어 스위트, IIS 워커 프로세스 w3wp.exe 메모리 상주 컴포넌트 포함)
 - 관측 시점: 활동 계보 2023-06 ~ 2024-05 ~ 현재, 공개 2026-09(정확한 날짜 원문 미확보)
-- 출처: 검색 스니펫만 확인 — Unit 42(unit42.paloaltonetworks.com, 금일 재프로브 결과 DNS 미해결로 차단 유지)
+- 출처: 검색 스니펫만 확인 — Unit 42(unit42.paloaltonetworks.com, 지속 차단)
 
 ### Red Heron — WordPress·Zyxel·Ubiquiti·Gitea 연쇄 익스플로잇 정부기관 데이터 탈취 ⚠️ (미검증)
 - 귀속: 귀속 미확인 — 검색 스니펫 표현: "Chinese-speaking threat actor linked to the Red Heron group" (Acronis TRU/GreyNoise 재보도 종합). PLA/MSS 언급 없음.
@@ -82,14 +82,6 @@
 - 주요 도구/멀웨어: 신원 미상의 신규 Linux 루트킷, AMSI 우회, 권한 상승 도구
 - 관측 시점: 최소 2026-06 초부터 활동, Zyxel 익스플로잇 2026-08-17 시작, 공개 2026-09-22경
 - 출처: 검색 스니펫만 확인 — Acronis TRU(차단), GreyNoise(차단)
-
-### UTA0565 — "Mind the (Patch) Gap, Part 2" Chrome/Windows 제로데이 체인 재사용, CLEANGULP ⚠️ (미검증)
-- 귀속: 귀속 미확인 — 검색 스니펫 표현: "Chinese threat group"/"China-aligned threat group" (Volexity 재보도 종합). PLA/MSS 언급 없음.
-- 대상: 아시아 정부기관 등 — 홍콩 활동가 추 항퉁(Chow Hang-tung) 공개 지지를 촉구하는 위장 피싱 메일로 유인
-- 초기 침투: BlueMoon 캠페인(UTA0560/JungleBamboo)과 동일한 Chrome/Windows 패치갭 제로데이 체인 — CVE-2026-85046 + CVE-2026-87491 + CVE-2026-85880
-- 주요 도구/멀웨어: CLEANGULP — Microsoft Visual C Compiler로 빌드된 신규 악성코드
-- 관측 시점: 2026-09-03~09-04 공격 탐지, 2026-09-21 Volexity 공개
-- 출처: 검색 스니펫만 확인 — Volexity(www.volexity.com, 금일 재프로브 결과 DNS 미해결로 차단 유지)
 
 ### SparroWocky 백도어 — FamousSparrow 라틴아메리카 정부 캠페인 ⚠️ (미검증)
 - 귀속: 귀속 미확인 — 검색 스니펫 표현: "China-aligned"(The Hacker News), ESET은 "may be connected to China's interest in monitoring how regional governments respond to growing US political, economic, and strategic engagement in Latin America"로 평가. PLA/MSS 언급 없음.
@@ -107,14 +99,6 @@
 - 관측 시점: 2026-09-16 공개
 - 출처: [Cloud CISO Perspectives: How Google monitors AI threats and advances AI defenses](https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-how-google-monitors-ai-threats-advances-ai-defenses) — Google Cloud/GTIG — 2026-09-16 — fetched(이전 실행)
 
-### BlueMoon — Chrome/Windows 패치갭 제로데이 체인 — TA412/JungleBamboo·UTA0560 ⚠️ (미검증)
-- 귀속: 귀속 미확인 — 검색 스니펫 표현: "Chinese threat actors"/"China-linked"/"China-aligned"/"state-aligned". PLA/MSS 언급 없음.
-- 대상: 미국 NGO, 광업 기업, 실물상품거래 기업(TA412), 반사형 XSS 취약점이 있던 미국 대학 웹사이트 방문자 등
-- 초기 침투: CVE-2026-85046 + CVE-2026-87491 + CVE-2026-85880. TA412은 대학생 인턴십 문의·Association for Asian Studies 컨퍼런스 위장 스피어피싱으로 유포
-- 주요 도구/멀웨어: GRIMWEDGE(UTA0560), SUPERSTOMP(JungleBamboo) → LONGTALE, GemStone(TA412, ⚠️ 미검증)
-- 관측 시점: 2026-08-28 TA412 최초 사용, 2026-09-01 일반 활동, 2026-09-09 Volexity 공개 — **경계값: 60일 창 하한, 내일(11-09)부터 창 밖**
-- 출처: 검색 스니펫만 확인 — Volexity(www.volexity.com, 금일 재프로브 결과 DNS 미해결로 차단 유지), Proofpoint(차단)
-
 ## 그룹 별칭 매핑
 전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 신규 없음.
 
@@ -125,7 +109,7 @@
 신규 없음. 전체 목록은 [`blocklists/domains.txt`](../blocklists/domains.txt) 참조.
 
 ## C2 IP (31, 누적)
-신규 없음. 전체 목록은 [`blocklists/ips.txt`](../blocklists/ips.txt) 참조. ⚠️ 참고: Microsoft가 2026-11-05 공개한 ARTEX 관련 미귀속 IP 4건(199.19.77[.]84, 199.19.77[.]18, 65.87.223[.]26, 157.22.126[.]128) 및 2026-11-06 공개한 Storm-3358(중국 귀속 없음) 관련 IP 8건(199.19.95[.]66~68, 91.92.240[.]238, 85.11.168[.]45, 85.11.167[.]52, 178.16.54[.]129, 31.77.229[.]35)은 원문이 각각 "Unattributed" 또는 금전적 목적의 캄보디아 기반 클러스터로 명시해 중국 국가 배후 귀속 기준 미충족 — 블록리스트에 추가하지 않음.
+신규 없음. 전체 목록은 [`blocklists/ips.txt`](../blocklists/ips.txt) 참조.
 
 ## 파일 해시 (61, 누적)
 신규 없음. 기존 61건은 이전 스냅샷([`snapshots/2026-08-27.md`](2026-08-27.md), [`snapshots/2026-08-28.md`](2026-08-28.md), [`snapshots/2026-09-03.md`](2026-09-03.md), [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-09-25.md`](2026-09-25.md), [`snapshots/2026-10-01.md`](2026-10-01.md), [`snapshots/2026-10-16.md`](2026-10-16.md)) 참조.
@@ -136,13 +120,13 @@
 ## 이번 실행 변경사항
 - 신규 캠페인: 없음
 - 신규 IOC: 없음
-- 제거: "RAVINE CASTLE·BASIN CASTLE·UNC6508 — AI 통합 첩보작전 고도화"(GTIG, 공개 2026-09-08) — 60일 창(2026-09-09~)을 벗어나 금일부터 "최근 캠페인" 목록에서 제외(그룹·출처 메타데이터는 `groups.md` 및 과거 스냅샷에 보존, 결부된 검증 IOC 없어 블록리스트 변동 없음)
+- 제거: "BlueMoon — Chrome/Windows 패치갭 제로데이 체인(TA412/JungleBamboo·UTA0560)"(Volexity 재보도 종합, 공개 2026-09-09) — 60일 창(2026-09-10~)을 벗어나 금일부터 "최근 캠페인" 목록에서 제외(그룹·출처 메타데이터는 `groups.md` 및 과거 스냅샷에 보존, 결부된 검증 IOC 없어 블록리스트 변동 없음)
 - 승격(미검증→검증): 없음
 - 귀속 변경: 없음
 - 신규 CVE: 없음
 - 신규 그룹(표 등재): 없음
-- 검토 후 제외한 항목: "ARTEX abuse expands as cybercriminals target financial sector"(Microsoft, 2026-11-06 — Storm-3358이라는 "Cambodia-based intrusion cluster"의 금전적 목적 ARTEX 악용 공격, 원문에 중국 국가 배후 귀속 표현 없음)
-- 비고: GTIG 블로그 목록 재페치 결과 신규 게시물 없음(11건 동일). Microsoft 블로그 목록 재페치 결과 신규 게시물 1건 확인·원문 페치 후 제외. 1차 출처 EGRESS_BLOCKED 상태인 unit42.paloaltonetworks.com·www.volexity.com에 재프로브를 시도했으나 둘 다 DNS 미해결로 차단 유지 확인. 추가로 www.crowdstrike.com·www.recordedfuture.com에 신규 프로브를 시도했으나 둘 다 DNS 미해결로 차단됨을 확인(향후 프로브 후보에서 보류). WebFetch 예산 7건 사용(GTIG 블로그 목록, Microsoft 블로그 목록, ARTEX abuse 게시물 성공 3건; unit42, volexity, crowdstrike, recordedfuture DNS 미해결 4건).
+- 검토 후 제외한 항목: "Financially Motivated Threat Actor BREEZE COMET Targets Brazil"(GTIG 블로그 목록, 제목상 금전적 목적 명시로 중국 국가 배후 수집 기준 미충족, 원문 상세 열람 없이 제외)
+- 비고: GTIG 블로그 목록 재페치 결과 11건 중 신규 1건("BREEZE COMET", 중국 귀속 아님) 외 변동 없음. Microsoft 블로그 목록 재페치 결과 12건 모두 전일 확인분과 동일(최신 2026-11-06). 신규 벤더 프로브 www.trendmicro.com·www.sentinelone.com 둘 다 DNS 미해결로 차단(세션 네트워크 허용 목록 밖) — 향후 프로브 후보에서 보류. WebFetch 예산 4건 사용(GTIG 블로그 목록, Microsoft 블로그 목록 성공 2건; trendmicro, sentinelone DNS 미해결 2건).
 
 ## 차단 운영 포맷 (복붙용)
 
@@ -226,6 +210,5 @@ www.twisinbeth.com
 - [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched(이전 실행)
 - [NeedyMantis: Unpacking a post-compromise malware family used in targeted operations](https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/) — Microsoft — 2026-09-28 — fetched(이전 실행)
 - [Cloud CISO Perspectives: How Google monitors AI threats and advances AI defenses](https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-how-google-monitors-ai-threats-advances-ai-defenses) — Google Cloud/GTIG — 2026-09-16 — fetched(이전 실행)
-- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-11-08 조회 — fetched(신규 게시물 없음)
-- [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/) — Microsoft — 2026-11-08 조회 — fetched(신규 게시물 1건 확인)
-- [ARTEX abuse expands as cybercriminals target financial sector](https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/) — Microsoft — 2026-11-06 — fetched(금일, 중국 귀속 없음으로 제외)
+- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-11-09 조회 — fetched(신규 게시물 없음, 중국 귀속 기준)
+- [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/) — Microsoft — 2026-11-09 조회 — fetched(신규 게시물 없음)
