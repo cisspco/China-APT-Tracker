@@ -1,13 +1,17 @@
-# China State APT Campaign Snapshot — 2026-11-09 UTC
+# China State APT Campaign Snapshot — 2026-11-10 UTC
 
 ## 수집 상태
-- 페치 성공: [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재페치 — 11건 전체 제목 재확인, 전일(11-08) 대비 신규 게시물 없음), [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/)(재페치 — 12건 전체 제목 재확인, 최신 게시물 여전히 2026-11-06 "ARTEX abuse expands..."로 전일 대비 신규 게시물 없음)
-- 페치 차단: www.trendmicro.com(DNS 미해결 — 금일 신규 프로브), www.sentinelone.com(DNS 미해결 — 금일 신규 프로브)
+- 페치 성공: [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재페치 — 11건 중 신규 3건 제목 확인), [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/)(재페치 — 12건 전체 제목 재확인, 최신 게시물 여전히 2026-11-06 "ARTEX abuse expands..."로 전일 대비 신규 게시물 없음), [Shutting the Door on the XCPE Botnet](https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet)(GTIG, 2026-11-02, 원문 직접 확인)
+- 페치 차단/실패: `gtig-ai-threat-tracker-from-prompting-to-autonomy-the-evolution-of-adversarial-ai`(GTIG, 추정 URL 2건 모두 404) → 정확한 URL(`from-prompting-to-autonomy-the-evolution-of-adversarial-ai`) 확인 후 재시도했으나 페치 도구 자체가 콘텐츠 정책으로 거부(EGRESS_BLOCKED 아님, 도구측 거부 — 2회 재시도 모두 동일 거부)
 - 검증된 IOC: 신규 0개(누적 도메인 35·IP 31·해시 61) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 0건(누적 27, 검증 12/미검증 15)
 
-6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대)를 수행했습니다. 검색 결과는 전량 60일 창(2026-09-10~) 밖의 과거 자료(예: UNC6508/REDCap — Gurucul 재보도, 2026-06-16; UNC2814/GRIDTIDE — Google, 2026-02-25; Mustang Panda 인도 은행권 LOTUSLITE — 2026-03; "Silver Dragon" 제로데이 클러스터 — CtrlAltNod, 중국 귀속 불명확·원문 미확보) 또는 기존에 이미 반영된 캠페인의 재보도였으며, "Chengdu 404"에 대한 신규 자료는 없었습니다. GTIG 블로그 목록을 재페치해 11건 제목을 재확인했으며(신규 항목 "Financially Motivated Threat Actor BREEZE COMET Targets Brazil"은 원문 제목상 금전적 목적 명시로 수집 규칙상 중국 국가 배후 캠페인에 해당하지 않아 상세 검토 없이 제외), 전일 대비 실질적 신규 게시물은 없었습니다. Microsoft 블로그 목록도 재페치해 12건 제목을 재확인했으며 최신 게시물은 여전히 2026-11-06자 "ARTEX abuse expands..."(전일 이미 검토·제외)로 변동이 없었습니다. 신규 벤더 소스 확보 가능성을 확인하기 위해 www.trendmicro.com·www.sentinelone.com에 프로브를 시도했으나 둘 다 DNS 미해결(세션 네트워크 허용 목록 밖)로 차단됨을 확인했습니다(2회 연속 실패로 추가 신규 도메인 프로브는 금일 중단). 이 외 금일은 수집 규칙에 부합하는 신규 중국 국가 배후 캠페인을 발견하지 못했습니다.
+6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대)를 수행했습니다. 검색 결과는 전량 60일 창(2026-09-11~) 밖의 과거 자료(UNC2814/GRIDTIDE — Google, 2026-02-25; Mustang Panda 인도 은행권 LOTUSLITE — 2026-03; CISA/NCSC 공동권고 AA26-113A "China-nexus covert networks" — 2026-04-23; UAT-9244/TernDoor·PeerTime·BruteEntry — Cisco Talos, 2026-03-05 공개, 11-08 실행에서 이미 확인·제외) 또는 기존에 이미 반영된 캠페인의 재보도였으며, "Chengdu 404"에 대한 신규 자료는 없었습니다.
 
-60일 창이 2026-09-10~으로 1일 이동하면서, 최저 관측/공개일 캠페인이었던 "BlueMoon — Chrome/Windows 패치갭 제로데이 체인(TA412/JungleBamboo·UTA0560)"(공개 2026-09-09)이 창 밖으로 벗어나 금일부터 "최근 캠페인" 목록에서 제외됩니다(그룹·출처 메타데이터는 [`groups.md`](../groups.md) 및 [`snapshots/2026-11-08.md`](2026-11-08.md) 등 과거 스냅샷에 보존, 해당 캠페인에 결부된 검증 도메인/IP/해시는 없어 블록리스트 변동 없음). 나머지 12건 캠페인은 모두 창 내에 유지됩니다(최저 공개일: CC Switch/AI 모델 전환 툴, 2026-09-16). 7일 창(2026-11-02~2026-11-09) 기준 🔥 해당 캠페인 없음(최신 검증 출처는 GTIG 2026-10-30·Microsoft 2026-10-21로 모두 7일 창 밖).
+GTIG 블로그 목록을 재페치한 결과 전일(11-09) 확인분 대비 신규 게시물 3건을 확인했습니다: (1) "Shutting the Door on the XCPE Botnet"(2026-11-02) — 원문 직접 확인 결과 Videostrong Technology Co.(Android OEM/ODM)가 금전적 목적으로 선탑재한 백도어/봇넷으로, 원문이 "intentionally developed, deployed, and operated for financial gain"으로 명시해 중국 국가 배후 귀속이 전혀 없으므로 수집 규칙(중국 국가 배후 명시적 귀속 필요, 일반 범죄 활동 배제)에 따라 제외. (2) "The Rise of LLMJacking: How Threat Actors Monetize Compromised Cloud and Model Resources" — 검색 재보도 종합 결과 UNC6993 등 금전적 목적의 LLM 리소스 탈취 행위로 중국 국가 배후 귀속 없음 → 제외. (3) "GTIG AI Threat Tracker: From Prompting to Autonomy – The Evolution of Adversarial AI"(2026-09-08 공개로 추정) — 원문 페치가 도구측 정책으로 2회 모두 거부되어 직접 확인 불가. WebSearch 재보도 종합 결과 이 리포트 시리�즈가 과거(2025-11, 2026-02, 2026-05) 에디션에서 APT41의 Gemini 악용(OSSTUN C2 프레임워크 개발·난독화 지원)을 다룬 바 있다는 점만 확인했으나, 해당 내용은 전부 60일 창 밖의 과거 활동이고 금번(11월) 에디션에 신규 PRC 귀속 캠페인·IOC가 포함되는지는 원문 미확보로 확인 불가 — 미채택(참고 기록만, 표에 미등재).
+
+Microsoft 블로그 목록도 재페치해 12건 제목을 재확인했으며 최신 게시물은 여전히 2026-11-06자 "ARTEX abuse expands..."(11-08 실행에서 이미 검토·제외, Storm-3358·금전적 목적·중국 귀속 없음)로 변동이 없었습니다. 이 외 금일은 수집 규칙에 부합하는 신규 중국 국가 배후 캠페인을 발견하지 못했습니다.
+
+60일 창이 2026-09-11~로 1일 이동했습니다. 기존 12건 캠페인 중 최저 공개일은 "CC Switch — AI 모델 전환 공격 툴"(공개 2026-09-16)로 여전히 창 내에 있어 금일 창 이동으로 인한 제외 캠페인은 없습니다. 7일 창(2026-11-03~2026-11-10) 기준 🔥 해당 캠페인 없음(최신 검증 출처는 GTIG 2026-10-30·Microsoft 2026-10-21로 모두 7일 창 밖).
 
 ## 최근 캠페인 (최근 60일)
 
@@ -120,13 +124,13 @@
 ## 이번 실행 변경사항
 - 신규 캠페인: 없음
 - 신규 IOC: 없음
-- 제거: "BlueMoon — Chrome/Windows 패치갭 제로데이 체인(TA412/JungleBamboo·UTA0560)"(Volexity 재보도 종합, 공개 2026-09-09) — 60일 창(2026-09-10~)을 벗어나 금일부터 "최근 캠페인" 목록에서 제외(그룹·출처 메타데이터는 `groups.md` 및 과거 스냅샷에 보존, 결부된 검증 IOC 없어 블록리스트 변동 없음)
+- 제거: 없음 (60일 창이 2026-09-11~로 이동했으나 최저 공개일 캠페인(CC Switch, 2026-09-16)이 여전히 창 내에 있어 제외 대상 없음)
 - 승격(미검증→검증): 없음
 - 귀속 변경: 없음
 - 신규 CVE: 없음
 - 신규 그룹(표 등재): 없음
-- 검토 후 제외한 항목: "Financially Motivated Threat Actor BREEZE COMET Targets Brazil"(GTIG 블로그 목록, 제목상 금전적 목적 명시로 중국 국가 배후 수집 기준 미충족, 원문 상세 열람 없이 제외)
-- 비고: GTIG 블로그 목록 재페치 결과 11건 중 신규 1건("BREEZE COMET", 중국 귀속 아님) 외 변동 없음. Microsoft 블로그 목록 재페치 결과 12건 모두 전일 확인분과 동일(최신 2026-11-06). 신규 벤더 프로브 www.trendmicro.com·www.sentinelone.com 둘 다 DNS 미해결로 차단(세션 네트워크 허용 목록 밖) — 향후 프로브 후보에서 보류. WebFetch 예산 4건 사용(GTIG 블로그 목록, Microsoft 블로그 목록 성공 2건; trendmicro, sentinelone DNS 미해결 2건).
+- 검토 후 제외한 항목: "Shutting the Door on the XCPE Botnet"(GTIG, 2026-11-02, 원문 확인 — Videostrong Technology Co.의 금전적 목적 Android 공급망 백도어로 중국 국가 배후 귀속 없음), "The Rise of LLMJacking"(GTIG, UNC6993 등 금전적 목적의 LLM 리소스 탈취로 중국 국가 배후 귀속 없음, 검색 재보도 종합) — 둘 다 수집 규칙(일반 범죄 활동 배제)에 따라 미채택
+- 비고: GTIG 블로그 목록 재페치 결과 11건 중 신규 3건("Shutting the Door on the XCPE Botnet", "The Rise of LLMJacking", "GTIG AI Threat Tracker: From Prompting to Autonomy") 확인. 앞의 2건은 원문 확인 후 중국 귀속 없어 제외. 세 번째("From Prompting to Autonomy", 2026-09-08 공개 추정)는 정확한 URL을 특정했으나 페치 도구가 2회 모두 콘텐츠 정책으로 거부해 원문 확인 불가 — 과거 에디션에서 APT41의 Gemini 악용 사례가 있었다는 점만 검색으로 확인했으나 모두 60일 창 밖의 과거 활동이며 금번 에디션의 PRC 관련 신규 내용은 미확인 상태로 참고 기록만 남기고 표에는 미등재. Microsoft 블로그 목록도 재페치해 12건 모두 전일 확인분과 동일함을 재확인(최신 2026-11-06, 이미 검토·제외). WebFetch 예산 8건 전부 사용(GTIG 블로그 목록 2회, Microsoft 블로그 목록 1회, XCPE 원문 1회 성공; "From Prompting to Autonomy" 잘못된 URL 추정 2회 404, 정확한 URL 재시도 2회 도구측 거부).
 
 ## 차단 운영 포맷 (복붙용)
 
@@ -210,5 +214,6 @@ www.twisinbeth.com
 - [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched(이전 실행)
 - [NeedyMantis: Unpacking a post-compromise malware family used in targeted operations](https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/) — Microsoft — 2026-09-28 — fetched(이전 실행)
 - [Cloud CISO Perspectives: How Google monitors AI threats and advances AI defenses](https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-how-google-monitors-ai-threats-advances-ai-defenses) — Google Cloud/GTIG — 2026-09-16 — fetched(이전 실행)
-- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-11-09 조회 — fetched(신규 게시물 없음, 중국 귀속 기준)
-- [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/) — Microsoft — 2026-11-09 조회 — fetched(신규 게시물 없음)
+- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-11-10 조회 — fetched(신규 게시물 3건 확인, 중국 귀속 없음 2건 제외·1건 미확인)
+- [Shutting the Door on the XCPE Botnet](https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet) — Google GTIG — 2026-11-02 — fetched(중국 귀속 없음, 금전적 목적 — 미채택)
+- [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/) — Microsoft — 2026-11-10 조회 — fetched(신규 게시물 없음)
