@@ -1,17 +1,17 @@
-# China State APT Campaign Snapshot — 2026-11-10 UTC
+# China State APT Campaign Snapshot — 2026-11-11 UTC
 
 ## 수집 상태
-- 페치 성공: [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재페치 — 11건 중 신규 3건 제목 확인), [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/)(재페치 — 12건 전체 제목 재확인, 최신 게시물 여전히 2026-11-06 "ARTEX abuse expands..."로 전일 대비 신규 게시물 없음), [Shutting the Door on the XCPE Botnet](https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet)(GTIG, 2026-11-02, 원문 직접 확인)
-- 페치 차단/실패: `gtig-ai-threat-tracker-from-prompting-to-autonomy-the-evolution-of-adversarial-ai`(GTIG, 추정 URL 2건 모두 404) → 정확한 URL(`from-prompting-to-autonomy-the-evolution-of-adversarial-ai`) 확인 후 재시도했으나 페치 도구 자체가 콘텐츠 정책으로 거부(EGRESS_BLOCKED 아님, 도구측 거부 — 2회 재시도 모두 동일 거부)
+- 페치 성공: [Cloud CISO Perspectives: How Google monitors AI threats and advances AI defenses](https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-how-google-monitors-ai-threats-advances-ai-defenses)(재확인, 변동 없음), [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence)(재페치 — 11건 중 신규 6건 제목 확인), [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/)(재페치 — 12건 중 신규 1건, "Detecting sleeper agents hiding in AI model neurons", 2026-11-10), [Vulnerability Discovery and Exploitation Trends in the AI Era](https://cloud.google.com/blog/topics/threat-intelligence/vulnerability-discovery-and-exploitation-trends-in-the-ai-era)(GTIG, 원문 직접 확인 — 중국 귀속 없음), [Investigating Ephemeral Supply Chain Tampering](https://cloud.google.com/blog/topics/threat-intelligence/investigating-ephemeral-supply-chain-tampering)(GTIG/Mandiant, 원문 직접 확인 — UNC7017/AOMEI 공급망 변조, 중국 귀속 없음), [Threat actors use agentic AI tooling to find and abuse exposed secrets](https://www.microsoft.com/en-us/security/blog/2026/11/05/threat-actors-use-agentic-ai-tooling-to-find-and-abuse-exposed-secrets/)(Microsoft, 원문 직접 확인 — 중국 귀속 없음)
+- 페치 차단/실패: [GTIG AI Threat Tracker: From Prompting to Autonomy](https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai) — 정확한 URL로 2회 재시도 모두 페치 도구측 오류로 거부(EGRESS_BLOCKED 아님, "API Error" 거부, 전회 실행과 동일한 패턴) → 원문 미확보 지속
 - 검증된 IOC: 신규 0개(누적 도메인 35·IP 31·해시 61) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 0건(누적 27, 검증 12/미검증 15)
 
-6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대)를 수행했습니다. 검색 결과는 전량 60일 창(2026-09-11~) 밖의 과거 자료(UNC2814/GRIDTIDE — Google, 2026-02-25; Mustang Panda 인도 은행권 LOTUSLITE — 2026-03; CISA/NCSC 공동권고 AA26-113A "China-nexus covert networks" — 2026-04-23; UAT-9244/TernDoor·PeerTime·BruteEntry — Cisco Talos, 2026-03-05 공개, 11-08 실행에서 이미 확인·제외) 또는 기존에 이미 반영된 캠페인의 재보도였으며, "Chengdu 404"에 대한 신규 자료는 없었습니다.
+6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대)와 추가 타겟 검색(UAT-11587/Antino/Jewelbug, GTIG Q3 AI Threat Tracker, RedNovember/Mustang Panda 항공우주)을 수행했습니다. 검색 결과는 전량 60일 창(2026-09-12~) 밖의 과거 자료(UNC2814/GRIDTIDE — Google, 2026-02-25; CISA/NCSC 공동권고 AA26-113A — 2026-04-23; UNC6508 의료·국방 연구기관 캠페인 — GTIG, 2026-06-15; Salt Typhoon/Twill Typhoon Azerbaijan 활동 — 2025-12~2026-02; APT31 Gemini 악용 — 2026-02) 또는 기존에 이미 반영된 캠페인(UAT-11587/Antino, Storm-0940/ARTEX, ARMORY CASTLE)의 재보도였습니다. Cisco Talos 원문(blog.talosintelligence.com)은 이번 실행에서 호스트 자체가 이 세션의 네트워크 허용 목록 밖으로 확인되어(DNS 미해석) 프로브를 보류했습니다.
 
-GTIG 블로그 목록을 재페치한 결과 전일(11-09) 확인분 대비 신규 게시물 3건을 확인했습니다: (1) "Shutting the Door on the XCPE Botnet"(2026-11-02) — 원문 직접 확인 결과 Videostrong Technology Co.(Android OEM/ODM)가 금전적 목적으로 선탑재한 백도어/봇넷으로, 원문이 "intentionally developed, deployed, and operated for financial gain"으로 명시해 중국 국가 배후 귀속이 전혀 없으므로 수집 규칙(중국 국가 배후 명시적 귀속 필요, 일반 범죄 활동 배제)에 따라 제외. (2) "The Rise of LLMJacking: How Threat Actors Monetize Compromised Cloud and Model Resources" — 검색 재보도 종합 결과 UNC6993 등 금전적 목적의 LLM 리소스 탈취 행위로 중국 국가 배후 귀속 없음 → 제외. (3) "GTIG AI Threat Tracker: From Prompting to Autonomy – The Evolution of Adversarial AI"(2026-09-08 공개로 추정) — 원문 페치가 도구측 정책으로 2회 모두 거부되어 직접 확인 불가. WebSearch 재보도 종합 결과 이 리포트 시리�즈가 과거(2025-11, 2026-02, 2026-05) 에디션에서 APT41의 Gemini 악용(OSSTUN C2 프레임워크 개발·난독화 지원)을 다룬 바 있다는 점만 확인했으나, 해당 내용은 전부 60일 창 밖의 과거 활동이고 금번(11월) 에디션에 신규 PRC 귀속 캠페인·IOC가 포함되는지는 원문 미확보로 확인 불가 — 미채택(참고 기록만, 표에 미등재).
+GTIG 블로그 목록을 재페치한 결과 전일(11-10) 확인분 대비 신규 6건을 확인했습니다: "Investigating Ephemeral Supply Chain Tampering"(UNC7017이 AOMEI Backupper/AnyViewer 업데이트 인프라를 2026-04~07 간헐적으로 변조한 공급망 공격. CROSSROAD 다운로더가 피해자 지리위치가 "CN"이면 주요 동작을 중단하는 회피 로직을 포함하나, 원문은 공격자를 "UNC7017"로만 지칭하고 중국/PRC 국가 배후를 명시적으로 귀속하지 않아 수집 규칙에 따라 미채택), "Vulnerability Discovery and Exploitation Trends in the AI Era"(불특정 "threat clusters"의 BeyondTrust CVE-2026-1731 등 신속 악용 사례를 다루나 중국 귀속 없음 — 미채택), "Defending Against Active Exploitation of Citrix NetScaler ADC and Gateway Appliances", "ShinyHunters Renewed Mass Exploitation Campaign Targeting Oracle PeopleSoft"(금전적 목적, 중국 무관), "Proactive Defense: Hardening Code Pipelines and CI/CD Infrastructure", "Financially Motivated Threat Actor BREEZE COMET Targets Brazil"(제목 자체가 금전적 목적 명시) — 뒤 4건은 제목·요약만으로도 중국 귀속과 무관함이 명확해 원문 페치를 생략했습니다. "GTIG AI Threat Tracker: From Prompting to Autonomy"는 금일도 원문 확보 실패(위 참조).
 
-Microsoft 블로그 목록도 재페치해 12건 제목을 재확인했으며 최신 게시물은 여전히 2026-11-06자 "ARTEX abuse expands..."(11-08 실행에서 이미 검토·제외, Storm-3358·금전적 목적·중국 귀속 없음)로 변동이 없었습니다. 이 외 금일은 수집 규칙에 부합하는 신규 중국 국가 배후 캠페인을 발견하지 못했습니다.
+Microsoft 블로그 목록도 재페치해 신규 1건("Detecting sleeper agents hiding in AI model neurons", 2026-11-10)을 확인했으나 제목·주제(AI 모델 내부 안전성 연구)상 중국 국가 배후 캠페인과 무관해 원문 페치를 생략했습니다. "Threat actors use agentic AI tooling to find and abuse exposed secrets"(2026-11-05, 전일 미확인 상태로 남아있던 항목)는 원문 확인 결과 Storm-0940/Storm-3358 관련 "Unattributed network indicators"만 다루며 중국 국가 배후 귀속이 없어 미채택(기존 Storm-0940 캠페인 항목의 "미귀속 네트워크 지표" 서술과 일치).
 
-60일 창이 2026-09-11~로 1일 이동했습니다. 기존 12건 캠페인 중 최저 공개일은 "CC Switch — AI 모델 전환 공격 툴"(공개 2026-09-16)로 여전히 창 내에 있어 금일 창 이동으로 인한 제외 캠페인은 없습니다. 7일 창(2026-11-03~2026-11-10) 기준 🔥 해당 캠페인 없음(최신 검증 출처는 GTIG 2026-10-30·Microsoft 2026-10-21로 모두 7일 창 밖).
+60일 창이 2026-09-12~로 1일 이동했습니다. 기존 12건 캠페인 중 최저 공개일은 "CC Switch — AI 모델 전환 공격 툴"(공개 2026-09-16)로 여전히 창 내에 있어 금일 창 이동으로 인한 제외 캠페인은 없습니다. 7일 창(2026-11-04~2026-11-11) 기준 🔥 해당 캠페인 없음(최신 검증 출처는 GTIG 2026-10-30·Microsoft 2026-10-21로 모두 7일 창 밖).
 
 ## 최근 캠페인 (최근 60일)
 
@@ -40,12 +40,12 @@ Microsoft 블로그 목록도 재페치해 12건 제목을 재확인했으며 �
 - 출처: 검색 결과만 확인 — FBI 및 6개국 공동권고(1차 출처 미확보), 재보도(전량 EGRESS_BLOCKED); FBI/DOJ 도메인 압류 보도(전량 EGRESS_BLOCKED)
 
 ### UAT-11587 (Antino 백도어) — 아시아 8개국 정부·정책·시민사회 기관 대상 재부상 캠페인 ⚠️ (미검증)
-- 귀속: 귀속 미확인 — 검색 결과 종합: "Talos assesses the actor as China-nexus with high confidence" (Cisco Talos 재보도 종합, 원문 EGRESS_BLOCKED로 미검증). PLA/MSS 언급 없음.
-- 대상: 대만·인도·필리핀·캄보디아 등 아시아 8개국 정부·정책·시민사회 기관 — 약 350개 엔드포인트 침해 보도
+- 귀속: 귀속 미확인 — 검색 결과 종합: "Talos assesses the actor as China-nexus with high confidence" (Cisco Talos 재보도 종합, 원문 EGRESS_BLOCKED/DNS 미해석으로 미검증). PLA/MSS 언급 없음.
+- 대상: 대만·인도·필리핀·캄보디아·파키스탄·태국·미얀마·시리아 등 아시아 8개국 정부·정책·시민사회 기관 — 약 350개 엔드포인트 침해 보도
 - 초기 침투: 대만 학계·시민단체 대상 Gmail 위장 스피어피싱으로 최초 식별
-- 주요 도구/멀웨어: Antino 백도어(Rust 컴파일) — Microsoft Graph API를 통해 Outlook/OneDrive 오브젝트를 C2 데드드롭으로 악용
-- 관측 시점: 2025-09~2026-10(캠페인 지속), 최초 공개 2026-07(미검증)/2026-10-01~04경 세부사항 확대 재보도(미검증)
-- 출처: 검색 결과만 확인 — Cisco Talos(blog.talosintelligence.com, 금일 프로브 대상 미포함, 전회까지 재차 프로브 결과 차단), 재보도(전량 EGRESS_BLOCKED)
+- 주요 도구/멀웨어: Antino 백도어(Rust 컴파일) — Microsoft Graph API를 통해 Outlook/OneDrive 오브젝트를 C2 데드드롭으로 악용. 전달은 Cloudflare Pages/R2/CloudFront 경유(재보도 종합, 미검증). 권고 차단 도메인(미검증): osc-cdn.com, microsoft-flash.com, wps-cn.com
+- 관측 시점: 2025-09~2026-07(캠페인 지속), Talos 원문 공개 2026-09-30, 2026-10-01~04경 세부사항 확대 재보도(미검증)
+- 출처: 검색 결과만 확인 — Cisco Talos(blog.talosintelligence.com, 금일 세션 네트워크 허용 목록 밖으로 DNS 미해석 확인, 프로브 보류), 재보도(전량 EGRESS_BLOCKED)
 
 ### BPFdoor/Rekoobe/AVERAT — 메일보안장비 위장 통신사 침투 캠페인 ⚠️ (미검증)
 - 귀속: 귀속 미확인 — 검색 결과 종합(원문 EGRESS_BLOCKED로 미검증): "likely tied to Chinese-linked espionage against telecoms". PLA/MSS 언급 없음.
@@ -101,7 +101,7 @@ Microsoft 블로그 목록도 재페치해 12건 제목을 재확인했으며 �
 - 초기 침투: 해당 없음 — 공격 후 작업 자동화 패턴(AI 모델 전환)만 기술
 - 주요 도구/멀웨어: CC Switch — 다중 계정을 순환시키며 Claude·Codex·Gemini 등 AI 모델을 작업별로 전환하는 자동화 툴
 - 관측 시점: 2026-09-16 공개
-- 출처: [Cloud CISO Perspectives: How Google monitors AI threats and advances AI defenses](https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-how-google-monitors-ai-threats-advances-ai-defenses) — Google Cloud/GTIG — 2026-09-16 — fetched(이전 실행)
+- 출처: [Cloud CISO Perspectives: How Google monitors AI threats and advances AI defenses](https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-how-google-monitors-ai-threats-advances-ai-defenses) — Google Cloud/GTIG — 2026-09-16 — fetched(재확인)
 
 ## 그룹 별칭 매핑
 전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 신규 없음.
@@ -124,13 +124,13 @@ Microsoft 블로그 목록도 재페치해 12건 제목을 재확인했으며 �
 ## 이번 실행 변경사항
 - 신규 캠페인: 없음
 - 신규 IOC: 없음
-- 제거: 없음 (60일 창이 2026-09-11~로 이동했으나 최저 공개일 캠페인(CC Switch, 2026-09-16)이 여전히 창 내에 있어 제외 대상 없음)
+- 제거: 없음 (60일 창이 2026-09-12~로 이동했으나 최저 공개일 캠페인(CC Switch, 2026-09-16)이 여전히 창 내에 있어 제외 대상 없음)
 - 승격(미검증→검증): 없음
 - 귀속 변경: 없음
 - 신규 CVE: 없음
 - 신규 그룹(표 등재): 없음
-- 검토 후 제외한 항목: "Shutting the Door on the XCPE Botnet"(GTIG, 2026-11-02, 원문 확인 — Videostrong Technology Co.의 금전적 목적 Android 공급망 백도어로 중국 국가 배후 귀속 없음), "The Rise of LLMJacking"(GTIG, UNC6993 등 금전적 목적의 LLM 리소스 탈취로 중국 국가 배후 귀속 없음, 검색 재보도 종합) — 둘 다 수집 규칙(일반 범죄 활동 배제)에 따라 미채택
-- 비고: GTIG 블로그 목록 재페치 결과 11건 중 신규 3건("Shutting the Door on the XCPE Botnet", "The Rise of LLMJacking", "GTIG AI Threat Tracker: From Prompting to Autonomy") 확인. 앞의 2건은 원문 확인 후 중국 귀속 없어 제외. 세 번째("From Prompting to Autonomy", 2026-09-08 공개 추정)는 정확한 URL을 특정했으나 페치 도구가 2회 모두 콘텐츠 정책으로 거부해 원문 확인 불가 — 과거 에디션에서 APT41의 Gemini 악용 사례가 있었다는 점만 검색으로 확인했으나 모두 60일 창 밖의 과거 활동이며 금번 에디션의 PRC 관련 신규 내용은 미확인 상태로 참고 기록만 남기고 표에는 미등재. Microsoft 블로그 목록도 재페치해 12건 모두 전일 확인분과 동일함을 재확인(최신 2026-11-06, 이미 검토·제외). WebFetch 예산 8건 전부 사용(GTIG 블로그 목록 2회, Microsoft 블로그 목록 1회, XCPE 원문 1회 성공; "From Prompting to Autonomy" 잘못된 URL 추정 2회 404, 정확한 URL 재시도 2회 도구측 거부).
+- 검토 후 제외한 항목: "Investigating Ephemeral Supply Chain Tampering"(GTIG/Mandiant, 2026-10 추정, 원문 확인 — UNC7017의 AOMEI Backupper/AnyViewer 업데이트 인프라 간헐적 변조 공급망 공격. CROSSROAD 다운로더가 피해자 국가가 "CN"이면 동작을 중단하는 회피 로직이 있으나, 원문이 공격자를 "UNC7017"로만 지칭하고 중국/PRC 국가 배후 귀속을 명시하지 않아 수집 규칙상 미채택 — 향후 GTIG가 PRC-nexus로 귀속하면 재검토), "Vulnerability Discovery and Exploitation Trends in the AI Era"(GTIG, 원문 확인 — 불특정 threat cluster의 BeyondTrust CVE-2026-1731 악용 등을 다루나 중국 귀속 없음), "Threat actors use agentic AI tooling to find and abuse exposed secrets"(Microsoft, 2026-11-05, 원문 확인 — Storm-0940/Storm-3358 관련 "Unattributed" 네트워크 지표만 제시, 기존 Storm-0940 항목의 미귀속 서술과 일치하여 중복 미채택), "Defending Against Active Exploitation of Citrix NetScaler ADC and Gateway Appliances"·"ShinyHunters Renewed Mass Exploitation Campaign Targeting Oracle PeopleSoft"·"Proactive Defense: Hardening Code Pipelines and CI/CD Infrastructure"·"Financially Motivated Threat Actor BREEZE COMET Targets Brazil"(제목·요약상 중국 귀속과 무관함이 명확해 원문 페치 생략), "Detecting sleeper agents hiding in AI model neurons"(Microsoft, 2026-11-10, 제목·주제상 중국 귀속과 무관해 원문 페치 생략)
+- 비고: WebFetch 예산 8건 전부 사용(Cloud CISO Perspectives 재확인 1회, GTIG 블로그 목록 1회, Microsoft 블로그 목록 1회, Vulnerability Discovery Trends 원문 1회, Ephemeral Supply Chain Tampering 원문 1회, agentic AI tooling exposed secrets 원문 1회 — 모두 성공; GTIG AI Threat Tracker "From Prompting to Autonomy" 원문 2회 재시도 모두 도구측 오류로 거부, 전회 실행과 동일). Cisco Talos(blog.talosintelligence.com)는 이번 세션의 네트워크 허용 목록 밖으로 확인되어(DNS 미해석, EGRESS_BLOCKED와 다른 오류) 직접 프로브를 생략했습니다 — 사용자가 세션 네트워크 설정에서 허용하면 다음 실행에서 재시도 가능합니다.
 
 ## 차단 운영 포맷 (복붙용)
 
@@ -213,7 +213,10 @@ www.twisinbeth.com
 - [ARTEX and Friends: Enter Agentic Offensive Frameworks](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks) — Google GTIG/Mandiant — 2026-10-30 — fetched(이전 실행)
 - [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched(이전 실행)
 - [NeedyMantis: Unpacking a post-compromise malware family used in targeted operations](https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/) — Microsoft — 2026-09-28 — fetched(이전 실행)
-- [Cloud CISO Perspectives: How Google monitors AI threats and advances AI defenses](https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-how-google-monitors-ai-threats-advances-ai-defenses) — Google Cloud/GTIG — 2026-09-16 — fetched(이전 실행)
-- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-11-10 조회 — fetched(신규 게시물 3건 확인, 중국 귀속 없음 2건 제외·1건 미확인)
-- [Shutting the Door on the XCPE Botnet](https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet) — Google GTIG — 2026-11-02 — fetched(중국 귀속 없음, 금전적 목적 — 미채택)
-- [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/) — Microsoft — 2026-11-10 조회 — fetched(신규 게시물 없음)
+- [Cloud CISO Perspectives: How Google monitors AI threats and advances AI defenses](https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-how-google-monitors-ai-threats-advances-ai-defenses) — Google Cloud/GTIG — 2026-09-16 — fetched(재확인)
+- [Google Cloud Threat Intelligence 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google Cloud/GTIG — 2026-11-11 조회 — fetched(신규 게시물 6건 확인, 전건 중국 귀속 없음·1건 재시도 실패)
+- [Investigating Ephemeral Supply Chain Tampering](https://cloud.google.com/blog/topics/threat-intelligence/investigating-ephemeral-supply-chain-tampering) — Google GTIG/Mandiant — 2026-11-11 조회 — fetched(UNC7017/AOMEI, 중국 귀속 없음 — 미채택)
+- [Vulnerability Discovery and Exploitation Trends in the AI Era](https://cloud.google.com/blog/topics/threat-intelligence/vulnerability-discovery-and-exploitation-trends-in-the-ai-era) — Google GTIG — 2026-11-11 조회 — fetched(중국 귀속 없음 — 미채택)
+- [Threat actors use agentic AI tooling to find and abuse exposed secrets](https://www.microsoft.com/en-us/security/blog/2026/11/05/threat-actors-use-agentic-ai-tooling-to-find-and-abuse-exposed-secrets/) — Microsoft — 2026-11-05 — fetched(중국 귀속 없음, Storm-0940/3358 미귀속 지표만 — 미채택)
+- [Microsoft Security Blog 위협 인텔리전스 목록](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/) — Microsoft — 2026-11-11 조회 — fetched(신규 게시물 1건 확인, 중국 귀속과 무관)
+- [GTIG AI Threat Tracker: From Prompting to Autonomy](https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai) — Google GTIG — 공개일 추정 2026-09-08 — blocked(도구측 오류로 2회 거부)
