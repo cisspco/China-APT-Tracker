@@ -1,17 +1,19 @@
-# China State APT Campaign Snapshot — 2026-11-13 UTC
+# China State APT Campaign Snapshot — 2026-11-14 UTC
 
 ## 수집 상태
-- 페치 성공: [Disrupting the GRIDTIDE Global Espionage Campaign](https://cloud.google.com/blog/topics/threat-intelligence/disrupting-gridtide-global-espionage-campaign)(GTIG, 재확인 — 신규 정보 없음, 기존 IOC와 전량 일치), [Beyond the Battlefield: Threats to the Defense Industrial Base](https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base)(GTIG, 신규 페치 — APT5·UNC3886·UNC5221·UNC4841·UNC3236·UNC6508·APT40·APT1 등 기존 등재 그룹의 DIB 표적화 재확인, 신규 그룹 없음), [Distillation, Experimentation, Integration: AI Adversarial Use](https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use)(GTIG AI Threat Tracker, 2026-02-12 게시분, 신규 페치 — TEMP.Hex/APT31/APT41 재확인 및 신규 그룹 **UNC795**(Gemini 다중 활용 코드 감사 역량 구축) 확인), [UNC6508: PRC-Nexus Actor Exploits REDCap for Medical Research Targeting](https://cloud.google.com/blog/topics/threat-intelligence/prc-targets-us-medical-research)(GTIG, 재확인 — 기존 IOC 7건과 전량 일치, 신규 없음)
-- 페치 차단/실패: crowdstrike.com(VAPOR PANDA adversary 프로필 및 ARTEX/BLOODALCHEMY 캠페인 원문 — DNS 미해석/ENOTFOUND, 이 세션 네트워크 허용 목록 밖)
+- 페치 성공: [Google Cloud Blog — Threat Intelligence 섹션 색인](https://cloud.google.com/blog/topics/threat-intelligence)(GTIG, 색인 페이지만 — 최신 글 목록 확인용, 개별 보고서 본문 아님. "GTIG AI Threat Tracker: From Prompting to Autonomy"(2026-09-08, 60일 창 밖), "The Rise of LLMJacking"(2026-11-02, PRC 귀속 미확인), "Shutting the Door on the XCPE Botnet"(2026-11-02, Videostrong Technology/범죄 조직에 귀속 — 국가 배후 아님) 등 확인, 중국 국가 배후 신규 캠페인 없음)
+- 페치 차단/실패: microsoft.com/en-us/security/blog/threat-intelligence/(404 Not Found — 경로 변경 또는 접근 불가)
 - 검증된 IOC: 신규 0개(누적 도메인 35·IP 31·해시 61) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 0건(누적 27, 검증 12/미검증 15)
 
-6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대)와 GTIG(`site:cloud.google.com`)·Microsoft(`site:microsoft.com`) 타겟 검색, 그리고 "last week/this week" 류의 최신성 검색을 추가로 수행했습니다. 대부분 결과는 60일 창(2026-09-14~) 밖의 과거 자료(RedNovember — Insikt Group 2025-09-24; Salt Typhoon Azerbaijan — Bitdefender 2025-12~2026-02; UNC2814/GRIDTIDE 2026-02-25; DIB 위협 2026-02-10; AI Threat Tracker 2026-02-12; UNC6508 2026-06-15; AA26-113A 공동권고 2026-04-23) 또는 기존 반영 캠페인(Storm-0940/ARTEX, ARMORY CASTLE, UAT-11587/Antino, TA419 등)의 재보도였습니다.
+6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대)와 GTIG(`site:cloud.google.com`)·Microsoft(`site:microsoft.com`) 타겟 검색, 그리고 당일(2026-11-14) 기준 최신성 검색을 추가로 수행했습니다. 대부분 결과는 60일 창(2026-09-15~) 밖의 과거 자료(RedNovember — 2025-09; Salt Typhoon Azerbaijan — Bitdefender 2025-12~2026-02; UNC2814/GRIDTIDE 2026-02-25; AI Threat Tracker "From Prompting to Autonomy" 2026-09-08; AA26-113A 공동권고 2026-04-23) 또는 기존 반영 캠페인(Storm-0940/ARTEX, ARMORY CASTLE, UAT-11587/Antino, TA419, VAPOR PANDA 등)의 재보도였습니다.
 
-금일 신규로 식별한 캠페인은 **VAPOR PANDA**(CrowdStrike 명명, 구 VexatiousTemper 클러스터)의 ARTEX/DeepSeek AI 에이전트 기반 글로벌 동시다발 침투 캠페인(2026-10-17 시작, 공개 2026-10-29~30)입니다. 1차 출처 crowdstrike.com은 이 세션의 네트워크 허용 목록 밖으로 DNS 미해석(ENOTFOUND)되어 직접 페치가 실패했고, crowdstrike.com/adversaries/vapor-panda 페이지의 존재 자체만 검색으로 확인했습니다. 따라서 전체 내용을 검색 스니펫 종합으로만 반영하며 ⚠️(미검증)로 표시합니다. 보도 매체 간 피해 조직 수(140건 vs 200건+), 공개일(10-29~31) 등에 경미한 불일치가 있어 원문 확보 전까지는 수치를 보수적으로 다룹니다.
+금일 신규 후보로 검토했으나 **미채택**한 항목:
+- **XCPE 봇넷**(GTIG, 2026-11-02 공개, Android TV 셋톱박스 1.3백만대 규모): GTIG는 Android 제조사 Videostrong Technology가 펌웨어에 백도어를 직접 심어 범죄 조직에 접근권을 판매한 것으로 평가(high confidence) — 중국 국가 배후(PLA/MSS)로 귀속된 바 없고 금전적 목적의 범죄 활동으로 서술되어 본 리포트 범위(국가 배후 첩보) 밖으로 판단해 미채택.
+- **LLMJacking**(GTIG/Mandiant, 2026-11-02경 공개): 탈취한 클라우드 인증 토큰을 이용한 AI 모델 무단 사용·수익화 캠페인. 검토한 검색 결과 어디에도 PRC/중국 귀속이 명시되지 않아 미채택.
+- **Storm-1175**(Microsoft, 2026-08경, StormEncryptor 랜섬웨어): "China-linked financially motivated actor"로 서술 — 국가 배후 첩보가 아닌 금전적 목적의 랜섬웨어 활동이라 "일반적인 China-nexus 범죄 활동은 포함하지 않는다"는 규칙에 따라 미채택.
+- **PostGREShell(CVE-2026-6471, PostgreSQL 논리적 디코딩 권한 취약점)**: Silk Typhoon과의 연관성을 암시하는 검색 결과가 있었으나, 재검색 결과 Silk Typhoon과의 직접적 연결을 명시한 출처를 찾지 못해 미채택(출처 간 무관한 기사가 나열된 것으로 판단).
 
-추가로 "CopperDragon"/"Sparrow 생태계"(FamousSparrow·Earth Estries·Tropic Trooper 공유 프레임워크 추정) 후보를 검색으로 접했으나, 후속 타겟 검색에서 1차 출처나 구체 내용을 전혀 재현하지 못해(무관한 결과만 반환) 근거 불충분으로 미채택했습니다. Trellix의 2026-11-04 공개 보고서(2026년 4~9월 중국 국가 배후 활동 41.4% 감소, 미국·튀르키예 집중 표적화)는 특정 그룹·IOC가 없는 트렌드 분석이라 캠페인 항목으로는 미채택하고 배경 정보로만 기록합니다.
-
-60일 창이 2026-09-14~로 이동했습니다. 기존 11건 캠페인 중 최저 공개일은 "CC Switch — AI 모델 전환 공격 툴"(공개 2026-09-16)로 여전히 창 내에 있어 창 이동으로 인한 제외 캠페인은 없습니다. 신규 캠페인 1건(VAPOR PANDA) 추가로 금일 총 12건. 7일 창(2026-11-06~2026-11-13) 기준 🔥 해당 캠페인 없음(VAPOR PANDA 공개일 10-29~30은 7일 창 밖).
+60일 창이 2026-09-15~로 이동했습니다. 기존 12건 캠페인 중 최저 공개일은 "CC Switch — AI 모델 전환 공격 툴"(공개 2026-09-16)로 여전히 창 내에 있어 창 이동으로 인한 제외 캠페인은 없습니다. 신규 캠페인 없음으로 금일 총 12건 유지. 7일 창(2026-11-07~2026-11-14) 기준 🔥 해당 캠페인 없음.
 
 ## 최근 캠페인 (최근 60일)
 
@@ -112,7 +114,7 @@
 - 출처: 검색 결과만 확인 — CrowdStrike(crowdstrike.com/adversaries/vapor-panda, 이 세션 네트워크 허용 목록 밖 — DNS 미해석/ENOTFOUND로 직접 페치 실패), 재보도(BleepingComputer·IT Brief·CSO Online 등 다수 매체, 전량 미시도/기존 차단 목록 추정)
 
 ## 그룹 별칭 매핑
-전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 신규 2건(VAPOR PANDA — 미검증, UNC795 — 검증) 추가.
+전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 신규 그룹 추가 없음.
 
 ## 악용 CVE (패치 우선순위)
 신규 없음. 전체 누적 목록은 [`exploited-cves.txt`](../exploited-cves.txt) 참조(27건, 검증 12 / 미검증 15).
@@ -130,15 +132,15 @@
 신규 없음. 기존 항목은 [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-10-16.md`](2026-10-16.md), [`snapshots/2026-11-03.md`](2026-11-03.md) 참조.
 
 ## 이번 실행 변경사항
-- 신규 캠페인: VAPOR PANDA — ARTEX/DeepSeek AI 에이전트 기반 글로벌 동시다발 침투 캠페인(⚠️ 미검증, CrowdStrike 재보도 종합)
-- 신규 IOC: 없음(VAPOR PANDA 관련 구체 도메인/IP/해시가 재보도 스니펫에 노출되지 않아 반영 불가)
-- 제거: 없음 (60일 창이 2026-09-14~로 이동했으나 최저 공개일 캠페인(CC Switch, 2026-09-16)이 여전히 창 내에 있어 제외 대상 없음)
+- 신규 캠페인: 없음
+- 신규 IOC: 없음
+- 제거: 없음 (60일 창이 2026-09-15~로 이동했으나 최저 공개일 캠페인(CC Switch, 2026-09-16)이 여전히 창 내에 있어 제외 대상 없음)
 - 승격(미검증→검증): 없음
 - 귀속 변경: 없음
 - 신규 CVE: 없음
-- 신규 그룹(표 등재): VAPOR PANDA(미검증), UNC795(검증 — GTIG AI Threat Tracker 2026-02-12 원문 직접 확인)
-- 검토 후 제외한 항목: "CopperDragon/Sparrow 생태계"(검색 스니펫에서 1차 암시만 있었고 후속 타겟 검색에서 전혀 재현되지 않아 근거 불충분으로 미채택), Trellix 2026-11-04 중국 국가 배후 활동 동향 보고서(특정 그룹·IOC 없는 트렌드 분석이라 캠페인 항목 미채택, 배경 정보로만 기록)
-- 비고: WebFetch 5건 사용(GRIDTIDE 재확인, DIB 위협 보고서 신규, AI Threat Tracker 2026-02-12 신규, UNC6508 재확인 — 4건 성공; crowdstrike.com/adversaries/vapor-panda — 1건 ENOTFOUND 실패). crowdstrike.com이 이 세션의 네트워크 허용 목록 밖으로 확인되어 VAPOR PANDA 캠페인의 구체 IOC(해시·C2)를 검증하지 못했습니다 — 사용자가 세션 네트워크 설정에서 허용하면 다음 실행에서 재시도 가능합니다.
+- 신규 그룹(표 등재): 없음
+- 검토 후 제외한 항목: XCPE 봇넷(GTIG, 2026-11-02 — Android 제조사 Videostrong Technology에 귀속된 범죄 인프라, 국가 배후 미귀속으로 미채택), LLMJacking(GTIG/Mandiant, 2026-11-02경 — PRC 귀속 미확인으로 미채택), Storm-1175/StormEncryptor 랜섬웨어(Microsoft, 2026-08경 — "financially motivated"로 서술되어 국가 배후 첩보 범위 밖으로 미채택), PostGREShell CVE-2026-6471(Silk Typhoon과의 연관성 재검색에서 확인 불가로 미채택)
+- 비고: WebFetch 2건 사용(cloud.google.com/blog/topics/threat-intelligence 색인 페이지 — 성공, 개별 보고서 본문 아님; microsoft.com/en-us/security/blog/threat-intelligence/ — 404 실패). 6개 정기 검색 쿼리와 추가 타겟 검색 다수 수행 결과, 60일 창 내에서 PLA/MSS 또는 국가 배후로 귀속 가능한 신규 캠페인·IOC를 확인하지 못했습니다.
 
 ## 차단 운영 포맷 (복붙용)
 
@@ -222,8 +224,5 @@ www.twisinbeth.com
 - [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched(이전 실행)
 - [NeedyMantis: Unpacking a post-compromise malware family used in targeted operations](https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/) — Microsoft — 2026-09-28 — fetched(이전 실행)
 - [Cloud CISO Perspectives: How Google monitors AI threats and advances AI defenses](https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-how-google-monitors-ai-threats-advances-ai-defenses) — Google Cloud/GTIG — 2026-09-16 — fetched(이전 실행)
-- [Disrupting the GRIDTIDE Global Espionage Campaign](https://cloud.google.com/blog/topics/threat-intelligence/disrupting-gridtide-global-espionage-campaign) — Google GTIG — 2026-02-25 — fetched(재확인, 신규 정보 없음)
-- [Beyond the Battlefield: Threats to the Defense Industrial Base](https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base) — Google GTIG — 2026-02-10 — fetched(신규, 기존 그룹 재확인만)
-- [Distillation, Experimentation, Integration: AI Adversarial Use](https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use) — Google GTIG — 2026-02-12 — fetched(신규, UNC795 확인)
-- [UNC6508: PRC-Nexus Actor Exploits REDCap for Medical Research Targeting](https://cloud.google.com/blog/topics/threat-intelligence/prc-targets-us-medical-research) — Google GTIG — 2026-06-15 — fetched(재확인, 신규 정보 없음)
-- crowdstrike.com/adversaries/vapor-panda(VAPOR PANDA 어드버서리 프로필, ARTEX/BLOODALCHEMY 캠페인) — 2026-11-13 — blocked(DNS 미해석/ENOTFOUND, 세션 네트워크 허용 목록 밖)
+- [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence) — Google GTIG — 2026-11-14 조회 — fetched(색인만, 신규 국가 배후 캠페인 없음 확인)
+- microsoft.com/en-us/security/blog/threat-intelligence/ — 2026-11-14 — blocked(404 Not Found)
