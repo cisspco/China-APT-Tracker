@@ -1,18 +1,16 @@
-# China State APT Campaign Snapshot — 2026-11-15 UTC
+# China State APT Campaign Snapshot — 2026-11-16 UTC
 
 ## 수집 상태
-- 페치 성공: [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence)(GTIG/Mandiant, 색인 페이지만); [Defending Against Active Exploitation of Citrix NetScaler ADC and Gateway Appliances](https://cloud.google.com/blog/topics/threat-intelligence/defending-against-active-exploitation-of-citrix-netscaler-adc-and-gateway-appliances/)(Mandiant/GTIG, 본문 — 귀속 없음, 미채택); [Microsoft Security Blog 색인](https://www.microsoft.com/en-us/security/blog/)(Microsoft, 색인 페이지만)
-- 페치 차단(EGRESS_BLOCKED): 없음(오늘 시도한 1차 출처 전량 성공 — 단, 다수 WebSearch 결과의 1차 출처(acronis.com, greynoise.io, talosintelligence.com, unit42.paloaltonetworks.com, proofpoint.com 등)는 과거 실행에서 이미 차단 확인된 상태로 재시도하지 않음)
+- 페치 성공: [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence)(GTIG/Mandiant, 색인 페이지만); [Microsoft Security Blog 색인](https://www.microsoft.com/en-us/security/blog/)(Microsoft, 색인 페이지만)
+- 페치 차단: unit42.paloaltonetworks.com(DNS 미해석, 세션 네트워크 허용 목록 밖 — 신규 시도), blog.talosintelligence.com(DNS 미해석, 세션 네트워크 허용 목록 밖 — 신규 시도). 기존에 이미 차단 확인된 다수 1차 출처(acronis.com, greynoise.io, talosintelligence.com, unit42.paloaltonetworks.com, proofpoint.com, cisa.gov, therecord.media, securityweek.com, thehackernews.com 등)는 재시도하지 않음.
 - 검증된 IOC: 신규 0개(누적 도메인 35·IP 31·해시 61) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 0건(누적 27, 검증 12/미검증 15)
 
-6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대)와 GTIG(`site:cloud.google.com`)·Microsoft(`site:microsoft.com`) 타겟 검색, 그리고 당일(2026-11-15) 기준 최신성 검색(지난 24~48시간 포커스)을 추가로 수행했습니다. GTIG·Microsoft 양측 블로그 색인을 직접 페치해 확인한 결과, 2026-11-14 이후 신규로 게시된 중국 국가 배후 귀속 캠페인은 없었습니다(GTIG 최신 글: LLMJacking·XCPE 봇넷·Vulnerability Discovery AI Era·Citrix NetScaler·BREEZE COMET 등 — 전부 비중국 귀속 또는 범죄 활동; Microsoft 최신 글: SCKit/ScreenConnect, GSocket C2, AI 코딩 에이전트 공급망 공격 등 — 중국 귀속 언급 없음). 검색 결과 대부분은 60일 창(2026-09-17~) 밖의 과거 자료(RedNovember — 2025-09; GRIDTIDE/UNC2814 — 2026-02-25; AA26-113A 공동권고 — 2026-04-23; Trellix 반기 보고서 — 2026-11-04, 신규 IOC 없는 통계성 자료) 또는 기존 반영 캠페인(Storm-0940/ARTEX, ARMORY CASTLE, UAT-11587/Antino, TA419, Mustang Panda/Twill Typhoon 등)의 재보도였습니다.
+6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대)와 추가 타겟 검색(Storm-1175/StormEncryptor 귀속 확인, 당일자 최신성 검색, "PRC-nexus"/"China-nexus" 금주 신규 보고서 검색)을 수행했습니다. GTIG·Microsoft 양측 블로그 색인을 직접 페치해 확인한 결과, 2026-11-15 이후 신규로 게시된 중국 국가 배후 귀속 캠페인은 없었습니다(GTIG 최신 글: GTIG AI Threat Tracker, LLMJacking, XCPE 봇넷, ARTEX and Friends, ARMORY CASTLE, Citrix NetScaler, BREEZE COMET 등 — 전일과 동일한 목록, 신규 게시물 없음; Microsoft 최신 글: SCKit/ScreenConnect(11-13), 코딩 에이전트 공급망 공격(11-12), GSocket C2(11-11) 등 — 중국 귀속 언급 없음).
 
 금일 신규 후보로 검토했으나 **미채택**한 항목:
-- **Citrix NetScaler ADC/Gateway 제로데이 캠페인(WHIPSHOT·SLAPSHOT)**(Mandiant/GTIG, 2026-09-29 공개, 1차 출처 본문 직접 확보·검증): CVE-2026-88772(사전인증 제로데이, 힙 메모리 손상)·CVE-2026-88771(미인증 RCE) 악용, WHIPSHOT(PHP 웹셸/터널러)·SLAPSHOT(Python TCP 터널러) 배포, 정부·금융·기술·교육·법률 분야(북미·유럽) 표적. **본문에 "China", "PRC", "UNC", "APT" 등 귀속 표현이 전혀 없음** — "the threat actor"로만 기술. 일부 2차 매체(SC Media/SC World)가 "china backed hackers suspected"로 보도했으나 1차 출처(GTIG/Mandiant)가 직접 확보·검증된 본문에서 그런 귀속을 전혀 하지 않았으므로, 본 리포트의 귀속 원칙("1차 출처가 명시적으로 밝힌 경우만 채택")에 따라 미채택. 특정 CVE(CVE-2026-88771/88772)를 `exploited-cves.txt`에 "Unattributed"로 추가하지 않은 이유: 현재 정책상 그룹/귀속 없는 일반 미귀속 취약점은 CVE 목록에 포함하지 않음(CVE-2026-59310 vCenter 사례만 "Chinese-speaking, moderate confidence" 서술이 있어 예외적으로 포함됨 — 본 Citrix 사례는 그런 서술조차 1차 출처에 없음).
-- **Vulnerability Discovery and Exploitation Trends in the AI Era**(GTIG, 2026-09-30 공개): AI 활용 취약점 발견·악용 통계 보고서. PRC/DPRK 등 특정 국가 귀속 언급 없이 전반적 트렌드만 서술 — 미채택.
-- **Trellix 반기 위협 보고서(2026-11-04)**: "Chinese nation-state threat activity fell 41.4%"라는 통계와 Mustang Panda 탐지 비율(7.52%)만 제시 — 신규 캠페인·IOC 없는 집계 자료이며 Mustang Panda는 이미 `groups.md`에 등재되어 있어 추가 반영 사항 없음.
+- **Storm-1175 / StormEncryptor 랜섬웨어**(Microsoft 원보고 2026-08, 재보도 다수 확인): N-able N-central 취약점(CVE-2026-18577 추정) 악용, 구 Medusa 제휴사가 신규 StormEncryptor(C++) 배포. 모든 확인된 출처가 "financially motivated threat actor linked to China"로만 서술 — **국가 배후(국가 기관 연계) 서술 없음**. 본 리포트는 국가 배후 첩보 캠페인만 다루므로 금전적 동기의 랜섬웨어 행위자는 귀속 원칙과 무관하게 범위에서 제외.
 
-60일 창이 2026-09-17~로 이동했습니다. 기존 12건 캠페인 중 최저 공개일은 "CC Switch — AI 모델 전환 공격 툴"(공개 2026-09-16)로, 창 경계와 거의 겹치지만 정책상 포함 유지(전일 판단과 동일). 신규 캠페인 없음으로 금일 총 12건 유지. 7일 창(2026-11-08~2026-11-15) 기준 🔥 해당 캠페인 없음.
+60일 창이 2026-09-17~로 이동했습니다. 이에 따라 전일까지 포함되던 **"AI 모델 전환 공격 툴 CC Switch"(공개 2026-09-16) 캠페인이 60일 창 밖으로 이탈**하여 금일 "최근 캠페인" 목록에서 제외했습니다(IOC 없는 캠페인이므로 도메인/IP/해시/CVE 목록에는 영향 없음; 과거 전문은 [`snapshots/2026-09-25.md`](snapshots/2026-09-25.md) 등 이전 스냅샷에 보존). 신규 캠페인 없음으로 금일 총 11건. 7일 창(2026-11-09~2026-11-16) 기준 🔥 해당 캠페인 없음.
 
 ## 최근 캠페인 (최근 60일)
 
@@ -96,14 +94,6 @@
 - 관측 시점: 최소 2025-08부터, 2026-09-17 공개
 - 출처: 검색 스니펫만 확인 — The Hacker News(차단), ESET(차단)
 
-### AI 모델 전환 공격 툴 "CC Switch" — 미상 PRC-nexus 첩보 그룹
-- 귀속: 귀속 미확인 — "a PRC-nexus espionage group"(Google Cloud/GTIG, 검증). 그룹 고유 명칭 미부여. PLA/MSS 언급 없음.
-- 대상: 불명 — 원문에 특정 산업·국가 미기재
-- 초기 침투: 해당 없음
-- 주요 도구/멀웨어: CC Switch(다중 계정 순환, AI 모델 전환 자동화 툴)
-- 관측 시점: 2026-09-16 공개
-- 출처: [Google Cloud/GTIG](https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-how-google-monitors-ai-threats-advances-ai-defenses) — 2026-09-16 — fetched(이전 실행)
-
 ### VAPOR PANDA — ARTEX/DeepSeek AI 에이전트 기반 글로벌 동시다발 침투 캠페인 ⚠️ (미검증)
 - 귀속: 귀속 미확인 — "China-based targeted intrusion adversary"(CrowdStrike, 재보도 종합, 원문 미검증), 구 VexatiousTemper(2021년부터 추적)
 - 대상: 정부부처, 통신사(미국·벨기에·필리핀), 제약·반도체·국방·원자력·금융 등 14개국 200개 이상 조직
@@ -128,18 +118,19 @@
 신규 없음. 기존 61건은 이전 스냅샷([`snapshots/2026-08-27.md`](2026-08-27.md), [`snapshots/2026-08-28.md`](2026-08-28.md), [`snapshots/2026-09-03.md`](2026-09-03.md), [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-09-25.md`](2026-09-25.md), [`snapshots/2026-10-01.md`](2026-10-01.md), [`snapshots/2026-10-16.md`](2026-10-16.md)) 참조.
 
 ## 호스트 IOC · LOTL 아티팩트
-신규 없음(채택 기준 미달 — Citrix NetScaler 캠페인은 귀속 불명으로 미채택). 기존 항목은 [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-10-16.md`](2026-10-16.md), [`snapshots/2026-11-03.md`](2026-11-03.md) 참조.
+신규 없음. 기존 항목은 [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-10-16.md`](2026-10-16.md), [`snapshots/2026-11-03.md`](2026-11-03.md) 참조.
 
 ## 이번 실행 변경사항
 - 신규 캠페인: 없음
 - 신규 IOC: 없음
-- 제거: 없음
+- 제거: 없음(IOC 기준 제거 없음)
+- 캠페인 목록 변동: "CC Switch" 캠페인이 60일 창(2026-09-17~) 밖으로 이탈하여 "최근 캠페인" 목록에서 제외(IOC 없는 캠페인이라 블록리스트/CVE/해시에는 영향 없음)
 - 승격(미검증→검증): 없음
 - 귀속 변경: 없음
 - 신규 CVE: 없음
 - 신규 그룹(표 등재): 없음
-- 검토 후 제외한 항목: Citrix NetScaler ADC/Gateway WHIPSHOT·SLAPSHOT 캠페인(Mandiant/GTIG, 2026-09-29, 1차 출처 본문 확보·검증 — "the threat actor"로만 기술, China/PRC/UNC/APT 귀속 전혀 없어 미채택), Vulnerability Discovery and Exploitation Trends in the AI Era(GTIG, 2026-09-30 — 특정 국가 귀속 없음), Trellix 반기 위협 보고서(2026-11-04 — 통계 자료, 신규 캠페인·IOC 없음, Mustang Panda는 이미 등재됨)
-- 비고: WebFetch 3건 사용(GTIG 색인 — 성공; Citrix NetScaler 본문 — 성공, 귀속 없어 미채택; Microsoft 블로그 색인 — 성공). 6개 정기 검색 쿼리와 추가 타겟 검색 다수 수행 결과, 60일 창 내에서 PLA/MSS 또는 국가 배후로 귀속 가능한 신규 캠페인·IOC를 확인하지 못했습니다.
+- 검토 후 제외한 항목: Storm-1175/StormEncryptor 랜섬웨어(Microsoft/재보도 — "financially motivated threat actor linked to China"로만 서술, 국가 배후 서술 없어 본 리포트 범위 밖)
+- 비고: WebFetch 4건 사용(GTIG 색인 — 성공; Microsoft 블로그 색인 — 성공; unit42.paloaltonetworks.com — DNS 미해석/차단; blog.talosintelligence.com — DNS 미해석/차단). 6개 정기 검색 쿼리와 추가 타겟 검색 수행 결과, 60일 창 내에서 PLA/MSS 또는 국가 배후로 귀속 가능한 신규 캠페인·IOC를 확인하지 못했습니다.
 
 ## 차단 운영 포맷 (복붙용)
 
@@ -222,7 +213,5 @@ www.twisinbeth.com
 - [ARTEX and Friends: Enter Agentic Offensive Frameworks](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks) — Google GTIG/Mandiant — 2026-10-30 — fetched(이전 실행)
 - [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched(이전 실행)
 - [NeedyMantis: Unpacking a post-compromise malware family used in targeted operations](https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/) — Microsoft — 2026-09-28 — fetched(이전 실행)
-- [Cloud CISO Perspectives: How Google monitors AI threats and advances AI defenses](https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-how-google-monitors-ai-threats-advances-ai-defenses) — Google Cloud/GTIG — 2026-09-16 — fetched(이전 실행)
-- [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence) — Google GTIG — 2026-11-15 조회 — fetched(색인만, 신규 국가 배후 캠페인 없음 확인)
-- [Defending Against Active Exploitation of Citrix NetScaler ADC and Gateway Appliances](https://cloud.google.com/blog/topics/threat-intelligence/defending-against-active-exploitation-of-citrix-netscaler-adc-and-gateway-appliances/) — Mandiant/GTIG — 2026-09-29 — fetched(본문 확보, 귀속 없어 미채택)
-- [Microsoft Security Blog 색인](https://www.microsoft.com/en-us/security/blog/) — Microsoft — 2026-11-15 조회 — fetched(색인만, 중국 귀속 신규 캠페인 없음 확인)
+- [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence) — Google GTIG — 2026-11-16 조회 — fetched(색인만, 신규 국가 배후 캠페인 없음 확인)
+- [Microsoft Security Blog 색인](https://www.microsoft.com/en-us/security/blog/) — Microsoft — 2026-11-16 조회 — fetched(색인만, 중국 귀속 신규 캠페인 없음 확인)
