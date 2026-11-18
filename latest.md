@@ -1,13 +1,13 @@
-# China State APT Campaign Snapshot — 2026-11-17 UTC
+# China State APT Campaign Snapshot — 2026-11-18 UTC
 
 ## 수집 상태
-- 페치 성공: [GTIG — PRC-nexus espionage targets diplomats (UNC6384)](https://cloud.google.com/blog/topics/threat-intelligence/prc-nexus-espionage-targets-diplomats)(2025-08-25 원문, 기존 IOC 재확인·변동 없음); [Microsoft — Storm-0940/ARTEX/ConnectWise 공급망 침해](https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/)(기존 IOC 재확인·변동 없음); [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence)(색인만); [Microsoft Security Blog 색인](https://www.microsoft.com/en-us/security/blog/)(색인만)
-- 페치 차단(EGRESS_BLOCKED/DNS 미해석): darkreading.com(신규 시도), infosecurity-magazine.com(신규 시도), crowdstrike.com(신규 시도). 기존에 이미 차단 확인된 다수 1차 출처(acronis.com, greynoise.io, talosintelligence.com, unit42.paloaltonetworks.com, proofpoint.com, cisa.gov, therecord.media, securityweek.com, thehackernews.com 등)는 재시도하지 않음.
+- 페치 성공: [GTIG/Mandiant — ARTEX and Friends: Enter Agentic Offensive Frameworks](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks)(재확인, 기존 Storm-0940/UNC7228 PRC-nexus 귀속·IOC와 일치·변동 없음); [Microsoft — Silk Typhoon IT 공급망 타게팅](https://www.microsoft.com/en-us/security/blog/2025/03/05/silk-typhoon-targeting-it-supply-chain/)(재확인, 변동 없음); [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence)(색인만); [Microsoft Security Blog 메인 색인](https://www.microsoft.com/en-us/security/blog/)(색인만, 2026-11-17 이후 신규 게시물 없음)
+- 페치 차단(EGRESS_BLOCKED/DNS 미해석/404, 신규 시도): www.crowdstrike.com(ENOTFOUND, VAPOR PANDA 원문 재시도 실패), aicybr.com(ENOTFOUND), www.huntress.com(ENOTFOUND), www.microsoft.com/en-us/security/blog/threat-intelligence/(404 — 카테고리 경로 변경·소멸 추정). 기존에 이미 차단 확인된 1차 출처(acronis.com, greynoise.io, talosintelligence.com, unit42.paloaltonetworks.com, proofpoint.com, volexity.com, cisa.gov, therecord.media, securityweek.com, thehackernews.com, darkreading.com, infosecurity-magazine.com 등)는 재시도하지 않음.
 - 검증된 IOC: 신규 0개(누적 도메인 35·IP 31·해시 61) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 0건(누적 27, 검증 12/미검증 15)
 
-6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대)와 추가 타겟 검색(GTIG/Microsoft 블로그 색인 최신성 확인, VAPOR PANDA/CrowdStrike 원문 재시도, "2026-11" 신규 보고서 검색)을 수행했습니다. GTIG·Microsoft 양측 블로그 색인을 직접 페치해 확인한 결과, 2026-11-16 이후 신규로 게시된 중국 국가 배후 귀속 캠페인은 없었습니다(GTIG 최신 글 목록: GTIG AI Threat Tracker "Agentic Threat Activity Crosses a Significant Threshold", LLMJacking, XCPE 봇넷, ARTEX and Friends, ARMORY CASTLE, Citrix NetScaler 등 — 전일과 동일한 캠페인 세트, 신규 중국 귀속 게시물 없음; Microsoft 최신 글: M365 장애 테마 피싱(11-16, 중국 귀속 언급 없음), SCKit/ScreenConnect(11-13), 코딩 에이전트 공급망 공격(11-12) 등 — 11-17 신규 게시물 없음).
+6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대)와 추가 타겟 검색(GTIG/Microsoft 블로그 사이트 한정 검색, CrowdStrike VAPOR PANDA 원문 재시도, CLEANGULP/UTA0560 세부 재검증, Storm-3358/ARTEX 신규 보고 검토)을 수행했습니다. 모든 검색 결과가 이미 등재된 그룹·캠페인(Storm-0940/UNC7228/ARTEX, VAPOR PANDA, UTA0560/UTA0565/JungleBamboo/CLEANGULP, Volt/Salt/Silk/Flax Typhoon, APT31/40/41, Mustang Panda, Integrity Technology Group 등)의 재보도였습니다. 신규 후보로 Microsoft가 2026-11-06 공개한 "Storm-3358"(ARTEX를 금융권에 악용)를 검토했으나, Microsoft 원문(2차 보도 종합)이 이를 "financially motivated, Cambodia-based intrusion cluster"로 명시해 국가 배후 첩보 활동 기준을 충족하지 못하므로 미채택(기존 Warlock/Longlegs·한국 금융권 AI 에이전트 침해 배제 사례와 동일 처리).
 
-60일 창이 2026-09-18~로 이동했습니다. 이에 따라 전일까지 포함되던 **SparroWocky/FamousSparrow 캠페인(공개 2026-09-17)이 60일 창 밖으로 이탈**하여 금일 "최근 캠페인" 목록에서 제외했습니다(IOC 없는 캠페인이므로 도메인/IP/해시/CVE 목록에는 영향 없음; 전문은 [`snapshots/2026-11-16.md`](snapshots/2026-11-16.md) 등 이전 스냅샷에 보존). 신규 캠페인 없음으로 금일 총 10건. 7일 창(2026-11-10~2026-11-17) 기준 🔥 해당 캠페인 없음.
+60일 창이 2026-09-19~로 이동했습니다. 기존 10건 캠페인 중 가장 이른 Red Heron(공개 2026-09-22)도 여전히 창 내에 있어 금일 이탈하는 캠페인은 없습니다. 신규 캠페인 없음으로 금일 총 10건 유지. 7일 창(2026-11-11~2026-11-18) 기준 🔥 해당 캠페인 없음.
 
 ## 최근 캠페인 (최근 60일)
 
@@ -113,12 +113,12 @@
 - 신규 캠페인: 없음
 - 신규 IOC: 없음
 - 제거: 없음(IOC 기준 제거 없음)
-- 캠페인 목록 변동: SparroWocky/FamousSparrow 캠페인(공개 2026-09-17)이 60일 창(2026-09-18~) 밖으로 이탈하여 "최근 캠페인" 목록에서 제외(IOC 없는 캠페인이라 블록리스트/CVE/해시에는 영향 없음; 전문은 [`snapshots/2026-11-16.md`](2026-11-16.md) 등 이전 스냅샷에 보존)
+- 캠페인 목록 변동: 없음(기존 10건 전부 60일 창 내 유지)
 - 승격(미검증→검증): 없음
 - 귀속 변경: 없음
 - 신규 CVE: 없음
 - 신규 그룹(표 등재): 없음
-- 비고: WebFetch 총 8건 사용 — GTIG UNC6384 원문(성공, 2025-08-25, 기존 IOC와 완전 일치·변동 없음); Microsoft Storm-0940 원문(성공, 기존 IOC와 완전 일치·변동 없음); GTIG 블로그 색인(성공, 신규 중국 귀속 게시물 없음); Microsoft 블로그 색인(성공, 신규 중국 귀속 게시물 없음); darkreading.com(DNS 미해석/신규 차단 확인); infosecurity-magazine.com(DNS 미해석/신규 차단 확인); crowdstrike.com(DNS 미해석/신규 차단 확인, VAPOR PANDA 원문 검증 시도 실패); GTIG AI Threat Tracker 추정 URL(404, 차단 아님 — 슬러그 불일치). 6개 정기 검색 쿼리와 추가 타겟 검색 수행 결과, 60일 창 내에서 PLA/MSS 또는 국가 배후로 귀속 가능한 신규 캠페인·IOC를 확인하지 못했습니다.
+- 비고: WebFetch 총 6건 사용 — GTIG "ARTEX and Friends" 원문(성공, 재확인, 기존 Storm-0940/UNC7228 IOC·귀속과 완전 일치·변동 없음); Microsoft Silk Typhoon 원문(성공, 재확인, 변동 없음); Microsoft 블로그 메인 색인(성공, 2026-11-17 이후 신규 게시물 없음 확인); www.microsoft.com/en-us/security/blog/threat-intelligence/(404 — 구 카테고리 경로); www.crowdstrike.com(ENOTFOUND, VAPOR PANDA 원문 검증 재시도 실패); aicybr.com(ENOTFOUND, CLEANGULP 2차 집계 글 시도); www.huntress.com(ENOTFOUND, Storm-0940 2차 프로필 시도). 6개 정기 검색 쿼리와 추가 타겟 검색(Storm-3358/ARTEX 신규 보고 검토 등) 수행 결과, 60일 창 내에서 PLA/MSS 또는 국가 배후로 신규 귀속 가능한 캠페인·IOC를 확인하지 못했습니다. Storm-3358(Cambodia-based, financially motivated로 명시)은 국가 배후 기준 미충족으로 미채택.
 
 ## 차단 운영 포맷 (복붙용)
 
@@ -197,10 +197,10 @@ www.twisinbeth.com
 ```
 
 ## 출처
-- [PRC-Nexus Espionage Targets Diplomats (UNC6384)](https://cloud.google.com/blog/topics/threat-intelligence/prc-nexus-espionage-targets-diplomats) — Google GTIG — 2025-08-25 — fetched(금일 재확인, 기존 IOC와 일치·변동 없음)
-- [AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise](https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/) — Microsoft — 2026-10-21 — fetched(금일 재확인, 변동 없음)
-- [ARTEX and Friends: Enter Agentic Offensive Frameworks](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks) — Google GTIG/Mandiant — 2026-10-30 — fetched(이전 실행)
+- [ARTEX and Friends: Enter Agentic Offensive Frameworks](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks) — Google GTIG/Mandiant — 2026-10-30 — fetched(금일 재확인, 기존 Storm-0940/UNC7228 귀속·IOC와 일치·변동 없음)
+- [AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise](https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/) — Microsoft — 2026-10-21 — fetched(이전 실행)
 - [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched(이전 실행)
 - [NeedyMantis: Unpacking a post-compromise malware family used in targeted operations](https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/) — Microsoft — 2026-09-28 — fetched(이전 실행)
-- [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence) — Google GTIG — 2026-11-17 조회 — fetched(색인만, 신규 국가 배후 캠페인 없음 확인)
-- [Microsoft Security Blog 색인](https://www.microsoft.com/en-us/security/blog/) — Microsoft — 2026-11-17 조회 — fetched(색인만, 중국 귀속 신규 캠페인 없음 확인)
+- [Silk Typhoon targeting IT supply chain](https://www.microsoft.com/en-us/security/blog/2025/03/05/silk-typhoon-targeting-it-supply-chain/) — Microsoft — 2025-03-05 — fetched(금일 재확인, 변동 없음)
+- [Microsoft Security Blog 메인 색인](https://www.microsoft.com/en-us/security/blog/) — Microsoft — 2026-11-18 조회 — fetched(색인만, 2026-11-17 이후 신규 게시물 없음, 중국 귀속 신규 캠페인 없음 확인)
+- [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence) — Google GTIG — 2026-11-17 조회(이전 실행) — fetched(색인만, 신규 국가 배후 캠페인 없음 확인)
