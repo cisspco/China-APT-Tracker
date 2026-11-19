@@ -1,23 +1,33 @@
-# China State APT Campaign Snapshot — 2026-11-18 UTC
+# China State APT Campaign Snapshot — 2026-11-19 UTC
 
 ## 수집 상태
-- 페치 성공: [GTIG/Mandiant — ARTEX and Friends: Enter Agentic Offensive Frameworks](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks)(재확인, 기존 Storm-0940/UNC7228 PRC-nexus 귀속·IOC와 일치·변동 없음); [Microsoft — Silk Typhoon IT 공급망 타게팅](https://www.microsoft.com/en-us/security/blog/2025/03/05/silk-typhoon-targeting-it-supply-chain/)(재확인, 변동 없음); [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence)(색인만); [Microsoft Security Blog 메인 색인](https://www.microsoft.com/en-us/security/blog/)(색인만, 2026-11-17 이후 신규 게시물 없음)
-- 페치 차단(EGRESS_BLOCKED/DNS 미해석/404, 신규 시도): www.crowdstrike.com(ENOTFOUND, VAPOR PANDA 원문 재시도 실패), aicybr.com(ENOTFOUND), www.huntress.com(ENOTFOUND), www.microsoft.com/en-us/security/blog/threat-intelligence/(404 — 카테고리 경로 변경·소멸 추정). 기존에 이미 차단 확인된 1차 출처(acronis.com, greynoise.io, talosintelligence.com, unit42.paloaltonetworks.com, proofpoint.com, volexity.com, cisa.gov, therecord.media, securityweek.com, thehackernews.com, darkreading.com, infosecurity-magazine.com 등)는 재시도하지 않음.
+- 페치 성공: [GTIG AI Threat Tracker — Agentic Threat Activity Crosses a Significant Threshold](https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold)(신규, 2026-11-16, LEAKY CASTLE/CAIRN PRC-nexus 귀속 확인); [GTIG — COLD RELIC: A Case Study in Impersonation and Compromise](https://cloud.google.com/blog/topics/threat-intelligence/cold-relic-a-case-study-in-impersonation-and-compromise)(신규, 2026-11-17, Russia-nexus로 확인 — 중국 귀속 아님, 미채택); [GTIG — Shutting the Door on the XCPE Botnet](https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet)(신규, 2026-11-02, "financial gain" 목적의 Videostrong Technology Co. 운영으로 명시 — 국가 배후 미귀속, 미채택); [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence)(색인); [Microsoft Security Blog 메인 색인](https://www.microsoft.com/en-us/security/blog/)(색인, 2026-11-17 게시물 2건 확인 — Microsoft Perception/디바이스 코드 피싱, 중국 귀속 아님)
+- 페치 차단(DNS 미해석/ENOTFOUND, 신규 시도): www.kratosspace.com(RedNovember 항공우주 확장 보도 원문 — 검색 결과 재확인상 2025-09-24 Recorded Future 보고서로 60일 창 밖, 추가 시도 중단), cybersecuritynews.com(Haidian사/PLA 61046부대·사이버공간군 8국 연계 보도 원문 — 게시일 2026-08-18로 60일 창 밖, 추가 시도 중단)
 - 검증된 IOC: 신규 0개(누적 도메인 35·IP 31·해시 61) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 0건(누적 27, 검증 12/미검증 15)
 
-6개 정기 WebSearch 쿼리(중국 국가 배후 APT IOC, Typhoon 계열, APT31/40/41, Mustang Panda/i-Soon/Chengdu 404, CISA PRC 권고, PLA 전략지원부대)와 추가 타겟 검색(GTIG/Microsoft 블로그 사이트 한정 검색, CrowdStrike VAPOR PANDA 원문 재시도, CLEANGULP/UTA0560 세부 재검증, Storm-3358/ARTEX 신규 보고 검토)을 수행했습니다. 모든 검색 결과가 이미 등재된 그룹·캠페인(Storm-0940/UNC7228/ARTEX, VAPOR PANDA, UTA0560/UTA0565/JungleBamboo/CLEANGULP, Volt/Salt/Silk/Flax Typhoon, APT31/40/41, Mustang Panda, Integrity Technology Group 등)의 재보도였습니다. 신규 후보로 Microsoft가 2026-11-06 공개한 "Storm-3358"(ARTEX를 금융권에 악용)를 검토했으나, Microsoft 원문(2차 보도 종합)이 이를 "financially motivated, Cambodia-based intrusion cluster"로 명시해 국가 배후 첩보 활동 기준을 충족하지 못하므로 미채택(기존 Warlock/Longlegs·한국 금융권 AI 에이전트 침해 배제 사례와 동일 처리).
+6개 정기 WebSearch 쿼리와 추가 타겟 검색(Google/Microsoft 블로그 신규 게시물 확인, RedNovember 항공우주 확장 보도 날짜 검증, Haidian/PLA 61046부대 보도 날짜 검증)을 수행했습니다. 대부분의 검색 결과는 기존 등재 그룹·캠페인(Volt/Salt/Flax/Silk Typhoon, APT31/40/41, Mustang Panda, Storm-0940/ARTEX 등)의 재보도였습니다. Google Cloud 블로그 색인에서 신규 게시물 3건(AI Threat Tracker, COLD RELIC, XCPE 봇넷)을 확인해 전문을 페치했고, 이 중 AI Threat Tracker 1건만 PRC-nexus 귀속 기준을 충족해 신규 채택했습니다(LEAKY CASTLE, CAIRN 프레임워크 기반 캠페인). COLD RELIC은 원문이 러시아 FSB 연계(Russia-nexus)로 명시해 미채택. XCPE 봇넷은 원문이 "financial gain" 목적의 단일 기업(Videostrong Technology Co.) 운영으로 명시하고 중국 국가 배후 서술이 전혀 없어 미채택(일반 사이버범죄로 분류, 기존 Storm-3358 배제 사례와 동일 처리).
 
-60일 창이 2026-09-19~로 이동했습니다. 기존 10건 캠페인 중 가장 이른 Red Heron(공개 2026-09-22)도 여전히 창 내에 있어 금일 이탈하는 캠페인은 없습니다. 신규 캠페인 없음으로 금일 총 10건 유지. 7일 창(2026-11-11~2026-11-18) 기준 🔥 해당 캠페인 없음.
+RedNovember 항공우주/우주 섹터 확장 보도(Kratos Space 재보도)는 원문이 Recorded Future Insikt Group의 2025-09-24 보고서(CTA-CN-2025-0924)에 기반함을 검색으로 확인해 60일 창(2026-09-20~) 밖으로 판단, 채택하지 않았습니다. Haidian사/PLA 61046부대·사이버공간군 8국 연계 보도(cybersecuritynews.com)는 게시일 2026-08-18로 역시 60일 창 밖이라 채택하지 않았습니다(두 건 모두 도메인 자체도 DNS 미해석으로 원문 미확보).
+
+60일 창이 2026-09-20~로 이동했습니다. 기존 10건 캠페인 모두 창 내에 유지(가장 이른 Red Heron 공개 2026-09-22, Phantom Taurus 2026-09). 금일 신규 캠페인 1건(LEAKY CASTLE/CAIRN) 추가로 총 11건. 7일 창(2026-11-12~2026-11-19) 기준 신규 캠페인 1건에 🔥 표시.
 
 ## 최근 캠페인 (최근 60일)
 
+### LEAKY CASTLE(PRC 계약업체) 및 CAIRN 프레임워크 — AI/LLM 기반 사이버첩보 활동, 미 항공우주 섹터 표적 🔥
+- 귀속: 귀속 미확인 — 원문 인용: "a PRC contractor"(LEAKY CASTLE, GTIG, 검증) / "suspected espionage threat actors with a PRC nexus"·"PRC-nexus cyber espionage actors used LLM tools and models for reconnaissance, front-end scanning, researching targets across various sectors and geographies, and weaponizing exploits"(GTIG, 검증, 2026-11-16). PLA/MSS 명시 없음.
+- 대상: LEAKY CASTLE — 원문에 특정 산업·국가 미기재(유출 데이터 분석·번역·이해 목적 LLM 활용으로만 서술). CAIRN 프레임워크 기반 활동 — 미국 항공우주 섹터
+- 초기 침투: 불명 — 원문은 LLM을 정찰, 공격표면 스캐닝, 타겟 리서치, 익스플로잇 무기화에 활용한 것으로만 서술하며 구체적 벡터·CVE 미기재
+- 주요 도구/멀웨어: CAIRN(공격용 LLM 프레임워크), LEAKY CASTLE(PRC 계약업체 명칭 — 유출 데이터를 LLM으로 분석·번역·이해하는 데 활용된 활동과 중첩한다고 GTIG가 서술)
+- 관측 시점: 2026년 3분기(Q3 2026) 활동, 2026-11-16 GTIG 공개
+- 출처: [GTIG AI Threat Tracker](https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold) — 2026-11-16 — fetched(신규)
+
 ### Storm-0940(UNC7228) — ARTEX AI 에이전트 기반 ConnectWise 공급망 침해, M365 테넌트 대량 표적화
-- 귀속: 귀속 미확인 — 원문 인용: "China-state aligned actor"(Microsoft, 검증, 2026-11-17 재확인) / GTIG 인용: "overlaps with activity tracked by Microsoft as the PRC-nexus actor STORM-0940"(Google GTIG, 검증, 2026-10-30). PLA/MSS 명시 없음. GTIG는 ARTEX를 사용하는 "additional suspected PRC-nexus clusters"(미명명)도 별도로 존재한다고 서술(검증) — 특정 그룹 특정 불가로 별도 항목화하지 않음.
+- 귀속: 귀속 미확인 — 원문 인용: "China-state aligned actor"(Microsoft, 검증) / GTIG 인용: "overlaps with activity tracked by Microsoft as the PRC-nexus actor STORM-0940"(Google GTIG, 검증, 2026-10-30). PLA/MSS 명시 없음.
 - 대상: 항공우주·국방, 자동차, 화학, 에너지, 금융서비스, 정부, 법률, 제조, 미디어, 군, 반도체, 소프트웨어, 기술, 싱크탱크·비영리단체 등 전 세계 수백 개 조직. ConnectWise Cloud Backup 멀티테넌트 앱 통해 2,250개 이상 M365 테넌트 대상화.
 - 초기 침투: ConnectWise Cloud Backup 멀티테넌트 앱 공급망 침해 → 신뢰된 OAuth 앱 경유 다운스트림 테넌트 접근. 2026-10-10~14(피크 10-11) 패스워드 스프레이. CVE 명시 없음
 - 주요 도구/멀웨어: ARTEX(오픈소스 멀티에이전트 LLM 펜테스트 프레임워크, Go+Next.js), 웹셸 `cl1217.jsp` 등, `artex-probe-*` 프로브 패턴
 - 관측 시점: 최소 2026-08말부터, 2026-10-10~14 패스워드 스프레이 피크, 2026-10-21 Microsoft 공개, 2026-10-30 GTIG/Mandiant "ARTEX and Friends" 공개(UNC7228 명명)
-- 출처: [Microsoft](https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/) — 2026-10-21 — fetched(금일 재확인, 변동 없음); [GTIG/Mandiant](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks) — 2026-10-30 — fetched(이전 실행)
+- 출처: [Microsoft](https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/) — 2026-10-21 — fetched(이전 실행); [GTIG/Mandiant](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks) — 2026-10-30 — fetched(이전 실행)
 
 ### ARMORY CASTLE(구 UNC5221) — BeyondTrust Remote Support 제로데이 익스플로잇, SAWFLY·BARECLAW
 - 귀속: 귀속 미확인 — 원문 인용: "ARMORY CASTLE, a suspected PRC-nexus espionage threat actor (formerly tracked as UNC5221)" (GTIG, 검증). PLA/MSS 명시 없음.
@@ -84,7 +94,7 @@
 - 출처: 검색 스니펫만 확인 — Acronis TRU(차단), GreyNoise(차단)
 
 ### VAPOR PANDA — ARTEX/DeepSeek AI 에이전트 기반 글로벌 동시다발 침투 캠페인 ⚠️ (미검증)
-- 귀속: 귀속 미확인 — "China-based targeted intrusion adversary"(CrowdStrike, 재보도 종합, 원문 미검증, 원문 crowdstrike.com 금일 재시도도 DNS 미해석/차단), 구 VexatiousTemper(2021년부터 추적)
+- 귀속: 귀속 미확인 — "China-based targeted intrusion adversary"(CrowdStrike, 재보도 종합, 원문 미검증), 구 VexatiousTemper(2021년부터 추적)
 - 대상: 정부부처, 통신사(미국·벨기에·필리핀), 제약·반도체·국방·원자력·금융 등 14개국 200개 이상 조직
 - 초기 침투: 불명 — ARTEX를 DeepSeek 등으로 구동한 자동화된 정찰·침투(재보도)
 - 주요 도구/멀웨어: ARTEX, BLOODALCHEMY 백도어
@@ -92,7 +102,7 @@
 - 출처: 검색 결과만 확인 — CrowdStrike(DNS 미해석), 재보도(다수)
 
 ## 그룹 별칭 매핑
-전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 신규 그룹 추가 없음.
+전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 신규 그룹 2건 추가: LEAKY CASTLE, 미상(CAIRN 프레임워크 기반 캠페인).
 
 ## 악용 CVE (패치 우선순위)
 신규 없음. 전체 누적 목록은 [`exploited-cves.txt`](../exploited-cves.txt) 참조(27건, 검증 12 / 미검증 15).
@@ -110,15 +120,15 @@
 신규 없음. 기존 항목은 [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-10-16.md`](2026-10-16.md), [`snapshots/2026-11-03.md`](2026-11-03.md) 참조.
 
 ## 이번 실행 변경사항
-- 신규 캠페인: 없음
-- 신규 IOC: 없음
-- 제거: 없음(IOC 기준 제거 없음)
-- 캠페인 목록 변동: 없음(기존 10건 전부 60일 창 내 유지)
+- 신규 캠페인: LEAKY CASTLE/CAIRN 프레임워크 기반 PRC-nexus 캠페인(GTIG AI Threat Tracker, 2026-11-16) 1건
+- 신규 IOC: 없음(해당 캠페인 원문에 도메인/IP/해시 미게시)
+- 제거: 없음
+- 캠페인 목록 변동: 10건 → 11건(신규 1건 추가, 기존 10건 전부 60일 창 내 유지)
 - 승격(미검증→검증): 없음
 - 귀속 변경: 없음
 - 신규 CVE: 없음
-- 신규 그룹(표 등재): 없음
-- 비고: WebFetch 총 6건 사용 — GTIG "ARTEX and Friends" 원문(성공, 재확인, 기존 Storm-0940/UNC7228 IOC·귀속과 완전 일치·변동 없음); Microsoft Silk Typhoon 원문(성공, 재확인, 변동 없음); Microsoft 블로그 메인 색인(성공, 2026-11-17 이후 신규 게시물 없음 확인); www.microsoft.com/en-us/security/blog/threat-intelligence/(404 — 구 카테고리 경로); www.crowdstrike.com(ENOTFOUND, VAPOR PANDA 원문 검증 재시도 실패); aicybr.com(ENOTFOUND, CLEANGULP 2차 집계 글 시도); www.huntress.com(ENOTFOUND, Storm-0940 2차 프로필 시도). 6개 정기 검색 쿼리와 추가 타겟 검색(Storm-3358/ARTEX 신규 보고 검토 등) 수행 결과, 60일 창 내에서 PLA/MSS 또는 국가 배후로 신규 귀속 가능한 캠페인·IOC를 확인하지 못했습니다. Storm-3358(Cambodia-based, financially motivated로 명시)은 국가 배후 기준 미충족으로 미채택.
+- 신규 그룹(표 등재): LEAKY CASTLE, 미상(CAIRN 프레임워크 기반 캠페인)
+- 비고: WebFetch 총 7건 시도(성공 5 — GTIG 블로그 색인, Microsoft 블로그 색인, AI Threat Tracker, COLD RELIC, XCPE 봇넷 / 실패 2 — kratosspace.com·cybersecuritynews.com DNS 미해석). COLD RELIC(Russia-nexus, FSB 연계 명시)과 XCPE 봇넷(Videostrong Technology Co.의 금전적 동기 운영으로 명시, 국가 배후 서술 없음)은 중국 국가 배후 기준 미충족으로 미채택. RedNovember 항공우주 확장 보도(2025-09-24 원보고서)와 Haidian/PLA 61046부대 보도(2026-08-18 원보고서)는 검색으로 날짜를 확인한 결과 60일 창 밖으로 판단해 원문 재시도 없이 미채택.
 
 ## 차단 운영 포맷 (복붙용)
 
@@ -197,10 +207,12 @@ www.twisinbeth.com
 ```
 
 ## 출처
-- [ARTEX and Friends: Enter Agentic Offensive Frameworks](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks) — Google GTIG/Mandiant — 2026-10-30 — fetched(금일 재확인, 기존 Storm-0940/UNC7228 귀속·IOC와 일치·변동 없음)
+- [GTIG AI Threat Tracker: Agentic Threat Activity Crosses a Significant Threshold](https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold) — Google GTIG — 2026-11-16 — fetched(신규)
+- [COLD RELIC: A Case Study in Impersonation and Compromise](https://cloud.google.com/blog/topics/threat-intelligence/cold-relic-a-case-study-in-impersonation-and-compromise) — Google GTIG — 2026-11-17 — fetched(신규, Russia-nexus로 확인, 중국 귀속 아님, 미채택)
+- [Shutting the Door on the XCPE Botnet](https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet) — Google GTIG — 2026-11-02 — fetched(신규, 금전적 동기 기업 운영으로 명시, 국가 배후 미귀속, 미채택)
+- [ARTEX and Friends: Enter Agentic Offensive Frameworks](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks) — Google GTIG/Mandiant — 2026-10-30 — fetched(이전 실행)
 - [AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise](https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/) — Microsoft — 2026-10-21 — fetched(이전 실행)
 - [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched(이전 실행)
 - [NeedyMantis: Unpacking a post-compromise malware family used in targeted operations](https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/) — Microsoft — 2026-09-28 — fetched(이전 실행)
-- [Silk Typhoon targeting IT supply chain](https://www.microsoft.com/en-us/security/blog/2025/03/05/silk-typhoon-targeting-it-supply-chain/) — Microsoft — 2025-03-05 — fetched(금일 재확인, 변동 없음)
-- [Microsoft Security Blog 메인 색인](https://www.microsoft.com/en-us/security/blog/) — Microsoft — 2026-11-18 조회 — fetched(색인만, 2026-11-17 이후 신규 게시물 없음, 중국 귀속 신규 캠페인 없음 확인)
-- [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence) — Google GTIG — 2026-11-17 조회(이전 실행) — fetched(색인만, 신규 국가 배후 캠페인 없음 확인)
+- [Microsoft Security Blog 메인 색인](https://www.microsoft.com/en-us/security/blog/) — Microsoft — 2026-11-19 조회 — fetched(색인만, 2026-11-17 게시물 2건 확인, 중국 귀속 신규 캠페인 없음)
+- [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence) — Google GTIG — 2026-11-19 조회 — fetched(색인, 신규 게시물 3건 확인 및 전문 검토)
