@@ -1,25 +1,33 @@
-# China State APT Campaign Snapshot — 2026-11-19 UTC
+# China State APT Campaign Snapshot — 2026-11-20 UTC
 
 ## 수집 상태
-- 페치 성공: [GTIG AI Threat Tracker — Agentic Threat Activity Crosses a Significant Threshold](https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold)(신규, 2026-11-16, LEAKY CASTLE/CAIRN PRC-nexus 귀속 확인); [GTIG — COLD RELIC: A Case Study in Impersonation and Compromise](https://cloud.google.com/blog/topics/threat-intelligence/cold-relic-a-case-study-in-impersonation-and-compromise)(신규, 2026-11-17, Russia-nexus로 확인 — 중국 귀속 아님, 미채택); [GTIG — Shutting the Door on the XCPE Botnet](https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet)(신규, 2026-11-02, "financial gain" 목적의 Videostrong Technology Co. 운영으로 명시 — 국가 배후 미귀속, 미채택); [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence)(색인); [Microsoft Security Blog 메인 색인](https://www.microsoft.com/en-us/security/blog/)(색인, 2026-11-17 게시물 2건 확인 — Microsoft Perception/디바이스 코드 피싱, 중국 귀속 아님)
-- 페치 차단(DNS 미해석/ENOTFOUND, 신규 시도): www.kratosspace.com(RedNovember 항공우주 확장 보도 원문 — 검색 결과 재확인상 2025-09-24 Recorded Future 보고서로 60일 창 밖, 추가 시도 중단), cybersecuritynews.com(Haidian사/PLA 61046부대·사이버공간군 8국 연계 보도 원문 — 게시일 2026-08-18로 60일 창 밖, 추가 시도 중단)
-- 검증된 IOC: 신규 0개(누적 도메인 35·IP 31·해시 61) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 0건(누적 27, 검증 12/미검증 15)
+- 페치 성공: [GTIG — Disrupting GRIDTIDE: A Global Espionage Campaign](https://cloud.google.com/blog/topics/threat-intelligence/disrupting-gridtide-global-espionage-campaign)(재확인, 공개 2026-02-25, 60일 창 밖으로 재확인되어 미채택 유지 — 과거 다수 실행에서 반복 확인된 사항과 동일); [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence)(색인, 신규 China/PRC-nexus 게시물 없음, 2026-11-16 LEAKY CASTLE/CAIRN 이후 변동 없음); [Microsoft Security Blog 메인 색인](https://www.microsoft.com/en-us/security/blog/)(색인, 최신 게시물 2026-11-17 2건 모두 China 비관련)
+- 페치 차단(DNS 미해석/ENOTFOUND): blog.talosintelligence.com(UAT-11473/KeyDrift 원문 — 2회 시도), www.helpnetsecurity.com(Silent Train 재보도), cyberscoop.com(Silent Train 재보도), www.ampcuscyber.com(UAT-11473 재보도)
+- 검증된 IOC: 신규 0개(누적 도메인 35·IP 31·해시 61) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 1건(미검증, CVE-2026-20127 — 누적 28, 검증 12/미검증 16)
 
-6개 정기 WebSearch 쿼리와 추가 타겟 검색(Google/Microsoft 블로그 신규 게시물 확인, RedNovember 항공우주 확장 보도 날짜 검증, Haidian/PLA 61046부대 보도 날짜 검증)을 수행했습니다. 대부분의 검색 결과는 기존 등재 그룹·캠페인(Volt/Salt/Flax/Silk Typhoon, APT31/40/41, Mustang Panda, Storm-0940/ARTEX 등)의 재보도였습니다. Google Cloud 블로그 색인에서 신규 게시물 3건(AI Threat Tracker, COLD RELIC, XCPE 봇넷)을 확인해 전문을 페치했고, 이 중 AI Threat Tracker 1건만 PRC-nexus 귀속 기준을 충족해 신규 채택했습니다(LEAKY CASTLE, CAIRN 프레임워크 기반 캠페인). COLD RELIC은 원문이 러시아 FSB 연계(Russia-nexus)로 명시해 미채택. XCPE 봇넷은 원문이 "financial gain" 목적의 단일 기업(Videostrong Technology Co.) 운영으로 명시하고 중국 국가 배후 서술이 전혀 없어 미채택(일반 사이버범죄로 분류, 기존 Storm-3358 배제 사례와 동일 처리).
+6개 정기 WebSearch 쿼리와 추가 타겟 검색(Cisco Talos·Lumen Black Lotus Labs 원문 URL 특정, Google/Microsoft 블로그 신규 게시물 확인)을 수행했습니다. 대부분의 검색 결과는 기존 등재 그룹·캠페인(Volt/Salt/Silk/Flax Typhoon, APT31/40/41, Mustang Panda 등)의 재보도였습니다. 2026-10-28~29에 Cisco Talos와 Lumen Black Lotus Labs가 같은 날 공개한 두 건의 관련 보고서(UAT-11473/KeyDrift 멀웨어의 Cisco SD-WAN 익스플로잇, Volt Typhoon의 "Silent Train" 커버트 릴레이 네트워크)를 60일 창 내 신규 후보로 식별했으나, 원문(blog.talosintelligence.com) 및 모든 재보도 매체(helpnetsecurity.com, cyberscoop.com, ampcuscyber.com 등)가 DNS 미해석으로 차단되어 검색 스니펫 종합만으로 미검증 반영했습니다. CVE-2026-20127(Cisco Catalyst SD-WAN Controller 인증 우회)을 미검증 CVE로 신규 추가했으며, 구체적 C2 도메인·IP·해시는 재보도에 제시되지 않아 반영하지 않았습니다.
 
-RedNovember 항공우주/우주 섹터 확장 보도(Kratos Space 재보도)는 원문이 Recorded Future Insikt Group의 2025-09-24 보고서(CTA-CN-2025-0924)에 기반함을 검색으로 확인해 60일 창(2026-09-20~) 밖으로 판단, 채택하지 않았습니다. Haidian사/PLA 61046부대·사이버공간군 8국 연계 보도(cybersecuritynews.com)는 게시일 2026-08-18로 역시 60일 창 밖이라 채택하지 않았습니다(두 건 모두 도메인 자체도 DNS 미해석으로 원문 미확보).
+GTIG GRIDTIDE/UNC2814 원문(2026-02-25 공개)을 재확인했으나 과거 실행에서 반복 확인된 바와 같이 60일 창을 크게 벗어나 재채택하지 않았습니다(그룹·IOC 불변, 참고용 유지).
 
-60일 창이 2026-09-20~로 이동했습니다. 기존 10건 캠페인 모두 창 내에 유지(가장 이른 Red Heron 공개 2026-09-22, Phantom Taurus 2026-09). 금일 신규 캠페인 1건(LEAKY CASTLE/CAIRN) 추가로 총 11건. 7일 창(2026-11-12~2026-11-19) 기준 신규 캠페인 1건에 🔥 표시.
+60일 창이 2026-09-21~로 이동했습니다. 기존 11건 캠페인 모두 창 내에 유지(가장 이른 Red Heron 공개 2026-09-22, Phantom Taurus 2026-09). 금일 신규 캠페인 1건(UAT-11473/KeyDrift) 추가로 총 12건. 7일 창(2026-11-13~2026-11-20) 기준 LEAKY CASTLE/CAIRN(11-16)만 🔥 유지, UAT-11473(10-28)은 7일 창 밖.
 
 ## 최근 캠페인 (최근 60일)
+
+### UAT-11473(KeyDrift) — Cisco SD-WAN 제로데이, Volt Typhoon "Silent Train" 인프라 중첩 ⚠️ (미검증)
+- 귀속: 귀속 미확인 — Talos 원문(재보도 종합)은 UAT-11473 자체에 국가 귀속 표현을 직접 사용하지 않음. "infrastructure overlaps considerably with Volt Typhoon's 'Silent Train'"로만 서술하며 두 행위자를 동일시하지 않음(재보도 종합, 원문 미확보). PLA/MSS 언급 없음. 참고: Volt Typhoon 자체는 기존 등재 기준상 "China-nexus"(GTIG, 검증, 그룹 표 참조)
+- 대상: 우주·위성 서비스, 국방·항공우주 기술, 정책 연구기관(피해 국가·조직명 재보도에 미기재)
+- 초기 침투: CVE-2026-20127(Cisco Catalyst SD-WAN Controller, vSmart/vBond 인증 우회, CVSS 10.0)
+- 주요 도구/멀웨어: KeyDrift 프레임워크 — PolyFlame(메모리 상주 모듈, `libdssl.so`, 컨트롤러 프로세스 내부 실행), LittleFilch(OpenSSL `SSL_read` 후킹을 통한 AES-256 키 자재 추출 모듈)
+- 관측 시점: 활동은 "historical"로만 서술(정확한 기간 미기재), 공개 2026-10-28(Cisco Talos)
+- 출처: 검색 결과만 확인 — Cisco Talos(blog.talosintelligence.com, ENOTFOUND로 2회 차단), 재보도(esecurityplanet.com, securityonline.info, neoteo.com, ampcuscyber.com 등, 일부 ENOTFOUND)
 
 ### LEAKY CASTLE(PRC 계약업체) 및 CAIRN 프레임워크 — AI/LLM 기반 사이버첩보 활동, 미 항공우주 섹터 표적 🔥
 - 귀속: 귀속 미확인 — 원문 인용: "a PRC contractor"(LEAKY CASTLE, GTIG, 검증) / "suspected espionage threat actors with a PRC nexus"·"PRC-nexus cyber espionage actors used LLM tools and models for reconnaissance, front-end scanning, researching targets across various sectors and geographies, and weaponizing exploits"(GTIG, 검증, 2026-11-16). PLA/MSS 명시 없음.
 - 대상: LEAKY CASTLE — 원문에 특정 산업·국가 미기재(유출 데이터 분석·번역·이해 목적 LLM 활용으로만 서술). CAIRN 프레임워크 기반 활동 — 미국 항공우주 섹터
 - 초기 침투: 불명 — 원문은 LLM을 정찰, 공격표면 스캐닝, 타겟 리서치, 익스플로잇 무기화에 활용한 것으로만 서술하며 구체적 벡터·CVE 미기재
-- 주요 도구/멀웨어: CAIRN(공격용 LLM 프레임워크), LEAKY CASTLE(PRC 계약업체 명칭 — 유출 데이터를 LLM으로 분석·번역·이해하는 데 활용된 활동과 중첩한다고 GTIG가 서술)
+- 주요 도구/멀웨어: CAIRN(공격용 LLM 프레임워크), LEAKY CASTLE(PRC 계약업체 명칭)
 - 관측 시점: 2026년 3분기(Q3 2026) 활동, 2026-11-16 GTIG 공개
-- 출처: [GTIG AI Threat Tracker](https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold) — 2026-11-16 — fetched(신규)
+- 출처: [GTIG AI Threat Tracker](https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold) — 2026-11-16 — fetched(이전 실행)
 
 ### Storm-0940(UNC7228) — ARTEX AI 에이전트 기반 ConnectWise 공급망 침해, M365 테넌트 대량 표적화
 - 귀속: 귀속 미확인 — 원문 인용: "China-state aligned actor"(Microsoft, 검증) / GTIG 인용: "overlaps with activity tracked by Microsoft as the PRC-nexus actor STORM-0940"(Google GTIG, 검증, 2026-10-30). PLA/MSS 명시 없음.
@@ -102,10 +110,10 @@ RedNovember 항공우주/우주 섹터 확장 보도(Kratos Space 재보도)는 
 - 출처: 검색 결과만 확인 — CrowdStrike(DNS 미해석), 재보도(다수)
 
 ## 그룹 별칭 매핑
-전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 신규 그룹 2건 추가: LEAKY CASTLE, 미상(CAIRN 프레임워크 기반 캠페인).
+전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 신규 그룹 1건 추가: UAT-11473(미검증).
 
 ## 악용 CVE (패치 우선순위)
-신규 없음. 전체 누적 목록은 [`exploited-cves.txt`](../exploited-cves.txt) 참조(27건, 검증 12 / 미검증 15).
+신규 미검증 CVE 1건: CVE-2026-20127 — Cisco Catalyst SD-WAN Controller(인증 우회), UAT-11473(미검증)/Volt Typhoon 인프라 중첩, 2026-10-28. 전체 누적 목록은 [`exploited-cves.txt`](../exploited-cves.txt) 참조(28건, 검증 12 / 미검증 16).
 
 ## C2 도메인 (35, 누적)
 신규 없음. 전체 목록은 [`blocklists/domains.txt`](../blocklists/domains.txt) 참조.
@@ -120,15 +128,15 @@ RedNovember 항공우주/우주 섹터 확장 보도(Kratos Space 재보도)는 
 신규 없음. 기존 항목은 [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-10-16.md`](2026-10-16.md), [`snapshots/2026-11-03.md`](2026-11-03.md) 참조.
 
 ## 이번 실행 변경사항
-- 신규 캠페인: LEAKY CASTLE/CAIRN 프레임워크 기반 PRC-nexus 캠페인(GTIG AI Threat Tracker, 2026-11-16) 1건
-- 신규 IOC: 없음(해당 캠페인 원문에 도메인/IP/해시 미게시)
+- 신규 캠페인: UAT-11473(KeyDrift) — Cisco SD-WAN 제로데이, Volt Typhoon "Silent Train" 인프라 중첩(미검증) 1건
+- 신규 IOC: 없음(해당 캠페인 재보도에 도메인/IP/해시 미게시)
+- 신규 CVE: CVE-2026-20127(미검증) 1건
 - 제거: 없음
-- 캠페인 목록 변동: 10건 → 11건(신규 1건 추가, 기존 10건 전부 60일 창 내 유지)
+- 캠페인 목록 변동: 11건 → 12건(신규 1건 추가, 기존 11건 전부 60일 창 내 유지)
 - 승격(미검증→검증): 없음
 - 귀속 변경: 없음
-- 신규 CVE: 없음
-- 신규 그룹(표 등재): LEAKY CASTLE, 미상(CAIRN 프레임워크 기반 캠페인)
-- 비고: WebFetch 총 7건 시도(성공 5 — GTIG 블로그 색인, Microsoft 블로그 색인, AI Threat Tracker, COLD RELIC, XCPE 봇넷 / 실패 2 — kratosspace.com·cybersecuritynews.com DNS 미해석). COLD RELIC(Russia-nexus, FSB 연계 명시)과 XCPE 봇넷(Videostrong Technology Co.의 금전적 동기 운영으로 명시, 국가 배후 서술 없음)은 중국 국가 배후 기준 미충족으로 미채택. RedNovember 항공우주 확장 보도(2025-09-24 원보고서)와 Haidian/PLA 61046부대 보도(2026-08-18 원보고서)는 검색으로 날짜를 확인한 결과 60일 창 밖으로 판단해 원문 재시도 없이 미채택.
+- 신규 그룹(표 등재): UAT-11473(미검증)
+- 비고: WebFetch 총 8건 시도(성공 3 — GRIDTIDE 원문 재확인, GTIG 블로그 목록, Microsoft 블로그 목록 / 실패 5 — blog.talosintelligence.com 2회, helpnetsecurity.com, cyberscoop.com, ampcuscyber.com 모두 DNS 미해석). UAT-11473/KeyDrift 및 Volt Typhoon "Silent Train"(Lumen Black Lotus Labs) 양쪽 모두 1차 출처 및 모든 대체 재보도 매체가 차단되어 검색 스니펫 종합으로만 미검증 반영. GRIDTIDE/UNC2814(2026-02-25 공개)는 과거 다수 실행에서 반복 확인된 바와 같이 60일 창을 크게 벗어나 재채택하지 않음(참고용 유지, 그룹·IOC 불변).
 
 ## 차단 운영 포맷 (복붙용)
 
@@ -207,12 +215,13 @@ www.twisinbeth.com
 ```
 
 ## 출처
-- [GTIG AI Threat Tracker: Agentic Threat Activity Crosses a Significant Threshold](https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold) — Google GTIG — 2026-11-16 — fetched(신규)
-- [COLD RELIC: A Case Study in Impersonation and Compromise](https://cloud.google.com/blog/topics/threat-intelligence/cold-relic-a-case-study-in-impersonation-and-compromise) — Google GTIG — 2026-11-17 — fetched(신규, Russia-nexus로 확인, 중국 귀속 아님, 미채택)
-- [Shutting the Door on the XCPE Botnet](https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet) — Google GTIG — 2026-11-02 — fetched(신규, 금전적 동기 기업 운영으로 명시, 국가 배후 미귀속, 미채택)
+- [Inside KeyDrift: Analyzing historical UAT-11473 activity on Cisco SD-WAN](https://blog.talosintelligence.com/) — Cisco Talos — 2026-10-28 — blocked(ENOTFOUND, 재보도 종합으로 미검증 반영)
+- [Volt Typhoon targeted enterprise control planes via ever-changing "Silent Train" relay network](https://www.helpnetsecurity.com/2026/10/29/volt-typhoon-silent-train-relay-network/) — Lumen Black Lotus Labs(재인용, Help Net Security) — 2026-10-29 — blocked(ENOTFOUND)
+- [GTIG AI Threat Tracker: Agentic Threat Activity Crosses a Significant Threshold](https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold) — Google GTIG — 2026-11-16 — fetched(이전 실행)
 - [ARTEX and Friends: Enter Agentic Offensive Frameworks](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks) — Google GTIG/Mandiant — 2026-10-30 — fetched(이전 실행)
 - [AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise](https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/) — Microsoft — 2026-10-21 — fetched(이전 실행)
 - [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched(이전 실행)
 - [NeedyMantis: Unpacking a post-compromise malware family used in targeted operations](https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/) — Microsoft — 2026-09-28 — fetched(이전 실행)
-- [Microsoft Security Blog 메인 색인](https://www.microsoft.com/en-us/security/blog/) — Microsoft — 2026-11-19 조회 — fetched(색인만, 2026-11-17 게시물 2건 확인, 중국 귀속 신규 캠페인 없음)
-- [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence) — Google GTIG — 2026-11-19 조회 — fetched(색인, 신규 게시물 3건 확인 및 전문 검토)
+- [Disrupting GRIDTIDE: A Global Espionage Campaign](https://cloud.google.com/blog/topics/threat-intelligence/disrupting-gridtide-global-espionage-campaign) — Google GTIG — 2026-02-25 — fetched(재확인, 60일 창 밖으로 미채택)
+- [Microsoft Security Blog 메인 색인](https://www.microsoft.com/en-us/security/blog/) — Microsoft — 2026-11-20 조회 — fetched(색인, 신규 China/PRC-nexus 게시물 없음)
+- [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence) — Google GTIG — 2026-11-20 조회 — fetched(색인, 신규 China/PRC-nexus 게시물 없음)
