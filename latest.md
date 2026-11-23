@@ -1,15 +1,23 @@
-# China State APT Campaign Snapshot — 2026-11-22 UTC
+# China State APT Campaign Snapshot — 2026-11-23 UTC
 
 ## 수집 상태
-- 페치 성공: [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence)(색인, 최근 11건 확인 — 2026-11-19 ARMORY CASTLE/vSphere 이후 신규 China/PRC-nexus 게시물 없음. COLD RELIC·XCPE Botnet·ShinyHunters·기타 신규 게시물 확인했으나 러시아 FSB 연계·금전적 동기 봇넷·비국가 사이버범죄로 국가 배후 첩보 활동 기준 미충족); [Microsoft Security Blog 메인 색인](https://www.microsoft.com/en-us/security/blog/)(색인, 2026-11-05~11-20 게시물 8건 확인 — China/Typhoon/국가 배후 관련 신규 게시물 없음)
-- 페치 차단(EGRESS_BLOCKED/DNS 미해석): cisa.gov, ic3.gov, cyber.gov.au, therecord.media, securityweek.com, thehackernews.com, darktrace.com, cybersecuritydive.com
-- 검증된 IOC: 신규 0개(누적 도메인 35·IP 42·해시 61, 변동 없음) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 0건(누적 29건, 검증 13/미검증 16)
+- 페치 성공: [GTIG AI Threat Tracker: Agentic Threat Activity Crosses a Significant Threshold](https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold)(재확인, 신규 PRC-nexus 세부사항 없음, 기존 반영 내용과 일치); [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence)(색인, 최근 11건 확인 — 2026-11-19 ARMORY CASTLE/vSphere 이후 신규 China/PRC-nexus 게시물 없음. COLD RELIC·XCPE Botnet·ShinyHunters·LLMJacking은 기존 실행에서 이미 검토·제외); [Microsoft Security Blog 메인 색인](https://www.microsoft.com/en-us/security/blog/)(색인, 2026-10-19~11-20 게시물 9건 확인 — China/Typhoon/국가 배후 관련 신규 게시물 없음)
+- 페치 차단(EGRESS_BLOCKED/DNS 미해석): www.helpnetsecurity.com, cyberscoop.com, www.bleepingcomputer.com, blog.lumen.com, research.checkpoint.com
+- 검증된 IOC: 신규 0개(누적 도메인 35·IP 42, 변동 없음) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 0건(누적 29건, 검증 13/미검증 16)
 
-6개 정기 WebSearch 쿼리를 수행했으나 금일 신규로 확인된 캠페인은 없습니다. 검색 과정에서 발견한 후보 3건(RedNovember, CL-STA-1087, Royal Thai Police/Yokai — Mustang Panda)은 모두 공개일 기준 60일 창(2026-09-23~) 밖으로 확인되어 미채택했습니다: RedNovember(Recorded Future, 1차 공개 2025-09-24, 분석 마감 2025-07-25), CL-STA-1087(Unit 42, 공개 2026-03-17), Royal Thai Police/Yokai(Darktrace/Cado, 공개 2025-02-25). GTIG·Microsoft 블로그 색인을 재확인해 2026-11-19 ARMORY CASTLE/vSphere 게시물 이후 신규 China-nexus 포스트가 없음을 확인했습니다.
+6개 정기 WebSearch 쿼리를 수행했습니다. 그 결과 신규 미검증 캠페인 1건을 추가로 채택했습니다: Check Point Research가 2026-11-10경 공개한 것으로 재보도된 "CopperDragon" 추정 공급자 및 SilentDelivery·OceanGate·DarkWire 3개 클러스터(Sparrow 멀웨어 생태계 기반 코드·인프라 공유). 이 후보는 2026-11-13 실행에서 "후속 검색에서 전혀 재현되지 않아 근거 불충분으로 미채택" 처리되었으나, 금일 재검색에서 Infosecurity Magazine·TheHackerNews·Cybernews 3개 매체가 일관되게 동일 세부사항(클러스터명, 악성코드명, 피해 지역)을 보도하고 있음을 확인하여 재검토·채택했습니다. 1차 출처(research.checkpoint.com)는 이 세션에서 ENOTFOUND로 접근 불가해 전량 미검증으로만 반영했습니다. GTIG·Microsoft 블로그 색인을 직접 재페치해 2026-11-19(ARMORY CASTLE/vSphere) 및 2026-11-20(비China) 이후 신규 China-nexus 포스트가 없음을 재확인했습니다. 그 외 검색에서 발견한 Trellix 활동 동향 보고서(2026-11-04, 중국 국가 배후 활동 41.4% 감소, 특정 그룹·IOC 없는 트렌드 분석)와 FamousSparrow/SparroWocky 관련 재보도(모두 기존 2026-09-17 공개 내용 재인용, 신규 없음)는 기존 처리와 동일하게 미채택/배경 기록만 유지했습니다.
 
-60일 창이 2026-09-23~로 이동했습니다. 기존 13건 캠페인 모두 창 내 유지(Red Heron·Phantom Taurus의 근사 공개일 "2026-09-22경"/"2026-09"는 원문 미확보로 날짜 보정 불가하여 기존 분류를 유지). 금일 신규 캠페인 없음. 7일 창(2026-11-15~2026-11-22) 기준 LEAKY CASTLE/CAIRN(11-16)·ARMORY CASTLE/vCenter(11-19) 2건 🔥(전일 대비 변동 없음, 창 내 유지).
+60일 창이 2026-09-24~로 이동했습니다. 기존 13건 캠페인 모두 창 내 유지(Red Heron·Phantom Taurus의 근사 공개일 "2026-09-22경"/"2026-09"는 원문 미확보로 날짜 보정 불가하여 기존 분류 유지). 신규 캠페인 1건(CopperDragon/SilentDelivery·OceanGate·DarkWire) 추가로 총 14건. 7일 창(2026-11-16~2026-11-23) 기준 LEAKY CASTLE/CAIRN(11-16)·ARMORY CASTLE/vCenter(11-19) 2건 🔥(전일 대비 변동 없음), CopperDragon 계열(11-10경)은 7일 창 밖.
 
 ## 최근 캠페인 (최근 60일)
+
+### CopperDragon(추정 공급자) / SilentDelivery·OceanGate·DarkWire — Sparrow 생태계 기반 3개 클러스터 공급망 추정 ⚠️ (미검증)
+- 귀속: 귀속 미확인 — 검색 결과 종합: "China-nexus intrusion clusters"(Check Point Research 재보도, Infosecurity Magazine/TheHackerNews/Cybernews, 원문 research.checkpoint.com ENOTFOUND로 미검증). "CopperDragon"은 Check Point가 붙인 추정 공급자 명칭으로, 3개 클러스터와의 관계는 "확인되지 않았다(unconfirmed)"로 서술됨. PLA/MSS 언급 없음.
+- 대상: 통신사, 정부기관, 군, 연구기관, critical infrastructure 등 21개국. SilentDelivery는 독일·프랑스·체코의 정상 정부·해운·IT·연구기관 웹사이트를 워터링홀로 활용(재보도 종합)
+- 초기 침투: 불명 — 재보도에 구체 벡터·CVE 미기재
+- 주요 도구/멀웨어: SquadC, AnnobinDoor, SparrowShell(모두 Windows/Linux, 미공개 신규 멀웨어로 서술) — Sparrow 프레임워크 기반 코드 유사성으로 FamousSparrow(SparroWocky/SparrowDoor)와의 연관성 시사되나 원문 미확보로 동일 그룹 여부 판단 불가
+- 관측 시점: 1년여 조사, 공개 2026-11-10경(Check Point)
+- 출처: 검색 결과만 확인 — Check Point Research(research.checkpoint.com, ENOTFOUND로 미검증), 재보도([Infosecurity Magazine](https://www.infosecurity-magazine.com/news/chinese-malware-tied-three-hacking/), [TheHackerNews](https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html), [Cybernews](https://cybernews.com/security/new-global-china-cyber-espionage-campaign/) — 전량 EGRESS_BLOCKED/DNS 미해석으로 WebFetch 직접 확인 불가, WebSearch 스니펫만 확보)
 
 ### ARMORY CASTLE(구 UNC5221) — VMware vCenter 제로데이(CVE-2026-123890) 추가 익스플로잇, SLIMSAVAGE·BONESAW·LAZYBONES 등 신규 툴셋 🔥
 - 귀속: 귀속 미확인 — 원문 인용: "ARMORY CASTLE, a suspected PRC-nexus espionage threat actor (formerly tracked as UNC5221)" (GTIG, 검증). PLA/MSS 명시 없음. 함께 언급된 UNC6201(BRICKSTORM 관련 TTP 공유)도 "suspected PRC-nexus actor"로만 서술.
@@ -25,7 +33,7 @@
 - 초기 침투: 불명 — 원문은 LLM을 정찰, 공격표면 스캐닝, 타겟 리서치, 익스플로잇 무기화에 활용한 것으로만 서술하며 구체적 벡터·CVE 미기재
 - 주요 도구/멀웨어: CAIRN(공격용 LLM 프레임워크), LEAKY CASTLE(PRC 계약업체 명칭)
 - 관측 시점: 2026년 3분기(Q3 2026) 활동, 2026-11-16 GTIG 공개
-- 출처: [GTIG AI Threat Tracker](https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold) — 2026-11-16 — fetched(이전 실행)
+- 출처: [GTIG AI Threat Tracker](https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold) — 2026-11-16 — fetched(재확인)
 
 ### Storm-0940(UNC7228) — ARTEX AI 에이전트 기반 ConnectWise 공급망 침해, M365 테넌트 대량 표적화
 - 귀속: 귀속 미확인 — 원문 인용: "China-state aligned actor"(Microsoft, 검증) / GTIG 인용: "overlaps with activity tracked by Microsoft as the PRC-nexus actor STORM-0940"(Google GTIG, 검증, 2026-10-30). PLA/MSS 명시 없음.
@@ -116,7 +124,7 @@
 - 출처: 검색 결과만 확인 — CrowdStrike(DNS 미해석), 재보도(다수)
 
 ## 그룹 별칭 매핑
-전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 신규 그룹 없음, 그룹 메타데이터 변경 없음.
+전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 신규 그룹 1건 추가(CopperDragon(추정 공급자)/SilentDelivery·OceanGate·DarkWire, 미검증).
 
 ## 악용 CVE (패치 우선순위)
 금일 신규 CVE 없음. 전체 누적 목록은 [`exploited-cves.txt`](../exploited-cves.txt) 참조(29건, 검증 13 / 미검증 16).
@@ -134,15 +142,15 @@
 신규 없음. 기존 항목은 [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-10-16.md`](2026-10-16.md), [`snapshots/2026-11-03.md`](2026-11-03.md), [`snapshots/2026-11-21.md`](2026-11-21.md) 참조.
 
 ## 이번 실행 변경사항
-- 신규 캠페인: 없음
-- 신규 IOC: 없음
+- 신규 캠페인: 1건(CopperDragon(추정 공급자)/SilentDelivery·OceanGate·DarkWire, 미검증 — 2026-11-13 실행에서 "근거 불충분으로 미채택" 처리되었으나 금일 3개 매체 일관 보도 확인으로 재검토·채택)
+- 신규 IOC: 없음(구체 도메인/IP/해시 값은 재보도에 미제시)
 - 신규 CVE: 없음
 - 제거: 없음
-- 캠페인 목록 변동: 13건 유지(신규 없음, 전부 60일 창 내 유지)
+- 캠페인 목록 변동: 13건 → 14건(CopperDragon 계열 추가)
 - 승격(미검증→검증): 없음
 - 귀속 변경: 없음
-- 그룹 메타데이터 갱신: 없음
-- 비고: WebFetch 2건 시도(성공 2 — GTIG 블로그 색인, Microsoft 블로그 색인). 두 색인 모두 전일(2026-11-21) 확인된 최신 게시물(ARMORY CASTLE/vSphere, 2026-11-19) 이후 신규 China/PRC-nexus 콘텐츠가 없음을 확인. WebSearch 과정에서 발견한 RedNovember(Recorded Future)·CL-STA-1087(Unit 42)·Royal Thai Police/Yokai(Darktrace, Mustang Panda 연계)는 모두 1차 공개일이 60일 창(2026-09-23~) 밖으로 확인되어 미채택.
+- 그룹 메타데이터 갱신: 신규 그룹 1건 추가(CopperDragon/SilentDelivery·OceanGate·DarkWire)
+- 비고: WebFetch 8건 수행(성공 3 — GTIG AI Threat Tracker 재확인, GTIG 블로그 색인, Microsoft 블로그 색인 / 실패 5 — www.helpnetsecurity.com, cyberscoop.com, www.bleepingcomputer.com, blog.lumen.com, research.checkpoint.com 전부 ENOTFOUND). GTIG·Microsoft 양쪽 색인 모두 2026-11-19/11-20 이후 신규 China-nexus 콘텐츠 없음을 확인.
 
 ## 차단 운영 포맷 (복붙용)
 
@@ -232,13 +240,15 @@ www.twisinbeth.com
 ```
 
 ## 출처
+- [Suspected Chinese Malware Supplier Tied to Three Hacking Campaigns](https://www.infosecurity-magazine.com/news/chinese-malware-tied-three-hacking/) — Infosecurity Magazine(Check Point Research 재인용) — 2026-11-10경 — blocked(원문 research.checkpoint.com ENOTFOUND, 재보도만 확인)
+- [Three China-Nexus Espionage Campaigns](https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html) — TheHackerNews — 2026-11경 — blocked(EGRESS_BLOCKED)
+- [Chinese spies are hacking the services you rely on](https://cybernews.com/security/new-global-china-cyber-espionage-campaign/) — Cybernews — 2026-11경 — blocked(EGRESS_BLOCKED)
 - [ARMORY CASTLE Exploits vSphere](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-vsphere) — Google GTIG — 2026-11-19 — fetched(이전 실행)
-- [GTIG AI Threat Tracker: Agentic Threat Activity Crosses a Significant Threshold](https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold) — Google GTIG — 2026-11-16 — fetched(이전 실행)
+- [GTIG AI Threat Tracker: Agentic Threat Activity Crosses a Significant Threshold](https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold) — Google GTIG — 2026-11-16 — fetched(재확인)
 - [ARTEX and Friends: Enter Agentic Offensive Frameworks](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks) — Google GTIG/Mandiant — 2026-10-30 — fetched(이전 실행)
 - [AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise](https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/) — Microsoft — 2026-10-21 — fetched(이전 실행)
 - [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched(이전 실행)
 - [NeedyMantis: Unpacking a post-compromise malware family used in targeted operations](https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/) — Microsoft — 2026-09-28 — fetched(이전 실행)
 - [Chinese Government-linked Cyber Threat Actors Combine Automated and Hands-on Hacking Tools to Steal Sensitive Data (AA26-281A)](https://www.cisa.gov/) — FBI/CISA/NSA/NCSC-UK — 2026-10-08 — blocked(EGRESS_BLOCKED, 재보도 종합으로만 반영)
-- [China's Volt Typhoon quietly built another hacking network following US crackdown](https://www.nextgov.com/) — Nextgov (Lumen Black Lotus Labs 재인용) — 2026-10 — blocked(EGRESS_BLOCKED)
-- [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence) — Google GTIG — 2026-11-22 조회 — fetched(색인, 신규 China-nexus 게시물 없음)
-- [Microsoft Security Blog 메인 색인](https://www.microsoft.com/en-us/security/blog/) — Microsoft — 2026-11-22 조회 — fetched(색인, 신규 China-nexus 게시물 없음)
+- [Google Cloud Blog — Threat Intelligence 색인](https://cloud.google.com/blog/topics/threat-intelligence) — Google GTIG — 2026-11-23 조회 — fetched(색인, 신규 China-nexus 게시물 없음)
+- [Microsoft Security Blog 메인 색인](https://www.microsoft.com/en-us/security/blog/) — Microsoft — 2026-11-23 조회 — fetched(색인, 신규 China-nexus 게시물 없음)
