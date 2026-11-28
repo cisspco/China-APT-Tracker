@@ -1,13 +1,13 @@
-# China State APT Campaign Snapshot — 2026-11-27 UTC
+# China State APT Campaign Snapshot — 2026-11-28 UTC
 
 ## 수집 상태
-- 페치 성공: [GTIG — Exposing the Undercurrent: Disrupting the GRIDTIDE Global Cyber Espionage Campaign](https://cloud.google.com/blog/topics/threat-intelligence/disrupting-gridtide-global-espionage-campaign)(2026-02-25, 재확인 — 신규 IOC 없음, 기존 UNC2814 항목과 완전 일치); [GTIG — Beyond the Watering Hole: APT24's Pivot to Multi-Vector Attacks](https://cloud.google.com/blog/topics/threat-intelligence/apt24-pivot-to-multi-vector-attacks)(2025-11-20, 재확인 — 신규 IOC 없음, 기존 APT24 항목과 완전 일치)
-- 페치 차단(EGRESS_BLOCKED/ENOTFOUND): blog.talosintelligence.com, www.helpnetsecurity.com, securityaffairs.com, www.nextgov.com, www.theregister.com, www.cyberscoop.com
+- 페치 성공: [GTIG 블로그 목록 페이지](https://cloud.google.com/blog/topics/threat-intelligence)(신규 게시물 확인용 — 2026-11-16 AI Threat Tracker/2026-11-19 ARMORY CASTLE vSphere 이후 중국 연계 신규 글 없음 확인); [Microsoft Security Blog 목록 페이지](https://www.microsoft.com/en-us/security/blog/)(신규 게시물 확인용 — 2026-11-25 ARTEX 방어자 가이드 이후 중국/Typhoon 연계 신규 글 없음 확인)
+- 페치 차단(ENOTFOUND): www.imda.gov.sg(Autumn Dragon 원문 PDF, 신규 시도), www.techrepublic.com(WARP PANDA 재보도, 신규 시도)
 - 검증된 IOC: 신규 0개(누적 도메인 35·IP 42, 변동 없음) / 미검증 IOC: 신규 0개(누적 도메인 0·IP 0) / 신규 CVE: 0건(누적 29건, 검증 13/미검증 16)
 
-6개 정기 WebSearch 쿼리와 보강 검색을 수행했습니다. GTIG의 GRIDTIDE(UNC2814, 공개 2026-02-25)와 APT24/BADAUDIO(공개 2025-11-20) 원문을 재페치했으나, 두 캠페인 모두 60일 창(2026-09-28~) 밖의 과거 활동이며 내용은 기존 `groups.md` 항목(각각 UNC2814·APT24 행)과 완전히 일치해 신규 사항은 없습니다. 그 외 Cisco Talos(UAT-11473/KeyDrift), Lumen 계열 재보도(helpnetsecurity.com), Security Affairs(FamousSparrow/Azerbaijan), nextgov.com(Volt Typhoon 재보도), The Register(APT31/Gemini), Cyberscoop(Storm-0940/ARTEX 재보도)는 전량 ENOTFOUND로 원문 미확보. 검색 스니펫만으로 확인한 FamousSparrow(Bitdefender, 활동 2025-12~2026-02)·APT31 Gemini 악용(Google, 공개 2026-02-12)·Unit42 "Shadow Campaigns"(공개 2026-02-05, "state-aligned group that operates out of Asia"로만 서술, PRC 귀속 미확정)는 모두 60일 창 밖이라 채택하지 않았습니다. Trellix 2026년 11월 보고서(China 국가배후 탐지 41.4% 감소, 2026 Q2~Q3)는 특정 그룹·IOC가 없는 통계 트렌드 보고라 캠페인 항목으로 반영하지 않았습니다.
+6개 정기 WebSearch 쿼리와 보강 검색(GTIG/Microsoft 블로그 사이트 검색 포함)을 수행했으나, 2026-11-27 스냅샷 이후 60일 창(2026-09-29~) 내 신규 캠페인은 발견되지 않았습니다. GTIG·Microsoft 공식 블로그 목록을 직접 페치해 확인한 결과, 가장 최근 중국 연계 게시물은 기존에 이미 반영된 GTIG AI Threat Tracker(2026-11-16)·ARMORY CASTLE vSphere(2026-11-19)·Microsoft ARTEX 방어자 가이드(2026-11-25)이며 그 이후 신규 게시물은 없습니다. 검색 스니펫에서 발견한 Autumn Dragon(China-nexus 추정, medium confidence, 동남아 정부·미디어 대상 DLL 사이드로딩)은 최초 공개가 2025-11-18로 60일 창 밖이라 채택하지 않았습니다. CrowdStrike WARP PANDA(2025년 활동 중심, 기술 섹터 대상)도 원문 미확보 상태이며 활동 시점이 60일 창 밖으로 판단되어 미채택. Trellix 2026-11-04 보고서(중국 국가배후 탐지 41.4% 감소, 2026 Q2~Q3 통계)는 특정 그룹·IOC가 없는 트렌드 보고라 캠페인 항목으로 반영하지 않았습니다.
 
-60일 창이 2026-09-28~로 이동했습니다. NeedyMantis(원문 공개 2026-09-28)는 창의 경계에 위치해 금일은 유지되나, 다음 실행부터는 창 밖으로 벗어날 예정입니다. 나머지 9건 캠페인은 창 내 유지됩니다. 7일 창(2026-11-20~2026-11-27) 기준 ARMORY CASTLE/vCenter(공개 11-19)는 8일 경과로 🔥 표시에서 제외되었고, Storm-0940/ARTEX 방어자 가이드(11-25)만 🔥 유지됩니다.
+60일 창이 2026-09-29~로 이동하면서, 전일 스냅샷에서 경계에 있던 NeedyMantis(원문 공개 2026-09-28)가 창 밖으로 벗어나 금일부터 "최근 캠페인" 목록에서 제외되었습니다(해시 등 기존 IOC 데이터는 과거 스냅샷에 보존되며 삭제되지 않음). 나머지 11건 캠페인은 창 내 유지됩니다. 7일 창(2026-11-21~2026-11-28) 기준 Storm-0940/ARTEX 방어자 가이드(11-25)만 🔥 유지되며, ARMORY CASTLE/vCenter(11-19)는 9일 경과로 🔥 제외 상태가 유지됩니다.
 
 ## 최근 캠페인 (최근 60일)
 
@@ -56,7 +56,7 @@
 - 대상: 우주·위성 서비스, 국방·항공우주 기술, 정책 연구기관
 - 초기 침투: CVE-2026-20127(Cisco Catalyst SD-WAN Controller, vSmart/vBond 인증 우회, CVSS 10.0)
 - 주요 도구/멀웨어: KeyDrift 프레임워크 — PolyFlame(`libdssl.so`), LittleFilch(OpenSSL `SSL_read` 후킹)
-- 관측 시점: 활동 "historical", 공개 2026-10-28(Cisco Talos). Lumen Black Lotus Labs는 별도로 Volt Typhoon의 "Silent Train" 중계 인프라(SOHO 라우터·IoT 장비 등 27개 이상 기기군 경유, 평균 4시간 세션)가 제로데이 최소 4건에 사용되었다고 2026-10-28 공개(원문 blog.lumen.com, 재보도 helpnetsecurity.com 모두 금일 ENOTFOUND로 미확보)
+- 관측 시점: 활동 "historical", 공개 2026-10-28(Cisco Talos)
 - 출처: 검색 결과만 확인 — Cisco Talos(차단), Lumen(차단), 재보도(일부 차단)
 
 ### ARMORY CASTLE(구 UNC5221) — BeyondTrust Remote Support 제로데이 익스플로잇, SAWFLY·BARECLAW
@@ -99,14 +99,6 @@
 - 관측 시점: 2025-09~2026-07, 원문 공개 2026-09-30
 - 출처: 검색 결과만 확인 — Cisco Talos(차단), 재보도(전량 EGRESS_BLOCKED)
 
-### NeedyMantis — Storm-3069 포스트-컴프로마이즈 악성코드 프레임워크 (60일 창 경계 — 다음 실행 제외 예정)
-- 귀속: 귀속 미확인 — "While Microsoft assesses the activity originates from China, it has not attributed Storm-3069 to a Chinese nation-state actor."(Microsoft, 검증)
-- 대상: 통신사, 대학, 의료 비영리단체, 국제기구, 정부 계약업체
-- 초기 침투: 해당 없음(포스트-컴프로마이즈 전용) — Impacket 기반 핸즈온키보드, DLL 사이드로딩
-- 주요 도구/멀웨어: NeedyMantis(모듈형), Impacket
-- 관측 시점: 최소 2025-10부터, 2026-09-28 공개
-- 출처: [Microsoft](https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/) — 2026-09-28 — fetched(이전 실행)
-
 ## 그룹 별칭 매핑
 전체 누적 그룹 목록(마지막 관측일 포함)은 [`groups.md`](../groups.md) 참조. 금일 신규 그룹 없음.
 
@@ -120,21 +112,21 @@
 신규 없음. 전체 목록은 [`blocklists/ips.txt`](../blocklists/ips.txt) 참조.
 
 ## 파일 해시 (61, 누적)
-신규 없음. 금일 재페치한 GRIDTIDE(UNC2814)·APT24(BADAUDIO) 원문의 해시는 기존 보유 목록과 완전히 일치함을 재확인했습니다. 기존 61건은 이전 스냅샷([`snapshots/2026-08-27.md`](2026-08-27.md), [`snapshots/2026-08-28.md`](2026-08-28.md), [`snapshots/2026-09-03.md`](2026-09-03.md), [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-09-25.md`](2026-09-25.md), [`snapshots/2026-10-01.md`](2026-10-01.md), [`snapshots/2026-10-16.md`](2026-10-16.md)) 참조.
+신규 없음. 기존 61건은 이전 스냅샷([`snapshots/2026-08-27.md`](2026-08-27.md), [`snapshots/2026-08-28.md`](2026-08-28.md), [`snapshots/2026-09-03.md`](2026-09-03.md), [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-09-25.md`](2026-09-25.md), [`snapshots/2026-10-01.md`](2026-10-01.md), [`snapshots/2026-10-16.md`](2026-10-16.md)) 참조.
 
 ## 호스트 IOC · LOTL 아티팩트
 신규 없음. 기존 항목은 [`snapshots/2026-09-07.md`](2026-09-07.md), [`snapshots/2026-10-16.md`](2026-10-16.md), [`snapshots/2026-11-03.md`](2026-11-03.md), [`snapshots/2026-11-21.md`](2026-11-21.md) 참조.
 
 ## 이번 실행 변경사항
-- 신규 캠페인: 없음(기존 10건 유지)
+- 신규 캠페인: 없음
 - 신규 IOC: 없음
 - 신규 CVE: 없음
-- 제거: 없음(블록리스트·CVE·그룹 파일은 변동 없이 누적 유지)
+- 제거: NeedyMantis(Storm-3069) — IOC/해시 삭제 아님, 60일 창(2026-09-29~) 밖으로 벗어나 금일부터 "최근 캠페인" 목록에서만 제외(원문 공개 2026-09-28, 전일 스냅샷에서 "경계 위치, 다음 실행 제외 예정"으로 예고됨). 과거 기록은 [`snapshots/2026-11-27.md`](2026-11-27.md) 등에 보존.
 - 승격(미검증→검증): 없음
 - 귀속 변경: 없음
 - 신규 그룹: 없음
-- 7일 창(🔥) 변동: ARMORY CASTLE/vCenter(11-19)는 8일 경과로 🔥 제외. Storm-0940/ARTEX(11-25)만 🔥 유지.
-- 비고: WebSearch 8건, WebFetch 8건 수행(성공 2 — GTIG GRIDTIDE/UNC2814 원문 재확인, GTIG APT24/BADAUDIO 원문 재확인, 둘 다 60일 창 밖의 과거 캠페인으로 기존 `groups.md` 기재 내용과 완전 일치하여 신규 반영 없음 / 실패 6 — blog.talosintelligence.com, www.helpnetsecurity.com, securityaffairs.com, www.nextgov.com, www.theregister.com, www.cyberscoop.com 전부 ENOTFOUND). 검토했으나 채택하지 않은 항목: Bitdefender FamousSparrow/Azerbaijan(활동 2025-12~2026-02, 60일 창 밖), Google APT31/Gemini 악용(공개 2026-02-12, 60일 창 밖), Unit42 "Shadow Campaigns"/37개국(공개 2026-02-05, 60일 창 밖, PRC 귀속도 "state-aligned group that operates out of Asia"로 불확정), Trellix 2026-11 CyberThreat Report(통계 트렌드 보고로 특정 그룹·IOC 미기재).
+- 7일 창(🔥) 변동: Storm-0940/ARTEX(11-25)만 🔥 유지. ARMORY CASTLE/vCenter(11-19)는 9일 경과로 🔥 제외 유지.
+- 비고: WebSearch 8건, WebFetch 4건 수행(성공 2 — GTIG·Microsoft 공식 블로그 목록 페이지를 직접 확인해 2026-11-25 이후 중국 연계 신규 게시물 없음을 검증 / 실패 2 — www.imda.gov.sg(Autumn Dragon 원문), www.techrepublic.com(WARP PANDA 재보도) 모두 ENOTFOUND). 검토했으나 채택하지 않은 항목: Autumn Dragon(China-nexus 추정 medium confidence, 최초 공개 2025-11-18로 60일 창 밖), CrowdStrike WARP PANDA(활동 시점 2025년 중심, 원문 미확보), Trellix 2026-11-04 CyberThreat 통계 보고(특정 그룹·IOC 미기재).
 
 ## 차단 운영 포맷 (복붙용)
 
@@ -224,18 +216,13 @@ www.twisinbeth.com
 ```
 
 ## 출처
-- [GTIG — Exposing the Undercurrent: Disrupting the GRIDTIDE Global Cyber Espionage Campaign](https://cloud.google.com/blog/topics/threat-intelligence/disrupting-gridtide-global-espionage-campaign) — Google GTIG/Mandiant — 2026-02-25 — fetched(금일 재확인, 60일 창 밖)
-- [GTIG — Beyond the Watering Hole: APT24's Pivot to Multi-Vector Attacks](https://cloud.google.com/blog/topics/threat-intelligence/apt24-pivot-to-multi-vector-attacks) — Google GTIG — 2025-11-20 — fetched(금일 재확인, 60일 창 밖)
+- [GTIG 블로그 목록](https://cloud.google.com/blog/topics/threat-intelligence) — Google GTIG/Mandiant — 상시 갱신 — fetched(금일, 목록 확인용)
+- [Microsoft Security Blog 목록](https://www.microsoft.com/en-us/security/blog/) — Microsoft — 상시 갱신 — fetched(금일, 목록 확인용)
 - [Microsoft — What defenders need to know about ARTEX, the agentic AI framework threat actors abuse](https://www.microsoft.com/en-us/security/blog/2026/11/25/what-defenders-need-to-know-artex-agentic-ai-framework-threat-actors-abuse/) — Microsoft — 2026-11-25 — fetched(이전 실행)
 - [GTIG AI Threat Tracker: Agentic Threat Activity Crosses a Significant Threshold](https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold) — Google GTIG — 2026-11-16 — fetched(이전 실행)
 - [ARMORY CASTLE Exploits vSphere](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-vsphere) — Google GTIG — 2026-11-19 — fetched(이전 실행)
 - [ARTEX and Friends: Enter Agentic Offensive Frameworks](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks) — Google GTIG/Mandiant — 2026-10-30 — fetched(이전 실행)
 - [AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise](https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/) — Microsoft — 2026-10-21 — fetched(이전 실행)
 - [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust) — Google GTIG — 2026-10-15 — fetched(이전 실행)
-- [NeedyMantis: Unpacking a post-compromise malware family used in targeted operations](https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/) — Microsoft — 2026-09-28 — fetched(이전 실행)
-- Cisco Talos — UAT-11473/KeyDrift — Cisco Talos — 2026-10-28 — blocked(ENOTFOUND, 금일 재시도)
-- Lumen Black Lotus Labs — Silent Train (재보도: helpnetsecurity.com) — Lumen — 2026-10-28/10-29 — blocked(ENOTFOUND, 금일 재시도)
-- Bitdefender FamousSparrow/Azerbaijan 에너지 섹터 (재보도: securityaffairs.com) — Bitdefender — 2026-05 — blocked(ENOTFOUND), 60일 창 밖이라 미채택
-- Google APT31/Gemini 악용 (재보도: theregister.com) — Google — 2026-02-12 — blocked(ENOTFOUND), 60일 창 밖이라 미채택
-- Microsoft Storm-0940 재보도 (cyberscoop.com) — 2026-10-21 — blocked(ENOTFOUND)
-- nextgov.com — Volt Typhoon network 재보도 — 2026-10 — blocked(ENOTFOUND)
+- IMDA Singapore — Autumn Dragon 원문 PDF — IMDA — 날짜 불명 — blocked(ENOTFOUND, 금일 신규 시도, 60일 창 밖 판단으로 미채택)
+- TechRepublic — WARP PANDA(CrowdStrike 재보도) — TechRepublic — 날짜 불명 — blocked(ENOTFOUND, 금일 신규 시도)
